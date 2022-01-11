@@ -1,0 +1,7 @@
+
+NOT IsInCombat() AND
+IsEquippedRightType(1) OR
+IsEquippedRightType(3) AND
+NOT IsEquippedLeftType(11) AND
+Random(0.05) AND
+IsRace("Katana.esp"|0x0012624D)

@@ -1,0 +1,5 @@
+
+IsActorValuePercentageLessThan(24, 0.5) AND
+NOT IsEquippedLeftType(11) AND
+Random(0.30) AND
+IsRace("Katana.esp"|0x0012624D)

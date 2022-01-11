@@ -1,0 +1,3 @@
+IsRace("Katana.esp"|0x0012624D) AND
+IsEquippedRightType(16) AND
+IsEquippedLeftType(16)
