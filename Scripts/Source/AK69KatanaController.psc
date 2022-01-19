@@ -165,7 +165,6 @@ EndFunction
 
 Quest Property AK69KatanaConfigQuest Auto
 
-
 ;property Warm = 6.0 auto conditional hidden
 ;property Friendly = 2.0 auto conditional hidden
 ;property Civil = 0.0 auto conditional hidden
@@ -319,7 +318,6 @@ UpdateAllStats()
 	
 	RegisterForSingleUpdate(SecondsBetweenPeriodicUpdates)
 EndEvent
-
 
 
 ;Relationship Stuff

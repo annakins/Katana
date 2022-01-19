@@ -37,7 +37,9 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 		endIf
 	endIf
 	if Player.IsOnMount() && AK69KatanaRidingVar.GetValue() == 1 as Float
+		Utility.Wait(3)
 		Katana.OnAnimationEvent(none, "tailHorseMount")
+		Utility.Wait(3)
 	endIf
 		If Katana.GetActorValue("WaitingForPlayer") == 0
 			If asEventName == "tailHorseMount"
@@ -45,7 +47,7 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 				if (Katana.GetDistance(Takiyo) >= 2048)
 				VisEffect.Play(Takiyo)
 				Takiyo.setGhost(true)
-				Takiyo.MoveTo(Player as objectreference, -500.000 * math.Sin(Player.GetAngleZ()), -500.000 * math.Cos(Player.GetAngleZ()), Player.GetHeight() + 5.00000, true)
+				Takiyo.MoveTo(Player as objectreference, -500.000 * math.Sin(Player.GetAngleZ()), -500.000 * math.Cos(Player.GetAngleZ()), Player.GetHeight() + 2.00000, true)
 				Utility.Wait(3)
 				
 				Takiyo.setGhost(false)
