@@ -3,7 +3,7 @@
 - Katana and all associated pages are currently under construction. 
 - **<span style="color: red">DO NOT import Katana into any follower framework. She has her own.</span>**
 ### Overview
-Katana comes with a quest, which begins when she trusts you more. 
+Ready to meet Katana? She's at the Winking Skeever, seeking adventure. Katana comes with a quest, which begins when she trusts you more. 
 <details>
   <summary>
 When does it actually start (click for a hint)?
