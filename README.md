@@ -16,9 +16,11 @@ I am no Skyrim expert, so if you know how to fix things like: ![Takiyo](https://
 You know where to find me. ;) For issues I'm aware of, click here. As for other bugs, please report them [here](https://github.com/annakins/Katana/issues).
 ### Credits and Thanks
 #### Main
-- Anna Garcia - creator, manager, writer, voice of Katana and Elli. 
+- Anna Garcia - creator, manager, writer, voice of Katana. 
 - Kelsey Kat - creator, writer, voice of River.
 - My beautiful partner, [lafrenchtoasts](https://www.twitch.tv/lafrenchtoasts/about) - voice of Megara.
+- [Mossbal](https://www.castingcall.club/mossbal) - voice of Elli.
+- [Teenygiant](https://www.twitch.tv/teenygiant) - voice of T'ni Jhiant.
 #### Testers
 - Thanks so much for testing Katana in various environments: *avatarvitug, Felix3220 -- this list will be updated soon.*
 #### Animations (all with permission or open perms)
