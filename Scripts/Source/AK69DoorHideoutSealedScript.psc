@@ -7,8 +7,12 @@ Quest property AK69KatanaPersonalQuest Auto
 Message property sealedMSG Auto
 bool isSealed
 
+Event OnInit()
+SetupSealedDoor()
+EndEvent
+
 Function SetupSealedDoor()
-	if (Self.GetOwningQuest().GetStage() < 160)
+	if (Self.GetOwningQuest().GetStage() < 180)
 		Self.GetReference().BlockActivation(True)
 		isSealed = True
 		Utility.Wait(0.5)
