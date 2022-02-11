@@ -1,5 +1,6 @@
 # Katana
 ### Important
+- Katana and all associated pages are currently under construction. 
 - **<span style="color: red">DO NOT import Katana into any follower framework. She has her own.</span>**
 ### Overview
 Katana comes with a quest, which begins when she trusts you more. 
@@ -19,7 +20,7 @@ You know where to find me. ;) For issues I'm aware of, click here. As for other 
 - Kelsey Kat - creator, writer, voice of River.
 - My beautiful partner, [lafrenchtoasts](https://www.twitch.tv/lafrenchtoasts/about) - voice of Megara.
 #### Testers
-- Thanks so much for testing Katana in various environments: *avatarvitug, Felix3220, Astro, pwin, Nautg, Tarzier, Mr Grahmuel, Shuck.*
+- Thanks so much for testing Katana in various environments: *avatarvitug, Felix3220 -- this list will be updated soon.*
 #### Animations (all with permission or open perms)
 Important: Please don't re-distribute if you don't have permission.
 - [JL10123](https://www.nexusmods.com/skyrimspecialedition/mods/52535) 
