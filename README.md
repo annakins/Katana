@@ -22,7 +22,7 @@ You know where to find me. ;) For issues I'm aware of, click here. As for other 
 - [Mossbal](https://www.castingcall.club/mossbal) - voice of Elli.
 - [Teenygiant](https://www.twitch.tv/teenygiant) - voice of T'ni Jhiant.
 #### Testers
-- Thanks so much for testing Katana in various environments: *avatarvitug, Felix3220 -- this list will be updated soon.*
+- Thanks so much for testing Katana in various environments: *avatarvitug, Felix3220, Astro -- this list will be updated soon.*
 #### Animations (all with permission or open perms)
 Important: Please don't re-distribute if you don't have permission.
 - [JL10123](https://www.nexusmods.com/skyrimspecialedition/mods/52535) 
