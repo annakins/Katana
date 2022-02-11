@@ -8,6 +8,7 @@ Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 game.getPlayer().addItem(Gold001, 3000)
 (GetOwningQuest() as AK69KatanaPersonalQuestData).playerIsGreedy = true
+GetOwningQuest().setstage(170)
 ;END CODE
 EndFunction
 ;END FRAGMENT

@@ -45,9 +45,11 @@ Important: Please don't re-distribute if you don't have permission.
 - [QuarantineCouture](https://www.nexusmods.com/skyrimspecialedition/users/94213673)
 - [Seroux](https://www.nexusmods.com/skyrimspecialedition/mods/36454)
 - [Netrve](https://www.nexusmods.com/skyrimspecialedition/mods/6492)
+- [TeluraVas](https://www.nexusmods.com/skyrimspecialedition/mods/57294)
 - [CD Projekt Red](http://www.cdprojekt.com/)
 - [Ruse and Oaristys](https://www.nexusmods.com/skyrimspecialedition/mods/2618)
 - [pottoply](https://www.nexusmods.com/skyrimspecialedition/mods/8608)
+- [Enroys](https://www.nexusmods.com/skyrimspecialedition/mods/60183?tab=files)
 #### Helpful Resources
 - [Xoleras](http://xoleras.com/)
 - [Testiger2](https://www.nexusmods.com/skyrim/users/7964964?tab=user+files)

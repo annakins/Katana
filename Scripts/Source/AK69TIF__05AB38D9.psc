@@ -7,6 +7,7 @@ Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 GetOwningQuest().SetStage(150)
+(GetOwningQuest() as AK69KatanaPersonalQuestData).WinterholdScene = true
 ;END CODE
 EndFunction
 ;END FRAGMENT

@@ -1,10 +1,12 @@
 Scriptname AK69KatanaConfigScript extends Quest  
 
 AK69KatanaController property KatanaDataStorage auto
+ReferenceAlias Property RKatana auto
 
+GlobalVariable Property FollowerRecruited Auto
 
 int Property UpdateInterval auto
-
+float Property SettleRadius auto
 
 int __historySize = 8 ; remember to update the declarations if necessary
 float[] __playerPosX
@@ -52,6 +54,53 @@ Event OnUpdate()
 	__playerPosY[__historySize - 1] = _player.Y
 	__playerPosZ[__historySize - 1] = _player.Z
 
+; check current position against oldest history point if we're
+	;   in follow mode
+	if (FollowerRecruited.GetValue() ==1) 
+		bool switchedPackageConditions = false
+
+		if (RKatana.GetActorReference().GetActorValue("WaitingForPlayer") != 0)
+			; she's not willing to wait for the player right now, but for
+			;  some reason is waiting. Let's kick her out of this.
+			RKatana.GetActorReference().SetActorValue("WaitingForPlayer", 0)
+			switchedPackageConditions = true
+		endif
+
+		; calculate distance between history start and present
+		;    sqrt((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2)
+		float xFactor = (__playerPosX[0] - _player.X)
+		xFactor = xFactor * xFactor
+		float yFactor = (__playerPosY[0] - _player.Y)
+		yFactor = yFactor * yFactor
+		float zFactor = (__playerPosZ[0] - _player.Z)
+		zFactor = zFactor * zFactor
+
+		float distance = Math.sqrt(xFactor + yFactor + zFactor)
+
+		; if the player has moved less than the defined settle radius,
+		;   set the flag that the sandbox package is looking for.
+		if (distance > SettleRadius)
+			if (KatanaDataStorage.PlayerSettled == true)
+				switchedPackageConditions = true
+			endif
+			KatanaDataStorage.PlayerSettled = false
+		else
+			if (KatanaDataStorage.PlayerSettled == false)
+				switchedPackageConditions = true
+			endif
+			KatanaDataStorage.PlayerSettled = true
+		endif
+
+		; only do the EVP if we've actually changed the value
+		if (switchedPackageConditions)
+			if (KatanaDataStorage.PlayerSettled)
+; 				Debug.Trace("RNPC: Player settled; sandbox.")
+			else
+; 				Debug.Trace("RNPC: Player moving more than settle radius; resume follow.")
+			endif
+			RKatana.GetActorReference().EvaluatePackage()
+		endif
+	endif
 
 
 UpdateStats()

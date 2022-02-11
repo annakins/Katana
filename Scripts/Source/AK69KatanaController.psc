@@ -35,7 +35,7 @@ Int Property iFollowerDismiss Auto Conditional
 
 ;Controller Things
  
- 
+bool Property PlayerSettled auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)
 

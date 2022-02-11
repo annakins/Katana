@@ -8,7 +8,7 @@ Message property sealedMSG Auto
 bool isSealed
 
 Function SetupSealedDoor()
-	if (Self.GetOwningQuest().GetStage() < 300)
+	if (Self.GetOwningQuest().GetStage() < 160)
 		Self.GetReference().BlockActivation(True)
 		isSealed = True
 		Utility.Wait(0.5)
@@ -23,7 +23,7 @@ Function UnsealDoor()
 	RumbleSFX.Play(Game.GetPlayer())
 	DoorVFX.Stop(Self.GetReference())
 	Self.GetReference().SetOpen(True)
-	AK69KatanaPersonalQuest.SetStage(310)
+	AK69KatanaPersonalQuest.SetStage(190)
 EndFunction
 
 Event OnActivate(ObjectReference obj)

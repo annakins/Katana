@@ -1,16 +1,21 @@
 Scriptname AK69KatanaSummonScript extends ActiveMagicEffect  
 
 Actor Property Katana Auto
-VisualEffect Property VisEffect Auto
+Activator Property InVis Auto
 
 Event OnEffectStart(Actor akTarget, Actor akCaster)
-VisEffect.Play(Katana)
-         Katana.MoveTo(Game.GetPlayer(), 5, 0, 5, true)
-         
-         
-         Utility.Wait(3.0)
-         
-
-
-
+Katana.setAlpha(0.1)
+BeginTeleport()
+Katana.MoveTo(Game.GetPlayer() as objectreference, -500.000 * Math.Sin(Game.GetPlayer().GetAngleZ()), -500.000 * Math.Cos(Game.GetPlayer().GetAngleZ()))
+EndTeleport()
+Utility.Wait(0.1)   
+Katana.setAlpha(1)
 EndEvent
+
+function BeginTeleport()
+Katana.PlaceAtMe(InVis)
+endFunction
+
+function EndTeleport()
+Katana.PlaceAtMe(InVis)
+endFunction

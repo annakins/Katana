@@ -6,7 +6,10 @@ Message Property FollowerDismissMessage  Auto
 
 Actor Property PlayerREF Auto
 
+Actor Property Katana Auto
+
 Quest Property AK69KatanaShadowAttackQuest Auto
+
 
 Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
 
@@ -20,7 +23,8 @@ Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
 
 EndEvent
 
- 
+
+
 
 Event OnDeath(Actor akKiller)
 
@@ -32,6 +36,5 @@ EndEvent
 
 
 
-Event OnPackageStart(Package akNewPackage)
-	(AK69KatanaShadowAttackQuest as AK69KatanaShadowAttack).KatanaPackageStart(akNewPackage)
-EndEvent
+
+
