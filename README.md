@@ -16,7 +16,7 @@
 #### Recruitment
 Ready to meet Katana? She's at the Winking Skeever, seeking adventure. 
 #### Quest
-In the Do you enjoy collecting bounties? Great. which begins when she trusts you more. 
+Do you enjoy collecting bounties? Great. Her main quest involves such activities, which begins when she trusts you more. 
 <details>
   <summary>
 When does it actually start (click for a hint)?
