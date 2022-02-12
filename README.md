@@ -6,6 +6,7 @@
 - [Issues](https://github.com/annakins/Katana/issues)
 - [Changelog](https://github.com/annakins/Katana/blob/main/Changelog.md)
 - [I like Starbucks](https://ko-fi.com/annakins)
+- [Discord]()
 - [Credits & Thanks](https://github.com/annakins/Katana#credits-and-thanks)
 - [Future Ideas](https://github.com/users/annakins/projects/8)
 ---
@@ -21,7 +22,7 @@ Do you enjoy collecting bounties? Great. Her main quest involves such activities
   <summary>
 When does it actually start (click for a hint)?
   </summary>
-When you talk to Katana after reaching a certain relationship level, you should see the dialogue option, "Katana, I..." 
+You need her mystical feather and summon spell to trigger the quest's script to start, which you can get by talking to her in an inn after recruitment. After reaching a certain relationship level, you should see the dialogue option: "Katana, I..." 
 </details>
 
 
