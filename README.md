@@ -1,9 +1,22 @@
 # Katana
-### Important
+[Picture placeholder]
+### Table of Contents
+- [Overview](https://github.com/annakins/Katana#overview)
+- [Relationship System](https://github.com/annakins/Katana/blob/main/Relationship%20System.md)
+- [Issues](https://github.com/annakins/Katana/issues)
+- [Changelog](https://github.com/annakins/Katana/blob/main/Changelog.md)
+- [I like Starbucks](https://ko-fi.com/annakins)
+- [Credits & Thanks](https://github.com/annakins/Katana#credits-and-thanks)
+- [Future Ideas](https://github.com/users/annakins/projects/8)
+---
+### Overview
+#### Important
 - Katana and all associated pages are currently under construction. 
 - **<span style="color: red">DO NOT import Katana into any follower framework. She has her own.</span>**
-### Overview
-Ready to meet Katana? She's at the Winking Skeever, seeking adventure. Katana comes with a quest, which begins when she trusts you more. 
+#### Recruitment
+Ready to meet Katana? She's at the Winking Skeever, seeking adventure. 
+#### Quest
+In the Do you enjoy collecting bounties? Great. which begins when she trusts you more. 
 <details>
   <summary>
 When does it actually start (click for a hint)?
@@ -11,9 +24,7 @@ When does it actually start (click for a hint)?
 When you talk to Katana after reaching a certain relationship level, you should see the dialogue option, "Katana, I..." 
 </details>
 
-### Contributing
-I am no Skyrim expert, so if you know how to fix things like: ![Takiyo](https://cdn.discordapp.com/attachments/803257955029352518/932025156644257802/63f6f8a4c889463ebd66b76d6207b467.png)
-You know where to find me. ;) For issues I'm aware of, click here. As for other bugs, please report them [here](https://github.com/annakins/Katana/issues).
+
 ### Credits and Thanks
 #### Main
 - Anna Garcia - creator, manager, writer, voice of Katana. 
@@ -22,7 +33,7 @@ You know where to find me. ;) For issues I'm aware of, click here. As for other 
 - [Mossbal](https://www.castingcall.club/mossbal) - voice of Elli.
 - [Teenygiant](https://www.twitch.tv/teenygiant) - voice of T'ni Jhiant.
 #### Testers
-- Thanks so much for testing Katana in various environments: *avatarvitug, Felix3220, Astro -- this list will be updated soon.*
+- Thanks so much for testing Katana in various environments: *avatarvitug, Felix3220, Astro.*
 #### Animations (all with permission or open perms)
 Important: Please don't re-distribute if you don't have permission.
 - [JL10123](https://www.nexusmods.com/skyrimspecialedition/mods/52535) 
