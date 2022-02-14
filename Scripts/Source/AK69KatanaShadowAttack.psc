@@ -15,7 +15,7 @@ Actor property Player auto
 Keyword property ActorTypeNPC auto
 Actor Property Katana Auto
 GlobalVariable Property AK69KatanaTeleVar  Auto
-Faction Property DragonFaction Auto
+
 
 
 Event OnUpdate()
@@ -40,35 +40,6 @@ function EndTeleport2()
 Katana.PlaceAtMe(OutVis2)
 endFunction
 
-function TeletoDragon()
-	Actor KatanaIrin
-	Actor combattarget = KatanaIrin.GetCombatTarget()
-	If (KatanaRef.GetActorRef() != None)
-		KatanaIrin = KatanaRef.GetActorRef()
-	Else
-		KatanaIrin = Katana
-	EndIf
-
-	If (combattarget.GetParentCell() != KatanaIrin.GetParentCell())
-		float angle = combattarget.GetAngleZ() + 180
-		
-		KatanaIrin.setAlpha(0.1)
-		BeginTeleport2()	
-		KatanaIrin.MoveTo(combattarget, 512.0 * Math.Sin(angle), 512.0 * Math.Cos(angle), 512)
-		EndTeleport2()
-		Utility.Wait(0.1)
-		KatanaIrin.setAlpha(1)
-		
-	EndIf
-
-	KatanaIrin.setAlpha(0.1)
-	BeginTeleport2()	
-	KatanaIrin.Moveto(combattarget, 120.0 * Math.Sin(combattarget.GetAngleZ()), -120.0 * Math.Cos(combattarget.GetAngleZ()))
-	EndTeleport2()
-	Utility.Wait(0.1)   
-	KatanaIrin.setAlpha(1)
-	KatanaIrin.DrawWeapon()	
-endFunction
 
 
 function KatanaCombat()
@@ -83,14 +54,6 @@ function KatanaCombat()
 				KatanaIrin.GetEquippedItemType(1) <= 2			
 				ShadowAttack(KatanaIrin, combattarget)
 			endif
-			if combattarget.IsInFaction(DragonFaction)
-				if  (combattarget.GetFlyingState() == 4)		
-				TeletoDragon()
-				elseif (combattarget.GetFlyingState() == 0)	
-				TeletoDragon()	
-				endif
-			endif
-
 
 		endif
 	endif
@@ -152,6 +115,7 @@ Function ShadowAttack2()
 			Utility.Wait(0.1)   
 			KatanaIrin.setAlpha(1)
 			KatanaIrin.StartCombat(combatTarget)
+		
 		Else
 			Utility.Wait(4.0)
 			If (Player.GetActorValuePercentage("Health") <= 0.35)
