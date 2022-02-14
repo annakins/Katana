@@ -20,7 +20,6 @@ Faction Property DragonFaction Auto
 
 Event OnUpdate()
 KatanaCombat()
-MovetoDragon()
 RegisterForSingleUpdate(10)
 EndEvent
 
@@ -41,23 +40,35 @@ function EndTeleport2()
 Katana.PlaceAtMe(OutVis2)
 endFunction
 
-function MovetoDragon()
-	if (AK69KatanaTeleVar.GetValue() ==1) 
-			
-		Actor KatanaIrin = KatanaRef.GetActorRef()
-		if KatanaIrin.IsInCombat()
-			Actor combattarget = KatanaIrin.GetCombatTarget()
-			if combattarget.IsInFaction(DragonFaction)
-				if  (combattarget.GetFlyingState() == 4)		
-					ShadowAttack(KatanaIrin, combattarget)
-				elseif (combattarget.GetFlyingState() == 0)	
-					ShadowAttack(KatanaIrin, combattarget)	
-				endif
-			endif
-		endif
-		Katana.EvaluatePackage()
-		endif
-	endFunction
+function TeletoDragon()
+	Actor KatanaIrin
+	Actor combattarget = KatanaIrin.GetCombatTarget()
+	If (KatanaRef.GetActorRef() != None)
+		KatanaIrin = KatanaRef.GetActorRef()
+	Else
+		KatanaIrin = Katana
+	EndIf
+
+	If (combattarget.GetParentCell() != KatanaIrin.GetParentCell())
+		float angle = combattarget.GetAngleZ() + 180
+		
+		KatanaIrin.setAlpha(0.1)
+		BeginTeleport2()	
+		KatanaIrin.MoveTo(combattarget, 512.0 * Math.Sin(angle), 512.0 * Math.Cos(angle), 512)
+		EndTeleport2()
+		Utility.Wait(0.1)
+		KatanaIrin.setAlpha(1)
+		
+	EndIf
+
+	KatanaIrin.setAlpha(0.1)
+	BeginTeleport2()	
+	KatanaIrin.Moveto(combattarget, 120.0 * Math.Sin(combattarget.GetAngleZ()), -120.0 * Math.Cos(combattarget.GetAngleZ()))
+	EndTeleport2()
+	Utility.Wait(0.1)   
+	KatanaIrin.setAlpha(1)
+	KatanaIrin.DrawWeapon()	
+endFunction
 
 
 function KatanaCombat()
@@ -72,6 +83,15 @@ function KatanaCombat()
 				KatanaIrin.GetEquippedItemType(1) <= 2			
 				ShadowAttack(KatanaIrin, combattarget)
 			endif
+			if combattarget.IsInFaction(DragonFaction)
+				if  (combattarget.GetFlyingState() == 4)		
+				TeletoDragon()
+				elseif (combattarget.GetFlyingState() == 0)	
+				TeletoDragon()	
+				endif
+			endif
+
+
 		endif
 	endif
 	endif
