@@ -6,7 +6,7 @@
 - [Issues](https://github.com/annakins/Katana/issues)
 - [Changelog](https://github.com/annakins/Katana/blob/main/Changelog.md)
 - [I like Starbucks](https://ko-fi.com/annakins)
-- [Discord]()
+- [Discord](https://discord.gg/BuQsDQnGcz)
 - [Credits & Thanks](https://github.com/annakins/Katana#credits-and-thanks)
 - [Future Ideas](https://github.com/users/annakins/projects/8)
 ---
