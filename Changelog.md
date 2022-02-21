@@ -1,6 +1,9 @@
 ## Release
 
 ## Beta
+### 0.44 - 02/21/2022 
+*Save-compatible.*
+- Takiyo should no longer move to you if you don't have Katana with you.
 ### 0.43 - 02/14/2022 
 *Should be save-compatible.*
 - Combat style has been updated to be more dynamic.

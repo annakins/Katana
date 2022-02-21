@@ -1,9 +1,0 @@
-IsRace("Katana.esp"|0x0012624D) AND
-IsEquippedRightType(1) OR
-IsEquippedRightType(3) OR
-IsEquippedRightType(4) AND
-IsEquippedLeftType(12) OR
-IsEquippedLeftType(13) OR
-IsEquippedLeftType(14) OR
-IsEquippedLeftType(15) OR
-IsEquippedLeftType(16)

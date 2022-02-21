@@ -1,14 +1,20 @@
 # Katana
-[Picture placeholder]
+<center><img src="https://pbs.twimg.com/media/FL6Um8CXoAQth8H?format=jpg&name=medium" width=70%/><br><br>
+<div id="badges">
+  <a href="https://discord.gg/BuQsDQnGcz">
+    <img src="https://img.shields.io/badge/Discord-blue?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Badge"/>
+  </a>
+ 
+</div></center>
+
 ### Table of Contents
 - [Overview](https://github.com/annakins/Katana#overview)
 - [Relationship System](https://github.com/annakins/Katana/blob/main/Relationship%20System.md)
+- [Tracker](https://github.com/users/annakins/projects/1)
 - [Issues](https://github.com/annakins/Katana/issues)
 - [Changelog](https://github.com/annakins/Katana/blob/main/Changelog.md)
 - [I like Starbucks](https://ko-fi.com/annakins)
-- [Discord](https://discord.gg/BuQsDQnGcz)
 - [Credits & Thanks](https://github.com/annakins/Katana#credits-and-thanks)
-- [Future Ideas](https://github.com/users/annakins/projects/8)
 ---
 ### Overview
 #### Important
@@ -33,8 +39,9 @@ You need her mystical feather and summon spell to trigger the quest's script to 
 - My beautiful partner, [lafrenchtoasts](https://www.twitch.tv/lafrenchtoasts/about) - voice of Megara.
 - [Mossbal](https://www.castingcall.club/mossbal) - voice of Elli.
 - [Teenygiant](https://www.twitch.tv/teenygiant) - voice of T'ni Jhiant.
+- You, for taking the time to explore something I've given so much of my heart to. Thank you.
 #### Testers
-- Thanks so much for testing Katana in various environments: *avatarvitug, Felix3220, Astro.*
+- Thanks so much for testing Katana in various environments: *avatarvitug, Felix3220, Astro, and more!*
 #### Animations (all with permission or open perms)
 Important: Please don't re-distribute if you don't have permission.
 - [JL10123](https://www.nexusmods.com/skyrimspecialedition/mods/52535) 
