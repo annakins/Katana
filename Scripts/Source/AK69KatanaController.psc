@@ -313,8 +313,6 @@ Event OnUpdate()
 		count += 1
 	endwhile
 	ak69relationship[__historySize - 1] = __ak69relationshiplevel
-
-UpdateAllStats()
 	
 	RegisterForSingleUpdate(SecondsBetweenPeriodicUpdates)
 EndEvent

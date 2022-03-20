@@ -1,6 +1,17 @@
 ## Release
 
 ## Beta
+### 0.452 - 03/20/2022
+*I recommend using ReSaver if you have an older version of Katana. Or if you have a new save, great.*
+- Katana's armor ratings have been reduced to allow more outfit replacement.
+- Massive rework on quest dialogue.
+- Removed KeepDistanceFrom package.
+- Added favor *flavors*.
+- Modified mounting behavior. 
+- Modfied teleport behavior with ranged weapons.
+- Modified Takiyo's idle.
+- Removed local map markers for personal quest.
+
 ### 0.44 - 02/21/2022 
 *Save-compatible.*
 - Takiyo should no longer move to you if you don't have Katana with you.

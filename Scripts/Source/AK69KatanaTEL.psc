@@ -71,11 +71,13 @@ utility.wait(0.1)
 
 ;debug.trace(self + "COMBAT If no pass, TeleportTarget may be NONE:" + TeleportTarget)
 		if (TeleportTarget)
-		BeginTeleport()
+		VisEffect.Play(self, 1.0)
+		
 		utility.wait(0.4)
 		SetPosition(XLoc, YLoc, TeleportTarget.GetPositionZ()) ; added Z os for adjustments
 		SetAngle(GetAngleX(), GetAngleY(), GetAngleZ() + GetHeadingAngle(TeleportTarget))
-		EndTeleport()
+		VisEffect.Play(self, 1.0)
+		
 		utility.wait(2)
 		CheckSuccess(TeleportTarget)
 		bCasting = False

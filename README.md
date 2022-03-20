@@ -1,12 +1,12 @@
 # Katana
 <p align="center"><img src="https://pbs.twimg.com/media/FL6Um8CXoAQth8H?format=jpg&name=medium" width=90%/> 
 <div id="badges">
-  <a href="https://discord.gg/BuQsDQnGcz" target="_blank">
+  <a href="https://discord.gg/BuQsDQnGcz">
     <img src="https://img.shields.io/badge/Discord-blue?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Badge"/>
   </a>
    <a href="https://github.com/annakins/Katana/releases">
  <img alt="Download" src="https://img.shields.io/badge/Download-purple?style=for-the-badge&logo=AddThis&logoColor=white" alt="Discord Badge"/></a> 
- <a href="https://ko-fi.com/T6T8810YS" target="_blank">
+ <a href="https://ko-fi.com/T6T8810YS">
     <img src="https://img.shields.io/badge/Show love-teal?style=for-the-badge&logo=kofi&logoColor=white" alt="Ko-Fi Badge"/>
   </a>
 
@@ -17,7 +17,7 @@
 ### Table of Contents
 - [Overview](https://github.com/annakins/Katana#overview)
 - [Relationship System](https://github.com/annakins/Katana/blob/main/Relationship%20System.md)
-- [Tracker](https://github.com/users/annakins/projects/1)
+- [Project Tracker](https://github.com/users/annakins/projects/1)
 - [Issues](https://github.com/annakins/Katana/issues)
 - [Changelog](https://github.com/annakins/Katana/blob/main/Changelog.md)
 - [Credits & Thanks](https://github.com/annakins/Katana#credits-and-thanks)
@@ -78,6 +78,7 @@ Important: Please don't re-distribute if you don't have permission.
 - [Ruse and Oaristys](https://www.nexusmods.com/skyrimspecialedition/mods/2618)
 - [pottoply](https://www.nexusmods.com/skyrimspecialedition/mods/8608)
 - [Enroys](https://www.nexusmods.com/skyrimspecialedition/mods/60183?tab=files)
+- [xp32](https://www.nexusmods.com/skyrim/mods/45542/?tab=files)
 #### Helpful Resources
 - [Xoleras](http://xoleras.com/)
 - [Testiger2](https://www.nexusmods.com/skyrim/users/7964964?tab=user+files)

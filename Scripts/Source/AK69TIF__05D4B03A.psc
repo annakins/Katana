@@ -1,12 +1,12 @@
 ;BEGIN FRAGMENT CODE - Do not edit anything between this and the end comment
 ;NEXT FRAGMENT INDEX 1
-Scriptname AK69TIF__05C399D2 Extends TopicInfo Hidden
+Scriptname AK69TIF__05D4B03A Extends TopicInfo Hidden
 
 ;BEGIN FRAGMENT Fragment_0
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
-(GetOwningQuest() as AK69KatanaPersonalQuestData).UnlockLoyaltyZ = true
+(GetOwningQuest() as AK69KatanaPersonalQuestData).UnlockLoyaltyC = true
 ;END CODE
 EndFunction
 ;END FRAGMENT

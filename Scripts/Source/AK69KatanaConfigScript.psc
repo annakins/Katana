@@ -103,9 +103,14 @@ Event OnUpdate()
 	endif
 
 
+If RKatana.GetActorReference().HasLOS(Game.GetPlayer())
 UpdateStats()
 
-	; do it all again
+Else
+	KatanaDataStorage.UpdateAllStats()
+
+EndIf
+
 	RegisterForSingleUpdate(UpdateInterval)
 EndEvent
 

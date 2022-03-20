@@ -20,7 +20,6 @@ Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
           (GetOwningQuest() as AK69KatanaController).DismissFollower(0, 0)
 
      EndIf
-
 EndEvent
 
 
