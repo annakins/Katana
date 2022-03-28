@@ -6,8 +6,9 @@
         }
     ],
     "settings": {
-        "papyrus.skyrimSpecialEdition.enabled": true,
         "papyrus.fallout4.enabled": false,
-        "papyrus.skyrim.enabled": false
+        "papyrus.skyrim.enabled": false,
+        "papyrus.skyrimSpecialEdition.installPath": "D:\\Games\\steamapps\\common\\Skyrim Special Edition\\",
+        "papyrus.skyrimSpecialEdition.modDirectoryPath": "D:\\MO2\\mods"
     }
 }

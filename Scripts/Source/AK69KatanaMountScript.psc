@@ -63,7 +63,7 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 				
 				if (Katana.GetDistance(Takiyo) >= 2048) && (FollowerRecruited.GetValue() ==1) 
 				BeginTeleport()
-				TakiyoStand()
+				
 				Takiyo.setAlpha(0.1)
 				Takiyo.MoveTo(Player as objectreference, -500.000 * Math.Sin(Player.GetAngleZ()), -500.000 * Math.Cos(Player.GetAngleZ()))
 				EndTeleport()				
@@ -112,9 +112,3 @@ Function MistRavenCast()
 				Katana.setAlpha(1)						
 EndFunction
 
-
-Function TakiyoStand()
-	Actor TakiyoIrin = TakiyoRef.GetActorRef()	
-		Debug.SendAnimationEvent(TakiyoIrin, "returnToDefault")
-		TakiyoIrin.SetDontMove()
-EndFunction
