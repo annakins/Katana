@@ -52,7 +52,6 @@ You need her mystical feather and summon spell to trigger the quest's script to 
 Important: Please don't re-distribute if you don't have permission.
 - [JL10123](https://www.nexusmods.com/skyrimspecialedition/mods/52535) 
 - [juhaaaa](https://www.nexusmods.com/skyrimspecialedition/mods/45794) 
-- [Gomapudding](https://www.youtube.com/channel/UChT1kx2niY2VwLSV-tl0ISQ) 
 - [skypia](https://www.nexusmods.com/skyrimspecialedition/users/433905) 
 - [cyh0405 and mahiwastaken](https://www.nexusmods.com/skyrimspecialedition/mods/43377)
 - [mofu](https://www.patreon.com/user?u=38051229) 
