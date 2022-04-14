@@ -8,6 +8,8 @@ Location Property BeeandBarb  Auto
 
 Location Property FrozenHearth  Auto  
 
+Location Property Hideout Auto
+
  Event OnSit(ObjectReference akFurniture)
 
 if (GetOwningQuest().GetStage() == 20 && Game.GetPlayer().GetCurrentLocation() == DrunkenHuntsman)
@@ -28,10 +30,6 @@ if (GetOwningQuest().GetStage() == 90 && Game.GetPlayer().GetCurrentLocation() =
 	GetOwningQuest().SetStage(100)
  
 Endif
-
-
-
-
 EndEvent
 
 Event OnLocationChange(Location akOldLoc, Location akNewLoc)
@@ -42,4 +40,12 @@ if (GetOwningQuest().GetStage() == 130 && FrozenHearth == akNewLoc)
  
 Endif
 
+if (GetOwningQuest().GetStage() == 180 && Hideout == akNewLoc)
+	 
+	GetOwningQuest().SetStage(190)
+ 
+Endif
+
+
 endEvent
+

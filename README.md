@@ -1,5 +1,5 @@
 # Katana
-<p align="center"><img src="https://pbs.twimg.com/media/FL6Um8CXoAQth8H?format=jpg&name=medium" width=90%/> 
+<p align="center"><img src="https://imgur.com/NzjXb8B.png" width=90%/> 
 <div id="badges">
   <a href="https://discord.gg/eQcVzyCa2c">
     <img src="https://img.shields.io/badge/Discord-blue?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Badge"/>
