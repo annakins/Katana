@@ -1,8 +1,17 @@
 ## Release
 
-## Beta
+Estimated Nexus release: 
+Based on how things are going, version 1.0 will probably be released by August-September of 2022.
 
-### 0.453 - 04/04/2022
+## Beta Changelog
+
+### 0.47 - 05/09/2022
+*NOT compatible with previous versions.*
+- Added Elli and River difficulty.
+- Added remaining dialogue and scenes (without voices, except for Elli's) for the quest.
+
+
+### 0.46 - 04/04/2022
 *I recommend using ReSaver if you have an older version of Katana. Or if you have a new save, great.*
 - Katana's lines before stage 180 have been recorded. These may still be changed.
 - The map markers were still showing in the last build. Should be okay now.

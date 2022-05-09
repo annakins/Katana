@@ -1,0 +1,26 @@
+Scriptname AK69RiverBleedoutTalkScript extends ObjectReference
+
+Quest Property AK69KatanaPersonalQuest Auto
+Location Property Hideout Auto
+Actor Property Katana Auto
+Actor Property Elli Auto
+ReferenceAlias Property River Auto
+
+
+
+Event OnEnterBleedout()
+    actor AkSpeaker = River.GetActorReference()
+    Akspeaker.AllowBleedoutDialogue(true)
+
+    if Elli.isDead()
+    if (AK69KatanaPersonalQuest.GetStage() == 200 && Game.GetPlayer().GetCurrentLocation() == Hideout)
+    AkSpeaker.ForceActorValue("Aggression", 0)
+    AkSpeaker.StopCombat()
+        Katana.StopCombat()
+        Katana.StopCombatAlarm()
+ 
+        AK69KatanaPersonalQuest.SetStage(210)
+     
+    Endif
+endif
+  endEvent

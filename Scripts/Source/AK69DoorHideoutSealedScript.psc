@@ -27,7 +27,7 @@ Function UnsealDoor()
 	RumbleSFX.Play(Game.GetPlayer())
 	DoorVFX.Stop(Self.GetReference())
 	Self.GetReference().SetOpen(True)
-	AK69KatanaPersonalQuest.SetStage(190)
+	
 EndFunction
 
 Event OnActivate(ObjectReference obj)

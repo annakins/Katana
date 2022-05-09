@@ -78,6 +78,7 @@ Important: Please don't re-distribute if you don't have permission.
 - [pottoply](https://www.nexusmods.com/skyrimspecialedition/mods/8608)
 - [Enroys](https://www.nexusmods.com/skyrimspecialedition/mods/60183?tab=files)
 - [xp32](https://www.nexusmods.com/skyrim/mods/45542/?tab=files)
+- [Spongeman131](https://www.nexusmods.com/skyrimspecialedition/mods/25773)
 #### Helpful Resources
 - [Xoleras](http://xoleras.com/)
 - [Testiger2](https://www.nexusmods.com/skyrim/users/7964964?tab=user+files)
