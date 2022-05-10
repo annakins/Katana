@@ -25,11 +25,27 @@
 ### Overview
 #### Important
 - Katana and all associated pages are currently under construction. 
-- **<span style="color: red">DO NOT import Katana into any follower framework. She has her own.</span>**
+- **Please do not import Katana into any follower framework. She has her own.**
 #### Recruitment
-Ready to meet Katana? She's at the Winking Skeever, seeking adventure. 
+Ready to meet Katana? She's at the **Winking Skeever**, seeking adventure. 
+
+#### Background and Features
+- Katana's a bounty hunter from Irin, a land far away from Skyrim. 
+- Levels with the player. Powerful, but not overpowered.
+- Has over `400` lines of dialogue.
+- Can wield 1h, 2h, bows, crossbows (she has a silent rifle).
+- Will pick locks (after a level of trust), does not affect stealth meter.
+- Has a moral compass.
+- Not a marriage candidate. 
+- *Les-be-honest.* <3
+- Has a unique and adorable mount named Takiyo.
+- Teleports to you when your health is low (I'm looking at you hardcore/permadeath players).
+- Teleports to enemies when they're at full health.
+- Cannot die.
+- CBBE body (NeverNude).
+
 #### Quest
-Do you enjoy collecting bounties? Great. Her main quest involves such activities, which begins when she trusts you more. 
+Do you enjoy collecting bounties? Awesome! Her main quest involves such activities, which begins when she trusts you more. 
 <details>
   <summary>
 When does it actually start (click for a hint)?
@@ -38,26 +54,23 @@ You need her mystical feather and summon spell to trigger the quest's script to 
 </details>
 
 
-### Credits and Thanks
+### Credits & Thanks
 #### Main
-- Anna Garcia - creator, manager, writer, voice of Katana. 
-- Kelsey Kat - creator, writer, voice of River.
+- Anna Garcia - creator, writer, voice of Katana. 
+- Kelsey Kat - co-creator, writer, voice of River.
 - My beautiful partner, [lafrenchtoasts](https://www.twitch.tv/lafrenchtoasts/about) - voice of Megara.
 - [Mossbal](https://www.castingcall.club/mossbal) - voice of Elli.
 - [Teenygiant](https://www.twitch.tv/teenygiant) - voice of T'ni Jhiant.
 - You, for taking the time to explore something I've given so much of my heart to. Thank you.
 #### Testers
-- Thanks so much for testing Katana in various environments: *avatarvitug, Felix3220, Astro, and more!*
+- Thanks so much for testing Katana in various environments: *avatarvitug, Astro, and more!*
 #### Animations (all with permission or open perms)
 Important: Please don't re-distribute if you don't have permission.
 - [JL10123](https://www.nexusmods.com/skyrimspecialedition/mods/52535) 
 - [juhaaaa](https://www.nexusmods.com/skyrimspecialedition/mods/45794) 
 - [skypia](https://www.nexusmods.com/skyrimspecialedition/users/433905) 
-- [cyh0405 and mahiwastaken](https://www.nexusmods.com/skyrimspecialedition/mods/43377)
 - [mofu](https://www.patreon.com/user?u=38051229) 
 - [Eskyrim](https://www.nexusmods.com/skyrimspecialedition/users/87987028?tab=user+files)
-- [dyuz](https://www.nexusmods.com/skyrimspecialedition/mods/37031)
-- [Anchor](https://www.patreon.com/user?u=44116480)
 #### Meshes & Textures (all with permission or open perms)
 Important: Please don't re-distribute if you don't have permission.
 - [Caliente's Beautiful Bodies Enhancer -CBBE-](https://www.nexusmods.com/skyrim/users/3330686?tab=user+files)
