@@ -5,14 +5,16 @@ Based on how things are going, version 1.0 will probably be released by August-S
 
 ## Beta Changelog
 
-### 0.48 - UNRELEASED
+### 0.48 - 05/20/2022
 *NOT compatible with previous versions.*
 - Nerfed Katana. *I apparently had her skilled in Destruction, too...* `You saw nothing.` ;)
-- Removed most of the combat animations. *If I reached out to you previously, thank you for giving me permission to include your wonderful mods. I sincerely appreciate your kindness.* 
+- Removed most of the combat animations. *If I reached out to you previously to include your mod, thank you for giving me permission to do so. I sincerely appreciate your kindness.* 
     - This is due to the fact that most people use their own combat frameworks these days.
     - Kept the idles and only a few other combat animations.
 - Removed ability for player to pickpocket Katana. 
 - Follow package has been updated to make her more combat-aware.
+- Added the rest of Elli's voice lines.
+- Added the rest of Katana's quest lines.
 
 ### 0.47 - 05/09/2022
 *NOT compatible with previous versions.*

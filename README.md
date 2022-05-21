@@ -41,6 +41,8 @@ Ready to meet Katana? She's at the **Winking Skeever**, seeking adventure.
 - Has a unique and adorable mount named Takiyo.
 - Teleports to you when your health is low (I'm looking at you hardcore/permadeath players).
 - Teleports to enemies when they're at full health.
+- Has a special mist dodge.
+- Goes invisible for strategy.
 - Cannot die.
 - CBBE body (NeverNude).
 
