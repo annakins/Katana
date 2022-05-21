@@ -32,7 +32,7 @@ Ready to meet Katana? She's at the **Winking Skeever**, seeking adventure.
 #### Background and Features
 - Katana's a bounty hunter from Irin, a land far away from Skyrim. 
 - Levels with the player. Powerful, but not overpowered.
-- Has over `400` lines of dialogue.
+- Has over `500` lines of dialogue.
 - Can wield 1h, 2h, bows, crossbows (she has a silent rifle).
 - Will pick locks (after a level of trust), does not affect stealth meter.
 - Has a moral compass.
