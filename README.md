@@ -45,7 +45,7 @@ Ready to meet Katana? She's at the **Winking Skeever**, seeking adventure.
 - Has a special mist dodge.
 - Goes invisible for strategy.
 - Cannot die.
-- CBBE body (NeverNude).
+- CBBE body (NeverNude by default).
 
 #### Quest
 Do you enjoy collecting bounties? Awesome! Her main quest involves such activities, which begins when she trusts you more. 
