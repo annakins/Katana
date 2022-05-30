@@ -1,0 +1,2 @@
+1.) Go to meshes > actors > character > cbbenude and copy all the contents.
+2.) Now to go meshes > actors > character > Katana > body and paste the contents there.

@@ -5,6 +5,16 @@ Based on how things are going, version 1.0 will probably be released by August-S
 
 ## Beta Changelog
 
+### 0.49 - 05/30/2022
+*Might not be compatible with previous versions.*
+- Changed Katana's hair.
+- Removed Katana's invisibility conditions for dragons.
+- Added a torch for Megara.
+- Added an option to proceed with quest if the player decides to attempt to kill the final villains.
+- Nerfed all enemies except for Lucky Irnsvar.
+- Added CBBE nude option.
+- More dialogue.
+
 ### 0.48 - 05/20/2022
 *NOT compatible with previous versions.*
 - Nerfed Katana. *I apparently had her skilled in Destruction, too...* `You saw nothing.` ;)

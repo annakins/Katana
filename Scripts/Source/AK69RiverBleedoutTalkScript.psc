@@ -13,7 +13,7 @@ Event OnEnterBleedout()
     Akspeaker.AllowBleedoutDialogue(true)
 
     if Elli.isDead()
-    if (AK69KatanaPersonalQuest.GetStage() == 200 && Game.GetPlayer().GetCurrentLocation() == Hideout)
+    if (Game.GetPlayer().GetCurrentLocation() == Hideout)
     AkSpeaker.ForceActorValue("Aggression", 0)
     AkSpeaker.StopCombat()
         Katana.StopCombat()

@@ -26,6 +26,7 @@
 #### Important
 - Katana and all associated pages are currently under construction. 
 - **Please do not import Katana into any follower framework. She has her own.**
+- Feel free to use or delete the optional `cbbenude` files. 
 #### Recruitment
 Ready to meet Katana? She's at the **Winking Skeever**, seeking adventure. 
 
