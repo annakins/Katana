@@ -15,6 +15,7 @@ Based on how things are going, version 1.0 will probably be released by August-S
 - Nerfed River and Katana more.
 - Elli and River are now in the same faction (so if you attack one, the other attacks).
 - Katana now has a special ability upon completing her quest. 
+- Katana can now live in an interior and non-hostile environment.
 
 ### 0.49 - 05/30/2022
 *Might not be compatible with previous versions.*
