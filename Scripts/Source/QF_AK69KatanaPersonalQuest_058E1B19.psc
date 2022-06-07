@@ -2,19 +2,14 @@
 ;NEXT FRAGMENT INDEX 38
 Scriptname QF_AK69KatanaPersonalQuest_058E1B19 Extends Quest Hidden
 
-;BEGIN ALIAS PROPERTY RunirWulfhart
+;BEGIN ALIAS PROPERTY LuckyIrnsvarNote
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_RunirWulfhart Auto
+ReferenceAlias Property Alias_LuckyIrnsvarNote Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY River
+;BEGIN ALIAS PROPERTY RiverHideout
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_River Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY FrozenHearth
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_FrozenHearth Auto
+ReferenceAlias Property Alias_RiverHideout Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY LuckyIrnsvar
@@ -22,19 +17,19 @@ ReferenceAlias Property Alias_FrozenHearth Auto
 ReferenceAlias Property Alias_LuckyIrnsvar Auto
 ;END ALIAS PROPERTY
 
+;BEGIN ALIAS PROPERTY FrozenHearth
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_FrozenHearth Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY RiverHideout2
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_RiverHideout2 Auto
+;END ALIAS PROPERTY
+
 ;BEGIN ALIAS PROPERTY DrunkenHuntsman
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_DrunkenHuntsman Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY SealedDoor
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_SealedDoor Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY BeeandBarb
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_BeeandBarb Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Elli
@@ -52,19 +47,19 @@ ReferenceAlias Property Alias_Megara Auto
 ReferenceAlias Property Alias_Katana Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY RiverHideout
+;BEGIN ALIAS PROPERTY BeeandBarb
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_RiverHideout Auto
+ReferenceAlias Property Alias_BeeandBarb Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY GaltunBoldThief
+;BEGIN ALIAS PROPERTY SealedDoor
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_GaltunBoldThief Auto
+ReferenceAlias Property Alias_SealedDoor Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY LuckyIrnsvarNote
+;BEGIN ALIAS PROPERTY RunirWulfhart
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_LuckyIrnsvarNote Auto
+ReferenceAlias Property Alias_RunirWulfhart Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Player
@@ -72,19 +67,19 @@ ReferenceAlias Property Alias_LuckyIrnsvarNote Auto
 ReferenceAlias Property Alias_Player Auto
 ;END ALIAS PROPERTY
 
+;BEGIN ALIAS PROPERTY GaltunBoldThief
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_GaltunBoldThief Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY River
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_River Auto
+;END ALIAS PROPERTY
+
 ;BEGIN ALIAS PROPERTY GaltunBoldThiefNote
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_GaltunBoldThiefNote Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY RiverHideout2
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_RiverHideout2 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Throne
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Throne Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY SilverBloodInn
@@ -92,57 +87,10 @@ ReferenceAlias Property Alias_Throne Auto
 ReferenceAlias Property Alias_SilverBloodInn Auto
 ;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_25
-Function Fragment_25()
-;BEGIN CODE
-;Elli approaches
-WatchingMSG.show()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_3
-Function Fragment_3()
-;BEGIN CODE
-setObjectiveCompleted(30)
-setObjectiveDisplayed(40)
-setObjectiveDisplayed(41)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_31
-Function Fragment_31()
-;BEGIN CODE
-;Scene after paralysis
-EscapeScene.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_8
-Function Fragment_8()
-;BEGIN CODE
-setObjectiveCompleted(80)
-setObjectiveCompleted(81)
-setObjectiveDisplayed(90)
-BeeandBarb.AddToMap()
-Alias_Megara.GetActorReference().EvaluatePackage()
-MegaraRef.moveto(BeeandBarb)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_7
-Function Fragment_7()
-;BEGIN CODE
-setObjectiveCompleted(70)
-setObjectiveDisplayed(80)
-setObjectiveDisplayed(81)
-Alias_Megara.GetActorReference().EvaluatePackage()
-;END CODE
-EndFunction
-;END FRAGMENT
+;BEGIN ALIAS PROPERTY Throne
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Throne Auto
+;END ALIAS PROPERTY
 
 ;BEGIN FRAGMENT Fragment_22
 Function Fragment_22()
@@ -163,73 +111,15 @@ ElliDeath.GetActorBase().setEssential(false)
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_16
-Function Fragment_16()
+;BEGIN FRAGMENT Fragment_8
+Function Fragment_8()
 ;BEGIN CODE
-setObjectiveCompleted(130)
-WinterholdScene.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_21
-Function Fragment_21()
-;BEGIN CODE
-setObjectiveDisplayed(170)
-;Elli just walked away, time for loyalty path
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_32
-Function Fragment_32()
-;BEGIN CODE
-setObjectiveCompleted(180)
-;River portal
-RiverRef.PlaceAtMe(InVis)	
-RiverRef.MoveTo(SilverBloodInn)
-RiverRef.PlaceAtMe(InVis)	
-Utility.Wait(0.3)
-setstage(250)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_9
-Function Fragment_9()
-;BEGIN CODE
-game.getplayer().AddItem(alias_galtunboldthiefnote.getref())
-setObjectiveCompleted(100)
-setObjectiveDisplayed(110)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_0
-Function Fragment_0()
-;BEGIN CODE
-SetObjectiveCompleted(10)
-SetObjectiveDisplayed(20)
-DrunkenHuntsman.AddToMap()
-MegaraRef.Enable()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_26
-Function Fragment_26()
-;BEGIN CODE
-;Combat begins
-Alias_Elli.GetActorReference().StartCombat(Game.GetPlayer())
-Alias_River.GetActorReference().StartCombat(Game.GetPlayer())
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_29
-Function Fragment_29()
-;BEGIN CODE
-;River tells Katana to stop
+setObjectiveCompleted(80)
+setObjectiveCompleted(81)
+setObjectiveDisplayed(90)
+BeeandBarb.AddToMap()
+Alias_Megara.GetActorReference().EvaluatePackage()
+MegaraRef.moveto(BeeandBarb)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -242,87 +132,21 @@ SetObjectiveDisplayed(10)
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_5
-Function Fragment_5()
+;BEGIN FRAGMENT Fragment_31
+Function Fragment_31()
 ;BEGIN CODE
-setObjectiveCompleted(50)
-setObjectiveDisplayed(60)
-GaltunBoldThiefRef.Enable()
+;Scene after paralysis
+EscapeScene.Start()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_35
-Function Fragment_35()
+;BEGIN FRAGMENT Fragment_2
+Function Fragment_2()
 ;BEGIN CODE
-setObjectiveCompleted(250)
-;complete
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_33
-Function Fragment_33()
-;BEGIN CODE
-setObjectiveDisplayed(250)
-RiverRef.Disable()
-Paralysis.Stop(Game.GetPlayer())
-Paralysis.Stop(Alias_Katana.GetActorReference())
-Game.EnablePlayerControls()
-Alias_Katana.GetActorReference().SetRestrained(false)
-setstage(260)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_11
-Function Fragment_11()
-;BEGIN CODE
-setObjectiveCompleted(110)
-setObjectiveDisplayed(120)
-setObjectiveDisplayed(121)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_23
-Function Fragment_23()
-;BEGIN CODE
-;Megara and Katana say bye for now in Winterhold
-Alias_Megara.GetActorReference().EvaluatePackage()
-Alias_Elli.GetActorReference().EvaluatePackage()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_6
-Function Fragment_6()
-;BEGIN CODE
-game.getplayer().AddItem(alias_luckyirnsvarnote.getref())
-setObjectiveCompleted(60)
-setObjectiveDisplayed(70)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_24
-Function Fragment_24()
-;BEGIN CODE
-;They just entered the hideout
-Alias_Elli.GetActorReference().moveto(RiverHideout2)
-HideoutIntroScene.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_4
-Function Fragment_4()
-;BEGIN CODE
-setObjectiveCompleted(40)
-setObjectiveCompleted(41)
-setObjectiveDisplayed(50)
-SilverBloodInn.AddToMap()
-MegaraRef.moveto(SilverBloodInn)
+SetObjectiveCompleted(20)
+SetObjectiveDisplayed(30)
+LuckyIrnsvarRef.Enable()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -349,6 +173,129 @@ ElliRef.Enable()
 EndFunction
 ;END FRAGMENT
 
+;BEGIN FRAGMENT Fragment_32
+Function Fragment_32()
+;BEGIN CODE
+setObjectiveCompleted(180)
+;River portal
+RiverRef.PlaceAtMe(InVis)	
+RiverRef.MoveTo(SilverBloodInn)
+RiverRef.PlaceAtMe(InVis)	
+Utility.Wait(0.3)
+setstage(250)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_26
+Function Fragment_26()
+;BEGIN CODE
+;Combat begins
+Alias_Elli.GetActorReference().StartCombat(Game.GetPlayer())
+Alias_River.GetActorReference().StartCombat(Game.GetPlayer())
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_21
+Function Fragment_21()
+;BEGIN CODE
+setObjectiveDisplayed(170)
+;Elli just walked away, time for loyalty path
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_16
+Function Fragment_16()
+;BEGIN CODE
+setObjectiveCompleted(130)
+WinterholdScene.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_33
+Function Fragment_33()
+;BEGIN CODE
+setObjectiveDisplayed(250)
+RiverRef.Disable()
+Paralysis.Stop(Game.GetPlayer())
+Paralysis.Stop(Alias_Katana.GetActorReference())
+Game.EnablePlayerControls()
+Alias_Katana.GetActorReference().SetRestrained(false)
+setstage(260)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_29
+Function Fragment_29()
+;BEGIN CODE
+;River tells Katana to stop
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_25
+Function Fragment_25()
+;BEGIN CODE
+;Elli approaches
+WatchingMSG.show()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_6
+Function Fragment_6()
+;BEGIN CODE
+game.getplayer().AddItem(alias_luckyirnsvarnote.getref())
+setObjectiveCompleted(60)
+setObjectiveDisplayed(70)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_35
+Function Fragment_35()
+;BEGIN CODE
+setObjectiveCompleted(250)
+;complete
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_7
+Function Fragment_7()
+;BEGIN CODE
+setObjectiveCompleted(70)
+setObjectiveDisplayed(80)
+setObjectiveDisplayed(81)
+Alias_Megara.GetActorReference().EvaluatePackage()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_5
+Function Fragment_5()
+;BEGIN CODE
+setObjectiveCompleted(50)
+setObjectiveDisplayed(60)
+GaltunBoldThiefRef.Enable()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_23
+Function Fragment_23()
+;BEGIN CODE
+;Megara and Katana say bye for now in Winterhold
+Alias_Megara.GetActorReference().EvaluatePackage()
+Alias_Elli.GetActorReference().EvaluatePackage()
+;END CODE
+EndFunction
+;END FRAGMENT
+
 ;BEGIN FRAGMENT Fragment_10
 Function Fragment_10()
 ;BEGIN CODE
@@ -370,12 +317,65 @@ MegaraRef.moveto(DrunkenHuntsman)
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_2
-Function Fragment_2()
+;BEGIN FRAGMENT Fragment_9
+Function Fragment_9()
 ;BEGIN CODE
-SetObjectiveCompleted(20)
-SetObjectiveDisplayed(30)
-LuckyIrnsvarRef.Enable()
+game.getplayer().AddItem(alias_galtunboldthiefnote.getref())
+setObjectiveCompleted(100)
+setObjectiveDisplayed(110)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_11
+Function Fragment_11()
+;BEGIN CODE
+setObjectiveCompleted(110)
+setObjectiveDisplayed(120)
+setObjectiveDisplayed(121)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_3
+Function Fragment_3()
+;BEGIN CODE
+setObjectiveCompleted(30)
+setObjectiveDisplayed(40)
+setObjectiveDisplayed(41)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_4
+Function Fragment_4()
+;BEGIN CODE
+setObjectiveCompleted(40)
+setObjectiveCompleted(41)
+setObjectiveDisplayed(50)
+SilverBloodInn.AddToMap()
+MegaraRef.moveto(SilverBloodInn)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_24
+Function Fragment_24()
+;BEGIN CODE
+;They just entered the hideout
+Alias_Elli.GetActorReference().moveto(RiverHideout2)
+HideoutIntroScene.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_0
+Function Fragment_0()
+;BEGIN CODE
+SetObjectiveCompleted(10)
+SetObjectiveDisplayed(20)
+DrunkenHuntsman.AddToMap()
+MegaraRef.Enable()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -426,3 +426,5 @@ EffectShader Property Paralysis  Auto
 ObjectReference Property RiverHideout2  Auto  
 
 VisualEffect Property AuraParticlesFX  Auto  
+
+

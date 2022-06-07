@@ -26,6 +26,8 @@ Message Property  FollowerDismissMessageWait Auto
 
 SetHirelingRehire Property HirelingRehireScript Auto
 
+GlobalVariable Property KatanaRelaxVar Auto
+
 GlobalVariable Property FollowerRecruited Auto
 
 Int Property iFollowerDismiss Auto Conditional
@@ -66,9 +68,11 @@ Function FollowerWait()
 
      actor FollowerActor = Katana.GetActorRef() as Actor
 
-     FollowerActor.SetActorValue("WaitingForPlayer", 1)
+     KatanaRelaxVar.SetValue(1)
 
      SetObjectiveDisplayed(10, abforce = true)
+
+	 FollowerActor.EvaluatePackage()
 
 EndFunction
 
@@ -78,15 +82,15 @@ Function FollowerFollow()
 
      actor FollowerActor = Katana.GetActorRef() as Actor
 
-     FollowerActor.SetActorValue("WaitingForPlayer", 0)
+	 KatanaRelaxVar.SetValue(0)
 
      SetObjectiveDisplayed(10, abdisplayed = false)
 
      FollowerActor.EvaluatePackage()
 
+
 EndFunction
 
- 
 
 Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
 
@@ -435,3 +439,4 @@ function UpdateAllStats()
 	PStat_ItemsStolen = Game.QueryStat("Items Stolen")
 
 endFunction
+

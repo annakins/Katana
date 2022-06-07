@@ -5,6 +5,17 @@ Based on how things are going, version 1.0 will probably be released by August-S
 
 ## Beta Changelog
 
+### 0.50 - 06/07/2022
+*NOT compatible with previous versions.*
+- Updated AI package.
+- More dialogue.
+- Added spell to get Katana unstuck.
+- New dialogue for when Katana isn't in your squad (I'll add more later).
+- Megara now has radiant bounty quests.
+- Nerfed River and Katana more.
+- Elli and River are now in the same faction (so if you attack one, the other attacks).
+- Katana now has a special ability upon completing her quest. 
+
 ### 0.49 - 05/30/2022
 *Might not be compatible with previous versions.*
 - Changed Katana's hair.

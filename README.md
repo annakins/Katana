@@ -74,7 +74,7 @@ Important: Please don't re-distribute if you don't have permission.
 - [skypia](https://www.nexusmods.com/skyrimspecialedition/users/433905) 
 - [mofu](https://www.patreon.com/user?u=38051229) 
 - [Eskyrim](https://www.nexusmods.com/skyrimspecialedition/users/87987028?tab=user+files)
-#### Meshes & Textures (all with permission or open perms)
+#### Assets (all with permission or open perms)
 Important: Please don't re-distribute if you don't have permission.
 - [Caliente's Beautiful Bodies Enhancer -CBBE-](https://www.nexusmods.com/skyrim/users/3330686?tab=user+files)
 - [Bijin Skin - CBBE](https://www.nexusmods.com/skyrim/mods/91953)
@@ -95,6 +95,7 @@ Important: Please don't re-distribute if you don't have permission.
 - [Enroys](https://www.nexusmods.com/skyrimspecialedition/mods/60183?tab=files)
 - [xp32](https://www.nexusmods.com/skyrim/mods/45542/?tab=files)
 - [Spongeman131](https://www.nexusmods.com/skyrimspecialedition/mods/25773)
+- [EnaiSiaion](https://www.nexusmods.com/skyrimspecialedition/mods/1090)
 #### Helpful Resources
 - [Xoleras](http://xoleras.com/)
 - [Testiger2](https://www.nexusmods.com/skyrim/users/7964964?tab=user+files)

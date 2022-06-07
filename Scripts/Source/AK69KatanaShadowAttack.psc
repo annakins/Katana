@@ -10,10 +10,6 @@ ReferenceAlias Property KatanaRef Auto
 Actor property Player auto
 Actor Property Katana Auto
 
-Event OnUpdate()
-RegisterForSingleUpdate(10)
-EndEvent
-
 function BeginTeleport()
 Katana.PlaceAtMe(InVis)
 endFunction
@@ -37,7 +33,7 @@ Function KatanaCombatStateChanged(Actor akTarget, int aeCombatState)
 	If (aeCombatState == 1) && (akTarget.IsFlying() == 0) && (akTarget.GetCurrentLocation() == KatanaIrin.GetCurrentLocation())
 	ShadowAttack()
 
-	Elseif 	(Player.GetActorValuePercentage("Health") <= 0.30)
+	Elseif 	((Player.GetActorValuePercentage("Health") <= 0.40) && (Player.GetActorValuePercentage("Health") > 0.10))
 		TeleporttoPlayer()
 	EndIf
 
