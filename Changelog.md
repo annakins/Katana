@@ -5,6 +5,12 @@ Based on how things are going, version 1.0 will probably be released by August-S
 
 ## Beta Changelog
 
+### 0.51 - 06/12/2022
+*NOT compatible with previous versions.*
+- Megara is now available as a follower (healer). 
+- Changed Elli's sword because paralysis seems buggy if overly used.
+- This log may be short, but the changes made were huge.
+
 ### 0.50 - 06/07/2022
 *NOT compatible with previous versions.*
 - Updated AI package.

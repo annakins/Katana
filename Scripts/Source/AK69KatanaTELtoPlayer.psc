@@ -12,6 +12,7 @@ float Property ZFloat Auto Hidden
 bool Property bCasting Auto
 ActorBase Property ActorOwner Auto
 globalvariable property AK69KatanaRidingVar auto
+GlobalVariable property followerrecruited auto
 
 function BeginTeleport()
 PlaceAtMe(InVis)
@@ -64,7 +65,7 @@ Event OnLoad()
 
 float FRand = utility.RandomFloat()
 
-	if (self.GetDistance(Player) > 2000)&&(Player.GetCurrentLocation() == self.GetCurrentLocation())
+	if (self.GetDistance(Player) > 2000)&&(FollowerRecruited.GetValue() ==1)
 
 		if (FRand > 0.2) 
 		bCasting = True
