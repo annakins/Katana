@@ -5,6 +5,11 @@ Based on how things are going, version 1.0 will probably be released by August-S
 
 ## Beta Changelog
 
+### 0.52 - 06/13/2022
+*Compatible with 0.51, before meeting Galtun Bold-Thief.*
+- Just did a quick nerf for Galtun and the enemies after.
+- Re-added the CBBE nude instructions because I forgot it in 0.51.
+
 ### 0.51 - 06/12/2022
 *NOT compatible with previous versions.*
 - Megara is now available as a follower (healer). 
