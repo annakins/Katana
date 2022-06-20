@@ -5,6 +5,10 @@ ReferenceAlias Property RKatana auto
 
 GlobalVariable Property FollowerRecruited Auto
 
+Scene Property KatanaPlayerReactionsScene auto
+GlobalVariable property KatanaPlayerReactionsVar auto
+
+
 int Property UpdateInterval auto
 float Property SettleRadius auto
 
@@ -142,6 +146,8 @@ function UpdateStats()
 	int BrawlsWon = Game.QueryStat("Brawls Won")
 	if Brawlswon > KatanaDataStorage.PStat_BrawlsWon
 		KatanaDataStorage.PStat_BrawlsWon = BrawlsWon
+		KatanaPlayerReactionsVar.SetValueInt(1)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMinor()	
 	endif
 
@@ -160,6 +166,8 @@ function UpdateStats()
 	int SkillIncrease = Game.QueryStat("Skill Increases")
 	if SkillIncrease > KatanaDataStorage.PStat_SkillIncrease 
 		KatanaDataStorage.PStat_SkillIncrease = SkillIncrease
+		KatanaPlayerReactionsVar.SetValueInt(2)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMinor()
 	endif
 
@@ -185,6 +193,8 @@ function UpdateStats()
 	int HousesOwned = Game.QueryStat("Houses Owned")
 	if HousesOwned > KatanaDataStorage.PStat_HousesOwned
 		KatanaDataStorage.PStat_HousesOwned = HousesOwned
+		KatanaPlayerReactionsVar.SetValueInt(3)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMinor()
 	endif
 	
@@ -236,11 +246,6 @@ function UpdateStats()
 		KatanaDataStorage.IncreaseRateMinor()
 	endif	
 	
-	int PeopleKilled = Game.QueryStat("People Killed")
-	if PeopleKilled > KatanaDataStorage.PStat_PeopleKilled
-		KatanaDataStorage.PStat_PeopleKilled = PeopleKilled
-		KatanaDataStorage.IncreaseRateMinor()
-	endif	
 	
 	int SpellsLearned = Game.QueryStat("Spells Learned")
 	if SpellsLearned > KatanaDataStorage.PStat_SpellsLearned
@@ -251,13 +256,15 @@ function UpdateStats()
 	int DragonSoulsCollected = Game.QueryStat("Dragon Souls Collected")
 	if DragonSoulsCollected > KatanaDataStorage.PStat_DragonSoulsCollected
 		KatanaDataStorage.PStat_DragonSoulsCollected = DragonSoulsCollected
+		KatanaPlayerReactionsVar.SetValueInt(4)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateModerate()
 	endif	
 	
 	int WordsOfPowerLearned = Game.QueryStat("Words Of Power Learned")
 	if WordsOfPowerLearned > KatanaDataStorage.PStat_WordsOfPowerLearned
 		KatanaDataStorage.PStat_WordsOfPowerLearned = WordsOfPowerLearned
-		KatanaDataStorage.IncreaseRateModerate()
+		KatanaDataStorage.IncreaseRateMinor()
 	endif	
 	
 	int ShoutsLearned = Game.QueryStat("Shouts Learned")
@@ -269,30 +276,40 @@ function UpdateStats()
 	int ShoutsMastered = Game.QueryStat("Shouts Mastered")
 	if ShoutsMastered > KatanaDataStorage.PStat_ShoutsMastered
 		KatanaDataStorage.PStat_ShoutsMastered = ShoutsMastered
+		KatanaPlayerReactionsVar.SetValueInt(5)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateModerate()
 	endif
 	
 	int WeaponsImproved = Game.QueryStat("Weapons Improved")
 	if WeaponsImproved > KatanaDataStorage.PStat_WeapsImproved
 		KatanaDataStorage.PStat_WeapsImproved = WeaponsImproved
+		KatanaPlayerReactionsVar.SetValueInt(8)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMinor()
 	endif	
 	
 	int WeaponsMade = Game.QueryStat("Weapons Made")
 	if WeaponsMade > KatanaDataStorage.PStat_WeapsMade
 		KatanaDataStorage.PStat_WeapsMade = WeaponsMade
+		KatanaPlayerReactionsVar.SetValueInt(6)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMinor()
 	endif
 	
 	int ArmorImproved = Game.QueryStat("Armor Improved")
 	if WeaponsMade > KatanaDataStorage.PStat_ArmorImproved
 		KatanaDataStorage.PStat_ArmorImproved = ArmorImproved
+		KatanaPlayerReactionsVar.SetValueInt(9)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMinor()
 	endif
 	
 	int ArmorMade = Game.QueryStat("Armor Made")
 	if ArmorMade > KatanaDataStorage.PStat_ArmorMade
 		KatanaDataStorage.PStat_ArmorMade = ArmorMade
+		KatanaPlayerReactionsVar.SetValueInt(7)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMinor()
 	endif
 	
@@ -317,92 +334,119 @@ function UpdateStats()
 	int EastmarchBounty = Game.QueryStat("Eastmarch Bounty")
 	if EastmarchBounty > KatanaDataStorage.PStat_EastmarchBounty
 		KatanaDataStorage.PStat_EastmarchBounty = EastmarchBounty
+		KatanaPlayerReactionsVar.SetValueInt(10)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMajor()
 	endif
 	
 	int FalkreathBounty = Game.QueryStat("Falkreath Bounty")
 	if FalkreathBounty > KatanaDataStorage.PStat_FalkreathBounty
 		KatanaDataStorage.PStat_FalkreathBounty = FalkreathBounty
+		KatanaPlayerReactionsVar.SetValueInt(10)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMajor()
 	endif
 	
 	int HaafingarBounty = Game.QueryStat("Haafingar Bounty")
 	if HaafingarBounty > KatanaDataStorage.PStat_HaafingarBounty
 		KatanaDataStorage.PStat_HaafingarBounty = HaafingarBounty
+		KatanaPlayerReactionsVar.SetValueInt(10)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMajor()
 	endif
 	
 	int HjaalmarchBounty = Game.QueryStat("Hjaalmarch Bounty")
 	if HjaalmarchBounty > KatanaDataStorage.PStat_HjaalmarchBounty
 		KatanaDataStorage.PStat_HjaalmarchBounty = HjaalmarchBounty
+		KatanaPlayerReactionsVar.SetValueInt(10)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMajor()
 	endif
 	
 	int ThePaleBounty = Game.QueryStat("The Pale Bounty")
 	if ThePaleBounty > KatanaDataStorage.PStat_ThePaleBounty
 		KatanaDataStorage.PStat_ThePaleBounty = ThePaleBounty
+		KatanaPlayerReactionsVar.SetValueInt(10)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMajor()
 	endif
 	
 	int TheReachBounty = Game.QueryStat("The Reach Bounty")
 	if TheReachBounty > KatanaDataStorage.PStat_TheReachBounty
 		KatanaDataStorage.PStat_TheReachBounty = TheReachBounty
+		KatanaPlayerReactionsVar.SetValueInt(10)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMajor()
 	endif
 	
 	int TheRiftBounty = Game.QueryStat("The Rift Bounty")
 	if TheRiftBounty > KatanaDataStorage.PStat_TheRiftBounty
 		KatanaDataStorage.PStat_TheRiftBounty = TheRiftBounty
+		KatanaPlayerReactionsVar.SetValueInt(10)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMajor()
 	endif
 	
 	int TribalOrcsBounty = Game.QueryStat("Tribal Orcs Bounty")
 	if TribalOrcsBounty > KatanaDataStorage.PStat_TribalOrcsBounty
 		KatanaDataStorage.PStat_TribalOrcsBounty = TribalOrcsBounty
+		KatanaPlayerReactionsVar.SetValueInt(10)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMajor()
 	endif
 	
 	int WhiterunBounty = Game.QueryStat("Whiterun Bounty")
 	if WhiterunBounty > KatanaDataStorage.PStat_WhiterunBounty
 		KatanaDataStorage.PStat_WhiterunBounty = WhiterunBounty
+		KatanaPlayerReactionsVar.SetValueInt(10)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMajor()
 	endif
 	
 	int WinterholdBounty = Game.QueryStat("Winterhold Bounty")
 	if WinterholdBounty > KatanaDataStorage.PStat_WinterholdBounty
 		KatanaDataStorage.PStat_WinterholdBounty = WinterholdBounty
+		KatanaPlayerReactionsVar.SetValueInt(10)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.IncreaseRateMajor()
 	endif
 	
-	int LocksPicked = Game.QueryStat("Locks Picked")
-	if LocksPicked > KatanaDataStorage.PStat_LocksPicked
-		KatanaDataStorage.PStat_LocksPicked = LocksPicked
-		KatanaDataStorage.IncreaseRateMinor()
-	endif
 	
 	;==============DECREASE==============	
 	
 	int Murders = Game.QueryStat("Murders")
 	if Murders > KatanaDataStorage.PStat_Murders
 		KatanaDataStorage.PStat_Murders = Murders
+		KatanaPlayerReactionsVar.SetValueInt(13)
+		KatanaPlayerReactionsScene.Start()
+		KatanaDataStorage.DecreaseRateMajor()
+	endif
+
+	int BunniesSlaughtered  = Game.QueryStat("Bunnies Slaughtered")
+	if BunniesSlaughtered > KatanaDataStorage.PStat_BunniesSlaughtered
+		KatanaDataStorage.PStat_BunniesSlaughtered = BunniesSlaughtered
+		KatanaPlayerReactionsVar.SetValueInt(14)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.DecreaseRateMajor()
 	endif
 	
 	int HorsesStolen = Game.QueryStat("Horses Stolen")
 	if HorsesStolen > KatanaDataStorage.PStat_HorsesStolen
 		KatanaDataStorage.PStat_HorsesStolen = HorsesStolen
-		KatanaDataStorage.DecreaseRateMajor()
+		KatanaDataStorage.DecreaseRateModerate()
 	endif
 	
 	int Trespasses = Game.QueryStat("Trespasses")
 	if Trespasses > KatanaDataStorage.PStat_Tresspasses
 		KatanaDataStorage.PStat_Tresspasses = Trespasses
-		KatanaDataStorage.DecreaseRateModerate()
+		KatanaDataStorage.DecreaseRateMinor()
 	endif
 	
 	int Bribes = Game.QueryStat("Bribes")
 	if Bribes > KatanaDataStorage.PStat_Bribes
 		KatanaDataStorage.PStat_Bribes = Bribes
+		KatanaPlayerReactionsVar.SetValueInt(11)
+		KatanaPlayerReactionsScene.Start()
 		KatanaDataStorage.DecreaseRateMinor()
 	endif
 	
@@ -410,19 +454,23 @@ function UpdateStats()
 	int PocketsPicked = Game.QueryStat("Pockets Picked")
 	if PocketsPicked > KatanaDataStorage.PStat_PocketsPicked
 		KatanaDataStorage.PStat_PocketsPicked = PocketsPicked
-		KatanaDataStorage.DecreaseRateModerate()
+		KatanaPlayerReactionsVar.SetValueInt(12)
+		KatanaPlayerReactionsScene.Start()
+		KatanaDataStorage.DecreaseRateMinor()
 	endif
 	
 	int ItemsPickpocketed = Game.QueryStat("Items Pickpocketed")
 	if ItemsPickpocketed > KatanaDataStorage.PStat_ItemsPickpocketed
 		KatanaDataStorage.PStat_ItemsPickpocketed = ItemsPickpocketed
-		KatanaDataStorage.DecreaseRateModerate()
+		KatanaDataStorage.DecreaseRateMinor()
 	endif
 	
 	int ItemsStolen = Game.QueryStat("Items Stolen")
 	if ItemsStolen > KatanaDataStorage.PStat_ItemsStolen
 		KatanaDataStorage.PStat_ItemsStolen = ItemsStolen
-		KatanaDataStorage.DecreaseRateModerate()
+		KatanaPlayerReactionsVar.SetValueInt(15)
+		KatanaPlayerReactionsScene.Start()
+		KatanaDataStorage.DecreaseRateMinor()
 	endif
 endFunction
 

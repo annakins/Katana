@@ -6,6 +6,7 @@ Sound property RumbleSFX Auto
 Quest property AK69KatanaPersonalQuest Auto
 Message property sealedMSG Auto
 bool isSealed
+GlobalVariable property FollowerRecruited Auto
 
 Event OnInit()
 SetupSealedDoor()
@@ -31,7 +32,7 @@ Function UnsealDoor()
 EndFunction
 
 Event OnActivate(ObjectReference obj)
-	if (isSealed)
+	if (isSealed) || (FollowerRecruited.GetValue() == 0)
 		sealedMSG.Show()
-	EndIf
+	EndIf	
 EndEvent

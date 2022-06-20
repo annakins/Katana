@@ -1,5 +1,5 @@
 # Katana
-<p align="center"><img src="https://imgur.com/NzjXb8B.png" width=90%/> 
+<p align="center"><img src="https://imgur.com/utpe4uz.png" width=90%/> 
 <div id="badges">
   <a href="https://discord.gg/eQcVzyCa2c">
     <img src="https://img.shields.io/badge/Discord-blue?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Badge"/>
@@ -36,7 +36,7 @@ Ready to meet Katana? She's at the **Winking Skeever**, seeking adventure.
 - Has over `600` lines of dialogue.
 - Can wield 1h, 2h, bows, crossbows (she has a silent rifle).
 - Will pick locks (after a level of trust), does not affect stealth meter.
-- Has a moral compass.
+- Neutral good alignment.
 - Not a marriage candidate. 
 - *Les-be-honest.* <3
 - Has a unique and adorable mount named Takiyo.
@@ -63,7 +63,6 @@ You need her mystical feather and summon spell to trigger the quest's script to 
 - Kelsey Kat - co-creator, writer, voice of River.
 - My beautiful partner, [lafrenchtoasts](https://www.twitch.tv/lafrenchtoasts/about) - voice of Megara.
 - [Mossbal](https://www.castingcall.club/mossbal) - voice of Elli.
-- [Teenygiant](https://www.twitch.tv/teenygiant) - voice of T'ni Jhiant.
 - You, for taking the time to explore something I've given so much of my heart to. Thank you.
 #### Testers
 - Thanks so much for testing Katana in various environments: *avatarvitug, Astro, and more!*

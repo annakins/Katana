@@ -345,7 +345,6 @@ int property PStat_Disarmed = 0 auto hidden
 int property PStat_UndeadKilled = 0 auto hidden
 int property PStat_DaedraKilled = 0 auto hidden
 int property PStat_AutomatonsKilled = 0 auto hidden
-int property PStat_PeopleKilled = 0 auto hidden
 int property PStat_SpellsLearned = 0 auto hidden
 int property PStat_DragonSoulsCollected = 0 auto hidden
 int property PStat_WordsOfPowerLearned = 0 auto hidden
@@ -368,11 +367,11 @@ int property PStat_TheRiftBounty = 0 auto hidden
 int property PStat_TribalOrcsBounty = 0 auto hidden
 int property PStat_WhiterunBounty = 0 auto hidden
 int property PStat_WinterholdBounty = 0 auto hidden
-int property PStat_LocksPicked = 0 auto hidden
 
 ;==============DECREASE==============
 
 int property PStat_Murders = 0 auto hidden
+int property PStat_BunniesSlaughtered = 0 auto hidden
 int property PStat_HorsesStolen = 0 auto hidden
 int property PStat_Tresspasses = 0 auto hidden
 int property PStat_Bribes = 0 auto hidden
@@ -403,7 +402,6 @@ function UpdateAllStats()
 	PStat_UndeadKilled = Game.QueryStat("Undead Killed")
 	PStat_DaedraKilled = Game.QueryStat("Daedra Killed")
 	PStat_AutomatonsKilled = Game.QueryStat("Automatons Killed")
-	PStat_PeopleKilled = Game.QueryStat("People Killed")
 	PStat_SpellsLearned = Game.QueryStat("Spells Learned")
 	PStat_DragonSoulsCollected = Game.QueryStat("Dragon Souls Collected")
 	PStat_WordsOfPowerLearned = Game.QueryStat("Words Of Power Learned")
@@ -426,10 +424,9 @@ function UpdateAllStats()
 	PStat_TribalOrcsBounty = Game.QueryStat("Tribal Orcs Bounty")
 	PStat_WhiterunBounty = Game.QueryStat("Whiterun Bounty")
 	PStat_WinterholdBounty = Game.QueryStat("Winterhold Bounty")
-	PStat_LocksPicked = Game.QueryStat("Locks Picked")
 	
 	
-	
+	PStat_LocationsDiscovered = Game.QueryStat("Bunnies Slaughtered")
 	PStat_Murders = Game.QueryStat("Murders")
 	PStat_HorsesStolen = Game.QueryStat("Horses Stolen")
 	PStat_Tresspasses = Game.QueryStat("Tresspasses")

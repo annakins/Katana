@@ -4,6 +4,11 @@ Estimated Nexus release:
 Based on how things are going, version 1.0 will probably be released by August-September of 2022.
 
 ## Beta Changelog
+### 0.53 - UNRELEASED
+- Nerfed all quest enemies. 
+- Made Megara's armor "playable".
+- Added new response system for player actions.
+- Modified relationship system.
 
 ### 0.52 - 06/13/2022
 *Compatible with 0.51, before meeting Galtun Bold-Thief.*

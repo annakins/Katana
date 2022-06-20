@@ -39,7 +39,6 @@ Minor Increase
 | Undead Killed |
 | Daedra Killed |
 | Automatons Killed |
-| People Killed |
 | Spells Learned |
 | Weapons Improved |
 | Weapons Made |
@@ -48,7 +47,7 @@ Minor Increase
 | Persuasions |
 | Poisons Mixed |
 | Poisons Used |
-| Locks Picked |
+| Words Of Power Learned |
 </details>
 
 <details>
@@ -56,7 +55,6 @@ Minor Increase
     Moderate Increase
   </summary>
 | Dragon Souls Collected |
-| Words Of Power Learned |
 | Shouts Learned |
 | Shouts Mastered |
 </details>
@@ -83,13 +81,6 @@ Minor Increase
 Minor Decrease
   </summary>
 | Bribes |
-</details>
-
-
-<details>
-  <summary>
-Moderate Decrease
-  </summary>
 | Trespasses |
 | Pockets Picked |
 | Items Pickpocketed |
@@ -99,9 +90,35 @@ Moderate Decrease
 
 <details>
   <summary>
-Major Decrease
+Moderate Decrease
   </summary>
-| Murders |
 | Horses Stolen |
 </details>
 
+
+<details>
+  <summary>
+Major Decrease
+  </summary>
+| Murders |
+| Bunnies Slaughtered |
+
+</details>
+
+### Reaction Global Vars
+These are mostly dev notes. ;)
+- `1` Brawls Won
+- `2` Skill Increases
+- `3` Houses Owned
+- `4` Dragon Souls Collected
+- `5` Shouts Mastered
+- `6` Weapon Made
+- `7` Armor Made
+- `8` Weapon Improved
+- `9` Armor Improved
+- `10` All bounties in the holds
+- `11` Bribes
+- `12` Pickpocketing
+- `13` Murders
+- `14` Bunnies Slaughtered
+- `15` Items Stolen
