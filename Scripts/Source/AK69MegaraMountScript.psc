@@ -4,7 +4,7 @@ Scriptname AK69MegaraMountScript extends ReferenceAlias
 ;-- Properties --------------------------------------
 actor property Megara auto
 actor property Player auto
-actor property Toast auto
+actor property Cappy auto
 faction property CurrentFollowerFaction auto
 globalvariable property AK69MegaraRidingVar auto
 globalvariable property FollowerRecruited auto
@@ -18,11 +18,11 @@ Activator Property InVis Auto
 
 
 function BeginTeleport()
-	Toast.PlaceAtMe(InVis)
+	Cappy.PlaceAtMe(InVis)
 	endFunction
 	
 	function EndTeleport()
-		Toast.PlaceAtMe(OutVis)
+		Cappy.PlaceAtMe(OutVis)
 	endFunction
 
 
@@ -56,14 +56,14 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 		If Megara.GetActorValue("WaitingForPlayer") == 0
 			If asEventName == "tailHorseMount"
 				
-				if (Megara.GetDistance(Toast) >= 2048) && (FollowerRecruited.GetValue() ==1) 
+				if (Megara.GetDistance(Cappy) >= 2048) && (FollowerRecruited.GetValue() ==1) 
 					BeginTeleport()
-                    Toast.setAlpha(0.1)
-                    Toast.MoveTo(Player as objectreference, -500.000 * Math.Sin(Player.GetAngleZ()), -500.000 * Math.Cos(Player.GetAngleZ()))
+                    Cappy.setAlpha(0.1)
+                    Cappy.MoveTo(Player as objectreference, -500.000 * Math.Sin(Player.GetAngleZ()), -500.000 * Math.Cos(Player.GetAngleZ()))
 				
 				EndTeleport()
 				Utility.Wait(0.1)
-				Toast.setAlpha(1)
+				Cappy.setAlpha(1)
 				endif
 				Utility.Wait(3)		
 				Megara.OnAnimationEvent(none, "tailHorseMount")
@@ -72,8 +72,7 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 			EndIf
 	
 			If asEventName == "tailHorseDismount"
-				if (Toast.GetDistance(Game.GetPlayersLastRiddenHorse()) <= 700)
-					Toast.SetDontMove()
+				if (Cappy.GetDistance(Game.GetPlayersLastRiddenHorse()) <= 700)					
 					Utility.Wait(3)
 					Megara.Dismount()
 					Megara.EvaluatePackage()

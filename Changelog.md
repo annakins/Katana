@@ -4,6 +4,14 @@ Estimated Nexus release:
 Based on how things are going, version 1.0 will probably be released by August-September of 2022.
 
 ## Beta Changelog
+
+### 0.54 - 06/28/2022
+*Not compatible with previous versions.*
+- Added travel packages for Cappy during quest (*ooh, immersion*).
+- Corrected seam, changed underwear.
+- Corrected a bunch of packages.
+- Also corrected the nude option.
+
 ### 0.53 - 06/21/2022
 *Likely not compatible with previous versions.*
 - Nerfed all quest enemies. 

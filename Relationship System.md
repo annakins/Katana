@@ -108,7 +108,7 @@ Major Decrease
 ### Reaction Global Vars
 These are mostly dev notes. ;)
 - `1` Brawls Won
-- `2` Skill Increases
+- ~~`2` Skill Increases~~
 - `3` Houses Owned
 - `4` Dragon Souls Collected
 - `5` Shouts Mastered

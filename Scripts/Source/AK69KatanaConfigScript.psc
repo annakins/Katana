@@ -169,11 +169,7 @@ function UpdateStats()
 	int SkillIncrease = Game.QueryStat("Skill Increases")
 	if SkillIncrease > KatanaDataStorage.PStat_SkillIncrease 
 		KatanaDataStorage.PStat_SkillIncrease = SkillIncrease		
-		KatanaDataStorage.IncreaseRateMinor()
-		if utility.randomfloat() < 0.25
-			KatanaPlayerReactionsVar.SetValueInt(2)
-		KatanaPlayerReactionsScene.Start()
-		endif
+		KatanaDataStorage.IncreaseRateMinor()		
 	endif
 
 	int SkillBooksRead = Game.QueryStat("Skill Books Read")

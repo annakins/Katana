@@ -75,13 +75,13 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 				Katana.OnAnimationEvent(none, "tailHorseMount")
 				Utility.Wait(0.3)
 				Katana.EvaluatePackage()
-				Takiyo.SetDontMove(false)
+				
 			EndIf
 	
 			If asEventName == "tailHorseDismount"
 				
 				if (Takiyo.GetDistance(Game.GetPlayersLastRiddenHorse()) <= 700)
-					Takiyo.SetDontMove()
+					
 					Utility.Wait(3)
 				Katana.Dismount()
 				Katana.EvaluatePackage()
