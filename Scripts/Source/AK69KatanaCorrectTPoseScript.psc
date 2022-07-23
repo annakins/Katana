@@ -1,6 +1,5 @@
 Scriptname AK69KatanaCorrectTPoseScript extends ActiveMagicEffect  
 
-
 Actor Property Katana Auto
 Activator Property InVis Auto
 

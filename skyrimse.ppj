@@ -17,8 +17,8 @@
     </Variables>
     <Imports>
         <!-- <Import>@ModsFolder\SKSE64\Scripts\Source</Import> -->
-        <Import>D:\MO2\mods\CKScripts\Scripts\Source</Import>
-        <Import>D:\MO2\mods\SKSE Scripts\Scripts\Source</Import>
+        <Import>D:\ADT\mods\CKScripts\Scripts\Source</Import>
+        <Import>D:\ADT\mods\SKSE\Scripts\Source</Import>
 
     </Imports>
     <Folders>

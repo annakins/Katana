@@ -2,13 +2,9 @@ Scriptname AK69KatanaConfigScript extends Quest
 
 AK69KatanaController property KatanaDataStorage auto
 ReferenceAlias Property RKatana auto
-
 GlobalVariable Property FollowerRecruited Auto
-
 Quest Property KatanaPlayerReactionsScene auto
 GlobalVariable property KatanaPlayerReactionsVar auto
-
-
 int Property UpdateInterval auto
 float Property SettleRadius auto
 
@@ -16,7 +12,6 @@ int __historySize = 8 ; remember to update the declarations if necessary
 float[] __playerPosX
 float[] __playerPosY
 float[] __playerPosZ
-
 
 Function Setup()
 	; history of player position over the last __historySize updates
@@ -35,11 +30,8 @@ Function Setup()
 		__playerPosZ[count] = _player.Z + 1000
 		count += 1
 	endwhile
-
 	RegisterForSingleUpdate(UpdateInterval)
 EndFunction
-
-
 
 Event OnUpdate()
 	; cycle all positions down one notch in the history arrays
@@ -48,7 +40,6 @@ Event OnUpdate()
 		__playerPosX[historyIndex] = __playerPosX[historyIndex + 1]
 		__playerPosY[historyIndex] = __playerPosY[historyIndex + 1]
 		__playerPosZ[historyIndex] = __playerPosZ[historyIndex + 1]
-
 		historyIndex += 1
 	endwhile
 
@@ -106,25 +97,17 @@ Event OnUpdate()
 		endif
 	endif
 
-
 If RKatana.GetActorReference().HasLOS(Game.GetPlayer())
 UpdateStats()
-
 Else
 	KatanaDataStorage.UpdateAllStats()
-
 EndIf
-
 	RegisterForSingleUpdate(UpdateInterval)
 EndEvent
 
-
-
-
 function UpdateStats()
+
 	;==============INCREASE==============
-	
-	
 	int LocationsDiscovered = Game.QueryStat("Locations Discovered")
 	if LocationsDiscovered > KatanaDataStorage.PStat_LocationsDiscovered
 		KatanaDataStorage.PStat_LocationsDiscovered = LocationsDiscovered
@@ -150,8 +133,7 @@ function UpdateStats()
 		if utility.randomfloat() < 0.25
 		KatanaPlayerReactionsVar.SetValueInt(1)
 		KatanaPlayerReactionsScene.Start()
-		endif
-		
+		endif		
 	endif
 
 	int StandingStones = Game.QueryStat("Standing Stones Found")
@@ -190,7 +172,6 @@ function UpdateStats()
 		KatanaDataStorage.IncreaseRateMinor()
 	endif	
 
-
 	int HousesOwned = Game.QueryStat("Houses Owned")
 	if HousesOwned > KatanaDataStorage.PStat_HousesOwned
 		KatanaDataStorage.PStat_HousesOwned = HousesOwned		
@@ -198,9 +179,9 @@ function UpdateStats()
 		if utility.randomfloat() < 0.25
 		KatanaPlayerReactionsVar.SetValueInt(3)
 		KatanaPlayerReactionsScene.Start()
+		endif
 	endif
-	endif
-	
+
 	int QuestsCompleted = Game.QueryStat("Quests Completed")
 	if QuestsCompleted > KatanaDataStorage.PStat_QuestsCompleted
 		KatanaDataStorage.PStat_QuestsCompleted = QuestsCompleted
@@ -248,8 +229,7 @@ function UpdateStats()
 		KatanaDataStorage.PStat_AutomatonsKilled = AutomatonsKilled
 		KatanaDataStorage.IncreaseRateMinor()
 	endif	
-	
-	
+		
 	int SpellsLearned = Game.QueryStat("Spells Learned")
 	if SpellsLearned > KatanaDataStorage.PStat_SpellsLearned
 		KatanaDataStorage.PStat_SpellsLearned = SpellsLearned
@@ -445,8 +425,7 @@ function UpdateStats()
 		KatanaPlayerReactionsScene.Start()
 		endif
 	endif
-	
-	
+		
 	;==============DECREASE==============	
 	
 	int Murders = Game.QueryStat("Murders")
@@ -490,8 +469,7 @@ function UpdateStats()
 		KatanaPlayerReactionsScene.Start()
 		endif
 	endif
-	
-	
+		
 	int PocketsPicked = Game.QueryStat("Pockets Picked")
 	if PocketsPicked > KatanaDataStorage.PStat_PocketsPicked
 		KatanaDataStorage.PStat_PocketsPicked = PocketsPicked		
@@ -518,6 +496,3 @@ function UpdateStats()
 		endif
 	endif
 endFunction
-
-
-

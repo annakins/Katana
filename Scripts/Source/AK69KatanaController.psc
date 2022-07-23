@@ -2,170 +2,87 @@ Scriptname AK69KatanaController extends Quest  Conditional
 
 ;This is where Katana's memory is stored.
 
-
-;Controller Stuff
 Actor Property PlayerREF Auto
-
 ReferenceAlias Property Katana Auto
-
 Faction Property DismissedFollowerFaction Auto
-
 Faction Property CurrentHireling Auto
-
 Message Property  FollowerDismissMessage Auto
-
 Message Property  FollowerDismissMessageWedding Auto
-
 Message Property  FollowerDismissMessageCompanions Auto
-
 Message Property  FollowerDismissMessageCompanionsMale Auto
-
 Message Property  FollowerDismissMessageCompanionsFemale Auto
-
 Message Property  FollowerDismissMessageWait Auto
-
 SetHirelingRehire Property HirelingRehireScript Auto
-
 GlobalVariable Property KatanaRelaxVar Auto
-
 GlobalVariable Property FollowerRecruited Auto
-
 Int Property iFollowerDismiss Auto Conditional
-
-
-
-
-;Controller Things
  
 bool Property PlayerSettled auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)
-
      actor FollowerActor = FollowerRef as Actor
-
      FollowerActor.RemoveFromFaction(DismissedFollowerFaction)
-
      If FollowerActor.GetRelationshipRank(PlayerREF) <3 && FollowerActor.GetRelationshipRank(PlayerREF) >= 0
-
           FollowerActor.SetRelationshipRank(PlayerREF, 3)
-
      EndIf
-
      FollowerActor.SetPlayerTeammate()
-
      Katana.ForceRefTo(FollowerActor)
-
      FollowerActor.EvaluatePackage()
-
      FollowerRecruited.SetValue(1)
 	 AK69KatanaConfigQuest.Start()
-
 EndFunction
-
- 
 
 Function FollowerWait()
-
-     actor FollowerActor = Katana.GetActorRef() as Actor
-
+     actor FollowerActor = Katana.GetReference() as Actor
      KatanaRelaxVar.SetValue(1)
-
      SetObjectiveDisplayed(10, abforce = true)
-
 	 FollowerActor.EvaluatePackage()
-
 EndFunction
-
- 
 
 Function FollowerFollow()
-
-     actor FollowerActor = Katana.GetActorRef() as Actor
-
+     actor FollowerActor = Katana.GetReference() as Actor
 	 KatanaRelaxVar.SetValue(0)
-
      SetObjectiveDisplayed(10, abdisplayed = false)
-
      FollowerActor.EvaluatePackage()
-
-
 EndFunction
-
 
 Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
-
      If Katana && Katana.GetActorReference().IsDead() == False
-
           If iMessage == 0
-
                FollowerDismissMessage.Show()
-
           ElseIf iMessage == 1
-
                FollowerDismissMessageWedding.Show()
-
           ElseIf iMessage == 2
-
                FollowerDismissMessageCompanions.Show()
-
           ElseIf iMessage == 3
-
                FollowerDismissMessageCompanionsMale.Show()
-
           ElseIf iMessage == 4
-
                FollowerDismissMessageCompanionsFemale.Show()
-
           ElseIf iMessage == 5
-
                FollowerDismissMessageWait.Show()
-
           Else
-
               FollowerDismissMessage.Show()
-
           EndIf
-
-          actor DismissedFollowerActor = Katana.GetActorRef() as Actor
-
+          actor DismissedFollowerActor = Katana.GetReference() as Actor
           DismissedFollowerActor.StopCombatAlarm()
-
           DismissedFollowerActor.AddToFaction(DismissedFollowerFaction)
-
           DismissedFollowerActor.SetPlayerTeammate(false)
-
           DismissedFollowerActor.RemoveFromFaction(CurrentHireling)
-
           DismissedFollowerActor.SetActorValue("WaitingForPlayer", 0)
-
           FollowerRecruited.SetValue(0)
-
           HirelingRehireScript.DismissHireling(DismissedFollowerActor.GetActorBase())
-
           If iSayLine == 1
-
                iFollowerDismiss = 1
-
               DismissedFollowerActor.EvaluatePackage()
-
              Utility.Wait(2)
-
           EndIf
-
              Katana.Clear()
-
              iFollowerDismiss = 0
-
      EndIf
 	  AK69KatanaConfigQuest.Stop()
-
 EndFunction
 
-
-
-
 ;==============Katana Relationship System==============
-
 
 Quest Property AK69KatanaConfigQuest Auto
 
@@ -177,7 +94,6 @@ Quest Property AK69KatanaConfigQuest Auto
 ;Does favors when relationship is at 2.
 ;Trades at 0.
 ;Waits at 0.
-
 
 ;Data Stuff
 
@@ -225,60 +141,44 @@ float Function ClampFloat(float value, float min, float max)
 EndFunction
 
 Function ModAssessment(int assessmentIndex, float amount)
-
-	
 	if (assessmentIndex == 1)
 		PlayerAssessmentRelationship += amount
 	endif
-	
 EndFunction
-
-
 
 ;;; ASSESSMENT INCREMENTS AND FUNCTIONS
 float __minorAssessment = 0.05
 float __moderateAssessment = 0.2
 float __majorAssessment = 0.5
 
-
 Function IncreaseRateMinor()
 	ModAssessment(1, __minorAssessment)
-	
-EndFunction
+	EndFunction
 
 Function IncreaseRateModerate()
 	ModAssessment(1, __moderateAssessment)
-	
 EndFunction
 
 Function IncreaseRateMajor()
 	ModAssessment(1, __majorAssessment)
-	
 EndFunction
-
 
 Function DecreaseRateMinor()
 	ModAssessment(1, -__minorAssessment)
-	
 EndFunction
 
 Function DecreaseRateModerate()
 	ModAssessment(1, -__moderateAssessment)
-	
 EndFunction
 
 Function DecreaseRateMajor()
 	ModAssessment(1, -__majorAssessment)
-	
 EndFunction
-
 
 ;;; END ASSESSMENT INCREMENTS AND FUNCTIONS
 
-
 int __historySize = 10  ; if this changes, make sure to update 
 						;   array declarations below in Setup()
-
 
 bool __isSetup = false
 Function Setup(int forceNPC=0)
@@ -286,41 +186,30 @@ Function Setup(int forceNPC=0)
 	if (__isSetup)
 		return
 	endif
-	__isSetup = true
-	
-	ak69relationship = new float[10]
-	
+	__isSetup = true	
+	ak69relationship = new float[10]	
 
 	; fill dem arrays
 	int count = 0
 	while (count < __historySize)
-		; everything starts at initial anchor values
-	
-		ak69relationship[count] = __assessmentAnchorRelationship
-		
+		; everything starts at initial anchor values	
+		ak69relationship[count] = __assessmentAnchorRelationship		
 		count += 1
 	endwhile
-
-	
-
 	RegisterForSingleUpdate(SecondsBetweenPeriodicUpdates)
 EndFunction
-
 
 int Property SecondsBetweenPeriodicUpdates auto
 
 Event OnUpdate()
 	int count = 0
-	while (count < (__historySize - 1))
-	
+	while (count < (__historySize - 1))	
 		ak69relationship[count] = ak69relationship[count+1]
 		count += 1
 	endwhile
-	ak69relationship[__historySize - 1] = __ak69relationshiplevel
-	
+	ak69relationship[__historySize - 1] = __ak69relationshiplevel	
 	RegisterForSingleUpdate(SecondsBetweenPeriodicUpdates)
 EndEvent
-
 
 ;Relationship Stuff
 
@@ -424,8 +313,7 @@ function UpdateAllStats()
 	PStat_TribalOrcsBounty = Game.QueryStat("Tribal Orcs Bounty")
 	PStat_WhiterunBounty = Game.QueryStat("Whiterun Bounty")
 	PStat_WinterholdBounty = Game.QueryStat("Winterhold Bounty")
-	
-	
+		
 	PStat_LocationsDiscovered = Game.QueryStat("Bunnies Slaughtered")
 	PStat_Murders = Game.QueryStat("Murders")
 	PStat_HorsesStolen = Game.QueryStat("Horses Stolen")
@@ -434,6 +322,4 @@ function UpdateAllStats()
 	PStat_PocketsPicked = Game.QueryStat("Pockets Picked")
 	PStat_ItemsPickpocketed = Game.QueryStat("Items Pickpocketed")
 	PStat_ItemsStolen = Game.QueryStat("Items Stolen")
-
 endFunction
-

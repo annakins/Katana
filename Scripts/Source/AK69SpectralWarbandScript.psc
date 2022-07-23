@@ -19,16 +19,13 @@ Float EndLocX
 ;-- Functions ---------------------------------------
 
 Event OnEffectFinish(Actor akTarget, Actor akCaster)
-
-	self.Dispel()
+self.Dispel()
 endEvent
 
 Event OnUpdate()
-
 	if !KatanaShadow || KatanaShadow.IsDead()
-		self.Dispel()
+	self.Dispel()
 	endIf
-
 endEvent
 
 Event OnEffectStart(Actor akTarget, Actor akCaster)
@@ -39,15 +36,12 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
 	EndLocY = WB_DistanceInFront * math.Cos(TargetAngle)
 	KatanaShadow.MoveTo(Katana as objectreference, EndLocX, EndLocY, 0 as Float, true)
 	KatanaShadow.SetAngle(Katana.GetAngleX(), Katana.GetAngleY(), TargetAngle)    
-	KatanaShadow.AddSpell(SpectralWarbandFXSpell, true)
-  	
+	KatanaShadow.AddSpell(SpectralWarbandFXSpell, true)  	
 	if TargetCombatTarget
 		KatanaShadow.StartCombat(TargetCombatTarget)
 	endIf
-
 	self.RegisterForSingleUpdate(WB_UpdateRate)
 endEvent
-
 
 Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
 	Utility.Wait(4.0)

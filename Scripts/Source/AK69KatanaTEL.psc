@@ -5,7 +5,6 @@ Scriptname  AK69KatanaTEL extends ObjectReference  ;by EB/Xoleras xoleras.com - 
 Activator Property OutVis Auto
 Activator Property InVis Auto
 VisualEffect Property VisEffect Auto
-
 STATIC Property OutLocMarker Auto
 float Property XFloat Auto Hidden
 float Property YFloat Auto Hidden
@@ -13,14 +12,6 @@ float Property ZFloat Auto Hidden
 Keyword Property ActorTypeDragon Auto
 bool Property bCasting Auto
 ActorBase Property ActorOwner Auto
-
-
-
-
-
-
-
-
 
 function BeginTeleport()
 PlaceAtMe(InVis)
@@ -31,14 +22,11 @@ PlaceAtMe(OutVis)
 endFunction
 
 function TeleportTo(ObjectReference TeleportTarget, bool bTargetIsLocation, ObjectReference TeleportLocation = None, float WaitTime)
-
 float XLoc = PolarToRectangularX(TeleportTarget.GetPositionX(), 15, 128)
 float YLoc = PolarToRectangularY(TeleportTarget.GetPositionY(), 15, 128)	;to do: add param instead of fixed numbers
 float zOffset = GetHeadingAngle(TeleportTarget)
 utility.wait(0.1)
-
 debug.trace(self + "If no pass, TeleportTarget may be NONE:" + TeleportTarget)
-
 	if (bTargetIsLocation)	;then get offset
 	debug.trace("Target is Location")
 		if (TeleportTarget)
@@ -46,8 +34,7 @@ debug.trace(self + "If no pass, TeleportTarget may be NONE:" + TeleportTarget)
 		utility.wait(0.4)
 		SetPosition(XLoc, YLoc, TeleportTarget.GetPositionZ()) ; added Z os for adjustments
 		SetAngle(GetAngleX(), GetAngleY(), GetAngleZ() + zOffset)
-		endIf
-		
+		endIf		
 	elseif (TeleportLocation)
 		BeginTeleport()
 		utility.wait(0.4)
@@ -71,13 +58,11 @@ utility.wait(0.1)
 
 ;debug.trace(self + "COMBAT If no pass, TeleportTarget may be NONE:" + TeleportTarget)
 		if (TeleportTarget)
-		VisEffect.Play(self, 1.0)
-		
+		VisEffect.Play(self, 1.0)		
 		utility.wait(0.4)
 		SetPosition(XLoc, YLoc, TeleportTarget.GetPositionZ()) ; added Z os for adjustments
 		SetAngle(GetAngleX(), GetAngleY(), GetAngleZ() + GetHeadingAngle(TeleportTarget))
-		VisEffect.Play(self, 1.0)
-		
+		VisEffect.Play(self, 1.0)		
 		utility.wait(2)
 		CheckSuccess(TeleportTarget)
 		bCasting = False
@@ -96,20 +81,16 @@ bool function HitAsFollower(Actor ActorToCheck)
 if ((ActorToCheck == Game.GetPlayer())||(ActorToCheck.HasKeyword(ActorTypeDragon))) 
 return true
 endIf
-
 endFunction
 
 Event OnHit(ObjectReference akAggressor, Form akSource, Projectile akProjectile, bool abPowerAttack, bool abSneakAttack, bool abBashAttack, bool abHitBlocked)
 
 float FRand = utility.RandomFloat()
-
 if (bCasting)||(HitAsFollower(akAggressor As Actor))
 return
 endIf
-
 	;debug.trace( self + "hit detected!")
 	if (self.GetDistance(akAggressor) > 768)&&(akAggressor.GetCurrentLocation() == self.GetCurrentLocation())
-
 		if (FRand > 0.2) 
 		bCasting = True
 		CombatTeleportTo(akAggressor, 0.4)
@@ -128,12 +109,10 @@ float Function CalculateDesiredAngle(ObjectReference RefAngle)
 float T = GetHeadingAngle(RefAngle)
 
 	if (T < 45)&&(T > -45)
-	return (T+180)
-	
+	return (T+180)	
 	else
 	return T
-	endIf
-	
+	endIf	
 endFunction
 
 float Function PolarToRectangularY(float rY, float Degrees, float Radius) ;wow, no outbound parameters allowed :/

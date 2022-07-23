@@ -1,9 +1,20 @@
 ## Release
 
 Estimated Nexus release: 
-Based on how things are going, version 1.0 will probably be released by August-September of 2022.
+Based on how things are going, version 1.0 will probably be released by September-December of 2022.
 
 ## Beta Changelog
+
+### 0.55.1 - 07/22/2022
+*Needs testers due to the amount of updates, and unsure if compatible with previous version.*
+- Changed Takiyo and Cappy's Stay packages.
+- Added missing dialogue.
+- Corrected Megara's hair so there's no clipping when she wears helmets.
+- Added more dialogue.
+- Added possible sneak bug fix.
+- Added possible follower-on-follower attack fix.
+- Did a round of script clean-up.
+- Reduced Katana's regen, but increased damage.
 
 ### 0.54 - 06/28/2022
 *Not compatible with previous versions.*

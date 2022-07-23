@@ -4,7 +4,7 @@
         {
             "type": "pyro",
             "projectFile": "skyrimse.ppj",
-            "gamePath": "D:\\Games\\steamapps\\common\\Skyrim Special Edition\\",
+            "gamePath": "D:\\ADT\\Game Root\\",
             "problemMatcher": [
                 "$PapyrusCompiler"
             ],

@@ -22,8 +22,6 @@ function EndTeleport()
 PlaceAtMe(OutVis)
 endFunction
 
-
-
 function TeleportTo(ObjectReference TeleportTarget, float WaitTime)
 
 XFloat = self.GetPositionX()
@@ -35,8 +33,6 @@ float XLoc = PolarToRectangularX(TeleportTarget.GetPositionX(), fdir, 64)
 float YLoc = PolarToRectangularY(TeleportTarget.GetPositionY(), fdir, 64)	;to do: add prop instead of fixed numbers
 
 utility.wait(0.1)
-
-
 		if (TeleportTarget)
 		BeginTeleport()
 		utility.wait(0.4)
@@ -48,8 +44,8 @@ utility.wait(0.1)
 		bCasting = False
 	endIf
 	if Player.IsOnMount() && AK69MegaraRidingVar.GetValue() == 1 as Float
-							self.OnAnimationEvent(none, "tailHorseMount")
-						endIf
+	self.OnAnimationEvent(none, "tailHorseMount")
+	endIf
 endFunction
 
 function CheckSuccess(ObjectReference ObjPoint)
@@ -60,13 +56,9 @@ function CheckSuccess(ObjectReference ObjPoint)
 	endIf
 endFunction
 
-
 Event OnLoad()
-
 float FRand = utility.RandomFloat()
-
 	if (self.GetDistance(Player) > 2000)&&(FollowerRecruited.GetValue() ==1)
-
 		if (FRand > 0.2) 
 		bCasting = True
 		TeleportTo(Player, 0.4)
@@ -85,12 +77,10 @@ float Function CalculateDesiredAngle(ObjectReference RefAngle)
 float T = GetHeadingAngle(RefAngle)
 
 	if (T < 45)&&(T > -45)
-	return (T+180)
-	
+	return (T+180)	
 	else
 	return T
-	endIf
-	
+	endIf	
 endFunction
 
 float Function PolarToRectangularY(float rY, float Degrees, float Radius) ;wow, no outbound parameters allowed :/

@@ -13,7 +13,6 @@ float[] __playerPosX
 float[] __playerPosY
 float[] __playerPosZ
 
-
 Function Setup()
 	; history of player position over the last __historySize updates
 	__playerPosX = new float[8]
@@ -35,8 +34,6 @@ Function Setup()
 	RegisterForSingleUpdate(UpdateInterval)
 EndFunction
 
-
-
 Event OnUpdate()
 	; cycle all positions down one notch in the history arrays
 	int historyIndex = 0
@@ -44,7 +41,6 @@ Event OnUpdate()
 		__playerPosX[historyIndex] = __playerPosX[historyIndex + 1]
 		__playerPosY[historyIndex] = __playerPosY[historyIndex + 1]
 		__playerPosZ[historyIndex] = __playerPosZ[historyIndex + 1]
-
 		historyIndex += 1
 	endwhile
 
@@ -58,14 +54,12 @@ Event OnUpdate()
 	;   in follow mode
 	if (FollowerRecruited.GetValue() ==1) 
 		bool switchedPackageConditions = false
-
 		if (RMegara.GetActorReference().GetActorValue("WaitingForPlayer") != 0)
 			; she's not willing to wait for the player right now, but for
 			;  some reason is waiting. Let's kick her out of this.
 			RMegara.GetActorReference().SetActorValue("WaitingForPlayer", 0)
 			switchedPackageConditions = true
 		endif
-
 		; calculate distance between history start and present
 		;    sqrt((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2)
 		float xFactor = (__playerPosX[0] - _player.X)
@@ -101,13 +95,5 @@ Event OnUpdate()
 			RMegara.GetActorReference().EvaluatePackage()
 		endif
 	endif
-
-
 	RegisterForSingleUpdate(UpdateInterval)
 EndEvent
-
-
-
-
-
-

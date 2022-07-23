@@ -27,8 +27,7 @@ Function UnsealDoor()
 	Game.GetPlayer().RampRumble(0.15, 1, 1600)
 	RumbleSFX.Play(Game.GetPlayer())
 	DoorVFX.Stop(Self.GetReference())
-	Self.GetReference().SetOpen(True)
-	
+	Self.GetReference().SetOpen(True)	
 EndFunction
 
 Event OnActivate(ObjectReference obj)

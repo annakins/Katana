@@ -7,4 +7,3 @@ Event OnInit()
     Cappy.BlockActivation()
     self.setactorowner(Megaramountbase)   
 EndEvent
-
