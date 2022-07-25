@@ -5,6 +5,9 @@ Version 1.0 will be released by September of 2022. Still a WIP, but playtesting 
 
 ## Beta Changelog
 
+### 0.56b - 07/25/2022
+- Added GetRandomPercent for reactions to player scenes.
+
 ### 0.56 - 07/25/2022
 *Needed to just release this due to v0.55.1 being a bit "off".*
 - Reverted back to original damage.
