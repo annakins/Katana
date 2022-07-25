@@ -83,7 +83,7 @@ EndFunction
 ;========================
 
 Function Pacify()
-	Actor KatanaIrin = KatanaRef.GetActorRef()
+	Actor KatanaIrin = KatanaRef.GetReference() as Actor
 	KatanaIrin.StopCombat()	
 	KatanaIrin.StopCombatAlarm()
 	KatanaIrin.EvaluatePackage()	

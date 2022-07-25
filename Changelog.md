@@ -1,9 +1,21 @@
 ## Release
 
 Estimated Nexus release: 
-Based on how things are going, version 1.0 will probably be released by September-December of 2022.
+Version 1.0 will be released by September of 2022. Still a WIP, but playtesting from various sources will be helpful.
 
 ## Beta Changelog
+
+### 0.56 - 07/25/2022
+*Needed to just release this due to v0.55.1 being a bit "off".*
+- Reverted back to original damage.
+- Added a spell to try to correct sneak bug.
+- Fixed typo on `Game.QueryStat("Trespasses")`.
+- Did a round of script clean-up.
+- Changed follow distance package for both Katana and Megara.
+- Added new bleedout behavior for both Katana and Megara.
+- Tweaked Cappy's travel packages during the quest.
+- Reduced Megara's aggression.
+- Modified Katana's and Megara's combat styles. Harry Styles.
 
 ### 0.55.1 - 07/22/2022
 *Needs testers due to the amount of updates, and unsure if compatible with previous version.*

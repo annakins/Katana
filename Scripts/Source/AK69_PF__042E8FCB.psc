@@ -15,6 +15,7 @@ EndFunction
 ;BEGIN FRAGMENT Fragment_2
 Function Fragment_2(Actor akActor)
 ;BEGIN CODE
+Cappy.Activate(Megara, true)
 Megara.EvaluatePackage()
 ;END CODE
 EndFunction
@@ -23,3 +24,5 @@ EndFunction
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
 
 Actor Property Megara  Auto  
+
+Actor Property Cappy  Auto  

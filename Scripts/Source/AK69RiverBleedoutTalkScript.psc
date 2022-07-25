@@ -7,7 +7,7 @@ Actor Property Elli Auto
 ReferenceAlias Property River Auto
 
 Event OnEnterBleedout()
-    actor AkSpeaker = River.GetActorReference()
+    actor AkSpeaker = River.GetReference() as Actor
     Akspeaker.AllowBleedoutDialogue(true)
     if Elli.isDead()
     if (Game.GetPlayer().GetCurrentLocation() == Hideout)

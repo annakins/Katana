@@ -262,7 +262,7 @@ int property PStat_WinterholdBounty = 0 auto hidden
 int property PStat_Murders = 0 auto hidden
 int property PStat_BunniesSlaughtered = 0 auto hidden
 int property PStat_HorsesStolen = 0 auto hidden
-int property PStat_Tresspasses = 0 auto hidden
+int property PStat_Trespasses = 0 auto hidden
 int property PStat_Bribes = 0 auto hidden
 int property PStat_PocketsPicked = 0 auto hidden
 int property PStat_ItemsPickpocketed = 0 auto hidden
@@ -317,7 +317,7 @@ function UpdateAllStats()
 	PStat_LocationsDiscovered = Game.QueryStat("Bunnies Slaughtered")
 	PStat_Murders = Game.QueryStat("Murders")
 	PStat_HorsesStolen = Game.QueryStat("Horses Stolen")
-	PStat_Tresspasses = Game.QueryStat("Tresspasses")
+	PStat_Trespasses = Game.QueryStat("Trespasses")
 	PStat_Bribes = Game.QueryStat("Bribes")
 	PStat_PocketsPicked = Game.QueryStat("Pockets Picked")
 	PStat_ItemsPickpocketed = Game.QueryStat("Items Pickpocketed")

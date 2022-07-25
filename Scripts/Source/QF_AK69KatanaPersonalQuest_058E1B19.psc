@@ -298,7 +298,7 @@ RiverHideout.AddToMap()
 (Alias_SealedDoor as AK69DoorHideoutSealedScript).UnsealDoor()
 RiverRef.Enable()
 
-actor ElliDeath = Alias_Elli.GetActorReference()
+actor ElliDeath = Alias_Elli.GetReference() as Actor
 ElliDeath.moveto(RiverHideout2)
 ElliDeath.GetActorBase().setEssential(false)
 

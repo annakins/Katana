@@ -455,8 +455,8 @@ function UpdateStats()
 	endif
 	
 	int Trespasses = Game.QueryStat("Trespasses")
-	if Trespasses > KatanaDataStorage.PStat_Tresspasses
-		KatanaDataStorage.PStat_Tresspasses = Trespasses
+	if Trespasses > KatanaDataStorage.PStat_Trespasses
+		KatanaDataStorage.PStat_Trespasses = Trespasses
 		KatanaDataStorage.DecreaseRateMinor()
 	endif
 	
