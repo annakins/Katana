@@ -13,6 +13,8 @@
 
 </div></p>
 
+# The next update will be on Nexus Mods unless otherwise stated.
+
 
 ### Table of Contents
 - [Overview](https://github.com/annakins/Katana#overview)
