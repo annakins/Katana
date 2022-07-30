@@ -13,7 +13,7 @@
 
 </div></p>
 
-# The next update will be on Nexus Mods unless necessary.
+# The next update will be on Nexus Mods unless necessary. The information below is now outdated. Please go to https://github.com/annakins/Katana/releases for updates (pre-Nexus).
 
 
 ### Table of Contents
