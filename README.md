@@ -13,7 +13,7 @@
 
 </div></p>
 
-# The next update will be on Nexus Mods unless otherwise stated.
+# The next update will be on Nexus Mods unless necessary.
 
 
 ### Table of Contents
