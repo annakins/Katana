@@ -5,6 +5,19 @@ Version 1.0 will be released by September of 2022. Still a WIP, but playtesting 
 
 ## Beta Changelog
 
+### 0.57 - 07/30/2022
+- Decided to remove the `Armors Improved` stat for reactions due to bugginess.
+- Made River and Elli stronger.
+- Added float values to reduce amount of times Katana would teleport to you to save you.
+- Changed Megara's staff to a Firebolt one.
+- Made Katana's shadow much stronger.
+- Removed hood from my initial experimental days.
+- Megara can now cure player diseases. She needs garlic in return.
+- Changed FX for Megara summons.
+- Removed most of the DAR folders.
+- Corrected typos. Hehe, thanks Destiny.
+- Checked the box for `Stores Text` for Player Reference Aliases, to make patching easier (RE: considering mods like Khajiit Speak).
+
 ### 0.56b - 07/25/2022
 - Added GetRandomPercent for reactions to player scenes.
 

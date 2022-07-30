@@ -288,15 +288,16 @@ function UpdateStats()
 		endif
 	endif
 	
-	int ArmorImproved = Game.QueryStat("Armor Improved")
-	if WeaponsMade > KatanaDataStorage.PStat_ArmorImproved
-		KatanaDataStorage.PStat_ArmorImproved = ArmorImproved		
-		KatanaDataStorage.IncreaseRateMinor()
-		if utility.randomfloat() < 0.25
-			KatanaPlayerReactionsVar.SetValueInt(9)
-		KatanaPlayerReactionsScene.Start()
-		endif
-	endif
+	;Removing this due to unidentifiable spam.
+	;int ArmorImproved = Game.QueryStat("Armor Improved")
+	;if WeaponsMade > KatanaDataStorage.PStat_ArmorImproved
+		;KatanaDataStorage.PStat_ArmorImproved = ArmorImproved		
+		;KatanaDataStorage.IncreaseRateMinor()
+		;if utility.randomfloat() < 0.25
+			;KatanaPlayerReactionsVar.SetValueInt(9)
+		;KatanaPlayerReactionsScene.Start()
+		;endif
+	;endif
 	
 	int ArmorMade = Game.QueryStat("Armor Made")
 	if ArmorMade > KatanaDataStorage.PStat_ArmorMade

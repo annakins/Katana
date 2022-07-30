@@ -241,7 +241,7 @@ int property PStat_ShoutsLearned = 0 auto hidden
 int property PStat_ShoutsMastered = 0 auto hidden
 int property PStat_WeapsImproved = 0 auto hidden
 int property PStat_WeapsMade = 0 auto hidden
-int property PStat_ArmorImproved = 0 auto hidden
+;int property PStat_ArmorImproved = 0 auto hidden
 int property PStat_ArmorMade = 0 auto hidden
 int property PStat_PoisonsMixed = 0 auto hidden
 int property PStat_PoisonsUsed = 0 auto hidden
@@ -298,7 +298,7 @@ function UpdateAllStats()
 	PStat_ShoutsMastered = Game.QueryStat("Shouts Mastered")
 	PStat_WeapsImproved = Game.QueryStat("Weapons Improved")
 	PStat_WeapsMade = Game.QueryStat("Weapons Made")
-	PStat_ArmorImproved = Game.QueryStat("Armor Improved")
+	;PStat_ArmorImproved = Game.QueryStat("Armor Improved")
 	PStat_ArmorMade = Game.QueryStat("Armor Made")
 	PStat_Persuasions = Game.QueryStat("Persuasions")
 	PStat_PoisonsMixed = Game.QueryStat("Poisons Mixed")

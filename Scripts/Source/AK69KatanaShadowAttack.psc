@@ -30,7 +30,7 @@ Function KatanaCombatStateChanged(Actor akTarget, int aeCombatState)
 	akTarget.GetCombatState()
 	If (aeCombatState == 1) && (akTarget.IsFlying() == 0) && (akTarget.GetCurrentLocation() == KatanaIrin.GetCurrentLocation())
 	ShadowAttack()
-	Elseif 	((Player.GetActorValuePercentage("Health") <= 0.40) && (Player.GetActorValuePercentage("Health") > 0.10))
+	Elseif 	((Player.GetActorValuePercentage("Health") <= 0.40) && (Player.GetActorValuePercentage("Health") > 0.10) && (utility.randomfloat() < 0.25))
 		TeleporttoPlayer()
 	EndIf
 EndFunction

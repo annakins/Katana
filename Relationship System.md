@@ -42,7 +42,6 @@ Minor Increase
 | Spells Learned |
 | Weapons Improved |
 | Weapons Made |
-| Armor Improved |
 | Armor Made |
 | Persuasions |
 | Poisons Mixed |
@@ -115,7 +114,7 @@ These are mostly dev notes. ;)
 - `6` Weapon Made
 - `7` Armor Made
 - `8` Weapon Improved
-- `9` Armor Improved
+- ~~`9` Armor Improved~~ : Apparently buggy.
 - `10` All bounties in the holds
 - `11` Bribes
 - `12` Pickpocketing
