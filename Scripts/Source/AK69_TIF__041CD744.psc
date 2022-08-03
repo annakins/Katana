@@ -8,7 +8,9 @@ Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 Game.GetPlayer().AddSpell(SummonMegara)
 Game.GetPlayer().AddSpell(UnstuckMegara)
-	self.GetOwningQuest().SetStage(5)
+self.GetOwningQuest().SetStage(5)
+CrossedArmsIdleMarker.Delete()
+ElliRef.Delete()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -18,3 +20,7 @@ EndFunction
 SPELL Property SummonMegara  Auto  
 
 SPELL Property UnstuckMegara  Auto  
+
+ObjectReference Property CrossedArmsIdleMarker  Auto  
+
+ObjectReference Property ElliRef  Auto  

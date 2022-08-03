@@ -2,24 +2,9 @@
 ;NEXT FRAGMENT INDEX 42
 Scriptname QF_AK69KatanaPersonalQuest_058E1B19 Extends Quest Hidden
 
-;BEGIN ALIAS PROPERTY BeeandBarb
+;BEGIN ALIAS PROPERTY Katana
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_BeeandBarb Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY SilverBloodInn
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_SilverBloodInn Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY DrunkenHuntsman
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_DrunkenHuntsman Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY GaltunBoldThiefNote
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_GaltunBoldThiefNote Auto
+ReferenceAlias Property Alias_Katana Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY FrozenHearth
@@ -27,44 +12,9 @@ ReferenceAlias Property Alias_GaltunBoldThiefNote Auto
 ReferenceAlias Property Alias_FrozenHearth Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY LuckyIrnsvarNote
+;BEGIN ALIAS PROPERTY SilverBloodInn
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_LuckyIrnsvarNote Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY RiverHideout2
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_RiverHideout2 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Megara
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Megara Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY SealedDoor
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_SealedDoor Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY RiverHideout
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_RiverHideout Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY LuckyIrnsvar
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_LuckyIrnsvar Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Player
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Player Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Elli
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Elli Auto
+ReferenceAlias Property Alias_SilverBloodInn Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY GaltunBoldThief
@@ -72,14 +22,29 @@ ReferenceAlias Property Alias_Elli Auto
 ReferenceAlias Property Alias_GaltunBoldThief Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Katana
+;BEGIN ALIAS PROPERTY RiverHideout
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Katana Auto
+ReferenceAlias Property Alias_RiverHideout Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Cappy
+;BEGIN ALIAS PROPERTY Player
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Cappy Auto
+ReferenceAlias Property Alias_Player Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Throne
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Throne Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY BeeandBarb
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_BeeandBarb Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY SealedDoor
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_SealedDoor Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY River
@@ -92,22 +57,45 @@ ReferenceAlias Property Alias_River Auto
 ReferenceAlias Property Alias_RunirWulfhart Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Throne
+;BEGIN ALIAS PROPERTY LuckyIrnsvarNote
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Throne Auto
+ReferenceAlias Property Alias_LuckyIrnsvarNote Auto
 ;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_9
-Function Fragment_9()
-;BEGIN CODE
-game.getplayer().AddItem(alias_galtunboldthiefnote.getreference())
-setObjectiveCompleted(100)
-setObjectiveDisplayed(110)
-AK69MegaraPQRidingVar.SetValue(1)
-Alias_Megara.GetActorReference().EvaluatePackage()
-;END CODE
-EndFunction
-;END FRAGMENT
+;BEGIN ALIAS PROPERTY Megara
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Megara Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY GaltunBoldThiefNote
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_GaltunBoldThiefNote Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY DrunkenHuntsman
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_DrunkenHuntsman Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY LuckyIrnsvar
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_LuckyIrnsvar Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Cappy
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Cappy Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Elli
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Elli Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY RiverHideout2
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_RiverHideout2 Auto
+;END ALIAS PROPERTY
 
 ;BEGIN FRAGMENT Fragment_21
 Function Fragment_21()
@@ -121,21 +109,24 @@ CappyRef.moveto(WhiterunCappy)
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_22
-Function Fragment_22()
+;BEGIN FRAGMENT Fragment_26
+Function Fragment_26()
 ;BEGIN CODE
-setObjectiveCompleted(170)
-setObjectiveDisplayed(180)
-RiverHideout.AddToMap()
+;Combat begins
+Alias_Elli.GetActorReference().StartCombat(Game.GetPlayer())
+Alias_River.GetActorReference().StartCombat(Game.GetPlayer())
+;END CODE
+EndFunction
+;END FRAGMENT
 
-(Alias_SealedDoor as AK69DoorHideoutSealedScript).UnsealDoor()
-RiverRef.Enable()
-
-actor ElliDeath = Alias_Elli.GetReference() as Actor
-ElliDeath.moveto(RiverHideout2)
-ElliDeath.GetActorBase().setEssential(false)
-
-;Time to go to River and Elli is now mortal
+;BEGIN FRAGMENT Fragment_6
+Function Fragment_6()
+;BEGIN CODE
+game.getplayer().AddItem(alias_luckyirnsvarnote.getreference())
+setObjectiveCompleted(60)
+setObjectiveDisplayed(70)
+AK69MegaraPQRidingVar.SetValue(1)
+Alias_Megara.GetActorReference().EvaluatePackage()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -150,12 +141,27 @@ Alias_Cappy.GetActorReference().EvaluatePackage()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_26
-Function Fragment_26()
+;BEGIN FRAGMENT Fragment_7
+Function Fragment_7()
 ;BEGIN CODE
-;Combat begins
-Alias_Elli.GetActorReference().StartCombat(Game.GetPlayer())
-Alias_River.GetActorReference().StartCombat(Game.GetPlayer())
+setObjectiveCompleted(70)
+setObjectiveDisplayed(79)
+setObjectiveDisplayed(80)
+Alias_Megara.GetActorReference().EvaluatePackage()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_33
+Function Fragment_33()
+;BEGIN CODE
+setObjectiveDisplayed(250)
+RiverRef.Delete()
+Paralysis.Stop(Game.GetPlayer())
+Paralysis.Stop(Alias_Katana.GetActorReference())
+Game.EnablePlayerControls()
+Alias_Katana.GetActorReference().SetRestrained(false)
+setstage(260)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -178,20 +184,6 @@ Function Fragment_29()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_33
-Function Fragment_33()
-;BEGIN CODE
-setObjectiveDisplayed(250)
-RiverRef.Disable()
-Paralysis.Stop(Game.GetPlayer())
-Paralysis.Stop(Alias_Katana.GetActorReference())
-Game.EnablePlayerControls()
-Alias_Katana.GetActorReference().SetRestrained(false)
-setstage(260)
-;END CODE
-EndFunction
-;END FRAGMENT
-
 ;BEGIN FRAGMENT Fragment_31
 Function Fragment_31()
 ;BEGIN CODE
@@ -201,10 +193,12 @@ EscapeScene.Start()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_1
-Function Fragment_1()
+;BEGIN FRAGMENT Fragment_2
+Function Fragment_2()
 ;BEGIN CODE
-SetObjectiveDisplayed(10)
+SetObjectiveCompleted(20)
+SetObjectiveDisplayed(30)
+LuckyIrnsvarRef.Enable()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -242,16 +236,17 @@ Function Fragment_5()
 setObjectiveCompleted(50)
 setObjectiveDisplayed(60)
 GaltunBoldThiefRef.Enable()
+LuckyIrnsvarRef.Delete()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_39
-Function Fragment_39()
+;BEGIN FRAGMENT Fragment_28
+Function Fragment_28()
 ;BEGIN CODE
-;Megara dismounts at Riften
-AK69MegaraPQRidingVar.SetValue(0)
-Alias_Cappy.GetActorReference().EvaluatePackage()
+;River has entered bleedout
+AuraParticlesFX.stop(RiverRef)
+SurrenderScene.Start()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -266,35 +261,32 @@ Alias_Elli.GetActorReference().EvaluatePackage()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_0
-Function Fragment_0()
+;BEGIN FRAGMENT Fragment_9
+Function Fragment_9()
 ;BEGIN CODE
-SetObjectiveCompleted(10)
-SetObjectiveDisplayed(20)
-DrunkenHuntsman.AddToMap()
-MegaraRef.Enable()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_3
-Function Fragment_3()
-;BEGIN CODE
-SetObjectiveCompleted(30)
-setObjectiveDisplayed(39)
-setObjectiveDisplayed(40)
+game.getplayer().AddItem(alias_galtunboldthiefnote.getreference())
+setObjectiveCompleted(100)
+setObjectiveDisplayed(110)
 AK69MegaraPQRidingVar.SetValue(1)
 Alias_Megara.GetActorReference().EvaluatePackage()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_11
-Function Fragment_11()
+;BEGIN FRAGMENT Fragment_24
+Function Fragment_24()
 ;BEGIN CODE
-setObjectiveCompleted(110)
-setObjectiveDisplayed(119)
-setObjectiveDisplayed(120)
+;They just entered the hideout
+Alias_Elli.GetActorReference().moveto(RiverHideout2)
+HideoutIntroScene.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_36
+Function Fragment_36()
+;BEGIN CODE
+;Finale and Katana talks
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -319,16 +311,22 @@ Function Fragment_10()
 setObjectiveCompleted(90)
 setObjectiveDisplayed(100)
 RunirWulfhartRef.Enable()
+GaltunBoldThiefRef.Delete()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_28
-Function Fragment_28()
+;BEGIN FRAGMENT Fragment_4
+Function Fragment_4()
 ;BEGIN CODE
-;River has entered bleedout
-AuraParticlesFX.stop(RiverRef)
-SurrenderScene.Start()
+setObjectiveCompleted(40)
+setObjectiveCompleted(41)
+setObjectiveDisplayed(50)
+SilverBloodInn.AddToMap()
+MegaraRef.moveto(SilverBloodInn)
+utility.wait(1.0)
+CappyRef.moveto(MarkarthCappy)
+ReadingIdleDrunkenHuntsmanMarker.Delete()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -338,6 +336,54 @@ Function Fragment_16()
 ;BEGIN CODE
 setObjectiveCompleted(130)
 WinterholdScene.Start()
+RunirWulfhartRef.Delete()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_22
+Function Fragment_22()
+;BEGIN CODE
+setObjectiveCompleted(170)
+setObjectiveDisplayed(180)
+RiverHideout.AddToMap()
+
+(Alias_SealedDoor as AK69DoorHideoutSealedScript).UnsealDoor()
+RiverRef.Enable()
+
+actor ElliDeath = Alias_Elli.GetReference() as Actor
+ElliDeath.moveto(RiverHideout2)
+ElliDeath.GetActorBase().setEssential(false)
+
+;Time to go to River and Elli is now mortal
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_1
+Function Fragment_1()
+;BEGIN CODE
+SetObjectiveDisplayed(10)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_39
+Function Fragment_39()
+;BEGIN CODE
+;Megara dismounts at Riften
+AK69MegaraPQRidingVar.SetValue(0)
+Alias_Cappy.GetActorReference().EvaluatePackage()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_38
+Function Fragment_38()
+;BEGIN CODE
+;Megara dismounts at Markarth
+AK69MegaraPQRidingVar.SetValue(0)
+Alias_Cappy.GetActorReference().EvaluatePackage()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -355,79 +401,38 @@ utility.wait(1.0)
 CappyRef.moveto(WinterholdCappy)
 utility.wait(1.0)
 ElliRef.Enable()
+ReadingIdleBeeandBarbMarker.Delete()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_2
-Function Fragment_2()
+;BEGIN FRAGMENT Fragment_11
+Function Fragment_11()
 ;BEGIN CODE
-SetObjectiveCompleted(20)
-SetObjectiveDisplayed(30)
-LuckyIrnsvarRef.Enable()
+setObjectiveCompleted(110)
+setObjectiveDisplayed(119)
+setObjectiveDisplayed(120)
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_4
-Function Fragment_4()
+;BEGIN FRAGMENT Fragment_0
+Function Fragment_0()
 ;BEGIN CODE
-setObjectiveCompleted(40)
-setObjectiveCompleted(41)
-setObjectiveDisplayed(50)
-SilverBloodInn.AddToMap()
-MegaraRef.moveto(SilverBloodInn)
-utility.wait(1.0)
-CappyRef.moveto(MarkarthCappy)
+SetObjectiveCompleted(10)
+SetObjectiveDisplayed(20)
+DrunkenHuntsman.AddToMap()
+MegaraRef.Enable()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_38
-Function Fragment_38()
+;BEGIN FRAGMENT Fragment_3
+Function Fragment_3()
 ;BEGIN CODE
-;Megara dismounts at Markarth
-AK69MegaraPQRidingVar.SetValue(0)
-Alias_Cappy.GetActorReference().EvaluatePackage()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_36
-Function Fragment_36()
-;BEGIN CODE
-;Finale and Katana talks
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_7
-Function Fragment_7()
-;BEGIN CODE
-setObjectiveCompleted(70)
-setObjectiveDisplayed(79)
-setObjectiveDisplayed(80)
-Alias_Megara.GetActorReference().EvaluatePackage()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_24
-Function Fragment_24()
-;BEGIN CODE
-;They just entered the hideout
-Alias_Elli.GetActorReference().moveto(RiverHideout2)
-HideoutIntroScene.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_6
-Function Fragment_6()
-;BEGIN CODE
-game.getplayer().AddItem(alias_luckyirnsvarnote.getreference())
-setObjectiveCompleted(60)
-setObjectiveDisplayed(70)
+SetObjectiveCompleted(30)
+setObjectiveDisplayed(39)
+setObjectiveDisplayed(40)
 AK69MegaraPQRidingVar.SetValue(1)
 Alias_Megara.GetActorReference().EvaluatePackage()
 ;END CODE
@@ -500,3 +505,9 @@ ObjectReference Property WhiterunCappy  Auto
 GlobalVariable Property AK69KatanaPQCompleted  Auto  
 
 Quest Property MegaraRecruitQuest  Auto  
+
+ObjectReference Property ReadingIdleDrunkenHuntsmanMarker  Auto  
+
+ObjectReference Property ReadingIdleBeeandBarbMarker  Auto  
+
+

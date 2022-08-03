@@ -5,6 +5,17 @@ Version 1.0 will be released by September of 2022. Still a WIP, but playtesting 
 
 ## Beta Changelog
 
+### 0.58 - 08/03/2022
+- Corrected Megara's cure function. No longer uses the generic Stendarr template.
+- Elli's travel to hideout package changed. 
+- Added more emotion values and gestures.
+- Added delete scripts for all Chasing the Current object references.
+- Tweaked Megara's healing package.
+- Made it so the two heal themselves even if not recruited.
+- Cleaned an ITM record.
+- Added "IsInDialogueWithPlayer" for all greetings so you don't constantly hear "Yes?" | "What's going on?" LOL.
+- Converted Elli's lines to FUZ.
+
 ### 0.57 - 07/30/2022
 - Decided to remove the `Armors Improved` stat for reactions due to bugginess.
 - Made River and Elli stronger.
