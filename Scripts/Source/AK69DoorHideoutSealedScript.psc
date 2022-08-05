@@ -1,6 +1,5 @@
 Scriptname AK69DoorHideoutSealedScript extends ReferenceAlias  
 
-Sound property RumbleSFX Auto
 Quest property AK69KatanaPersonalQuest Auto
 Message property sealedMSG Auto
 bool isSealed
@@ -11,7 +10,7 @@ SetupSealedDoor()
 EndEvent
 
 Function SetupSealedDoor()
-	if (Self.GetOwningQuest().GetStage() < 180)
+	if (Self.GetOwningQuest().GetStage() < 170)
 	Self.GetReference().BlockActivation(True)
 	isSealed = True
 	Utility.Wait(0.5)	
@@ -20,9 +19,7 @@ EndFunction
 
 Function UnsealDoor()
 	Self.GetReference().BlockActivation(False)
-	isSealed = False
-	Game.GetPlayer().RampRumble(0.15, 1, 1600)
-	RumbleSFX.Play(Game.GetPlayer())
+	isSealed = False		
 	Self.GetReference().SetOpen(True)	
 EndFunction
 

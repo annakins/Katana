@@ -5,6 +5,14 @@ Version 1.0 will be released by September of 2022. Still a WIP, but playtesting 
 
 ## Beta Changelog
 
+### 0.59 - 08/05/2022
+- Just kidding, now the bleedout package works for when the two are not recruited.
+- Just kidding part 2: I needed to take off `IsInDialogueWithPlayer` for Goodbye topics.
+- Changed some parameters for stage 170 of the quest so you don't run into Elli.
+- Tweaked the villain values.
+- Changed River's combat style so she uses magic more.
+- Added more dialogue.
+
 ### 0.58 - 08/03/2022
 - Corrected Megara's cure function. No longer uses the generic Stendarr template.
 - Elli's travel to hideout package changed. 
@@ -14,7 +22,7 @@ Version 1.0 will be released by September of 2022. Still a WIP, but playtesting 
 - Made it so the two heal themselves even if not recruited.
 - Cleaned an ITM record.
 - Added "IsInDialogueWithPlayer" for all greetings so you don't constantly hear "Yes?" | "What's going on?" LOL.
-- Converted Elli's lines to FUZ.
+- Converted Elli's audio lines to FUZ.
 
 ### 0.57 - 07/30/2022
 - Decided to remove the `Armors Improved` stat for reactions due to bugginess.
