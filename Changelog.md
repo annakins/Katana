@@ -5,6 +5,11 @@ Version 1.0 will be released by September of 2022. Still a WIP, but playtesting 
 
 ## Beta Changelog
 
+### 0.60 - 08/08/2022
+- Removed the LocTypeInn condition to get the quest started.
+- New FOMOD.
+- Added distance feature.
+
 ### 0.59 - 08/05/2022
 - Just kidding, now the bleedout package works for when the two are not recruited.
 - Just kidding part 2: I needed to take off `IsInDialogueWithPlayer` for Goodbye topics.
