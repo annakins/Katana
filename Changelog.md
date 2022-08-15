@@ -5,10 +5,21 @@ Version 1.0 will be released by September of 2022. Still a WIP, but playtesting 
 
 ## Beta Changelog
 
+### 0.61 - 08/15/22
+- Added dialogue.
+- Modified debug spell. Sneak bug should go away when you see it.
+- Increased Megara's healing powers.
+- Added more unvoiced Megara lines.
+- Corrected the Wander Kill package.
+- Suppressed rifle noise.
+- Tweaked both Megara's and Katana's combat styles.
+- Renamed some assets to make more sense when using the console, ex: `Shadow` > `Katana's Shadow`.
+
 ### 0.60 - 08/08/2022
 - Removed the LocTypeInn condition to get the quest started.
 - New FOMOD.
 - Added distance feature.
+- Added "wander kill" feature.
 
 ### 0.59 - 08/05/2022
 - Just kidding, now the bleedout package works for when the two are not recruited.
