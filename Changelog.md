@@ -5,6 +5,15 @@ Version 1.0 will be released by September of 2022. Still a WIP, but playtesting 
 
 ## Beta Changelog
 
+### 0.62 - 08/18/22
+- Tweaked MGEFs for most actors since some of them may have not worked previously due to conditions.
+- Added invulnerability aspect for River to prevent player from trying to kill her before Elli.
+- Added stamina regen for Katana.
+- All actor leveling mults *should* be fair now, considering Wabbajack lists and all that. 
+- Changed markers in the hideout to reduce delays in the scenes.
+- Added dialogue.
+- Converted all current Katana audio files into FUZ files.
+
 ### 0.61 - 08/15/22
 - Added dialogue.
 - Modified debug spell. Sneak bug should go away when you see it.
