@@ -9,7 +9,13 @@ Version 1.0 will be released by September of 2022. Still a WIP, but playtesting 
 - Tweaked MGEFs for most actors since some of them may have not worked previously due to conditions.
 - Added invulnerability aspect for River to prevent player from trying to kill her before Elli.
 - Added stamina regen for Katana.
-- All actor leveling mults *should* be fair now, considering Wabbajack lists and all that. 
+- Added Tower of Strength to Megara, River, Elli, and Katana.
+- Changed Elli's weapon to Ebony.
+- Changed armor rating of Elli's to 30. Was 18. 
+- Megara's armor rating is now 25.
+- River's armor rating is now 30. Was 18.
+- Changed River's Frostbite damage from 12 to 15.
+- Oh boy. Playing with mults again... Elli: Was 17, now 28. Galtun: was 15, now 25. Katana Shadow: Was 20, now 30. Lucky: was 10, now 20. River: Was 20, now 30. Runir: Was 15, now 21.
 - Changed markers in the hideout to reduce delays in the scenes.
 - Added dialogue.
 - Converted all current Katana audio files into FUZ files.
