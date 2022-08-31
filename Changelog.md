@@ -1,9 +1,19 @@
 ## Release
 
-Estimated Nexus release: 
-Version 1.0 will be released by September of 2022. Still a WIP, but playtesting from various sources will be helpful.
+Nexus release: 
+Version 1.0 released September of 2022. 
+
+### 1.0 - 08/31/2022
+- Uploaded all dialogue that's needed.
+- Removed Requiem patch so Arkay can update whenever he wants to.
+- Updated Khajiit Speak patch.
+- Moving forward, please use the Nexus version: https://www.nexusmods.com/skyrimspecialedition/mods/69622
 
 ## Beta Changelog
+
+### 0.63 - UNRELEASED
+- Removed green shader for stamina regen.
+- Added dialogue.
 
 ### 0.62 - 08/18/22
 - Tweaked MGEFs for most actors since some of them may have not worked previously due to conditions.
