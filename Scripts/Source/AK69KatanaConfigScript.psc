@@ -327,105 +327,105 @@ function UpdateStats()
 		KatanaDataStorage.IncreaseRateMinor()
 	endif
 	
-	int EastmarchBounty = Game.QueryStat("Eastmarch Bounty")
-	if EastmarchBounty > KatanaDataStorage.PStat_EastmarchBounty
-		KatanaDataStorage.PStat_EastmarchBounty = EastmarchBounty		
-		KatanaDataStorage.IncreaseRateMajor()
-		if utility.randomfloat() < 0.25
-			KatanaPlayerReactionsVar.SetValueInt(10)
-		KatanaPlayerReactionsScene.Start()
-		endif
-	endif
+	;int EastmarchBounty = Game.QueryStat("Eastmarch Bounty")
+	;if EastmarchBounty > KatanaDataStorage.PStat_EastmarchBounty
+		;KatanaDataStorage.PStat_EastmarchBounty = EastmarchBounty		
+		;KatanaDataStorage.IncreaseRateMajor()
+		;if utility.randomfloat() < 0.25
+			;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsScene.Start()
+		;endif
+	;endif
 	
-	int FalkreathBounty = Game.QueryStat("Falkreath Bounty")
-	if FalkreathBounty > KatanaDataStorage.PStat_FalkreathBounty
-		KatanaDataStorage.PStat_FalkreathBounty = FalkreathBounty		
-		KatanaDataStorage.IncreaseRateMajor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(10)
-		KatanaPlayerReactionsScene.Start()
-		endif
-	endif
+	;int FalkreathBounty = Game.QueryStat("Falkreath Bounty")
+	;if FalkreathBounty > KatanaDataStorage.PStat_FalkreathBounty
+		;KatanaDataStorage.PStat_FalkreathBounty = FalkreathBounty		
+		;KatanaDataStorage.IncreaseRateMajor()
+		;if utility.randomfloat() < 0.25
+		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsScene.Start()
+		;endif
+	;endif
 	
-	int HaafingarBounty = Game.QueryStat("Haafingar Bounty")
-	if HaafingarBounty > KatanaDataStorage.PStat_HaafingarBounty
-		KatanaDataStorage.PStat_HaafingarBounty = HaafingarBounty		
-		KatanaDataStorage.IncreaseRateMajor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(10)
-		KatanaPlayerReactionsScene.Start()
-		endif
-	endif
+	;int HaafingarBounty = Game.QueryStat("Haafingar Bounty")
+	;if HaafingarBounty > KatanaDataStorage.PStat_HaafingarBounty
+		;KatanaDataStorage.PStat_HaafingarBounty = HaafingarBounty		
+		;KatanaDataStorage.IncreaseRateMajor()
+		;if utility.randomfloat() < 0.25
+		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsScene.Start()
+		;endif
+	;endif
 	
-	int HjaalmarchBounty = Game.QueryStat("Hjaalmarch Bounty")
-	if HjaalmarchBounty > KatanaDataStorage.PStat_HjaalmarchBounty
-		KatanaDataStorage.PStat_HjaalmarchBounty = HjaalmarchBounty		
-		KatanaDataStorage.IncreaseRateMajor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(10)
-		KatanaPlayerReactionsScene.Start()
-		endif
-	endif
+	;int HjaalmarchBounty = Game.QueryStat("Hjaalmarch Bounty")
+	;if HjaalmarchBounty > KatanaDataStorage.PStat_HjaalmarchBounty
+		;KatanaDataStorage.PStat_HjaalmarchBounty = HjaalmarchBounty		
+		;KatanaDataStorage.IncreaseRateMajor()
+		;if utility.randomfloat() < 0.25
+		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsScene.Start()
+		;endif
+	;endif
 	
-	int ThePaleBounty = Game.QueryStat("The Pale Bounty")
-	if ThePaleBounty > KatanaDataStorage.PStat_ThePaleBounty
-		KatanaDataStorage.PStat_ThePaleBounty = ThePaleBounty		
-		KatanaDataStorage.IncreaseRateMajor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(10)
-		KatanaPlayerReactionsScene.Start()
-		endif
-	endif
+	;int ThePaleBounty = Game.QueryStat("The Pale Bounty")
+	;if ThePaleBounty > KatanaDataStorage.PStat_ThePaleBounty
+		;KatanaDataStorage.PStat_ThePaleBounty = ThePaleBounty		
+		;KatanaDataStorage.IncreaseRateMajor()
+		;if utility.randomfloat() < 0.25
+		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsScene.Start()
+		;endif
+	;endif
 	
-	int TheReachBounty = Game.QueryStat("The Reach Bounty")
-	if TheReachBounty > KatanaDataStorage.PStat_TheReachBounty
-		KatanaDataStorage.PStat_TheReachBounty = TheReachBounty		
-		KatanaDataStorage.IncreaseRateMajor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(10)
-		KatanaPlayerReactionsScene.Start()
-		endif
-	endif
+	;int TheReachBounty = Game.QueryStat("The Reach Bounty")
+	;if TheReachBounty > KatanaDataStorage.PStat_TheReachBounty
+		;KatanaDataStorage.PStat_TheReachBounty = TheReachBounty		
+		;KatanaDataStorage.IncreaseRateMajor()
+		;if utility.randomfloat() < 0.25
+		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsScene.Start()
+		;endif
+	;endif
 	
-	int TheRiftBounty = Game.QueryStat("The Rift Bounty")
-	if TheRiftBounty > KatanaDataStorage.PStat_TheRiftBounty
-		KatanaDataStorage.PStat_TheRiftBounty = TheRiftBounty		
-		KatanaDataStorage.IncreaseRateMajor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(10)
-		KatanaPlayerReactionsScene.Start()
-		endif
-	endif
+	;int TheRiftBounty = Game.QueryStat("The Rift Bounty")
+	;if TheRiftBounty > KatanaDataStorage.PStat_TheRiftBounty
+		;KatanaDataStorage.PStat_TheRiftBounty = TheRiftBounty		
+		;KatanaDataStorage.IncreaseRateMajor()
+		;if utility.randomfloat() < 0.25
+		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsScene.Start()
+		;endif
+	;endif
 	
-	int TribalOrcsBounty = Game.QueryStat("Tribal Orcs Bounty")
-	if TribalOrcsBounty > KatanaDataStorage.PStat_TribalOrcsBounty
-		KatanaDataStorage.PStat_TribalOrcsBounty = TribalOrcsBounty		
-		KatanaDataStorage.IncreaseRateMajor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(10)
-		KatanaPlayerReactionsScene.Start()
-		endif
-	endif
+	;int TribalOrcsBounty = Game.QueryStat("Tribal Orcs Bounty")
+	;if TribalOrcsBounty > KatanaDataStorage.PStat_TribalOrcsBounty
+		;KatanaDataStorage.PStat_TribalOrcsBounty = TribalOrcsBounty		
+		;KatanaDataStorage.IncreaseRateMajor()
+		;if utility.randomfloat() < 0.25
+		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsScene.Start()
+		;endif
+	;endif
 	
-	int WhiterunBounty = Game.QueryStat("Whiterun Bounty")
-	if WhiterunBounty > KatanaDataStorage.PStat_WhiterunBounty
-		KatanaDataStorage.PStat_WhiterunBounty = WhiterunBounty		
-		KatanaDataStorage.IncreaseRateMajor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(10)
-		KatanaPlayerReactionsScene.Start()
-		endif
-	endif
+	;int WhiterunBounty = Game.QueryStat("Whiterun Bounty")
+	;if WhiterunBounty > KatanaDataStorage.PStat_WhiterunBounty
+		;KatanaDataStorage.PStat_WhiterunBounty = WhiterunBounty		
+		;KatanaDataStorage.IncreaseRateMajor()
+		;if utility.randomfloat() < 0.25
+		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsScene.Start()
+		;endif
+	;endif
 	
-	int WinterholdBounty = Game.QueryStat("Winterhold Bounty")
-	if WinterholdBounty > KatanaDataStorage.PStat_WinterholdBounty
-		KatanaDataStorage.PStat_WinterholdBounty = WinterholdBounty
-		KatanaDataStorage.IncreaseRateMajor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(10)
-		KatanaPlayerReactionsScene.Start()
-		endif
-	endif
+	;int WinterholdBounty = Game.QueryStat("Winterhold Bounty")
+	;if WinterholdBounty > KatanaDataStorage.PStat_WinterholdBounty
+		;KatanaDataStorage.PStat_WinterholdBounty = WinterholdBounty
+		;KatanaDataStorage.IncreaseRateMajor()
+		;if utility.randomfloat() < 0.25
+		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsScene.Start()
+		;endif
+	;endif
 		
 	;==============DECREASE==============	
 	

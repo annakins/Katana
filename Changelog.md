@@ -3,6 +3,14 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.0.1 - 09/02/2022
+- Removed idle animation changes and using DAR instead.
+- Removed sabrecat idle since most people have USSEP.
+- Fixed JK's All in One FOMOD detection.
+- Fixed body type paths in FOMOD.
+- Removed the relationship system's major stat increase as I had the wrong idea about the bounty query stat. 
+- Deleted .tga files.
+
 ### 1.0 - 08/31/2022
 - Uploaded all dialogue that's needed.
 - Removed Requiem patch so Arkay can update whenever he wants to.

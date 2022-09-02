@@ -62,16 +62,7 @@ Minor Increase
   <summary>
     Major Increase
   </summary>
-| Eastmarch Bounty |
-| Falkreath Bounty |
-| Haafingar Bounty |
-| Hjaalmarch Bounty |
-| The Pale Bounty |
-| The Reach Bounty |
-| The Rift Bounty |
-| Tribal Orcs Bounty |
-| Whiterun Bounty |
-| Winterhold Bounty |
+Nothing at this time.
 
 </details>
 
