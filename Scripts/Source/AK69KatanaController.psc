@@ -16,7 +16,7 @@ SetHirelingRehire Property HirelingRehireScript Auto
 GlobalVariable Property KatanaRelaxVar Auto
 GlobalVariable Property FollowerRecruited Auto
 Int Property iFollowerDismiss Auto Conditional
- 
+
 bool Property PlayerSettled auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)

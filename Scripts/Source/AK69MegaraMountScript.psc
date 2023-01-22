@@ -7,6 +7,7 @@ actor property Cappy auto
 faction property CurrentFollowerFaction auto
 globalvariable property AK69MegaraRidingVar auto
 globalvariable property FollowerRecruited auto
+globalvariable property MegaraRelaxVar auto
 Activator Property OutVis Auto
 Activator Property InVis Auto
 
@@ -35,12 +36,12 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 			Megara.EvaluatePackage()
 		endIf
 	endIf
-	if Player.IsOnMount() && (FollowerRecruited.GetValue() ==1) && AK69MegaraRidingVar.GetValue() == 1 as Float 
+	if Player.IsOnMount() && (FollowerRecruited.GetValue() ==1) && AK69MegaraRidingVar.GetValue() == 1 as Float && (MegaraRelaxVar.GetValue() == 0) 
 		Utility.Wait(3)
 		Megara.OnAnimationEvent(none, "tailHorseMount")
 		Utility.Wait(3)
 	endIf
-		If Megara.GetActorValue("WaitingForPlayer") == 0
+		If Megara.GetActorValue("WaitingForPlayer") == 0 && (MegaraRelaxVar.GetValue() == 0)	
 			If asEventName == "tailHorseMount"
 				
 				if (Megara.GetDistance(Cappy) >= 2048) && (FollowerRecruited.GetValue() ==1) 

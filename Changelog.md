@@ -3,6 +3,34 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.1 - 01/22/2023 - I don't recommend you download this right now. Just uploaded so I have a backup.
+- Removed: KatlasFarmExterior [CELL:000092BF] (in Tamriel "Skyrim" [WRLD:0000003C] at -19,23)
+- Removed: MarkarthExterior01 [CELL:0000717A] (in Tamriel "Skyrim" [WRLD:0000003C] at -42,1)
+- Removed: RiftenCityNorthGateExterior [CELL:0000BCAF] (in Tamriel "Skyrim" [WRLD:0000003C] at 42,-23)
+- Removed: WhiterunExterior01 [CELL:0000961B] (in Tamriel "Skyrim" [WRLD:0000003C] at 4,-3)
+- Removed: WinterholdExterior05 [CELL:00008EC0] (in Tamriel "Skyrim" [WRLD:0000003C] at 27,24)
+- Removed: SilentMoonsCampBlacksmith [CELL:0000951F] (in Tamriel "Skyrim" [WRLD:0000003C] at 0,4)
+- ITPO records removed: 6
+- Removed: Duplicate navmesh.
+- Re-recorded 781 Katana voice lines.
+- Modified Takiyo's skeleton as it caused crashes for Precision users.
+- Added spell to check relationship with Katana.
+- Added relax variables so the mod's followers do not mount when waiting for the player.
+- Modifed both Katana and Megara config scripts, to simplify `sandbox around player` packages.
+- Modified frequency of scarf comment.
+- Added lines to script to help ensure Lucky Irnsvar shows up during the quest.
+- Optional objectives should now also be marked as complete.
+- Removed variable that may have caused Cappy to show up at the Bee and Barb.
+- Added time passed factor RE: Katana's quest, for those that have a long Skyrim playthrough already (I'm not changing the regard system for waiting, trading, and favors).
+    - First stage - 1 game hour
+    - Second stage - 6 game hours
+    - Third stage - 8 game hours
+    - Fourth stage - 24 game hours
+- Modified COTN - Winterhold - Katana patch: Elli's location.
+- Added BHUNP textures for FOMOD.
+- Modified dialogue frequency.
+- Added unique katana weapon.
+
 ### 1.0.1 - 09/02/2022
 - Removed idle animation changes and using DAR instead.
 - Removed sabrecat idle since most people have USSEP.

@@ -8,6 +8,7 @@ ReferenceAlias Property TakiyoRef Auto
 faction property CurrentFollowerFaction auto
 globalvariable property AK69KatanaRidingVar auto
 globalvariable property FollowerRecruited auto
+globalvariable property KatanaRelaxVar auto
 Activator Property OutVis Auto
 Activator Property InVis Auto
 VisualEffect Property Sparkle Auto
@@ -36,12 +37,12 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 			Katana.EvaluatePackage()
 		endIf
 	endIf
-	if Player.IsOnMount() && (FollowerRecruited.GetValue() ==1) && AK69KatanaRidingVar.GetValue() == 1 as Float 		
+	if Player.IsOnMount() && (FollowerRecruited.GetValue() ==1) && AK69KatanaRidingVar.GetValue() == 1 as Float && (KatanaRelaxVar.GetValue() == 0)		
 		Utility.Wait(3)
 		Katana.OnAnimationEvent(none, "tailHorseMount")
 		Utility.Wait(3)
 	endIf
-		If Katana.GetActorValue("WaitingForPlayer") == 0
+		If Katana.GetActorValue("WaitingForPlayer") == 0 && (KatanaRelaxVar.GetValue() == 0)	
 			If asEventName == "tailHorseMount" && !Katana.IsOnMount()				
 				if (Katana.GetDistance(Takiyo) >= 2048) && (FollowerRecruited.GetValue() ==1) 
 				BeginTeleport()

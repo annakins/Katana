@@ -9,6 +9,7 @@ Actor akSpeaker = akSpeakerRef as Actor
 game.getplayer().additem(AK69KatanaFeather as form, 1, false)
 Game.GetPlayer().AddSpell(SummonKatana)
 Game.GetPlayer().AddSpell(UnstuckKatana)
+Game.GetPlayer().AddSpell(CheckRelationship)
 	self.GetOwningQuest().SetStage(5)
 ;END CODE
 EndFunction
@@ -23,3 +24,5 @@ SPELL Property SummonKatana  Auto
 SPELL Property UnstuckKatana  Auto  
 
 Actor Property Katana  Auto  
+
+SPELL Property CheckRelationship  Auto  

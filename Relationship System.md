@@ -106,7 +106,7 @@ These are mostly dev notes. ;)
 - `7` Armor Made
 - `8` Weapon Improved
 - ~~`9` Armor Improved~~ : Apparently buggy.
-- `10` All bounties in the holds
+- ~~`10` All bounties in the holds~~ : Incorrectly set initially. 
 - `11` Bribes
 - `12` Pickpocketing
 - `13` Murders

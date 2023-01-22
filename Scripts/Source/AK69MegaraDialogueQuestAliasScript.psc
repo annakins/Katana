@@ -17,3 +17,4 @@ Event OnDeath(Actor akKiller)
      Self.GetActorReference().RemoveFromFaction(CurrentHireling)
      Self.Clear()
 EndEvent
+

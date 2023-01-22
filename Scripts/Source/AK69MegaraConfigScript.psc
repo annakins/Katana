@@ -2,11 +2,9 @@ Scriptname AK69MegaraConfigScript extends Quest
 
 AK69MegaraController property MegaraDataStorage auto
 ReferenceAlias Property RMegara auto
-
-GlobalVariable Property FollowerRecruited Auto
-
 int Property UpdateInterval auto
 float Property SettleRadius auto
+GlobalVariable Property FollowerRecruited Auto
 
 int __historySize = 8 ; remember to update the declarations if necessary
 float[] __playerPosX

@@ -30,7 +30,7 @@ Function Setup()
 		__playerPosZ[count] = _player.Z + 1000
 		count += 1
 	endwhile
-	RegisterForSingleUpdate(UpdateInterval)
+		RegisterForSingleUpdate(UpdateInterval)
 EndFunction
 
 Event OnUpdate()
@@ -95,8 +95,7 @@ Event OnUpdate()
 			endif
 			RKatana.GetActorReference().EvaluatePackage()
 		endif
-	endif
-
+	endif	
 If RKatana.GetActorReference().HasLOS(Game.GetPlayer())
 UpdateStats()
 Else

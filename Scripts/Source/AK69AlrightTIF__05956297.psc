@@ -7,6 +7,8 @@ Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 GetOwningQuest().SetStage(10)
+(GetOwningQuest() as AK69KatanaPersonalQuestData).DHStage = true
+(GetOwningQuest() as AK69KatanaPersonalQuestData).DHReadyTime()
 ;END CODE
 EndFunction
 ;END FRAGMENT

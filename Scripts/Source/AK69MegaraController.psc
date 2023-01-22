@@ -15,7 +15,7 @@ GlobalVariable Property MegaraRelaxVar Auto
 GlobalVariable Property FollowerRecruited Auto
 Int Property iFollowerDismiss Auto Conditional
 Quest Property AK69MegaraConfigQuest Auto
- 
+
 bool Property PlayerSettled auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)

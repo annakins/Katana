@@ -3,7 +3,6 @@ Scriptname AK69DoorHideoutSealedScript extends ReferenceAlias
 Quest property AK69KatanaPersonalQuest Auto
 Message property sealedMSG Auto
 bool isSealed
-GlobalVariable property FollowerRecruited Auto
 
 Event OnInit()
 SetupSealedDoor()
@@ -24,7 +23,7 @@ Function UnsealDoor()
 EndFunction
 
 Event OnActivate(ObjectReference obj)
-	if (isSealed) || (FollowerRecruited.GetValue() == 0)
+	if (isSealed) 
 	sealedMSG.Show()
 	EndIf	
 EndEvent
