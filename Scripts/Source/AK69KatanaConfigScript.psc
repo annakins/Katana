@@ -437,7 +437,9 @@ function UpdateStats()
 		KatanaPlayerReactionsScene.Start()
 		endif
 	endif
+	
 
+	
 	int BunniesSlaughtered  = Game.QueryStat("Bunnies Slaughtered")
 	if BunniesSlaughtered > KatanaDataStorage.PStat_BunniesSlaughtered
 		KatanaDataStorage.PStat_BunniesSlaughtered = BunniesSlaughtered		
@@ -448,17 +450,23 @@ function UpdateStats()
 		endif
 	endif
 	
-	int HorsesStolen = Game.QueryStat("Horses Stolen")
+
+	
+	int HorsesStolen = Game.QueryStat("Horses Stolen")	
 	if HorsesStolen > KatanaDataStorage.PStat_HorsesStolen
 		KatanaDataStorage.PStat_HorsesStolen = HorsesStolen
 		KatanaDataStorage.DecreaseRateModerate()
 	endif
 	
-	int Trespasses = Game.QueryStat("Trespasses")
+
+	
+	int Trespasses = Game.QueryStat("Trespasses")	
 	if Trespasses > KatanaDataStorage.PStat_Trespasses
 		KatanaDataStorage.PStat_Trespasses = Trespasses
 		KatanaDataStorage.DecreaseRateMinor()
 	endif
+	
+	
 	
 	int Bribes = Game.QueryStat("Bribes")
 	if Bribes > KatanaDataStorage.PStat_Bribes
@@ -470,6 +478,7 @@ function UpdateStats()
 		endif
 	endif
 		
+
 	int PocketsPicked = Game.QueryStat("Pockets Picked")
 	if PocketsPicked > KatanaDataStorage.PStat_PocketsPicked
 		KatanaDataStorage.PStat_PocketsPicked = PocketsPicked		
@@ -479,13 +488,16 @@ function UpdateStats()
 		KatanaPlayerReactionsScene.Start()
 		endif
 	endif
+
 	
+
 	int ItemsPickpocketed = Game.QueryStat("Items Pickpocketed")
 	if ItemsPickpocketed > KatanaDataStorage.PStat_ItemsPickpocketed
 		KatanaDataStorage.PStat_ItemsPickpocketed = ItemsPickpocketed
 		KatanaDataStorage.DecreaseRateMinor()
 	endif
 	
+
 	int ItemsStolen = Game.QueryStat("Items Stolen")
 	if ItemsStolen > KatanaDataStorage.PStat_ItemsStolen
 		KatanaDataStorage.PStat_ItemsStolen = ItemsStolen		
@@ -495,4 +507,5 @@ function UpdateStats()
 		KatanaPlayerReactionsScene.Start()
 		endif
 	endif
+	
 endFunction

@@ -16,6 +16,7 @@ SetHirelingRehire Property HirelingRehireScript Auto
 GlobalVariable Property KatanaRelaxVar Auto
 GlobalVariable Property FollowerRecruited Auto
 Int Property iFollowerDismiss Auto Conditional
+GlobalVariable property AK69DontHateMe Auto
 
 bool Property PlayerSettled auto conditional
 
@@ -164,15 +165,21 @@ Function IncreaseRateMajor()
 EndFunction
 
 Function DecreaseRateMinor()
+	If AK69DontHateMe.GetValue() == 0
 	ModAssessment(1, -__minorAssessment)
+	Endif
 EndFunction
 
 Function DecreaseRateModerate()
+	If AK69DontHateMe.GetValue() == 0
 	ModAssessment(1, -__moderateAssessment)
+	Endif
 EndFunction
 
 Function DecreaseRateMajor()
+	If AK69DontHateMe.GetValue() == 0
 	ModAssessment(1, -__majorAssessment)
+	Endif
 EndFunction
 
 ;;; END ASSESSMENT INCREMENTS AND FUNCTIONS

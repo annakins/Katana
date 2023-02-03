@@ -2,8 +2,7 @@
 <p align="center"><img src="https://imgur.com/utpe4uz.png" width=90%/> 
 <div id="badges">
 
-   <a href="https://github.com/annakins/Katana/releases">
- <img alt="Download" src="https://img.shields.io/badge/Download-purple?style=for-the-badge&logo=AddThis&logoColor=white" alt="Discord Badge"/></a> 
+  
  <a href="https://ko-fi.com/T6T8810YS">
     <img src="https://img.shields.io/badge/Show love-teal?style=for-the-badge&logo=kofi&logoColor=white" alt="Ko-Fi Badge"/>
   </a>
@@ -11,5 +10,6 @@
 
 </div></p>
 
-# Nexus page: https://www.nexusmods.com/skyrimspecialedition/mods/69622
+## Nexus page: https://www.nexusmods.com/skyrimspecialedition/mods/69622
 
+This Github repo is mostly used for project management. Please reach out first if there's something you'd like to do that involves this mod.

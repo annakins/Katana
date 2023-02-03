@@ -3,6 +3,17 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.1.1 - UNRELEASED
+- Changed the way Megara says healing lines.
+- Added message on Takiyo.
+- No Trust Decrease system added within dialogue.
+    - `Katana will acknowledge all of your actions.` = DEFAULT TRUST.
+    - `Katana will look the other way if you decide to partake in certain activities.` = NO TRUST DECREASE.
+    - Cleaned up body type folder structure.
+- A lot of new lines.
+- Re-recorded a lot of lines for consistency.
+- Added 3BA + CBBE textures, but I have not tested.
+
 ### 1.1 - 01/22/2023 - I don't recommend you download this right now. Just uploaded so I have a backup.
 - Removed: KatlasFarmExterior [CELL:000092BF] (in Tamriel "Skyrim" [WRLD:0000003C] at -19,23)
 - Removed: MarkarthExterior01 [CELL:0000717A] (in Tamriel "Skyrim" [WRLD:0000003C] at -42,1)
