@@ -3,7 +3,7 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
-### 1.1.1 - UNRELEASED
+### 1.1.1 - 02/03/2023 - I don't recommend you download this right now. Just uploaded so I have a backup.
 - Changed the way Megara says healing lines.
 - Added message on Takiyo.
 - No Trust Decrease system added within dialogue.
