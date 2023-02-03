@@ -10,6 +10,7 @@
 
 </div></p>
 
-## Nexus page: https://www.nexusmods.com/skyrimspecialedition/mods/69622
+### Nexus page: https://www.nexusmods.com/skyrimspecialedition/mods/69622
 
-This Github repo is mostly used for project management. Please reach out first if there's something you'd like to do that involves this mod.
+<P>This Github repo is mostly used for project management. </P>
+<P> Please reach out first if there's something you'd like to do that involves this mod. </P>
