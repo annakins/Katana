@@ -1,4 +1,11 @@
 # Relationship System
+
+### Enabling/Disabling Decrease (Version 1.1+)
+- If you would like Katana to look the other way when you commit *certain* acts, talk to her and select `About my lifestyle...`
+- You will get these notifications that confirm your choice:
+  - `Katana will acknowledge all of your actions.` = DEFAULT TRUST.
+  - `Katana will look the other way if you decide to partake in certain activities.` = NO TRUST DECREASE.
+
 ### Assessment
 - Relationship level when you first meet Katana: `-5`
 - Relationship max level: `10`
