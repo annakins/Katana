@@ -17,11 +17,10 @@ function BeginTeleport()
 	Takiyo.PlaceAtMe(InVis)
 	endFunction	
 	function EndTeleport()
-		Takiyo.PlaceAtMe(OutVis)
+	Takiyo.PlaceAtMe(OutVis)
 	endFunction
 
 function OnInit()
-	Player = game.GetPlayer()
 	self.RegisterForAnimationEvent(Player as objectreference, "tailHorseMount")
 	self.RegisterForAnimationEvent(Player as objectreference, "tailHorseDismount")
 endFunction
@@ -75,13 +74,13 @@ Function MistRavenCast()
 	Actor TakiyoIrin = TakiyoRef.GetReference() as Actor
 	Actor KatanaIrin = KatanaRef.GetReference() as Actor
 	float ang_z
-				ang_z = TakiyoIrin.GetAngleZ() - 90
-				Sparkle.Play(Katana, 1.0)
-				Katana.setAlpha(0.1)
-				Utility.Wait(0.3)
-				KatanaIrin.SetAngle(0, 0, ang_z + 180)
-				KatanaIrin.MoveTo(Takiyo, 60 * Math.Sin(ang_z), 60 * Math.Cos(ang_z), 0, false)
-				Utility.Wait(0.3)	
-				Sparkle.Play(Katana, 1.0)
-				Katana.setAlpha(1)						
+		ang_z = TakiyoIrin.GetAngleZ() - 90
+		Sparkle.Play(Katana, 1.0)
+		Katana.setAlpha(0.1)
+		Utility.Wait(0.3)
+		KatanaIrin.SetAngle(0, 0, ang_z + 180)
+		KatanaIrin.MoveTo(Takiyo, 60 * Math.Sin(ang_z), 60 * Math.Cos(ang_z), 0, false)
+		Utility.Wait(0.3)	
+		Sparkle.Play(Katana, 1.0)
+		Katana.setAlpha(1)						
 EndFunction

@@ -184,22 +184,19 @@ EndFunction
 
 ;;; END ASSESSMENT INCREMENTS AND FUNCTIONS
 
-int __historySize = 10  ; if this changes, make sure to update 
-						;   array declarations below in Setup()
+int __historySize = 10  						
 
 bool __isSetup = false
 Function Setup(int forceNPC=0)
-	; make sure this only gets called once
+
 	if (__isSetup)
 		return
 	endif
 	__isSetup = true	
 	ak69relationship = new float[10]	
 
-	; fill dem arrays
 	int count = 0
 	while (count < __historySize)
-		; everything starts at initial anchor values	
 		ak69relationship[count] = __assessmentAnchorRelationship		
 		count += 1
 	endwhile
@@ -320,7 +317,6 @@ function UpdateAllStats()
 	PStat_TribalOrcsBounty = Game.QueryStat("Tribal Orcs Bounty")
 	PStat_WhiterunBounty = Game.QueryStat("Whiterun Bounty")
 	PStat_WinterholdBounty = Game.QueryStat("Winterhold Bounty")
-		
 	PStat_LocationsDiscovered = Game.QueryStat("Bunnies Slaughtered")
 	PStat_Murders = Game.QueryStat("Murders")
 	PStat_HorsesStolen = Game.QueryStat("Horses Stolen")

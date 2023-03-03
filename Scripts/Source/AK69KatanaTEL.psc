@@ -23,16 +23,16 @@ endFunction
 
 function TeleportTo(ObjectReference TeleportTarget, bool bTargetIsLocation, ObjectReference TeleportLocation = None, float WaitTime)
 float XLoc = PolarToRectangularX(TeleportTarget.GetPositionX(), 15, 128)
-float YLoc = PolarToRectangularY(TeleportTarget.GetPositionY(), 15, 128)	;to do: add param instead of fixed numbers
+float YLoc = PolarToRectangularY(TeleportTarget.GetPositionY(), 15, 128)	
 float zOffset = GetHeadingAngle(TeleportTarget)
 utility.wait(0.1)
 debug.trace(self + "If no pass, TeleportTarget may be NONE:" + TeleportTarget)
-	if (bTargetIsLocation)	;then get offset
+	if (bTargetIsLocation)	
 	debug.trace("Target is Location")
 		if (TeleportTarget)
 		BeginTeleport()
 		utility.wait(0.4)
-		SetPosition(XLoc, YLoc, TeleportTarget.GetPositionZ()) ; added Z os for adjustments
+		SetPosition(XLoc, YLoc, TeleportTarget.GetPositionZ()) 
 		SetAngle(GetAngleX(), GetAngleY(), GetAngleZ() + zOffset)
 		endIf		
 	elseif (TeleportLocation)
@@ -52,7 +52,7 @@ ZFloat = self.GetPositionZ()
 
 float fDir = CalculateDesiredAngle(TeleportTarget)
 float XLoc = PolarToRectangularX(TeleportTarget.GetPositionX(), fdir, 64)
-float YLoc = PolarToRectangularY(TeleportTarget.GetPositionY(), fdir, 64)	;to do: add prop instead of fixed numbers
+float YLoc = PolarToRectangularY(TeleportTarget.GetPositionY(), fdir, 64)	
 
 utility.wait(0.1)
 
@@ -98,7 +98,7 @@ endIf
 	endIf
 EndEvent
 
-function DoExit() ;in case we just want to be  fancy
+function DoExit() 
 PlaceAtMe(OutVis)
 utility.wait(0.5)
 Disable()
@@ -115,7 +115,7 @@ float T = GetHeadingAngle(RefAngle)
 	endIf	
 endFunction
 
-float Function PolarToRectangularY(float rY, float Degrees, float Radius) ;wow, no outbound parameters allowed :/
+float Function PolarToRectangularY(float rY, float Degrees, float Radius)
 return (rY + (Radius * Math.cos(Degrees)))
 endFunction
 

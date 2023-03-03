@@ -3,6 +3,15 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.1.2 - 03/03/2023 - I don't recommend you download this right now. Just uploaded so I have a backup.
+- Added new lines.
+- Changed scarf regen rate from 10% to 5%.
+- Added missing progression in loyalty path (dev note: A3G).
+- Reduced time for quest progression. By a fair amount.
+- Really edited dialogue frequency. I found they didn't talk enough despite having a nice amount of lines.
+- Nerfed River's Frostbite.
+- Removed extra spaces in topic starters.
+
 ### 1.1.1 - 02/03/2023 - I don't recommend you download this right now. Just uploaded so I have a backup.
 - Changed the way Megara says healing lines.
 - Added message on Takiyo.

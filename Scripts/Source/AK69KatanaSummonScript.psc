@@ -2,6 +2,7 @@ Scriptname AK69KatanaSummonScript extends ActiveMagicEffect
 
 Actor Property Katana Auto
 Activator Property InVis Auto
+Scene Property AK69KatanaSummonLines Auto
 
 Event OnEffectStart(Actor akTarget, Actor akCaster)
 Katana.setAlpha(0.1)
@@ -10,6 +11,7 @@ Katana.MoveTo(Game.GetPlayer() as objectreference, -500.000 * Math.Sin(Game.GetP
 EndTeleport()
 Utility.Wait(0.3)   
 Katana.setAlpha(1)
+AK69KatanaSummonLines.Start()
 EndEvent
 
 function BeginTeleport()
