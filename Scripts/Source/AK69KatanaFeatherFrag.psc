@@ -10,6 +10,7 @@ game.getplayer().additem(AK69KatanaFeather as form, 1, false)
 Game.GetPlayer().AddSpell(SummonKatana)
 Game.GetPlayer().AddSpell(UnstuckKatana)
 Game.GetPlayer().AddSpell(CheckRelationship)
+Katana.AllowBleedoutDialogue(true)
 	self.GetOwningQuest().SetStage(5)
 ;END CODE
 EndFunction

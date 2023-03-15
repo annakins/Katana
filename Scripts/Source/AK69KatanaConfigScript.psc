@@ -3,7 +3,7 @@ Scriptname AK69KatanaConfigScript extends Quest
 AK69KatanaController property KatanaDataStorage auto
 ReferenceAlias Property RKatana auto
 GlobalVariable Property FollowerRecruited Auto
-Quest Property KatanaPlayerReactionsScene auto
+Scene Property KatanaPlayerReactionsScene auto
 GlobalVariable property KatanaPlayerReactionsVar auto
 int Property UpdateInterval auto
 float Property SettleRadius auto

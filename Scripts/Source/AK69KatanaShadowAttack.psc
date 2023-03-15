@@ -7,6 +7,7 @@ Keyword property MagicInvisibility auto
 ReferenceAlias Property KatanaRef Auto
 Actor property Player auto
 Actor Property Katana Auto
+GlobalVariable property AK69KatanaRecruited Auto
 
 ;========================
 
@@ -41,7 +42,7 @@ Function ShadowAttack()
 	Actor KatanaIrin = KatanaRef.GetReference() as Actor
 	Actor combatTarget = KatanaIrin.GetCombatTarget()	
 	float FRand = utility.RandomFloat()
-		If ((combatTarget != None) && (FRand > 0.7) && (combatTarget.GetActorValuePercentage("Health") >= 0.95) && ((combatTarget.IsBleedingOut() == 0) || (combatTarget.IsRunning() == 0)))
+		If ((combatTarget != None) && (FRand > 0.7) && (combatTarget.GetDistance(Katana) > 300) && (combatTarget.GetActorValuePercentage("Health") >= 0.95) && ((combatTarget.IsBleedingOut() == 0) || (combatTarget.IsRunning() == 0)))
 			MistRaven.Cast(KatanaIrin, KatanaIrin)
 			int i = 0
 			while !KatanaIrin.HasMagicEffectWithKeyword(MagicInvisibility) && i < 50
@@ -60,7 +61,7 @@ EndFunction
 
 Function TeleporttoPlayer()	
 	Actor KatanaIrin = KatanaRef.GetReference() as Actor
-	If (Player.GetParentCell() != KatanaIrin.GetParentCell())
+	If (Player.GetParentCell() != KatanaIrin.GetParentCell()) && AK69KatanaRecruited.GetValue() == 1
 		float angle = Player.GetAngleZ() + 180		
 		KatanaIrin.setAlpha(0.1)
 		BeginTeleport()	

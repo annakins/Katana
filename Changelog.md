@@ -3,6 +3,19 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.1.3 - UNRELEASED - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Changed how bleedout lines are executed.
+- Corrected wrong property (Player Reactions Scene).
+- OCD check?
+    - `Ak69TakiyoSummon` > `AK69TakiyoSummon`.
+    - `Ak69KatanaMistRavenCooldown` > `Ak69KatanaMistRavenCooldown`.
+    - `AK66MegaraBleedoutHealLinesScript` > `AK69MegaraBleedoutHealLinesScript`.
+- Removed extra scripts.
+- Added new way for Katana to comment on targets she won't want to kill.
+- Added distance to Katana's flank script so she does not keep teleporting if enemies are near.
+- Reduced regen abilities from 1 to 0.7.
+
+
 ### 1.1.2 - 03/03/2023 - I don't recommend you download this right now. Just uploaded so I have a backup.
 - Added new lines.
 - Changed scarf regen rate from 10% to 5%.
