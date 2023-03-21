@@ -3,6 +3,7 @@ Scriptname AK69DoorHideoutSealedScript extends ReferenceAlias
 Quest property AK69KatanaPersonalQuest Auto
 Message property sealedMSG Auto
 bool isSealed
+GlobalVariable property AK69DoorUnsealedVar Auto
 
 Event OnInit()
 SetupSealedDoor()
@@ -17,6 +18,7 @@ Function SetupSealedDoor()
 EndFunction
 
 Function UnsealDoor()
+	AK69DoorUnsealedVar.SetValue(1 as Float)
 	Self.GetReference().BlockActivation(False)
 	isSealed = False		
 	Self.GetReference().SetOpen(True)	

@@ -3,7 +3,7 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
-### 1.1.3 - UNRELEASED - I don't recommend you download this right now. Just uploaded so I have a backup. 
+### 1.5 - 03/21/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - Changed how bleedout lines are executed.
 - Corrected wrong property (Player Reactions Scene).
 - OCD check?
@@ -12,8 +12,16 @@ Version 1.0 released September of 2022.
     - `AK66MegaraBleedoutHealLinesScript` > `AK69MegaraBleedoutHealLinesScript`.
 - Removed extra scripts.
 - Added new way for Katana to comment on targets she won't want to kill.
-- Added distance to Katana's flank script so she does not keep teleporting if enemies are near.
 - Reduced regen abilities from 1 to 0.7.
+- Gave Megara unique staff.
+- Added Katana teleport if you dismiss her and she's far from home.
+- Added new lines before hideout time. There is now a script within the dialogue to unseal the door, instead of unsealing it in a quest stage.
+- Added dismissed bleedout behavior upon player's hostile activity.
+- Added teleportation for dismissal if you are not close to Katana's home.
+    - This does not apply to Megara, though. I see her preferring to take her time rather than choosing a theatrical exit. 
+- Removed redundant idle animations in intro quest.
+- Megara now has lines for Skyrim quests.
+- Changing this to 1.5...
 
 
 ### 1.1.2 - 03/03/2023 - I don't recommend you download this right now. Just uploaded so I have a backup.

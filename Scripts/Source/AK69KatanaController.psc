@@ -3,6 +3,7 @@ Scriptname AK69KatanaController extends Quest  Conditional
 ;This is where Katana's memory is stored.
 
 Actor Property PlayerREF Auto
+Actor Property KatanaActor Auto
 ReferenceAlias Property Katana Auto
 Faction Property DismissedFollowerFaction Auto
 Faction Property CurrentHireling Auto
@@ -17,6 +18,12 @@ GlobalVariable Property KatanaRelaxVar Auto
 GlobalVariable Property FollowerRecruited Auto
 Int Property iFollowerDismiss Auto Conditional
 GlobalVariable property AK69DontHateMe Auto
+
+GlobalVariable Property AK69KatanaHomeVar Auto
+ObjectReference Property HomeMarker auto
+ObjectReference Property WinkingSkeeverMarker auto
+Location Property SolitudeLocation Auto
+Activator Property InVis Auto
 
 bool Property PlayerSettled auto conditional
 
@@ -47,8 +54,9 @@ Function FollowerFollow()
      FollowerActor.EvaluatePackage()
 EndFunction
 
-Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
-     If Katana && Katana.GetActorReference().IsDead() == False
+Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)	
+	
+	If Katana && Katana.GetActorReference().IsDead() == False
           If iMessage == 0
                FollowerDismissMessage.Show()
           ElseIf iMessage == 1
@@ -71,16 +79,49 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
           DismissedFollowerActor.RemoveFromFaction(CurrentHireling)
           DismissedFollowerActor.SetActorValue("WaitingForPlayer", 0)
           FollowerRecruited.SetValue(0)
+		  AK69KatanaConfigQuest.Stop()
           HirelingRehireScript.DismissHireling(DismissedFollowerActor.GetActorBase())
           If iSayLine == 1
                iFollowerDismiss = 1
               DismissedFollowerActor.EvaluatePackage()
              Utility.Wait(2)
           EndIf
-             Katana.Clear()
-             iFollowerDismiss = 0
+            Katana.Clear()
+            iFollowerDismiss = 0
      EndIf
-	  AK69KatanaConfigQuest.Stop()
+	 If AK69KatanaHomeVar.GetValue() == 1
+		KatanaGoHome()
+	else
+		KatanaGoWinkingSkeever()
+	endif
+EndFunction
+
+Function KatanaGoHome()
+	If KatanaActor.GetDistance(HomeMarker) >= 1000 && !KatanaActor.IsInCombat()
+		Debug.SendAnimationEvent(KatanaActor, "IdleMagic_01")
+		Utility.Wait(2)
+		KatanaActor.setAlpha(0.1)
+		Utility.Wait(0.3)
+		KatanaActor.PlaceAtMe(InVis)	
+		KatanaActor.MoveTo(HomeMarker)
+		KatanaActor.PlaceAtMe(InVis)	
+		Utility.Wait(0.3)   
+		KatanaActor.setAlpha(1)
+	endif
+EndFunction
+
+Function KatanaGoWinkingSkeever()
+	If KatanaActor.GetDistance(WinkingSkeeverMarker) >= 1000 && !KatanaActor.IsInLocation(SolitudeLocation) && !KatanaActor.IsInCombat()
+		Debug.SendAnimationEvent(KatanaActor, "IdleMagic_01")
+		Utility.Wait(2)
+		KatanaActor.setAlpha(0.1)
+		Utility.Wait(0.3)
+		KatanaActor.PlaceAtMe(InVis)	
+		KatanaActor.MoveToMyEditorLocation()
+		KatanaActor.PlaceAtMe(InVis)	
+		Utility.Wait(0.3)   
+		KatanaActor.setAlpha(1)
+	endif
 EndFunction
 
 ;==============Katana Relationship System==============

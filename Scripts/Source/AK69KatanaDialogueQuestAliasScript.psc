@@ -7,11 +7,14 @@ Actor Property Katana Auto
 Quest Property AK69KatanaShadowAttackQuest Auto
 GlobalVariable Property FollowerRecruited Auto
 GlobalVariable Property AK69KatanaWanderKillVar Auto
+GlobalVariable Property AK69KatanaWasBetrayed Auto
+
 
 Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
 Actor combatTarget = Katana.GetCombatTarget()
 (AK69KatanaShadowAttackQuest as AK69KatanaShadowAttack).KatanaCombatStateChanged(akTarget, aeCombatState)
 If (akTarget == PlayerREF) && (FollowerRecruited.GetValue() ==1) 
+AK69KatanaWasBetrayed.SetValue(1 as float)
 (GetOwningQuest() as AK69KatanaController).DismissFollower(0, 0)
 elseif (aeCombatState == 1) || (Katana.GetDistance(PlayerREF) >= 2000)
 AK69KatanaWanderKillVar.SetValue(0)

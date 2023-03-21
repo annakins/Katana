@@ -42,7 +42,7 @@ Function ShadowAttack()
 	Actor KatanaIrin = KatanaRef.GetReference() as Actor
 	Actor combatTarget = KatanaIrin.GetCombatTarget()	
 	float FRand = utility.RandomFloat()
-		If ((combatTarget != None) && (FRand > 0.7) && (combatTarget.GetDistance(Katana) > 300) && (combatTarget.GetActorValuePercentage("Health") >= 0.95) && ((combatTarget.IsBleedingOut() == 0) || (combatTarget.IsRunning() == 0)))
+		If ((combatTarget != None) && (FRand > 0.7) && (combatTarget.GetActorValuePercentage("Health") >= 0.95) && ((combatTarget.IsBleedingOut() == 0) || (combatTarget.IsRunning() == 0)))
 			MistRaven.Cast(KatanaIrin, KatanaIrin)
 			int i = 0
 			while !KatanaIrin.HasMagicEffectWithKeyword(MagicInvisibility) && i < 50

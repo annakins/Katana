@@ -17,17 +17,17 @@ EndEvent
 Function GetActors()
     CombatNoLikey.getReference() as Actor
     combatnolikeyobject1 = CombatNoLikey.getReference()
-    combatnolikeyobject2 = CombatNoLikey2.getReference()
+    ;combatnolikeyobject2 = CombatNoLikey2.getReference()
     MaybeKillTime()
 EndFunction
 
 Function MaybeKillTime()
     ObjectReference combatTarget = Katana.GetCombatTarget()
-    if (combatTarget == combatnolikeyobject1 || combatTarget == combatnolikeyobject2)
+    if (combatTarget == combatnolikeyobject1)
         AK69KatanaNoLikeyKillVar.SetValue(1 as Float)
         ;Debug.Notification("EFFECT This is 1")    
     endif
-    if !(combatTarget == combatnolikeyobject1 || combatTarget == combatnolikeyobject2)
+    if !(combatTarget == combatnolikeyobject1)
         AK69KatanaNoLikeyKillVar.SetValue(0 as Float)
         ;Debug.Notification("EFFECT This is 0")   
     endif

@@ -4,6 +4,7 @@ Location Property SilverBloodInn  Auto
 Location Property BeeandBarb  Auto  
 Location Property FrozenHearth  Auto  
 Location Property Hideout Auto
+Actor Property Katana Auto
 
 Event OnSit(ObjectReference akFurniture)
 if (GetOwningQuest().GetStage() == 20 && Game.GetPlayer().GetCurrentLocation() == DrunkenHuntsman)
@@ -20,7 +21,7 @@ Endif
 EndEvent
 
 Event OnLocationChange(Location akOldLoc, Location akNewLoc)
-if (GetOwningQuest().GetStage() == 130 && FrozenHearth == akNewLoc) 
+if (GetOwningQuest().GetStage() == 130 && FrozenHearth == akNewLoc && Katana.IsInLocation(FrozenHearth))
 	GetOwningQuest().SetStage(140) 
 Endif
 
