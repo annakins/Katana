@@ -64,12 +64,13 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
           EndIf
 
           actor DismissedFollowerActor = Megara.GetReference() as Actor
-          DismissedFollowerActor.StopCombatAlarm()
+          ;DismissedFollowerActor.StopCombatAlarm()
           DismissedFollowerActor.AddToFaction(DismissedFollowerFaction)
           DismissedFollowerActor.SetPlayerTeammate(false)
           DismissedFollowerActor.RemoveFromFaction(CurrentHireling)
           DismissedFollowerActor.SetActorValue("WaitingForPlayer", 0)
           FollowerRecruited.SetValue(0)
+          AK69MegaraConfigQuest.Stop()
           HirelingRehireScript.DismissHireling(DismissedFollowerActor.GetActorBase())
 
           If iSayLine == 1
@@ -80,5 +81,5 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
           Megara.Clear()
           iFollowerDismiss = 0
      EndIf
-	  AK69MegaraConfigQuest.Stop()
+	  
 EndFunction

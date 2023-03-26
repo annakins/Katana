@@ -12,6 +12,7 @@ float Property ZFloat Auto Hidden
 Keyword Property ActorTypeDragon Auto
 bool Property bCasting Auto
 ActorBase Property ActorOwner Auto
+globalvariable property AK69KatanaWorkWithPlayer auto
 
 function BeginTeleport()
 PlaceAtMe(InVis)
@@ -84,6 +85,9 @@ endIf
 endFunction
 
 Event OnHit(ObjectReference akAggressor, Form akSource, Projectile akProjectile, bool abPowerAttack, bool abSneakAttack, bool abBashAttack, bool abHitBlocked)
+if AK69KatanaWorkWithPlayer.GetValue() == 1
+	AK69KatanaWorkWithPlayer.SetValue(0 as float)
+endif
 
 float FRand = utility.RandomFloat()
 if (bCasting)||(HitAsFollower(akAggressor As Actor))

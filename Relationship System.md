@@ -99,6 +99,8 @@ Major Decrease
   </summary>
 | Murders |
 | Bunnies Slaughtered |
+| Betray Katana through combat |
+| Betray Megara through combat |
 
 </details>
 

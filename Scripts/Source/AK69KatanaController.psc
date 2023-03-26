@@ -73,7 +73,7 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
               FollowerDismissMessage.Show()
           EndIf
           actor DismissedFollowerActor = Katana.GetReference() as Actor
-          DismissedFollowerActor.StopCombatAlarm()
+          ;DismissedFollowerActor.StopCombatAlarm()
           DismissedFollowerActor.AddToFaction(DismissedFollowerFaction)
           DismissedFollowerActor.SetPlayerTeammate(false)
           DismissedFollowerActor.RemoveFromFaction(CurrentHireling)
@@ -89,15 +89,16 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
             Katana.Clear()
             iFollowerDismiss = 0
      EndIf
-	 If AK69KatanaHomeVar.GetValue() == 1
+	 If AK69KatanaHomeVar.GetValue() == 1 && !KatanaActor.IsInCombat()
 		KatanaGoHome()
-	else
+	 endif
+	if AK69KatanaHomeVar.GetValue() == 0 && !KatanaActor.IsInCombat()
 		KatanaGoWinkingSkeever()
 	endif
 EndFunction
 
 Function KatanaGoHome()
-	If KatanaActor.GetDistance(HomeMarker) >= 1000 && !KatanaActor.IsInCombat()
+	If KatanaActor.GetDistance(HomeMarker) >= 1000
 		Debug.SendAnimationEvent(KatanaActor, "IdleMagic_01")
 		Utility.Wait(2)
 		KatanaActor.setAlpha(0.1)
@@ -111,7 +112,7 @@ Function KatanaGoHome()
 EndFunction
 
 Function KatanaGoWinkingSkeever()
-	If KatanaActor.GetDistance(WinkingSkeeverMarker) >= 1000 && !KatanaActor.IsInLocation(SolitudeLocation) && !KatanaActor.IsInCombat()
+	If KatanaActor.GetDistance(WinkingSkeeverMarker) >= 1000 && !KatanaActor.IsInLocation(SolitudeLocation)
 		Debug.SendAnimationEvent(KatanaActor, "IdleMagic_01")
 		Utility.Wait(2)
 		KatanaActor.setAlpha(0.1)

@@ -3,6 +3,13 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.6 - 03/26/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Implemented dialogue option for stealthy characters.
+- Added DecreaseRateMajor for if you betray Katana OR Megara.
+- Megara can now buff the player if desired (check buff documentation).
+- Added Hearthfire to requirements since I'll add lines for that.
+- Removed non-CBBE bodies.
+
 ### 1.5 - 03/21/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - Changed how bleedout lines are executed.
 - Corrected wrong property (Player Reactions Scene).
@@ -21,7 +28,6 @@ Version 1.0 released September of 2022.
     - This does not apply to Megara, though. I see her preferring to take her time rather than choosing a theatrical exit. 
 - Removed redundant idle animations in intro quest.
 - Megara now has lines for Skyrim quests.
-- Changing this to 1.5...
 
 
 ### 1.1.2 - 03/03/2023 - I don't recommend you download this right now. Just uploaded so I have a backup.

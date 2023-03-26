@@ -8,6 +8,7 @@ ReferenceAlias Property KatanaRef Auto
 Actor property Player auto
 Actor Property Katana Auto
 GlobalVariable property AK69KatanaRecruited Auto
+GlobalVariable property AK69KatanaWorkWithPlayer auto
 
 ;========================
 
@@ -23,11 +24,11 @@ endFunction
 
 Function KatanaCombatStateChanged(Actor akTarget, int aeCombatState)
 	Actor KatanaIrin = KatanaRef.GetReference() as Actor
-	If (akTarget == Player) || (akTarget == None)
-		Pacify()
-	ElseIf (akTarget.IsPlayerTeammate())
-		Pacify()
-	EndIf
+	;If (akTarget == Player) || (akTarget == None)
+		;Pacify()
+	;ElseIf (akTarget.IsPlayerTeammate())
+		;Pacify()
+	;EndIf
 	akTarget.GetCombatState()
 	If (aeCombatState == 1) && (akTarget.IsFlying() == 0) && (akTarget.GetCurrentLocation() == KatanaIrin.GetCurrentLocation())
 	ShadowAttack()
@@ -42,7 +43,7 @@ Function ShadowAttack()
 	Actor KatanaIrin = KatanaRef.GetReference() as Actor
 	Actor combatTarget = KatanaIrin.GetCombatTarget()	
 	float FRand = utility.RandomFloat()
-		If ((combatTarget != None) && (FRand > 0.7) && (combatTarget.GetActorValuePercentage("Health") >= 0.95) && ((combatTarget.IsBleedingOut() == 0) || (combatTarget.IsRunning() == 0)))
+		If ((combatTarget != None) && AK69KatanaWorkWithPlayer.GetValue() == 0 && (FRand > 0.7) && (combatTarget.GetActorValuePercentage("Health") >= 0.95) && ((combatTarget.IsBleedingOut() == 0) || (combatTarget.IsRunning() == 0)))
 			MistRaven.Cast(KatanaIrin, KatanaIrin)
 			int i = 0
 			while !KatanaIrin.HasMagicEffectWithKeyword(MagicInvisibility) && i < 50
@@ -83,9 +84,9 @@ EndFunction
 
 ;========================
 
-Function Pacify()
-	Actor KatanaIrin = KatanaRef.GetReference() as Actor
-	KatanaIrin.StopCombat()	
-	KatanaIrin.StopCombatAlarm()
-	KatanaIrin.EvaluatePackage()	
-EndFunction
+;Function Pacify()
+	;Actor KatanaIrin = KatanaRef.GetReference() as Actor
+	;KatanaIrin.StopCombat()	
+	;KatanaIrin.StopCombatAlarm()
+;	KatanaIrin.EvaluatePackage()	
+;EndFunction
