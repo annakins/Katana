@@ -1,0 +1,121 @@
+[center][img]https://imgur.com/0pvUUYD.png[/img]
+[img]https://i.imgur.com/RY4tEIU.gif[/img]
+[url=https://ko-fi.com/annakins][img]https://imgur.com/CAC80v9.png[/img][/url]﻿[b][size=3]
+[/size][/b][/center][size=5][b]Includes[/b][/size]
+[list][*]Two followers: Katana (rogue) and Megara (healer). 
+[*]A quest that walks you through Katana’s story, and why she’s in Skyrim.
+[*]Over 3,000 voice lines.[/list][b][size=5]Mod Features & Notes[/size][/b][list][*]Both Katana and Megara level with the player (their minimum is level 10).
+[*]Upon bleeding out, both heal themselves.
+[*]Both can live in non-clearable interiors.
+[*]Both have a summon spell, as well as a debug spell.
+[*]Both have a unique mount.
+[*]Both refer to the player as [i]they[/i].
+[*]Neither are marriage candidates ([i]I wonder why[/i]).
+[*]Both comment on Skyrim quests, DLCs included.
+[*]Both can follow farther; otherwise, the default value is pretty standard.
+[*]Both are set to essential and cannot die.
+[*]Both have CBBE Curvy by default (not nude). Optional: CBBE with physics.
+[*][i]See [b]Custom Bodies[/b] below if you have different tastes.[/i]
+[*]You are [b]not the hero[/b] in this story. 
+[*][color=#f9cb9c]Katana and Megara will happily be by your side for YOUR story, though, regardless of which side of the war you pick, or what race you play.[/color]
+[*]There is no reference to you being THE Dragonborn, whatsoever. This is due to the fact that many of you have alternate life mods. Have fun roleplaying! If you play as a bandit, though, things might be a little awkward, with the dialogue and all.[/list][b][size=5]Katana[/size][/b][list][*]Katana specializes in [i]One-Handed[/i], [i]Two-Handed[/i], and [i]Archery[/i] (she has a fairly silent rifle).
+[*]Katana has a [url=https://github.com/annakins/Katana/blob/main/Relationship%20System.md]trust system[/url]﻿, which will initially prevent you from trading, having her wait, and asking for favors. 
+[*]You can turn off the [b]Trust Decrease[/b] via the dialogue option: [color=#f9cb9c]I want to talk about my lifestyle…[/color]
+[*]For stealth players: Katana can stay back if you ask her to (upon the beginning of combat); however, if she gets hit, her state will go back to normal.
+[*]You also get a Relationship Check spell after recruitment.
+[*]Katana will teleport to you when your health is low (but not all the time, intentionally).
+[*]Katana teleports to enemies when they're at >= 90% health, and also when she gets hit from a distance.
+[*]Katana has a special mist dodge and will go invisible for strategy.
+[*]After you complete her quest:
+[spoiler]Katana unlocks a shadow ability and can scout potentially dangerous areas if you ask.[/spoiler][/list][b][size=5]Megara[/size][/b][list][*]Megara specializes in [i]Restoration[/i].
+[*]Megara will heal you and your fellow companions, and [url=https://github.com/annakins/Katana/blob/main/Megara’s%20Buffs.md]she can buff you if you ask[/url]. 
+[*]Megara can cure diseases in exchange for garlic.
+[*]Megara has her own staff, with custom magic FX.
+[*]She carries a dagger that absorbs magicka.
+[*]You can take away her torch if you have other lighting methods in mind.
+[*]Unlike Katana, Megara does not have a trust system.
+[*]Megara offers radiant bounty quests using the BQ01 vanilla quest (instead of going to a jarl or steward, you can talk to her to save you a trip).
+[*]Megara can cheer you up with her warm personality, dad jokes, and puns.
+[/list][size=5][b]Get Started[/b][/size][list][*][color=#f9cb9c]Head over to the Winking Skeever. Katana’s upstairs, probably eating.[/color][/list][size=5][b]Quest[/b][/size][list][*]Do you enjoy collecting bounties? Awesome! This mod involves such activities, which begin when Katana trusts you more. 
+[*][color=#f9cb9c][i]When does it actually start?[/i][/color][/list][spoiler][list][*]You need to speak to her after recruitment, to set the stage for the quest (the dialogue that gives you the mystical feather and spells).
+[*]Stage 1: [color=#f9cb9c]So, what brings you to Skyrim?[/color] = 1 game hour.
+[*]Stage 2: [color=#f9cb9c]I’m so curious about why you’re here.[/color] = 3 game hours.
+[*]Stage 3: [color=#f9cb9c]Katana, I…[/color] = 3 game hours.
+[*]Stage 4: Talk to Katana. = 6 game hours.
+[/list][/spoiler]
+[size=5][b]Important + Incompatibilities[/b][/size][list][*]Please do not import Katana and Megara into any follower frameworks. They have their own.
+[*]You are welcome to delete the [url=https://www.nexusmods.com/skyrimspecialedition/mods/33746]DAR[/url]﻿ folders.
+[*]To try to avoid glitches, maybe try not to use the console to [color=#f9cb9c]coc[/color] to the quest’s locations. 
+[*]If you have Synthesis, you may need to use the SynWeaponKeywords patcher to blacklist Katana’s rifle.
+[*]If you have [i]certain[/i] mods where bleedout/defeat is involved, you may need to add this mod as an exception.
+[*]I understand that there are many combat + encounter zone mods out there. If needed, please go ahead and change the actors’ levels and stats in xEdit. The same applies to Katana’s rifle and clothes. She doesn’t really like to share (although she’d happily lend you her scarf + sword), and if it absolutely matters to you, you can go into xEdit OR give her gear with a higher rating.
+[*]Modified: [color=#f9cb9c]BQ01RewardTopic, BQ01MainTopic, WICastMagicNonHostileSpellHealingTopic, BQSharedSharedInfo[/color].
+[/list][size=5][b]Custom Bodies[/b][/size]
+[list][*]Using the CBBE body with physics and want to keep the look?
+[*]I do not play with physics on Skyrim much, so here’s where you can start:[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/45244]For Katana’s outfit[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/14340]For Megara’s outfit[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/23745]For River’s outfit[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/57294]For Elli’s outfit:[/url] I didn’t see BodySlide files for this one. The author said you could do whatever you’d like with it.
+[*]Please keep in mind that my texture paths are customized ([color=#f9cb9c]textures\actors\character\katana\body[/color]), so you would need [url=https://wiki.beyondskyrim.org/wiki/Arcane_University:Nifskope_for_Skyrim#:~:text=NifSkope%20is%20a%20tool%20for,%2C%20Civilization%20IV%2C%20and%20more.]Nifskope[/url]﻿ to make sure the .nif files have the right paths. With that said, if you are a mod author, you are welcome to release body conversions pertaining to this mod on Nexus.
+[*][color=#f9cb9c]Sorry, but no support will be given if the default body is intact.[/color][/list][size=5][b]Mod Recommendations[/b][/size]
+[list][*][url=https://www.nexusmods.com/skyrimspecialedition/mods/65037]No Follower Attack Collision[/url] - or similar.
+[*][url=https://www.skyrim-guild.com/distars-mods/adxp-mco]ADXP | MCO[/url]﻿﻿.
+[/list][size=5][b]Future Plans[/b][/size][list][*]Further dialogue expansion, if anything.
+[*]Feel free to look at the [url=https://github.com/users/annakins/projects/1]Github project list[/url]﻿. I have a pretty relaxed approach with Skyrim modding, so no timelines.
+[/list][b][size=5]Frequently Asked Questions[/size][/b][list][*]Can I get rid of the quest items when the quest is complete?[color=#f9cb9c] Yes. Even her feather if you’re happy with the summon spell.[/color]
+[*]Do I need to start a new game when installing for the first time? [color=#f9cb9c]You should be able to add this mod mid-save.[/color]
+[*]When the mod updates, can I still use the same save file? I have over 80 hours in! [color=#f9cb9c]Yes, unless otherwise indicated.[/color]
+[*]How come you removed the other body types? [color=#f9cb9c]Because I didn’t want to continue support for them anymore. [/color]
+[*]Where is Irin, and why did you choose that place instead of Akavir, for example?[color=#f9cb9c] Think of Irin as just another place outside the Elder Scrolls universe. And why, because Kat and I just wanted to name a place. That’s all. :)[/color]
+[*]Can you port to [i]insert platform here[/i]?[color=#f9cb9c] Not sure yet! Apparently porting to Xbox is simple? Perhaps later. [/color]
+[*]Can I have/see Katana’s rifle?[color=#f9cb9c] Not by default. If you know your way around mods, you can do anything.[/color]
+[*]Can I have Takiyo? [color=#f9cb9c]Not by default. If you know your way around mods, you can do anything.[/color]
+[*]How come Katana does not want to trade and stuff? [url=https://github.com/annakins/Katana/blob/main/Relationship%20System.md]Check out this trust document[/url]﻿.
+[*]I’m stuck, for some reason. Help? [color=#f9cb9c]If Skyrim decided to act funny, please check[url=https://github.com/users/annakins/projects/5/views/1] this document[/url]﻿ for setstage console commands.[/color]
+[*]Final battle question: [spoiler]Why isn’t River taking any damage? [color=#f9cb9c]Because you need to kill Elli first.[/color][/spoiler]
+[*]How come the quest ended that way? [spoiler][color=#f9cb9c]Originally, it was meant to be a cliff-hanger. In version 2.0+, you can ask Katana and Megara about most questions that players had. Ultimately, you have two companions who can support and flank for/with you. [/color][/spoiler][/list]
+[size=5][b]Credits & Thanks[/b][/size][b]
+[size=4]Main[/size][/b][list][*][url=https://ko-fi.com/annakins]Anna Garcia[/url] - creator, writer, voice of Katana. 
+[*][url=https://linktr.ee/katherine_brianne]Kelsey Kat[/url]﻿ - co-creator, writer, voice of River.
+[*][url=https://www.castingcall.club/DaggerForward]Mads[/url]﻿ - voice of Megara (version 2.0+).
+[*][url=https://www.castingcall.club/mossbal]Mossbal[/url]﻿ - voice of Elli.
+[*][url=https://github.com/chri3i/Ruvaak-Readme]Styyx[/url]﻿ for the title. 
+[*][url=https://github.com/zhongjiedong/Tsukiro]Tsukino[/url]﻿ for the CBBE+COTN+JK’s patches.
+[*][url=https://sites.google.com/view/krahven/]Destiny[/url]﻿ for the Khajiit Speak patch.
+[*]You, for taking the time to explore something I’ve given so much of my heart to. Thank you.
+[/list][size=4][b]Testers[/b][/size]
+Thanks so much for testing 1.0 in various environments: avatarvitug, Astro, Arkay, Tsukino, and more!
+
+[size=4][b]Assets[/b][/size]
+Important: Please don’t re-distribute if you don’t have permission.[list][*][url=https://www.nexusmods.com/skyrimspecialedition/mods/52535]JL10123[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/45794]juhaaaa[/url]
+[*][url=https://www.nexusmods.com/skyrim/users/3330686?tab=user+files]Caliente’s Beautiful Bodies Enhancer -CBBE-[/url]
+[*][url=https://www.nexusmods.com/skyrim/mods/91953]Bijin Skin - CBBE[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/31126]BHUNP[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/30174]3BA﻿[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/70653]billyro﻿[/url]﻿
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/36063]Authentic Eyes[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/29895]Kala’s Eyes[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/1062]Hvergelmir’s Aesthetics[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/40595]Kalilies Brows[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/6817]KS Hairdos[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/720]Northborn Scars[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/32744]Lertkrush[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/users/94213673]QuarantineCouture[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/6492]Netrve[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/57294]TeluraVas[/url]
+[*][url=http://www.cdprojekt.com/]CD Projekt Red[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/2618]Ruse and Oaristys[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/8608]pottoply[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/60183?tab=files]Enroys[/url]
+[*][url=https://www.nexusmods.com/skyrim/mods/45542/?tab=files]xp32[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/25773]Spongeman131[/url]
+[*][url=https://www.nexusmods.com/skyrimspecialedition/mods/1090]EnaiSiaion[/url]
+[/list][size=4][b]Helpful Resources[/b][/size][list][*][url=http://xoleras.com/]Xoleras[/url]
+[*][url=https://www.nexusmods.com/skyrim/users/7964964?tab=user+files]Testiger2[/url]
+[*][url=https://www.nexusmods.com/skyrim/mods/57050?tab=description]Tumbajamba[/url]
+[*][url=https://www.youtube.com/c/JosephRussell]Joseph Russell[/url]
+[*][url=https://www.youtube.com/channel/UCS8mvo8o60dgPQe9WJRp2qQ]mrowrpurr[/url]
+[*][url=https://www.youtube.com/c/Darkfox127/videos]Darkfox127[/url]
+[*]Bethesda - but of course!
+[/list]

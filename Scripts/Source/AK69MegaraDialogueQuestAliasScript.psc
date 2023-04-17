@@ -7,6 +7,7 @@ Actor Property Megara Auto
 GlobalVariable Property FollowerRecruited Auto
 GlobalVariable Property AK69MegaraWasBetrayed Auto
 AK69KatanaController property KatanaDataStorage auto
+GlobalVariable Property AK69MegaraWorkWithPlayer auto
 
 Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
      Actor combatTarget = Megara.GetCombatTarget()
@@ -22,3 +23,8 @@ Event OnDeath(Actor akKiller)
      Self.Clear()
 EndEvent
 
+Event OnHit(ObjectReference akAggressor, Form akSource, Projectile akProjectile, bool abPowerAttack, bool abSneakAttack, bool abBashAttack, bool abHitBlocked)
+     if AK69MegaraWorkWithPlayer.GetValue() == 1
+          AK69MegaraWorkWithPlayer.SetValue(0 as float)
+     endif
+EndEvent
