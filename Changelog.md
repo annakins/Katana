@@ -3,6 +3,13 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.7 - 04/16/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Visually replaced all actors (not the bandits).
+- New characters (not followers) have been created.
+- Katana can now hold back in combat (enable/disable via dialogue), if you play a stealthy character.
+- Megara can also hold back in combat (enable/disable via dialogue), but she can still heal you. 
+- Both of them go back to being able to attack if they get hit.
+
 ### 1.6 - 03/26/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - Implemented dialogue option for stealthy characters.
 - Added DecreaseRateMajor for if you betray Katana OR Megara.
