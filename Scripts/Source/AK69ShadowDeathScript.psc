@@ -3,6 +3,11 @@ Scriptname AK69ShadowDeathScript extends ObjectReference
 EffectShader Property DeathFXS Auto
 explosion property DeathExplosion auto
 
+Event OnInit()
+    self.BlockActivation()
+EndEvent
+
+
 Event OnDeath (Actor killer)	
 	ShadowDeath()	
 EndEvent

@@ -3,6 +3,27 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.8 - 06/04/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Removed Katana's teleportation to the player during combat, if dying.
+- Increased bleedout time.
+- Marked the two notes you get from the quest as optional. Some people reported they couldn't advance the quest upon reading the note(s), so this should help.
+- Marked Lucky Irnsvar, Runir Wulfhart, and Galtun Bold-Thief as optional as well, to reduce possible glitches.
+- Added BlockActivation on Katana's Shadow to prevent exploitation with looting the corpse.
+- Marked Elli's greatsword as not playable.
+- Reduced scarf regen from 5 to 2.
+- Changed Katana's race stats:
+    - Starting health: 150 to 100
+    - Starting magicka: 150 to 100
+    - Starting stamina: 150 to 100
+    - Health regen: 5 to 3
+- Moved Lucky Irnsvar a little. Hopefully that helps those that weren't able to find them before.
+- Leveling data changed:
+    - Elli: 28 to 20.
+    - Galtun Bold-Thief: 25 to 17.
+    - Lucky Irnsvar: 20 to 12.
+    - River: 30 to 22.
+    - Runir Wulfhart: 21 to 13.
+
 ### 1.7 - 04/16/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - Visually replaced all actors (not the bandits).
 - New characters (not followers) have been created.

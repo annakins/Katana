@@ -1,10 +1,11 @@
 ;BEGIN FRAGMENT CODE - Do not edit anything between this and the end comment
-;NEXT FRAGMENT INDEX 12
+;NEXT FRAGMENT INDEX 13
 Scriptname SF_AK69KatanaBleedoutLines_043F0410 Extends Scene Hidden
 
 ;BEGIN FRAGMENT Fragment_8
 Function Fragment_8()
 ;BEGIN CODE
+Utility.Wait(4)
 Katana.GetActorReference().AddItem(RestoreHealth04, 1, true)
 Katana.GetActorReference().EquipItem(RestoreHealth04 as form, false, false)
 Katana.GetActorReference().RestoreActorValue("Health", 100 as Float)

@@ -32,8 +32,8 @@ Function KatanaCombatStateChanged(Actor akTarget, int aeCombatState)
 	akTarget.GetCombatState()
 	If (aeCombatState == 1) && (akTarget.IsFlying() == 0) && (akTarget.GetCurrentLocation() == KatanaIrin.GetCurrentLocation())
 	ShadowAttack()
-	Elseif 	((Player.GetActorValuePercentage("Health") <= 0.40) && (Player.GetActorValuePercentage("Health") > 0.10) && (utility.randomfloat() < 0.25))
-		TeleporttoPlayer()
+	;Elseif 	((Player.GetActorValuePercentage("Health") <= 0.40) && (Player.GetActorValuePercentage("Health") > 0.10) && (utility.randomfloat() < 0.25))
+		;TeleporttoPlayer()
 	EndIf
 EndFunction
 
@@ -60,27 +60,27 @@ EndFunction
 
 ;========================
 
-Function TeleporttoPlayer()	
-	Actor KatanaIrin = KatanaRef.GetReference() as Actor
-	If (Player.GetParentCell() != KatanaIrin.GetParentCell()) && AK69KatanaRecruited.GetValue() == 1
-		float angle = Player.GetAngleZ() + 180		
-		KatanaIrin.setAlpha(0.1)
-		BeginTeleport()	
-		KatanaIrin.MoveTo(Player, 512.0 * Math.Sin(angle), 512.0 * Math.Cos(angle), 512)
-		EndTeleport()
-		Utility.Wait(0.3)
-		KatanaIrin.setAlpha(1)		
-	EndIf
-	KatanaIrin.setAlpha(0.1)
-	BeginTeleport()	
-	KatanaIrin.Moveto(Player, 120.0 * Math.Sin(Player.GetAngleZ()), -120.0 * Math.Cos(Player.GetAngleZ()))
-	EndTeleport()
-	Utility.Wait(0.3)   
-	KatanaIrin.setAlpha(1)
-	If KatanaIrin.IsWeaponDrawn() == 0
-	KatanaIrin.DrawWeapon()	
-	EndIf	
-EndFunction
+;Function TeleporttoPlayer()	
+	;Actor KatanaIrin = KatanaRef.GetReference() as Actor
+	;If (Player.GetParentCell() != KatanaIrin.GetParentCell()) && AK69KatanaRecruited.GetValue() == 1
+		;float angle = Player.GetAngleZ() + 180		
+		;KatanaIrin.setAlpha(0.1)
+		;BeginTeleport()	
+		;KatanaIrin.MoveTo(Player, 512.0 * Math.Sin(angle), 512.0 * Math.Cos(angle), 512)
+		;EndTeleport()
+		;Utility.Wait(0.3)
+		;KatanaIrin.setAlpha(1)		
+	;EndIf
+	;KatanaIrin.setAlpha(0.1)
+	;BeginTeleport()	
+	;KatanaIrin.Moveto(Player, 120.0 * Math.Sin(Player.GetAngleZ()), -120.0 * Math.Cos(Player.GetAngleZ()))
+	;EndTeleport()
+	;Utility.Wait(0.3)   
+	;KatanaIrin.setAlpha(1)
+	;If KatanaIrin.IsWeaponDrawn() == 0
+	;KatanaIrin.DrawWeapon()	
+	;EndIf	
+;EndFunction
 
 ;========================
 
