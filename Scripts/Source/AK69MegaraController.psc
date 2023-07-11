@@ -15,6 +15,8 @@ GlobalVariable Property MegaraRelaxVar Auto
 GlobalVariable Property FollowerRecruited Auto
 Int Property iFollowerDismiss Auto Conditional
 Quest Property AK69MegaraConfigQuest Auto
+Quest Property AK69MegaraSkyrimQuests Auto
+Quest Property AK69MegaraDismissedQuest Auto
 
 bool Property PlayerSettled auto conditional
 
@@ -29,6 +31,9 @@ Function SetFollower(ObjectReference FollowerRef)
      FollowerActor.EvaluatePackage()
      FollowerRecruited.SetValue(1)
 	AK69MegaraConfigQuest.Start()
+     AK69MegaraSkyrimQuests.Start()
+     AK69MegaraDismissedQuest.Stop()
+
 EndFunction
 
 Function FollowerWait()
@@ -71,6 +76,8 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
           DismissedFollowerActor.SetActorValue("WaitingForPlayer", 0)
           FollowerRecruited.SetValue(0)
           AK69MegaraConfigQuest.Stop()
+          AK69MegaraSkyrimQuests.Stop()
+          AK69MegaraDismissedQuest.Start()
           HirelingRehireScript.DismissHireling(DismissedFollowerActor.GetActorBase())
 
           If iSayLine == 1

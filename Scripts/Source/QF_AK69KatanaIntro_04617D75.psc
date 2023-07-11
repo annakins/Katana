@@ -1,5 +1,5 @@
 ;BEGIN FRAGMENT CODE - Do not edit anything between this and the end comment
-;NEXT FRAGMENT INDEX 2
+;NEXT FRAGMENT INDEX 3
 Scriptname QF_AK69KatanaIntro_04617D75 Extends Quest Hidden
 
 ;BEGIN ALIAS PROPERTY Player
@@ -15,9 +15,12 @@ ReferenceAlias Property Alias_Katana Auto
 ;BEGIN FRAGMENT Fragment_0
 Function Fragment_0()
 ;BEGIN CODE
-Stop()
+AK69KatanaTracker.Start()
+Self.Stop()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
+
+Quest Property AK69KatanaTracker  Auto  

@@ -25,6 +25,11 @@ ObjectReference Property WinkingSkeeverMarker auto
 Location Property SolitudeLocation Auto
 Activator Property InVis Auto
 
+Quest Property AK69KatanaPlayerReactionsQuest auto
+Quest Property KatanaPQDialogue auto
+Quest Property AK69KatanaSkyrimQuests auto
+Quest Property AK69KatanaDismissedQuest auto
+
 bool Property PlayerSettled auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)
@@ -38,6 +43,10 @@ Function SetFollower(ObjectReference FollowerRef)
      FollowerActor.EvaluatePackage()
      FollowerRecruited.SetValue(1)
 	 AK69KatanaConfigQuest.Start()
+	 AK69KatanaPlayerReactionsQuest.Start()
+	 KatanaPQDialogue.Start()
+	 AK69KatanaSkyrimQuests.Start()
+	 AK69KatanaDismissedQuest.Stop()
 EndFunction
 
 Function FollowerWait()
@@ -80,6 +89,10 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
           DismissedFollowerActor.SetActorValue("WaitingForPlayer", 0)
           FollowerRecruited.SetValue(0)
 		  AK69KatanaConfigQuest.Stop()
+		  AK69KatanaPlayerReactionsQuest.Stop()
+		  KatanaPQDialogue.Stop()
+		  AK69KatanaSkyrimQuests.Stop()
+		  AK69KatanaDismissedQuest.Start()
           HirelingRehireScript.DismissHireling(DismissedFollowerActor.GetActorBase())
           If iSayLine == 1
                iFollowerDismiss = 1
@@ -99,7 +112,7 @@ EndFunction
 
 Function KatanaGoHome()
 	If KatanaActor.GetDistance(HomeMarker) >= 1000
-		Debug.SendAnimationEvent(KatanaActor, "IdleMagic_01")
+		Debug.SendAnimationEvent(KatanaActor, "IdleCleanSword")
 		Utility.Wait(2)
 		KatanaActor.setAlpha(0.1)
 		Utility.Wait(0.3)
@@ -113,7 +126,7 @@ EndFunction
 
 Function KatanaGoWinkingSkeever()
 	If KatanaActor.GetDistance(WinkingSkeeverMarker) >= 1000 && !KatanaActor.IsInLocation(SolitudeLocation)
-		Debug.SendAnimationEvent(KatanaActor, "IdleMagic_01")
+		Debug.SendAnimationEvent(KatanaActor, "IdleCleanSword")
 		Utility.Wait(2)
 		KatanaActor.setAlpha(0.1)
 		Utility.Wait(0.3)

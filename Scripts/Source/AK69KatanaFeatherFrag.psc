@@ -11,7 +11,7 @@ Game.GetPlayer().AddSpell(SummonKatana)
 Game.GetPlayer().AddSpell(UnstuckKatana)
 Game.GetPlayer().AddSpell(CheckRelationship)
 Katana.AllowBleedoutDialogue(true)
-	self.GetOwningQuest().SetStage(5)
+GetOwningQuest().SetStage(5)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -27,3 +27,4 @@ SPELL Property UnstuckKatana  Auto
 Actor Property Katana  Auto  
 
 SPELL Property CheckRelationship  Auto  
+

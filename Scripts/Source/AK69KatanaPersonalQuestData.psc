@@ -48,3 +48,7 @@ Function DHReadyTime()
 	float DHReady = GameDaysPassed.GetValue() + DHUntilReady	
 	AK69DHStageVar.SetValue(DHReady)
 EndFunction
+
+Function EndQuest()
+Self.SetStage(300)
+EndFunction

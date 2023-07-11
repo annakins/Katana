@@ -3,6 +3,27 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.83 - UNRELEASED - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- New patch for Wounds available, for Megara.
+- All the missing Katana lines have been added.
+- Al'Tharo's scene implemented.
+- Changed Megara's confidence to Foolhardy due to cowering.
+
+### 1.82 - UNRELEASED - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Reduced the amount of start-game enabled quests and ensures that all of them (except for the follow quests) stop accordingly.
+- Katana now correctly reacts to the player stats changing. Refer to [this document](https://github.com/annakins/Katana/blob/main/Relationship%20System.md) if needed
+- Changed priority of some dialogue so you hear them first.
+
+### 1.81 - UNRELEASED - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Forwarded USSEP weather for Frozen Hearth.
+- Removed Katana's record for WICastMagicNonHostileSpell01 quest.
+- Removed Megara's record for BQ01 quest.
+- Added recruited condition to use summon spell and reset spell for both followers.
+- Modified Katana's, River's, Elli's, and Megara's perks. Ex: I originally had only Restoration50 on Megara, without Restoration00-25.
+- Removed `if utility.randomfloat()` in reaction var scenes so they play more.
+- Removed getstage lines for letters.
+- Changed angle from 64 to -500 and -300 for tele script.
+
 ### 1.8 - 06/04/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - Removed Katana's teleportation to the player during combat, if dying.
 - Increased bleedout time.

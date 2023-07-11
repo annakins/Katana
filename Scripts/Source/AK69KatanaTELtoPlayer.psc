@@ -29,8 +29,8 @@ YFloat = self.GetPositionY()
 ZFloat = self.GetPositionZ()
 
 float fDir = CalculateDesiredAngle(TeleportTarget)
-float XLoc = PolarToRectangularX(TeleportTarget.GetPositionX(), fdir, 64)
-float YLoc = PolarToRectangularY(TeleportTarget.GetPositionY(), fdir, 64)	;to do: add prop instead of fixed numbers
+float XLoc = PolarToRectangularX(TeleportTarget.GetPositionX(), fdir, -500)
+float YLoc = PolarToRectangularY(TeleportTarget.GetPositionY(), fdir, -500)	;to do: add prop instead of fixed numbers
 
 utility.wait(0.1)
 

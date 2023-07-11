@@ -1,6 +1,6 @@
 # Relationship System
 
-### Enabling/Disabling Decrease (Version 1.1+)
+### Enabling/Disabling Decrease (Version 2.0+)
 - If you would like Katana to look the other way when you commit *certain* acts, talk to her and select `About my lifestyle...`
 - You will get these notifications that confirm your choice:
   - `Katana will acknowledge all of your actions.` = DEFAULT TRUST.

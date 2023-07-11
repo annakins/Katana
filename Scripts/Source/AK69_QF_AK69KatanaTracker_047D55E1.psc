@@ -1,5 +1,5 @@
 ;BEGIN FRAGMENT CODE - Do not edit anything between this and the end comment
-;NEXT FRAGMENT INDEX 4
+;NEXT FRAGMENT INDEX 8
 Scriptname AK69_QF_AK69KatanaTracker_047D55E1 Extends Quest Hidden
 
 ;BEGIN ALIAS PROPERTY Katana
@@ -15,9 +15,18 @@ AK69KatanaQuestReadyScript kmyQuest = __temp as AK69KatanaQuestReadyScript
 ;END AUTOCAST
 ;BEGIN CODE
 kmyQuest.QuestReadyTime()
+
+AK69KatanaPersonalQuest.Start()
+
+AK69DecidedToDismissKatanaDuringHerQuest.Start()
+
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
 
+
+Quest Property AK69KatanaPersonalQuest  Auto  
+
+Quest Property AK69DecidedToDismissKatanaDuringHerQuest  Auto  

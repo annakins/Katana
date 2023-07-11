@@ -86,6 +86,7 @@ If RKatana.GetActorReference().HasLOS(Game.GetPlayer())
 UpdateStats()
 Else
 	KatanaDataStorage.UpdateAllStats()
+	KatanaPlayerReactionsVar.SetValue(0)
 EndIf
 	RegisterForSingleUpdate(UpdateInterval)
 EndEvent
@@ -115,10 +116,10 @@ function UpdateStats()
 	if Brawlswon > KatanaDataStorage.PStat_BrawlsWon
 		KatanaDataStorage.PStat_BrawlsWon = BrawlsWon
 		KatanaDataStorage.IncreaseRateMinor()	
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(1)
+		;if utility.randomfloat() < 0.25
+		KatanaPlayerReactionsVar.SetValue(1)
 		KatanaPlayerReactionsScene.Start()
-		endif		
+		;endif		
 	endif
 
 	int StandingStones = Game.QueryStat("Standing Stones Found")
@@ -161,10 +162,10 @@ function UpdateStats()
 	if HousesOwned > KatanaDataStorage.PStat_HousesOwned
 		KatanaDataStorage.PStat_HousesOwned = HousesOwned		
 		KatanaDataStorage.IncreaseRateMinor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(3)
+		;if utility.randomfloat() < 0.25
+		KatanaPlayerReactionsVar.SetValue(3)
 		KatanaPlayerReactionsScene.Start()
-		endif
+		;endif
 	endif
 
 	int QuestsCompleted = Game.QueryStat("Quests Completed")
@@ -225,10 +226,10 @@ function UpdateStats()
 	if DragonSoulsCollected > KatanaDataStorage.PStat_DragonSoulsCollected
 		KatanaDataStorage.PStat_DragonSoulsCollected = DragonSoulsCollected		
 		KatanaDataStorage.IncreaseRateModerate()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(4)
+		;if utility.randomfloat() < 0.25
+		KatanaPlayerReactionsVar.SetValue(4)
 		KatanaPlayerReactionsScene.Start()
-		endif
+		;endif
 	endif	
 	
 	int WordsOfPowerLearned = Game.QueryStat("Words Of Power Learned")
@@ -247,30 +248,30 @@ function UpdateStats()
 	if ShoutsMastered > KatanaDataStorage.PStat_ShoutsMastered
 		KatanaDataStorage.PStat_ShoutsMastered = ShoutsMastered		
 		KatanaDataStorage.IncreaseRateModerate()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(5)
+		;if utility.randomfloat() < 0.25
+		KatanaPlayerReactionsVar.SetValue(5)
 		KatanaPlayerReactionsScene.Start()
-		endif
+		;endif
 	endif
 	
 	int WeaponsImproved = Game.QueryStat("Weapons Improved")
 	if WeaponsImproved > KatanaDataStorage.PStat_WeapsImproved
 		KatanaDataStorage.PStat_WeapsImproved = WeaponsImproved		
 		KatanaDataStorage.IncreaseRateMinor()
-		if utility.randomfloat() < 0.25
-			KatanaPlayerReactionsVar.SetValueInt(8)
+		;if utility.randomfloat() < 0.25
+		KatanaPlayerReactionsVar.SetValue(8)
 		KatanaPlayerReactionsScene.Start()
-		endif
+		;endif
 	endif	
 	
 	int WeaponsMade = Game.QueryStat("Weapons Made")
 	if WeaponsMade > KatanaDataStorage.PStat_WeapsMade
 		KatanaDataStorage.PStat_WeapsMade = WeaponsMade		
 		KatanaDataStorage.IncreaseRateMinor()
-		if utility.randomfloat() < 0.25
-			KatanaPlayerReactionsVar.SetValueInt(6)
+		;if utility.randomfloat() < 0.25
+		KatanaPlayerReactionsVar.SetValue(6)
 		KatanaPlayerReactionsScene.Start()
-		endif
+		;endif
 	endif
 	
 	;Removing this due to unidentifiable spam.
@@ -279,7 +280,7 @@ function UpdateStats()
 		;KatanaDataStorage.PStat_ArmorImproved = ArmorImproved		
 		;KatanaDataStorage.IncreaseRateMinor()
 		;if utility.randomfloat() < 0.25
-			;KatanaPlayerReactionsVar.SetValueInt(9)
+			;KatanaPlayerReactionsVar.SetValue(9)
 		;KatanaPlayerReactionsScene.Start()
 		;endif
 	;endif
@@ -288,10 +289,10 @@ function UpdateStats()
 	if ArmorMade > KatanaDataStorage.PStat_ArmorMade
 		KatanaDataStorage.PStat_ArmorMade = ArmorMade		
 		KatanaDataStorage.IncreaseRateMinor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(7)
+		;if utility.randomfloat() < 0.25
+		KatanaPlayerReactionsVar.SetValue(7)
 		KatanaPlayerReactionsScene.Start()
-		endif
+		;endif
 	endif
 	
 	int Persuasions = Game.QueryStat("Persuasions")
@@ -317,7 +318,7 @@ function UpdateStats()
 		;KatanaDataStorage.PStat_EastmarchBounty = EastmarchBounty		
 		;KatanaDataStorage.IncreaseRateMajor()
 		;if utility.randomfloat() < 0.25
-			;KatanaPlayerReactionsVar.SetValueInt(10)
+			;KatanaPlayerReactionsVar.SetValue(10)
 		;KatanaPlayerReactionsScene.Start()
 		;endif
 	;endif
@@ -327,7 +328,7 @@ function UpdateStats()
 		;KatanaDataStorage.PStat_FalkreathBounty = FalkreathBounty		
 		;KatanaDataStorage.IncreaseRateMajor()
 		;if utility.randomfloat() < 0.25
-		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsVar.SetValue(10)
 		;KatanaPlayerReactionsScene.Start()
 		;endif
 	;endif
@@ -337,7 +338,7 @@ function UpdateStats()
 		;KatanaDataStorage.PStat_HaafingarBounty = HaafingarBounty		
 		;KatanaDataStorage.IncreaseRateMajor()
 		;if utility.randomfloat() < 0.25
-		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsVar.SetValue(10)
 		;KatanaPlayerReactionsScene.Start()
 		;endif
 	;endif
@@ -347,7 +348,7 @@ function UpdateStats()
 		;KatanaDataStorage.PStat_HjaalmarchBounty = HjaalmarchBounty		
 		;KatanaDataStorage.IncreaseRateMajor()
 		;if utility.randomfloat() < 0.25
-		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsVar.SetValue(10)
 		;KatanaPlayerReactionsScene.Start()
 		;endif
 	;endif
@@ -357,7 +358,7 @@ function UpdateStats()
 		;KatanaDataStorage.PStat_ThePaleBounty = ThePaleBounty		
 		;KatanaDataStorage.IncreaseRateMajor()
 		;if utility.randomfloat() < 0.25
-		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsVar.SetValue(10)
 		;KatanaPlayerReactionsScene.Start()
 		;endif
 	;endif
@@ -367,7 +368,7 @@ function UpdateStats()
 		;KatanaDataStorage.PStat_TheReachBounty = TheReachBounty		
 		;KatanaDataStorage.IncreaseRateMajor()
 		;if utility.randomfloat() < 0.25
-		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsVar.SetValue(10)
 		;KatanaPlayerReactionsScene.Start()
 		;endif
 	;endif
@@ -377,7 +378,7 @@ function UpdateStats()
 		;KatanaDataStorage.PStat_TheRiftBounty = TheRiftBounty		
 		;KatanaDataStorage.IncreaseRateMajor()
 		;if utility.randomfloat() < 0.25
-		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsVar.SetValue(10)
 		;KatanaPlayerReactionsScene.Start()
 		;endif
 	;endif
@@ -387,7 +388,7 @@ function UpdateStats()
 		;KatanaDataStorage.PStat_TribalOrcsBounty = TribalOrcsBounty		
 		;KatanaDataStorage.IncreaseRateMajor()
 		;if utility.randomfloat() < 0.25
-		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsVar.SetValue(10)
 		;KatanaPlayerReactionsScene.Start()
 		;endif
 	;endif
@@ -397,7 +398,7 @@ function UpdateStats()
 		;KatanaDataStorage.PStat_WhiterunBounty = WhiterunBounty		
 		;KatanaDataStorage.IncreaseRateMajor()
 		;if utility.randomfloat() < 0.25
-		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsVar.SetValue(10)
 		;KatanaPlayerReactionsScene.Start()
 		;endif
 	;endif
@@ -407,7 +408,7 @@ function UpdateStats()
 		;KatanaDataStorage.PStat_WinterholdBounty = WinterholdBounty
 		;KatanaDataStorage.IncreaseRateMajor()
 		;if utility.randomfloat() < 0.25
-		;KatanaPlayerReactionsVar.SetValueInt(10)
+		;KatanaPlayerReactionsVar.SetValue(10)
 		;KatanaPlayerReactionsScene.Start()
 		;endif
 	;endif
@@ -418,20 +419,20 @@ function UpdateStats()
 	if Murders > KatanaDataStorage.PStat_Murders
 		KatanaDataStorage.PStat_Murders = Murders	
 		KatanaDataStorage.DecreaseRateMajor()
-		if utility.randomfloat() < 0.25	
-		KatanaPlayerReactionsVar.SetValueInt(13)
+		;if utility.randomfloat() < 0.25	
+		KatanaPlayerReactionsVar.SetValue(13)
 		KatanaPlayerReactionsScene.Start()
-		endif
+		;endif
 	endif
 	
 	int BunniesSlaughtered  = Game.QueryStat("Bunnies Slaughtered")
 	if BunniesSlaughtered > KatanaDataStorage.PStat_BunniesSlaughtered
 		KatanaDataStorage.PStat_BunniesSlaughtered = BunniesSlaughtered		
 		KatanaDataStorage.DecreaseRateMajor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(14)
+		;if utility.randomfloat() < 0.25
+		KatanaPlayerReactionsVar.SetValue(14)
 		KatanaPlayerReactionsScene.Start()
-		endif
+		;endif
 	endif
 	
 	int HorsesStolen = Game.QueryStat("Horses Stolen")	
@@ -450,20 +451,20 @@ function UpdateStats()
 	if Bribes > KatanaDataStorage.PStat_Bribes
 		KatanaDataStorage.PStat_Bribes = Bribes		
 		KatanaDataStorage.DecreaseRateMinor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(11)
+		;if utility.randomfloat() < 0.25
+		KatanaPlayerReactionsVar.SetValue(11)
 		KatanaPlayerReactionsScene.Start()
-		endif
+		;endif
 	endif
 		
 	int PocketsPicked = Game.QueryStat("Pockets Picked")
 	if PocketsPicked > KatanaDataStorage.PStat_PocketsPicked
 		KatanaDataStorage.PStat_PocketsPicked = PocketsPicked		
 		KatanaDataStorage.DecreaseRateMinor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(12)
+		;if utility.randomfloat() < 0.25
+		KatanaPlayerReactionsVar.SetValue(12)
 		KatanaPlayerReactionsScene.Start()
-		endif
+		;endif
 	endif
 
 	int ItemsPickpocketed = Game.QueryStat("Items Pickpocketed")
@@ -476,10 +477,10 @@ function UpdateStats()
 	if ItemsStolen > KatanaDataStorage.PStat_ItemsStolen
 		KatanaDataStorage.PStat_ItemsStolen = ItemsStolen		
 		KatanaDataStorage.DecreaseRateMinor()
-		if utility.randomfloat() < 0.25
-		KatanaPlayerReactionsVar.SetValueInt(15)
+		;if utility.randomfloat() < 0.25
+		KatanaPlayerReactionsVar.SetValue(15)
 		KatanaPlayerReactionsScene.Start()
-		endif
+		;endif
 	endif
 	
 endFunction
