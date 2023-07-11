@@ -3,7 +3,7 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
-### 1.83 - UNRELEASED - I don't recommend you download this right now. Just uploaded so I have a backup. 
+### 1.83 - 07/07/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - New patch for Wounds available, for Megara.
 - All the missing Katana lines have been added.
 - Al'Tharo's scene implemented.
