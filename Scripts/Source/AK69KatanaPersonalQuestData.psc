@@ -22,6 +22,14 @@ bool property DHStage = false auto conditional
 
 ;===
 
+AK69KatanaController Property KatanaDataStorage  Auto  
+
+Function PQCompletedIncrease()
+KatanaDataStorage.IncreaseRatePQ()
+EndFunction
+
+;===
+
 GlobalVariable Property GameDaysPassed Auto
 GlobalVariable Property AK69KatanaStage2Var auto
 GlobalVariable Property AK69KatanaStage3Var auto

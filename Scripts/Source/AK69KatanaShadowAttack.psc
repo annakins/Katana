@@ -38,12 +38,13 @@ Function KatanaCombatStateChanged(Actor akTarget, int aeCombatState)
 EndFunction
 
 ;========================
+; original FRand > 0.7 
 
 Function ShadowAttack()
 	Actor KatanaIrin = KatanaRef.GetReference() as Actor
 	Actor combatTarget = KatanaIrin.GetCombatTarget()	
 	float FRand = utility.RandomFloat()
-		If ((combatTarget != None) && AK69KatanaWorkWithPlayer.GetValue() == 0 && (FRand > 0.7) && (combatTarget.GetActorValuePercentage("Health") >= 0.95) && ((combatTarget.IsBleedingOut() == 0) || (combatTarget.IsRunning() == 0)))
+		If ((combatTarget != None) && AK69KatanaWorkWithPlayer.GetValue() == 0 && (FRand < 0.25) && (combatTarget.GetActorValuePercentage("Health") >= 0.95) && ((combatTarget.IsBleedingOut() == 0) || (combatTarget.IsRunning() == 0)))
 			MistRaven.Cast(KatanaIrin, KatanaIrin)
 			int i = 0
 			while !KatanaIrin.HasMagicEffectWithKeyword(MagicInvisibility) && i < 50

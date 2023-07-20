@@ -206,6 +206,7 @@ EndFunction
 float __minorAssessment = 0.05
 float __moderateAssessment = 0.2
 float __majorAssessment = 0.5
+float __PQAssessment = 2.0
 
 Function IncreaseRateMinor()
 	ModAssessment(1, __minorAssessment)
@@ -217,6 +218,10 @@ EndFunction
 
 Function IncreaseRateMajor()
 	ModAssessment(1, __majorAssessment)
+EndFunction
+
+Function IncreaseRatePQ()
+	ModAssessment(1, __PQAssessment)
 EndFunction
 
 Function DecreaseRateMinor()

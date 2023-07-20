@@ -3,6 +3,12 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.84 - 07/20/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Reduced amount of teleportation.
+- Changed sandbox energy so they move less around the player.
+- Converted Elli's, Deep's, and Azatar's audio to FUZ.
+- Dialogue priorities reorganized.
+
 ### 1.83 - 07/07/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - New patch for Wounds available, for Megara.
 - All the missing Katana lines have been added.
