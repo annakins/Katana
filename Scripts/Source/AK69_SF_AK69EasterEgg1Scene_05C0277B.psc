@@ -2,6 +2,14 @@
 ;NEXT FRAGMENT INDEX 12
 Scriptname AK69_SF_AK69EasterEgg1Scene_05C0277B Extends Scene Hidden
 
+;BEGIN FRAGMENT Fragment_5
+Function Fragment_5()
+;BEGIN CODE
+AK69Azatar.AddItem(AK69DeepvosNote, 1, true)
+;END CODE
+EndFunction
+;END FRAGMENT
+
 ;BEGIN FRAGMENT Fragment_8
 Function Fragment_8()
 ;BEGIN CODE
@@ -14,14 +22,6 @@ AK69Deepvos.StopCombat()
 AK69Deepvos.StopCombatAlarm()
 AzatarDrunkMarker.Disable()
 DeepDrunkMarker.Disable()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_5
-Function Fragment_5()
-;BEGIN CODE
-AK69Azatar.AddItem(AK69DeepvosNote, 1, true)
 ;END CODE
 EndFunction
 ;END FRAGMENT

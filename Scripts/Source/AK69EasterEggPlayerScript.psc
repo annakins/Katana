@@ -14,6 +14,7 @@ ObjectReference property BanneredMareMarker auto
 ObjectReference Property AK69ChadrynSleepingGiantInnMarker  Auto 
 ObjectReference property DeepvosMarker auto
 ObjectReference property AzatarMarker auto
+ObjectReference property AK69DeepGoHereMeow auto
 Scene Property AK69ChadrynIntroScene Auto
 Actor Property Katana Auto
 Actor Property Megara Auto
@@ -29,11 +30,12 @@ If GameDaysPassed.GetValue() >= AK69NutBoysGoodbyeTimeVar.GetValue()
     BanneredMareMarker.Disable()
     DeepvosMarker.Disable()
     AzatarMarker.Disable()
+    AK69DeepGoHereMeow.Disable()
 Endif
 endif
 
 if (AK69KatanaRecruitedVar.GetValue() == 1) && (AK69MegaraRecruitedVar.GetValue() == 1)
-if (GetOwningQuest().GetStage() == 0 && (akNewLoc == Whiterun))
+if (GetOwningQuest().GetStage() == 0 && (akNewLoc == Whiterun) && Chadryn.GetParentCell() == Game.GetPlayer().GetParentCell())
 	AK69ChadrynIntroScene.Start()
 endif
 Endif
