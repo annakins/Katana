@@ -3,6 +3,12 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.86 - 07/26/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Katana's perks now level up with the player.
+- Removed weapspeedperk on Katana.
+- Khajiit Speak updated.
+- See 2.0 Testers file for documentation.
+
 ### 1.85 - 07/24/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - 2.0 should be close to being done. This is a test build with incomplete voices.
 
