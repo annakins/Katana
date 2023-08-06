@@ -3,6 +3,14 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.87 - 08/05/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Chadryn's lines have been FUZ'ed.
+- Sneak/sheathe torch feature implemented.
+- You can send Katana off to her own bounties, but this is a WIP.
+- All loc idles are in, but unvoiced. This is huge.
+- Changed settle radius to 700+ from 500.
+
+
 ### 1.86 - 07/26/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - Katana's perks now level up with the player.
 - Removed weapspeedperk on Katana.

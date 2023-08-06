@@ -13,6 +13,7 @@ Keyword Property ActorTypeDragon Auto
 bool Property bCasting Auto
 ActorBase Property ActorOwner Auto
 globalvariable property AK69KatanaWorkWithPlayer auto
+Actor Property Megara Auto
 
 function BeginTeleport()
 PlaceAtMe(InVis)
@@ -79,7 +80,7 @@ function CheckSuccess(ObjectReference ObjPoint)
 endFunction
 
 bool function HitAsFollower(Actor ActorToCheck)
-if ((ActorToCheck == Game.GetPlayer())||(ActorToCheck.HasKeyword(ActorTypeDragon))) 
+if ((ActorToCheck == Game.GetPlayer())|| (ActorToCheck == Megara) ||(ActorToCheck.HasKeyword(ActorTypeDragon))) 
 return true
 endIf
 endFunction

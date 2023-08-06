@@ -5,6 +5,8 @@ ReferenceAlias Property RMegara auto
 int Property UpdateInterval auto
 float Property SettleRadius auto
 GlobalVariable Property FollowerRecruited Auto
+GlobalVariable Property AK69MegaraTorchVar Auto
+Light Property Torch01 Auto
 
 int __historySize = 8 
 float[] __playerPosX
@@ -80,6 +82,11 @@ Event OnUpdate()
 			endif
 			RMegara.GetActorReference().EvaluatePackage()
 		endif
+		
+		if (AK69MegaraTorchVar.GetValue() == 0) && (RMegara.GetActorReference().GetItemCount(Torch01) == 0) && (!RMegara.GetActorReference().IsSneaking())
+			RMegara.GetActorReference().AddItem(Torch01)
+		endif
+		
 	endif
 	RegisterForSingleUpdate(UpdateInterval)
 EndEvent

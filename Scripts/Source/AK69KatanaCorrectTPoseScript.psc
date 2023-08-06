@@ -4,7 +4,8 @@ Actor Property Katana Auto
 
 Event OnEffectStart(Actor akTarget, Actor akCaster)
 
-
+Katana.StopCombat()	
+Katana.StopCombatAlarm()
 debug.SendAnimationEvent(Katana as objectreference, "RF_Idle_Out")
 utility.Wait(1.50000)
 debug.SendAnimationEvent(Katana as objectreference, "IdleSitCrossLeggedEnter")
