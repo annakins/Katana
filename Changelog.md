@@ -9,6 +9,12 @@ Version 1.0 released September of 2022.
 - You can send Katana off to her own bounties, but this is a WIP.
 - All loc idles are in, but unvoiced. This is huge.
 - Changed settle radius to 700+ from 500.
+- Corrected CBBE nude paths.
+- Added Lux patches.
+- Changed Megara's FX for the staff.
+- Changed staff model.
+- Azatar should now actually get paralyzed if DeepVos missed.
+
 
 
 ### 1.86 - 07/26/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
