@@ -6,9 +6,12 @@ Scriptname AK69_TIF__05F64D2E Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
+Game.GetPlayer().PlaceAtMe(AK69HealFXActivator)
 Game.GetPlayer().RestoreActorValue("Health", 100 as Float)
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
+
+Activator Property AK69HealFXActivator  Auto  

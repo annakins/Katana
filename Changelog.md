@@ -3,6 +3,12 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.88 - 08/11/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- A lot of idles should no longer repeat due to `GetDayOfWeek` condition.
+- Added crimefactions to NoLikeyVar.
+- All 2.0 lines (text, not voices) have been added.
+- Chadryn re-EQed.
+
 ### 1.87 - 08/05/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - Chadryn's lines have been FUZ'ed.
 - Sneak/sheathe torch feature implemented.
