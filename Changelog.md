@@ -3,6 +3,12 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.89 - 08/15/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Quality of life stuff. 
+- Shade's look has been changed a bit.
+- Shade now has a voice, but not 100% yet.
+- ccotherwordly texture removed. Wasn't in use.
+
 ### 1.88 - 08/11/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - A lot of idles should no longer repeat due to `GetDayOfWeek` condition.
 - Added crimefactions to NoLikeyVar.

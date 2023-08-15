@@ -19,6 +19,7 @@ Float EndLocX
 ;-- Functions ---------------------------------------
 
 Event OnEffectFinish(Actor akTarget, Actor akCaster)
+KatanaShadow.GetActorBase().SetInvulnerable(false)
 self.Dispel()
 endEvent
 
@@ -29,7 +30,7 @@ Event OnUpdate()
 endEvent
 
 Event OnEffectStart(Actor akTarget, Actor akCaster)
- 
+	KatanaShadow.GetActorBase().SetInvulnerable()
 	Float TargetAngle = Katana.GetAngleZ()
     Actor TargetCombatTarget = Katana.GetCombatTarget()		
 	EndLocX = WB_DistanceInFront * math.Sin(TargetAngle)
@@ -45,7 +46,7 @@ endEvent
 
 Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
 	Utility.Wait(4.0)
-	if (aeCombatState == 0)
+	if (akTarget == None) && (Katana.IsBleedingOut() == 0)
 	DeathFXS.Play(KatanaShadow)
 	Utility.wait(0.5)
 	KatanaShadow.placeAtMe(DeathExplosion)

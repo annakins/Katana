@@ -6,10 +6,6 @@ ObjectReference Property AK69ChillfurrowXMarker  Auto
 ObjectReference Property AK69BanneredMareMarker2  Auto 
 ObjectReference Property AK69CappyCarrot Auto
 
-Function RemoveCarrot()
-    Game.GetPlayer().RemoveItem(AK69CappyCarrot)
-EndFunction
-
 
 float UntilCappyTime = 1.92 ;0.04 is 1 game hour
 
