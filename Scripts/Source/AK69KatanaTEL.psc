@@ -87,7 +87,7 @@ endFunction
 
 Event OnHit(ObjectReference akAggressor, Form akSource, Projectile akProjectile, bool abPowerAttack, bool abSneakAttack, bool abBashAttack, bool abHitBlocked)
 if AK69KatanaWorkWithPlayer.GetValue() == 1
-	AK69KatanaWorkWithPlayer.SetValue(0 as float)
+	AK69KatanaWorkWithPlayer.SetValue(2 as float)
 endif
 
 float FRand = utility.RandomFloat()

@@ -285,7 +285,7 @@ EndFunction
 Function Fragment_25()
 ;BEGIN CODE
 ;Elli approaches
-Utility.Wait(2)
+Utility.Wait(1)
 WatchingMSG.show()
 ;END CODE
 EndFunction

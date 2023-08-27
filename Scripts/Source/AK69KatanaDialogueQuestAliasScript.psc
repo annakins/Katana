@@ -8,6 +8,7 @@ Quest Property AK69KatanaShadowAttackQuest Auto
 GlobalVariable Property FollowerRecruited Auto
 GlobalVariable Property AK69KatanaWanderKillVar Auto
 GlobalVariable Property AK69KatanaWasBetrayed Auto
+GlobalVariable Property AK69KatanaWorkWithPlayer Auto
 AK69KatanaController property KatanaDataStorage auto
 
 
@@ -18,9 +19,13 @@ If (akTarget == PlayerREF) && (FollowerRecruited.GetValue() ==1)
 AK69KatanaWasBetrayed.SetValue(1 as float)
 KatanaDataStorage.DecreaseRateMajor()
 (GetOwningQuest() as AK69KatanaController).DismissFollower(0, 0)
-elseif (aeCombatState == 1) || (Katana.GetDistance(PlayerREF) >= 2000)
+elseif (aeCombatState == 1) || (Katana.GetDistance(PlayerREF) >= 5000)
 AK69KatanaWanderKillVar.SetValue(0)
 endif
+if !PlayerREF.IsInCombat() && (AK69KatanaWorkWithPlayer.GetValue() == 2)
+     AK69KatanaWorkWithPlayer.SetValue(1 as float)
+ endif
+ 
 Katana.EvaluatePackage()
 EndEvent
 

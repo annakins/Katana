@@ -7,6 +7,7 @@ Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 AK69KatlaNoMegara.Start()
+GetOwningQuest().SetObjectiveCompleted(50)
 ;END CODE
 EndFunction
 ;END FRAGMENT

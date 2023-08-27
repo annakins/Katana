@@ -3,6 +3,16 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
+### 1.90 - 08/27/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- New questions asked for shade.
+- All shade lines done.
+- Lots more recorded lines in.
+- Scout/wanderkill package has been optimized. If Katana doesn't think there are more enemies, she just stays with you.
+- New Apothecary patch.
+- Al'Tharo's lines are all in.
+- Modified Hold Back package so enemies don't target Katana and Megara.
+- New Shadow mode. You, Katana, Megara, and two other followers can be invisible and have muffled movement.
+
 ### 1.89 - 08/15/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - Quality of life stuff. 
 - Shade's look has been changed a bit.
