@@ -10,6 +10,8 @@ AK69ShadowVar.SetValue(0)
 AK69KatanaWorkWithPlayer.SetValue(0)
 AK69MegaraWorkWithPlayer.SetValue(0)
 Game.GetPlayer().RemoveSpell(AK69NightingaleShadow)
+Katana.RemoveSpell(AK69NightingaleShadow)
+Megara.RemoveSpell(AK69NightingaleShadow)
 Game.GetPlayer().RemovePerk(AK69ShadowPlayerPerk)
 AK69ShadowQuest.Stop()
 ;END CODE
@@ -29,3 +31,7 @@ Quest Property AK69ShadowQuest  Auto
 Perk Property AK69ShadowPlayerPerk  Auto  
 
 SPELL Property AK69NightingaleShadow  Auto  
+
+Actor Property Katana  Auto  
+
+Actor Property Megara  Auto  
