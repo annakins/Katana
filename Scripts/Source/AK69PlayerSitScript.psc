@@ -5,6 +5,8 @@ Location Property BeeandBarb  Auto
 Location Property FrozenHearth  Auto  
 Location Property Hideout Auto
 Actor Property Katana Auto
+GlobalVariable Property AK69KatanaRecruited Auto
+GlobalVariable Property AK69KatanaRelaxVar Auto
 
 
 Event OnSit(ObjectReference akFurniture)
@@ -21,8 +23,9 @@ GetOwningQuest().SetStage(100)
 Endif
 EndEvent
 
+;This used to have Katana.IsInLocation(FrozenHearth)
 Event OnLocationChange(Location akOldLoc, Location akNewLoc)
-	if (GetOwningQuest().GetStage() == 130 && FrozenHearth == akNewLoc && Katana.IsInLocation(FrozenHearth))
+	if (GetOwningQuest().GetStage() == 130 && FrozenHearth == akNewLoc && (AK69KatanaRecruited.GetValue() ==1) && (AK69KatanaRelaxVar.GetValue() ==0))
 	GetOwningQuest().SetStage(140) 
 Endif
 

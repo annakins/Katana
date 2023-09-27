@@ -16,3 +16,4 @@ Event OnActivate(ObjectReference obj)
 	KatanaShadow.Reset()
 	Endif
 EndEvent
+

@@ -6,9 +6,14 @@ Location Property MoorsideInn Auto
 Scene Property AK69TheKhatsEyeQuestIntroScene Auto
 GlobalVariable Property AK69AlTharoGoodbyeTimeVar Auto
 GlobalVariable Property GameDaysPassed Auto
+GlobalVariable Property AK69KatanaRecruited Auto
+GlobalVariable Property AK69KatanaRelax Auto
+GlobalVariable Property AK69MegaraRecruited Auto
+GlobalVariable Property AK69MegaraRelax Auto
 
+;This used to have Katana.IsInLocation
 Event OnLocationChange(Location akOldLoc, Location akNewLoc)
-if (GetOwningQuest().GetStage() == 0 && MoorsideInn == akNewLoc && Katana.IsInLocation(MoorsideInn) && Megara.IsInLocation(MoorsideInn))
+if (GetOwningQuest().GetStage() == 0 && MoorsideInn == akNewLoc && (AK69KatanaRecruited.GetValue() ==1) && (AK69KatanaRelax.GetValue() ==0) && (AK69MegaraRecruited.GetValue() ==1) && (AK69MegaraRelax.GetValue() ==0))
 	AK69TheKhatsEyeQuestIntroScene.Start()
 Endif
 

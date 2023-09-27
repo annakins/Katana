@@ -93,7 +93,7 @@ Function Fragment_9()
 ;Combat begins
 Alias_Katana.GetActorReference().StartCombat(Alias_Chadryn.GetActorReference())
 Alias_Megara.GetActorReference().StartCombat(Alias_Chadryn.GetActorReference())
-Alias_Chadryn.GetActorReference().StartCombat(Alias_Megara.GetActorReference())
+Alias_Chadryn.GetActorReference().StartCombat(Game.GetPlayer())
 ;END CODE
 EndFunction
 ;END FRAGMENT

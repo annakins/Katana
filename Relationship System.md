@@ -107,7 +107,7 @@ Major Decrease
 ### Reaction Global Vars
 These are mostly dev notes. ;)
 - `1` Brawls Won
-- ~~`2` Skill Increases~~
+- `2` Times Shouted
 - `3` Houses Owned
 - `4` Dragon Souls Collected
 - `5` Shouts Mastered
@@ -117,7 +117,7 @@ These are mostly dev notes. ;)
 - ~~`9` Armor Improved~~ : Apparently buggy.
 - ~~`10` All bounties in the holds~~ : Incorrectly set initially. 
 - `11` Bribes
-- `12` Pickpocketing
+- ~~`12` Pickpocketing~~ : Goes to Items Stolen.
 - `13` Murders
 - `14` Bunnies Slaughtered
 - `15` Items Stolen

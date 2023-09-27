@@ -23,8 +23,8 @@ elseif (aeCombatState == 1) || (Katana.GetDistance(PlayerREF) >= 5000)
 AK69KatanaWanderKillVar.SetValue(0)
 endif
 if !PlayerREF.IsInCombat() && (AK69KatanaWorkWithPlayer.GetValue() == 2)
-     AK69KatanaWorkWithPlayer.SetValue(1 as float)
- endif
+AK69KatanaWorkWithPlayer.SetValue(1 as float)
+endif
  
 Katana.EvaluatePackage()
 EndEvent

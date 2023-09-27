@@ -3,10 +3,28 @@
 Nexus release: 
 Version 1.0 released September of 2022. 
 
-### 1.905 - X - I don't recommend you download this right now. Just uploaded so I have a backup. 
-- All Megara's lines are in (unless something changes).
+### 2.0.2 - 09/27/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Changed the way some scenes fire since some lists don't like IsInLocation.
+- Added a forced moveto function for Katana in Kilerth's Rest.
+- Changed some StartCombat calls since they don't play well with some bleedout mods.
+- Added quality-of-life changes.
+- Made it so the Shade doesn't come out if it's Katana VS. the player.
+
+### 2.0.1 - 09/13/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Reduced filesize.
+
+### 1.905 - 09/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Cleaned up perks. 
+- Finetuned idles, hellos.
+- Wanderkill tweaked due to Serana getting attacked.
+- Adjusted bleedout time.
+- River's a little tougher.
+- Companions will be quiet during certain quest lines.
+- Added music tracks to Kilerth's Rest in case the user has a jolly playlist.
 
 ### 1.90 - 08/27/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+- Only 3 of Megara's lines are missing.
+- All Katana's lines are in (unless something changes).
 - New questions asked for shade.
 - All shade lines done.
 - Scout/wanderkill package has been optimized. If Katana doesn't think there are more enemies, she just stays with you.
@@ -15,11 +33,12 @@ Version 1.0 released September of 2022.
 - Modified Hold Back package so enemies don't target Katana and Megara.
 - New Shadow mode. You, Katana, Megara, and two other followers can be invisible and have muffled movement.
 - Made it so there shouldn't be any combat lines if you have the hold back package activated (I really need a better name for this).
-- All Katana's lines are in (unless something changes).
 - Changed home package. Only condition needed now is `IsInterior`.
-- Only 3 of Megara's lines are missing.
 - Khajiit Speak patch updated.
 - Added Relax=0 condition on some dialogue.
+- Optimized Actor Detector.
+- Finetuned idle frequencies.
+- Healing package modified: 60% health or below before heal.
 
 ### 1.89 - 08/15/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
 - Quality of life stuff. 
