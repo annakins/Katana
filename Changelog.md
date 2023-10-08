@@ -2,15 +2,28 @@
 
 Nexus release: 
 Version 1.0 released September of 2022. 
+### 2.0.35 - X
+- Quality of life - frequency of... potato comments, etc. LOL.
+- Fixed typo in Al'Tharo's quest and re-equalized his voice.
+- Favors/trading/waiting will be available even if Katana's trust goes down BUT you've completed Chasing the Current.
 
-### 2.0.2 - 09/27/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+### 2.0.3 - 10/07/2023
+- Skin textures will be BnP + Bijin for some details.
+- Fixed some male body inconsistencies.
+- More lines for Katana + Megara.
+- CountsAsFleeing set to false in heal packages.
+- Quality of life changes.
+- Added descriptions in Katana's and Megara's unique weapons.
+- And something else (patch for another mod but hosted elsewhere).
+
+### 2.0.2 - 09/27/2023
 - Changed the way some scenes fire since some lists don't like IsInLocation.
 - Added a forced moveto function for Katana in Kilerth's Rest.
 - Changed some StartCombat calls since they don't play well with some bleedout mods.
 - Added quality-of-life changes.
 - Made it so the Shade doesn't come out if it's Katana VS. the player.
 
-### 2.0.1 - 09/13/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
+### 2.0.1 - 09/13/2023
 - Reduced filesize.
 
 ### 1.905 - 09/2023 - I don't recommend you download this right now. Just uploaded so I have a backup. 
