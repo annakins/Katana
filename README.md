@@ -1,5 +1,7 @@
 # Katana
-<p align="center"><img src="https://imgur.com/utpe4uz.png" width=90%/> 
+<p align="center"><img src="https://i.imgur.com/PJTqxlw.gif" width=90%/> 
+<img src="https://imgur.com/2FC4PaB.gif" width=90%/> 
+
 <div id="badges">
 
   

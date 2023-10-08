@@ -2,7 +2,7 @@
 
 Nexus release: 
 Version 1.0 released September of 2022. 
-### 2.0.35 - X
+### 2.0.35 - 10/08/2023
 - Quality of life - frequency of... potato comments, etc. LOL.
 - Fixed typo in Al'Tharo's quest and re-equalized his voice.
 - Favors/trading/waiting will be available even if Katana's trust goes down BUT you've completed Chasing the Current.
