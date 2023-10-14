@@ -2,9 +2,9 @@
 ;NEXT FRAGMENT INDEX 17
 Scriptname AK69_QF_AK69EasterEggsQuest_05B74A58 Extends Quest Hidden
 
-;BEGIN ALIAS PROPERTY Deepvos
+;BEGIN ALIAS PROPERTY Katana
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Deepvos Auto
+ReferenceAlias Property Alias_Katana Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY AzatarMarker1
@@ -22,9 +22,14 @@ ReferenceAlias Property Alias_Chadryn Auto
 ReferenceAlias Property Alias_Azatar Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Katana
+;BEGIN ALIAS PROPERTY DeepvosMarker1
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Katana Auto
+ReferenceAlias Property Alias_DeepvosMarker1 Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Deepvos
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Deepvos Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Megara
@@ -32,20 +37,32 @@ ReferenceAlias Property Alias_Katana Auto
 ReferenceAlias Property Alias_Megara Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY DeepvosMarker1
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_DeepvosMarker1 Auto
-;END ALIAS PROPERTY
-
 ;BEGIN ALIAS PROPERTY Player
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_Player Auto
 ;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_6
-Function Fragment_6()
+;BEGIN ALIAS PROPERTY ChadrynWhiterunMarker
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_ChadrynWhiterunMarker Auto
+;END ALIAS PROPERTY
+
+;BEGIN FRAGMENT Fragment_2
+Function Fragment_2()
+;BEGIN AUTOCAST TYPE AK69EasterEggsScript
+Quest __temp = self as Quest
+AK69EasterEggsScript kmyQuest = __temp as AK69EasterEggsScript
+;END AUTOCAST
 ;BEGIN CODE
-;Done with Solitude. Riften hunt time
+kmyQuest.Setup()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_15
+Function Fragment_15()
+;BEGIN CODE
+Self.Stop()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -63,26 +80,10 @@ kmyQuest.GoodbyeChadryn()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_7
-Function Fragment_7()
+;BEGIN FRAGMENT Fragment_6
+Function Fragment_6()
 ;BEGIN CODE
-;In Riften, some new dialogue between now and 40. Off to Riverwood
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_15
-Function Fragment_15()
-;BEGIN CODE
-Self.Stop()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_4
-Function Fragment_4()
-;BEGIN CODE
-;Chadryn intro done and time to go to Solitude
+;Done with Solitude. Riften hunt time
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -98,23 +99,27 @@ Alias_Chadryn.GetActorReference().StartCombat(Game.GetPlayer())
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_2
-Function Fragment_2()
-;BEGIN AUTOCAST TYPE AK69EasterEggsScript
-Quest __temp = self as Quest
-AK69EasterEggsScript kmyQuest = __temp as AK69EasterEggsScript
-;END AUTOCAST
-;BEGIN CODE
-kmyQuest.Setup()
-;END CODE
-EndFunction
-;END FRAGMENT
-
 ;BEGIN FRAGMENT Fragment_11
 Function Fragment_11()
 ;BEGIN CODE
 ;Bleedout
 AK69ChadrynSurrenderScene.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_4
+Function Fragment_4()
+;BEGIN CODE
+;Chadryn intro done and time to go to Solitude
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_7
+Function Fragment_7()
+;BEGIN CODE
+;In Riften, some new dialogue between now and 40. Off to Riverwood
 ;END CODE
 EndFunction
 ;END FRAGMENT
