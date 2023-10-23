@@ -6,6 +6,7 @@ Scriptname AK69_TIF__05F55A03 Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
+AK69MegaraTorchYES.Show()
 AK69MegaraTorchVar.SetValue(0)
 ;END CODE
 EndFunction
@@ -15,3 +16,5 @@ EndFunction
 
 GlobalVariable Property AK69MegaraTorchVar  Auto  
 
+
+Message Property AK69MegaraTorchYES  Auto  

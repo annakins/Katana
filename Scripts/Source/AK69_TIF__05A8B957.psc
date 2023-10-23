@@ -6,6 +6,7 @@ Scriptname AK69_TIF__05A8B957 Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
+AK69MegaraHoldBackNO.Show()
 AK69MegaraWorkWithPlayer.SetValue(0 as float)
 ;END CODE
 EndFunction
@@ -14,3 +15,5 @@ EndFunction
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
 
 GlobalVariable Property AK69MegaraWorkWithPlayer  Auto  
+
+Message Property AK69MegaraHoldBackNO  Auto  

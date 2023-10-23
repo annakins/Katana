@@ -6,6 +6,7 @@ Scriptname AK69_TIF__0529E542 Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
+AK69KatanaShadowsNO.Show()
 AK69ShadowVar.SetValue(0)
 AK69KatanaWorkWithPlayer.SetValue(0)
 AK69MegaraWorkWithPlayer.SetValue(0)
@@ -35,3 +36,5 @@ SPELL Property AK69NightingaleShadow  Auto
 Actor Property Katana  Auto  
 
 Actor Property Megara  Auto  
+
+Message Property AK69KatanaShadowsNO  Auto  

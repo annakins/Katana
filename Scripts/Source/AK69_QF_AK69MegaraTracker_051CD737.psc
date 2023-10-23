@@ -10,6 +10,7 @@ ReferenceAlias Property Alias_Megara Auto
 ;BEGIN FRAGMENT Fragment_0
 Function Fragment_0()
 ;BEGIN CODE
+AK69MegaraIntroMessage.Show()
 Self.Stop()
 ;END CODE
 EndFunction
@@ -27,3 +28,5 @@ Quest Property AK69EasterEggsQuest  Auto
 Quest Property AK69MegaraFollowQuest  Auto  
 
 Quest Property AK69TheKhatsEyeQuest  Auto  
+
+Message Property AK69MegaraIntroMessage  Auto  

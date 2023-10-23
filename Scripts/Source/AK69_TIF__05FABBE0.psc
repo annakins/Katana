@@ -6,6 +6,7 @@ Scriptname AK69_TIF__05FABBE0 Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
+AK69MegaraTorchNO.Show()
 AK69MegaraTorchVar.SetValue(1)
 Megara.RemoveItem(Torch01)
 ;END CODE
@@ -19,3 +20,5 @@ GlobalVariable Property AK69MegaraTorchVar  Auto
 Light Property Torch01  Auto  
 
 Actor Property Megara  Auto  
+
+Message Property AK69MegaraTorchNO  Auto  

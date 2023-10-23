@@ -21,7 +21,7 @@ Function UnsealDoor()
 	AK69DoorUnsealedVar.SetValue(1 as Float)
 	Self.GetReference().BlockActivation(False)
 	isSealed = False		
-	Self.GetReference().SetOpen(True)	
+	;Self.GetReference().SetOpen(True)	
 EndFunction
 
 Event OnActivate(ObjectReference obj)

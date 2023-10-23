@@ -6,6 +6,7 @@ Scriptname AK69_TIF__044ED6DE Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
+AK69KatanaScoutNO.Show()
 AK69KatanaWanderKillVar.SetValue(0)
 Katana.EvaluatePackage()
 ;END CODE
@@ -17,3 +18,5 @@ EndFunction
 GlobalVariable Property AK69KatanaWanderKillVar  Auto  
 
 Actor Property Katana  Auto  
+
+Message Property AK69KatanaScoutNO  Auto  

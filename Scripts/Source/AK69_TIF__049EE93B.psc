@@ -6,6 +6,7 @@ Scriptname AK69_TIF__049EE93B Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
+AK69KatanaHoldBackNO.Show()
 AK69KatanaWorkWithPlayer.SetValue(0 as float)
 ;END CODE
 EndFunction
@@ -16,3 +17,5 @@ EndFunction
 
 
 GlobalVariable Property AK69KatanaWorkWithPlayer  Auto  
+
+Message Property AK69KatanaHoldBackNO  Auto  
