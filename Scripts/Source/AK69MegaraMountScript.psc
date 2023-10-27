@@ -41,9 +41,8 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 		Megara.OnAnimationEvent(none, "tailHorseMount")
 		Utility.Wait(3)
 	endIf
-		If Megara.GetActorValue("WaitingForPlayer") == 0 && (MegaraRelaxVar.GetValue() == 0)	
+		If Megara.GetActorValue("WaitingForPlayer") == 0 && (MegaraRelaxVar.GetValue() == 0) && (FollowerRecruited.GetValue() ==1) 	
 			If asEventName == "tailHorseMount"
-				
 				if (Megara.GetDistance(Cappy) >= 2048) && (FollowerRecruited.GetValue() ==1) 
 				BeginTeleport()
                 Cappy.setAlpha(0.1)

@@ -41,7 +41,7 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 		Katana.OnAnimationEvent(none, "tailHorseMount")
 		Utility.Wait(3)
 	endIf
-		If Katana.GetActorValue("WaitingForPlayer") == 0 && (KatanaRelaxVar.GetValue() == 0)	
+		If Katana.GetActorValue("WaitingForPlayer") == 0 && (KatanaRelaxVar.GetValue() == 0) && (FollowerRecruited.GetValue() ==1) 	
 			If asEventName == "tailHorseMount" && !Katana.IsOnMount()				
 				if (Katana.GetDistance(Takiyo) >= 2048) && (FollowerRecruited.GetValue() ==1) 
 				BeginTeleport()
