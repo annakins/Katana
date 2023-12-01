@@ -1,89 +1,90 @@
 Scriptname AK69KatanaConfigScript extends Quest  
 
 AK69KatanaController property KatanaDataStorage auto
-ReferenceAlias Property RKatana auto
 GlobalVariable Property FollowerRecruited Auto
 Scene Property KatanaPlayerReactionsScene auto
 Scene Property AK69MegaraReactions auto
 GlobalVariable property KatanaPlayerReactionsVar auto
 int Property UpdateInterval auto
 float Property SettleRadius auto
+Actor Property PlayerRef auto
+Actor Property KatanaActor auto
 
-int __historySize = 8 
-float[] __playerPosX
-float[] __playerPosY
-float[] __playerPosZ
+;int __historySize = 8 
+;float[] __playerPosX
+;float[] __playerPosY
+;float[] __playerPosZ
 
 Function Setup()	
-	__playerPosX = new float[8]
-	__playerPosY = new float[8]
-	__playerPosZ = new float[8]
+	;__playerPosX = new float[8]
+	;__playerPosY = new float[8]
+	;__playerPosZ = new float[8]
 
-	Actor _player = Game.GetPlayer()
-	int count = 0
-	while (count < __historySize)
-		__playerPosX[count] = _player.X + 1000
-		__playerPosY[count] = _player.Y + 1000
-		__playerPosZ[count] = _player.Z + 1000
-		count += 1
-	endwhile
+	;Actor _player = Game.GetPlayer()
+	;int count = 0
+;	while (count < __historySize)
+	;	__playerPosX[count] = PlayerRef.X + 1000
+	;	__playerPosY[count] = PlayerRef.Y + 1000
+	;	__playerPosZ[count] = PlayerRef.Z + 1000
+	;	count += 1
+	;endwhile
 		RegisterForSingleUpdate(UpdateInterval)
 EndFunction
 
 Event OnUpdate()
-	int historyIndex = 0
-	while (historyIndex < __historySize - 1)
-		__playerPosX[historyIndex] = __playerPosX[historyIndex + 1]
-		__playerPosY[historyIndex] = __playerPosY[historyIndex + 1]
-		__playerPosZ[historyIndex] = __playerPosZ[historyIndex + 1]
-		historyIndex += 1
-	endwhile
+	;int historyIndex = 0
+	;while (historyIndex < __historySize - 1)
+	;	__playerPosX[historyIndex] = __playerPosX[historyIndex + 1]
+	;	__playerPosY[historyIndex] = __playerPosY[historyIndex + 1]
+	;	__playerPosZ[historyIndex] = __playerPosZ[historyIndex + 1]
+	;	historyIndex += 1
+	;endwhile
 
-	Actor _player = Game.GetPlayer()
-	__playerPosX[__historySize - 1] = _player.X
-	__playerPosY[__historySize - 1] = _player.Y
-	__playerPosZ[__historySize - 1] = _player.Z
+	;Actor _player = Game.GetPlayer()
+	;__playerPosX[__historySize - 1] = PlayerRef.X
+	;__playerPosY[__historySize - 1] = PlayerRef.Y
+	;__playerPosZ[__historySize - 1] = PlayerRef.Z
 
 	;   FOLLOWING
-	if (FollowerRecruited.GetValue() ==1) 
-		bool switchedPackageConditions = false
+	;if (FollowerRecruited.GetValue() ==1) 
+		;bool switchedPackageConditions = false
 
-		if (RKatana.GetActorReference().GetActorValue("WaitingForPlayer") != 0)
-			RKatana.GetActorReference().SetActorValue("WaitingForPlayer", 0)
-			switchedPackageConditions = true
-		endif
+		;if (RKatana.GetActorReference().GetActorValue("WaitingForPlayer") != 0)
+		;	RKatana.GetActorReference().SetActorValue("WaitingForPlayer", 0)
+		;	switchedPackageConditions = true
+		;endif
 
-		float xFactor = (__playerPosX[0] - _player.X)
-		xFactor = xFactor * xFactor
-		float yFactor = (__playerPosY[0] - _player.Y)
-		yFactor = yFactor * yFactor
-		float zFactor = (__playerPosZ[0] - _player.Z)
-		zFactor = zFactor * zFactor
+		;float xFactor = (__playerPosX[0] - PlayerRef.X)
+		;xFactor = xFactor * xFactor
+		;float yFactor = (__playerPosY[0] - PlayerRef.Y)
+		;yFactor = yFactor * yFactor
+		;float zFactor = (__playerPosZ[0] - PlayerRef.Z)
+		;zFactor = zFactor * zFactor
 
-		float distance = Math.sqrt(xFactor + yFactor + zFactor)
+		;float distance = Math.sqrt(xFactor + yFactor + zFactor)
+		
+		;if (KatanaActor.GetDistance(PlayerRef) >= SettleRadius)
+	;		if (KatanaDataStorage.PlayerSettled == true)
+	;			switchedPackageConditions = true
+	;		endif
+		;	KatanaDataStorage.PlayerSettled = false
+	;	else
+		;	if (KatanaDataStorage.PlayerSettled == false)
+		;		switchedPackageConditions = true
+		;	endif
+		;	KatanaDataStorage.PlayerSettled = true
+	;	endif
 
-		if (distance > SettleRadius)
-			if (KatanaDataStorage.PlayerSettled == true)
-				switchedPackageConditions = true
-			endif
-			KatanaDataStorage.PlayerSettled = false
-		else
-			if (KatanaDataStorage.PlayerSettled == false)
-				switchedPackageConditions = true
-			endif
-			KatanaDataStorage.PlayerSettled = true
-		endif
-
-		if (switchedPackageConditions)
-			if (KatanaDataStorage.PlayerSettled)
+	;	if (switchedPackageConditions)
+		;	if (KatanaDataStorage.PlayerSettled)
 ; 				Debug.Trace("RKatana: Player settled; sandbox.")
-			else
+			;else
 ; 				Debug.Trace("RKatana: Player moving more than settle radius; resume follow.")
-			endif
-			RKatana.GetActorReference().EvaluatePackage()
-		endif
-	endif	
-If RKatana.GetActorReference().HasLOS(Game.GetPlayer())
+			;endif
+			;RKatana.GetActorReference().EvaluatePackage()
+		;endif
+	;endif	
+If KatanaActor.HasLOS(PlayerRef)
 UpdateStats()
 Else
 	KatanaDataStorage.UpdateAllStats()
@@ -95,17 +96,17 @@ EndEvent
 function UpdateStats()
 
 	;==============INCREASE==============
-	int LocationsDiscovered = Game.QueryStat("Locations Discovered")
-	if LocationsDiscovered > KatanaDataStorage.PStat_LocationsDiscovered
-		KatanaDataStorage.PStat_LocationsDiscovered = LocationsDiscovered
-		KatanaDataStorage.IncreaseRateMinor()	
-	endif
+	;int LocationsDiscovered = Game.QueryStat("Locations Discovered")
+	;if LocationsDiscovered > KatanaDataStorage.PStat_LocationsDiscovered
+		;KatanaDataStorage.PStat_LocationsDiscovered = LocationsDiscovered
+		;KatanaDataStorage.IncreaseRateMinor()	
+	;endif
 	
-	int DungeonsCleared = Game.QueryStat("Dungeons Cleared")
-	if DungeonsCleared > KatanaDataStorage.PStat_DungeonsCleared
-		KatanaDataStorage.PStat_DungeonsCleared = DungeonsCleared
-		KatanaDataStorage.IncreaseRateMinor()
-	endif
+	;int DungeonsCleared = Game.QueryStat("Dungeons Cleared")
+	;if DungeonsCleared > KatanaDataStorage.PStat_DungeonsCleared
+	;	KatanaDataStorage.PStat_DungeonsCleared = DungeonsCleared
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif
 	
 	int DaysPassed = Game.QueryStat("Days Passed")
 	if DaysPassed > KatanaDataStorage.PStat_DaysPassed
@@ -121,17 +122,17 @@ function UpdateStats()
 		KatanaPlayerReactionsScene.Start()	
 	endif
 
-	int StandingStones = Game.QueryStat("Standing Stones Found")
-	if StandingStones > KatanaDataStorage.PStat_StandingStones
-		KatanaDataStorage.PStat_StandingStones = StandingStones
-		KatanaDataStorage.IncreaseRateMinor()	
-	endif
+	;int StandingStones = Game.QueryStat("Standing Stones Found")
+	;if StandingStones > KatanaDataStorage.PStat_StandingStones
+	;	KatanaDataStorage.PStat_StandingStones = StandingStones
+	;	KatanaDataStorage.IncreaseRateMinor()	
+	;endif
 
-	int ChestsLooted = Game.QueryStat("Chests Looted")
-	if ChestsLooted > KatanaDataStorage.PStat_ChestsLooted 
-		KatanaDataStorage.PStat_ChestsLooted = ChestsLooted
-		KatanaDataStorage.IncreaseRateMinor()
-	endif
+	;int ChestsLooted = Game.QueryStat("Chests Looted")
+	;if ChestsLooted > KatanaDataStorage.PStat_ChestsLooted 
+	;	KatanaDataStorage.PStat_ChestsLooted = ChestsLooted
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif
 
 	int SkillIncrease = Game.QueryStat("Skill Increases")
 	if SkillIncrease > KatanaDataStorage.PStat_SkillIncrease 
@@ -151,11 +152,11 @@ function UpdateStats()
 		KatanaDataStorage.IncreaseRateMinor()
 	endif
 	
-	int BooksRead = Game.QueryStat("Books Read")
-	if BooksRead > KatanaDataStorage.PStat_BooksRead
-		KatanaDataStorage.PStat_BooksRead = BooksRead
-		KatanaDataStorage.IncreaseRateMinor()
-	endif	
+	;int BooksRead = Game.QueryStat("Books Read")
+	;if BooksRead > KatanaDataStorage.PStat_BooksRead
+	;	KatanaDataStorage.PStat_BooksRead = BooksRead
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif	
 
 	int HousesOwned = Game.QueryStat("Houses Owned")
 	if HousesOwned > KatanaDataStorage.PStat_HousesOwned
@@ -171,53 +172,53 @@ function UpdateStats()
 		KatanaDataStorage.IncreaseRateMinor()
 	endif
 	
-	int CriticalStrikes = Game.QueryStat("Critical Strikes")
-	if CriticalStrikes > KatanaDataStorage.PStat_CritStrikes
-		KatanaDataStorage.PStat_CritStrikes = CriticalStrikes
-		KatanaDataStorage.IncreaseRateMinor()
-	endif
+	;int CriticalStrikes = Game.QueryStat("Critical Strikes")
+	;if CriticalStrikes > KatanaDataStorage.PStat_CritStrikes
+	;	KatanaDataStorage.PStat_CritStrikes = CriticalStrikes
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif
 
-	int SneakAttacks = Game.QueryStat("Sneak Attacks")
-	if SneakAttacks > KatanaDataStorage.PStat_SneakAttacks
-		KatanaDataStorage.PStat_SneakAttacks = SneakAttacks
-		KatanaDataStorage.IncreaseRateMinor()
-	endif	
+	;int SneakAttacks = Game.QueryStat("Sneak Attacks")
+	;if SneakAttacks > KatanaDataStorage.PStat_SneakAttacks
+	;	KatanaDataStorage.PStat_SneakAttacks = SneakAttacks
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif	
 	
-	int Backstabs = Game.QueryStat("Backstabs")
-	if Backstabs > KatanaDataStorage.PStat_Backstabs
-		KatanaDataStorage.PStat_Backstabs = Backstabs
-		KatanaDataStorage.IncreaseRateMinor()
-	endif	
+	;int Backstabs = Game.QueryStat("Backstabs")
+	;if Backstabs > KatanaDataStorage.PStat_Backstabs
+	;	KatanaDataStorage.PStat_Backstabs = Backstabs
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif	
 	
-	int WeaponsDisarmed = Game.QueryStat("Weapons Disarmed")
-	if WeaponsDisarmed > KatanaDataStorage.PStat_Disarmed
-		KatanaDataStorage.PStat_Disarmed = WeaponsDisarmed
-		KatanaDataStorage.IncreaseRateMinor()
-	endif		
+	;int WeaponsDisarmed = Game.QueryStat("Weapons Disarmed")
+	;if WeaponsDisarmed > KatanaDataStorage.PStat_Disarmed
+	;	KatanaDataStorage.PStat_Disarmed = WeaponsDisarmed
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif		
 	
-	int UndeadKilled = Game.QueryStat("Undead Killed")
-	if UndeadKilled > KatanaDataStorage.PStat_UndeadKilled
-		KatanaDataStorage.PStat_UndeadKilled = UndeadKilled
-		KatanaDataStorage.IncreaseRateMinor()
-	endif	
+	;int UndeadKilled = Game.QueryStat("Undead Killed")
+	;if UndeadKilled > KatanaDataStorage.PStat_UndeadKilled
+	;	KatanaDataStorage.PStat_UndeadKilled = UndeadKilled
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif	
 	
-	int DaedraKilled = Game.QueryStat("Daedra Killed")
-	if DaedraKilled > KatanaDataStorage.PStat_DaedraKilled
-		KatanaDataStorage.PStat_DaedraKilled = DaedraKilled
-		KatanaDataStorage.IncreaseRateMinor()
-	endif	
+	;int DaedraKilled = Game.QueryStat("Daedra Killed")
+	;if DaedraKilled > KatanaDataStorage.PStat_DaedraKilled
+	;	KatanaDataStorage.PStat_DaedraKilled = DaedraKilled
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif	
 	
-	int AutomatonsKilled = Game.QueryStat("Automatons Killed")
-	if AutomatonsKilled > KatanaDataStorage.PStat_AutomatonsKilled
-		KatanaDataStorage.PStat_AutomatonsKilled = AutomatonsKilled
-		KatanaDataStorage.IncreaseRateMinor()
-	endif	
+	;int AutomatonsKilled = Game.QueryStat("Automatons Killed")
+	;if AutomatonsKilled > KatanaDataStorage.PStat_AutomatonsKilled
+	;	KatanaDataStorage.PStat_AutomatonsKilled = AutomatonsKilled
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif	
 		
-	int SpellsLearned = Game.QueryStat("Spells Learned")
-	if SpellsLearned > KatanaDataStorage.PStat_SpellsLearned
-		KatanaDataStorage.PStat_SpellsLearned = SpellsLearned
-		KatanaDataStorage.IncreaseRateMinor()
-	endif	
+	;int SpellsLearned = Game.QueryStat("Spells Learned")
+	;if SpellsLearned > KatanaDataStorage.PStat_SpellsLearned
+	;	KatanaDataStorage.PStat_SpellsLearned = SpellsLearned
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif	
 	
 	int DragonSoulsCollected = Game.QueryStat("Dragon Souls Collected")
 	if DragonSoulsCollected > KatanaDataStorage.PStat_DragonSoulsCollected
@@ -289,23 +290,23 @@ function UpdateStats()
 		KatanaPlayerReactionsScene.Start()
 	endif
 	
-	int Persuasions = Game.QueryStat("Persuasions")
-	if Persuasions > KatanaDataStorage.PStat_Persuasions
-		KatanaDataStorage.PStat_Persuasions = Persuasions
-		KatanaDataStorage.IncreaseRateMinor()
-	endif
+	;int Persuasions = Game.QueryStat("Persuasions")
+	;if Persuasions > KatanaDataStorage.PStat_Persuasions
+	;	KatanaDataStorage.PStat_Persuasions = Persuasions
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif
 	
-	int PoisonsMixed = Game.QueryStat("Poisons Mixed")
-	if PoisonsMixed > KatanaDataStorage.PStat_PoisonsMixed
-		KatanaDataStorage.PStat_PoisonsMixed = PoisonsMixed
-		KatanaDataStorage.IncreaseRateMinor()
-	endif
+	;int PoisonsMixed = Game.QueryStat("Poisons Mixed")
+	;if PoisonsMixed > KatanaDataStorage.PStat_PoisonsMixed
+	;	KatanaDataStorage.PStat_PoisonsMixed = PoisonsMixed
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif
 	
-	int PoisonsUsed = Game.QueryStat("Poisons Used")
-	if PoisonsUsed > KatanaDataStorage.PStat_PoisonsUsed
-		KatanaDataStorage.PStat_PoisonsUsed = PoisonsUsed
-		KatanaDataStorage.IncreaseRateMinor()
-	endif
+	;int PoisonsUsed = Game.QueryStat("Poisons Used")
+	;if PoisonsUsed > KatanaDataStorage.PStat_PoisonsUsed
+	;	KatanaDataStorage.PStat_PoisonsUsed = PoisonsUsed
+	;	KatanaDataStorage.IncreaseRateMinor()
+	;endif
 	
 	;int EastmarchBounty = Game.QueryStat("Eastmarch Bounty")
 	;if EastmarchBounty > KatanaDataStorage.PStat_EastmarchBounty

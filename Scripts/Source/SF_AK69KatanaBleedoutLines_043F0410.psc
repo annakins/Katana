@@ -15,9 +15,9 @@ Function Fragment_8()
 ;BEGIN CODE
 AK69KatanaHealBleedoutVar.SetValue(1 as Float)
 Utility.Wait(4)
-Katana.GetActorReference().AddItem(RestoreHealth04, 1, true)
-Katana.GetActorReference().EquipItem(RestoreHealth04 as form, false, false)
-Katana.GetActorReference().RestoreActorValue("Health", 100 as Float)
+Katana.AddItem(RestoreHealth04, 1, true)
+Katana.EquipItem(RestoreHealth04 as form, false, false)
+Katana.RestoreActorValue("Health", 100 as Float)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -36,4 +36,4 @@ GlobalVariable Property AK69KatanaHealBleedoutVar  Auto
 
 Potion Property RestoreHealth04  Auto  
 
-ReferenceAlias Property Katana  Auto  
+Actor Property Katana  Auto  

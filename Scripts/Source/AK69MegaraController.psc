@@ -18,7 +18,7 @@ Quest Property AK69MegaraConfigQuest Auto
 Quest Property AK69MegaraSkyrimQuests Auto
 Quest Property AK69MegaraDismissedQuest Auto
 
-bool Property PlayerSettled auto conditional
+;bool Property PlayerSettled auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)
      actor FollowerActor = FollowerRef as Actor
@@ -85,7 +85,7 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
           DismissedFollowerActor.EvaluatePackage()
           Utility.Wait(2)
           EndIf
-          Megara.Clear()
+          ;Megara.Clear()
           iFollowerDismiss = 0
      EndIf
 	  

@@ -42,9 +42,9 @@ EndFunction
 Function Fragment_0()
 ;BEGIN CODE
 Utility.Wait(4)
-RMegara.GetActorReference().AddItem(RestoreHealth04, 1, true)
-RMegara.GetActorReference().EquipItem(RestoreHealth04 as form, false, false)
-RMegara.GetActorReference().RestoreActorValue("Health", 100 as Float)
+AK69Megara.AddItem(RestoreHealth04, 1, true)
+AK69Megara.EquipItem(RestoreHealth04 as form, false, false)
+AK69Megara.RestoreActorValue("Health", 100 as Float)
 Utility.Wait(4)
 AK69MegaraHealBleedoutVar.SetValue(1 as Float)
 KatanaDataStorage.DecreaseRateMajor()

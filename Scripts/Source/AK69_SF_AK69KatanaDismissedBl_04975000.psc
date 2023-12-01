@@ -42,9 +42,9 @@ EndFunction
 Function Fragment_0()
 ;BEGIN CODE
 Utility.Wait(4)
-Katana.GetActorReference().AddItem(RestoreHealth04, 1, true)
-Katana.GetActorReference().EquipItem(RestoreHealth04 as form, false, false)
-Katana.GetActorReference().RestoreActorValue("Health", 100 as Float)
+KatanaActor.AddItem(RestoreHealth04, 1, true)
+KatanaActor.EquipItem(RestoreHealth04 as form, false, false)
+KatanaActor.RestoreActorValue("Health", 100 as Float)
 Utility.Wait(4)
 AK69KatanaHealBleedoutVar.SetValue(1 as Float)
 KatanaDataStorage.DecreaseRateMajor()

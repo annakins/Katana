@@ -30,7 +30,7 @@ Quest Property KatanaPQDialogue auto
 Quest Property AK69KatanaSkyrimQuests auto
 Quest Property AK69KatanaDismissedQuest auto
 
-bool Property PlayerSettled auto conditional
+;bool Property PlayerSettled auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)
      actor FollowerActor = FollowerRef as Actor
@@ -65,7 +65,7 @@ EndFunction
 
 Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)	
 	
-	If Katana && Katana.GetActorReference().IsDead() == False
+	If KatanaActor.IsDead() == False
           If iMessage == 0
                FollowerDismissMessage.Show()
           ElseIf iMessage == 1
@@ -99,7 +99,7 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
               DismissedFollowerActor.EvaluatePackage()
              Utility.Wait(2)
           EndIf
-            Katana.Clear()
+            ;Katana.Clear()
             iFollowerDismiss = 0
      EndIf
 	 If AK69KatanaHomeVar.GetValue() == 1 && !KatanaActor.IsInCombat()
@@ -279,26 +279,26 @@ EndEvent
 
 ;==============Katana QueryStat==============
 ;==============INCREASE==============
-int property PStat_LocationsDiscovered = 0 auto hidden
-int property PStat_DungeonsCleared = 0 auto hidden
+;int property PStat_LocationsDiscovered = 0 auto hidden
+;int property PStat_DungeonsCleared = 0 auto hidden
 int property PStat_DaysPassed = 0 auto hidden
 int property PStat_BrawlsWon = 0 auto hidden 
-int property PStat_StandingStones = 0 auto hidden
-int property PStat_ChestsLooted = 0 auto hidden
+;int property PStat_StandingStones = 0 auto hidden
+;int property PStat_ChestsLooted = 0 auto hidden
 int property PStat_SkillIncrease = 0 auto hidden
 int property PStat_SkillBooksRead = 0 auto hidden
 int property PStat_Training = 0 auto hidden
-int property PStat_BooksRead = 0 auto hidden
+;int property PStat_BooksRead = 0 auto hidden
 int property PStat_HousesOwned = 0 auto hidden
 int property PStat_QuestsCompleted = 0 auto hidden
-int property PStat_CritStrikes = 0 auto hidden
-int property PStat_SneakAttacks = 0 auto hidden
-int property PStat_Backstabs = 0 auto hidden
-int property PStat_Disarmed = 0 auto hidden
-int property PStat_UndeadKilled = 0 auto hidden
-int property PStat_DaedraKilled = 0 auto hidden
-int property PStat_AutomatonsKilled = 0 auto hidden
-int property PStat_SpellsLearned = 0 auto hidden
+;int property PStat_CritStrikes = 0 auto hidden
+;int property PStat_SneakAttacks = 0 auto hidden
+;int property PStat_Backstabs = 0 auto hidden
+;int property PStat_Disarmed = 0 auto hidden
+;int property PStat_UndeadKilled = 0 auto hidden
+;int property PStat_DaedraKilled = 0 auto hidden
+;int property PStat_AutomatonsKilled = 0 auto hidden
+;int property PStat_SpellsLearned = 0 auto hidden
 int property PStat_DragonSoulsCollected = 0 auto hidden
 int property PStat_WordsOfPowerLearned = 0 auto hidden
 int property PStat_ShoutsLearned = 0 auto hidden
@@ -308,19 +308,19 @@ int property PStat_WeapsImproved = 0 auto hidden
 int property PStat_WeapsMade = 0 auto hidden
 ;int property PStat_ArmorImproved = 0 auto hidden
 int property PStat_ArmorMade = 0 auto hidden
-int property PStat_PoisonsMixed = 0 auto hidden
-int property PStat_PoisonsUsed = 0 auto hidden
-int property PStat_Persuasions = 0 auto hidden
-int property PStat_EastmarchBounty = 0 auto hidden
-int property PStat_FalkreathBounty = 0 auto hidden
-int property PStat_HaafingarBounty = 0 auto hidden
-int property PStat_HjaalmarchBounty = 0 auto hidden
-int property PStat_ThePaleBounty = 0 auto hidden
-int property PStat_TheReachBounty = 0 auto hidden
-int property PStat_TheRiftBounty = 0 auto hidden
-int property PStat_TribalOrcsBounty = 0 auto hidden
-int property PStat_WhiterunBounty = 0 auto hidden
-int property PStat_WinterholdBounty = 0 auto hidden
+;int property PStat_PoisonsMixed = 0 auto hidden
+;int property PStat_PoisonsUsed = 0 auto hidden
+;int property PStat_Persuasions = 0 auto hidden
+;int property PStat_EastmarchBounty = 0 auto hidden
+;int property PStat_FalkreathBounty = 0 auto hidden
+;int property PStat_HaafingarBounty = 0 auto hidden
+;int property PStat_HjaalmarchBounty = 0 auto hidden
+;int property PStat_ThePaleBounty = 0 auto hidden
+;int property PStat_TheReachBounty = 0 auto hidden
+;int property PStat_TheRiftBounty = 0 auto hidden
+;int property PStat_TribalOrcsBounty = 0 auto hidden
+;int property PStat_WhiterunBounty = 0 auto hidden
+;int property PStat_WinterholdBounty = 0 auto hidden
 
 ;==============DECREASE==============
 
@@ -337,26 +337,26 @@ int property PStat_ItemsStolen = 0 auto hidden
 
 function UpdateAllStats()
 	
-	PStat_LocationsDiscovered = Game.QueryStat("Locations Discovered")
-	PStat_DungeonsCleared = Game.QueryStat("Dungeons Cleared")
+	;PStat_LocationsDiscovered = Game.QueryStat("Locations Discovered")
+	;PStat_DungeonsCleared = Game.QueryStat("Dungeons Cleared")
 	PStat_DaysPassed = Game.QueryStat("Days Passed")
 	PStat_BrawlsWon = Game.QueryStat("Brawls Won")
-	PStat_StandingStones = Game.QueryStat("Standing Stones Found")
-	PStat_ChestsLooted = Game.QueryStat("Chests Looted")
+	;PStat_StandingStones = Game.QueryStat("Standing Stones Found")
+	;PStat_ChestsLooted = Game.QueryStat("Chests Looted")
 	PStat_SkillIncrease = Game.QueryStat("Skill Increases")
 	PStat_SkillBooksRead = Game.QueryStat("Skill Books Read")
 	PStat_Training = Game.QueryStat("Training Sessions")
-	PStat_BooksRead = Game.QueryStat("Books Read")
+	;PStat_BooksRead = Game.QueryStat("Books Read")
 	PStat_HousesOwned = Game.QueryStat("Houses Owned")
 	PStat_QuestsCompleted = Game.QueryStat("Quests Completed")
-	PStat_CritStrikes = Game.QueryStat("Critical Strikes")
-	PStat_SneakAttacks = Game.QueryStat("Sneak Attacks")
-	PStat_Backstabs = Game.QueryStat("Backstabs")
-	PStat_Disarmed = Game.QueryStat("Weapons Disarmed")
-	PStat_UndeadKilled = Game.QueryStat("Undead Killed")
-	PStat_DaedraKilled = Game.QueryStat("Daedra Killed")
-	PStat_AutomatonsKilled = Game.QueryStat("Automatons Killed")
-	PStat_SpellsLearned = Game.QueryStat("Spells Learned")
+	;PStat_CritStrikes = Game.QueryStat("Critical Strikes")
+	;PStat_SneakAttacks = Game.QueryStat("Sneak Attacks")
+	;PStat_Backstabs = Game.QueryStat("Backstabs")
+	;PStat_Disarmed = Game.QueryStat("Weapons Disarmed")
+	;PStat_UndeadKilled = Game.QueryStat("Undead Killed")
+	;PStat_DaedraKilled = Game.QueryStat("Daedra Killed")
+	;PStat_AutomatonsKilled = Game.QueryStat("Automatons Killed")
+	;PStat_SpellsLearned = Game.QueryStat("Spells Learned")
 	PStat_DragonSoulsCollected = Game.QueryStat("Dragon Souls Collected")
 	PStat_WordsOfPowerLearned = Game.QueryStat("Words Of Power Learned")
 	PStat_ShoutsLearned = Game.QueryStat("Shouts Learned")
@@ -366,9 +366,9 @@ function UpdateAllStats()
 	PStat_WeapsMade = Game.QueryStat("Weapons Made")
 	;PStat_ArmorImproved = Game.QueryStat("Armor Improved")
 	PStat_ArmorMade = Game.QueryStat("Armor Made")
-	PStat_Persuasions = Game.QueryStat("Persuasions")
-	PStat_PoisonsMixed = Game.QueryStat("Poisons Mixed")
-	PStat_PoisonsUsed = Game.QueryStat("Poisons Used")
+	;PStat_Persuasions = Game.QueryStat("Persuasions")
+	;PStat_PoisonsMixed = Game.QueryStat("Poisons Mixed")
+	;PStat_PoisonsUsed = Game.QueryStat("Poisons Used")
 	;PStat_EastmarchBounty = Game.QueryStat("Eastmarch Bounty")
 	;PStat_FalkreathBounty = Game.QueryStat("Falkreath Bounty")
 	;PStat_HaafingarBounty = Game.QueryStat("Haafingar Bounty")
@@ -379,7 +379,7 @@ function UpdateAllStats()
 	;PStat_TribalOrcsBounty = Game.QueryStat("Tribal Orcs Bounty")
 	;PStat_WhiterunBounty = Game.QueryStat("Whiterun Bounty")
 	;PStat_WinterholdBounty = Game.QueryStat("Winterhold Bounty")
-	PStat_LocationsDiscovered = Game.QueryStat("Bunnies Slaughtered")
+	PStat_BunniesSlaughtered = Game.QueryStat("Bunnies Slaughtered")
 	PStat_Murders = Game.QueryStat("Murders")
 	PStat_HorsesStolen = Game.QueryStat("Horses Stolen")
 	PStat_Trespasses = Game.QueryStat("Trespasses")

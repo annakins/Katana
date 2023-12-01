@@ -15,9 +15,9 @@ Function Fragment_0()
 ;BEGIN CODE
 AK69MegaraHealBleedoutVar.SetValue(1 as Float)
 Utility.Wait(4)
-Megara.GetActorReference().AddItem(RestoreHealth04, 1, true)
-Megara.GetActorReference().EquipItem(RestoreHealth04 as form, false, false)
-Megara.GetActorReference().RestoreActorValue("Health", 100 as Float)
+Megara.AddItem(RestoreHealth04, 1, true)
+Megara.EquipItem(RestoreHealth04 as form, false, false)
+Megara.RestoreActorValue("Health", 100 as Float)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -32,7 +32,7 @@ EndFunction
 
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
 
-ReferenceAlias Property Megara  Auto  
+Actor Property Megara  Auto  
 
 Potion Property RestoreHealth04  Auto  
 
