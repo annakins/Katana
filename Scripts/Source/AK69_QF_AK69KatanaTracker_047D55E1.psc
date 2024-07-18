@@ -14,12 +14,7 @@ Quest __temp = self as Quest
 AK69KatanaQuestReadyScript kmyQuest = __temp as AK69KatanaQuestReadyScript
 ;END AUTOCAST
 ;BEGIN CODE
-kmyQuest.QuestReadyTime()
-
-AK69KatanaPersonalQuest.Start()
-
-AK69DecidedToDismissKatanaDuringHerQuest.Start()
-
+;Original script in FeatherFrag script now
 ;END CODE
 EndFunction
 ;END FRAGMENT

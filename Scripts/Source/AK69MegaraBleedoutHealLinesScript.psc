@@ -14,7 +14,7 @@ AK69MegaraBleedout.Start()
 endEvent
 
 Event OnSpellCast(Form akSpell)
-    Utility.Wait(1)
+    ;Utility.Wait(1)
     If (akSpell == HealOther) || (akSpell == HealingHands) || (akSpell == HealUndead) || (akSpell == NecromanticHealing) 
     AK69MegaraHealScene.Start()
     endIf

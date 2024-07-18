@@ -18,7 +18,7 @@ GlobalVariable Property KatanaRelaxVar Auto
 GlobalVariable Property FollowerRecruited Auto
 Int Property iFollowerDismiss Auto Conditional
 GlobalVariable property AK69DontHateMe Auto
-
+GlobalVariable property AK69ShadowVar Auto
 GlobalVariable Property AK69KatanaHomeVar Auto
 ObjectReference Property HomeMarker auto
 ObjectReference Property WinkingSkeeverMarker auto
@@ -30,7 +30,12 @@ Quest Property KatanaPQDialogue auto
 Quest Property AK69KatanaSkyrimQuests auto
 Quest Property AK69KatanaDismissedQuest auto
 
-;bool Property PlayerSettled auto conditional
+GlobalVariable Property AK69KatanaWanderKillVar Auto
+Quest Property AK69ShadowQuest Auto
+
+Int Property AK69Quality Auto conditional
+bool Property SaidHoarding30books = false auto conditional
+bool Property RiftenApplePie = false auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)
      actor FollowerActor = FollowerRef as Actor
@@ -52,13 +57,16 @@ EndFunction
 Function FollowerWait()
      actor FollowerActor = Katana.GetReference() as Actor
      KatanaRelaxVar.SetValue(1)
+	 FollowerActor.SetActorValue("WaitingForPlayer", 1)
      SetObjectiveDisplayed(10, abforce = true)
 	 FollowerActor.EvaluatePackage()
+	 FavorOff()
 EndFunction
 
 Function FollowerFollow()
      actor FollowerActor = Katana.GetReference() as Actor
 	 KatanaRelaxVar.SetValue(0)
+	 FollowerActor.SetActorValue("WaitingForPlayer", 0)
      SetObjectiveDisplayed(10, abdisplayed = false)
      FollowerActor.EvaluatePackage()
 EndFunction
@@ -108,6 +116,7 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
 	if AK69KatanaHomeVar.GetValue() == 0 && !KatanaActor.IsInCombat()
 		KatanaGoWinkingSkeever()
 	endif
+	FavorOff()
 EndFunction
 
 Function KatanaGoHome()
@@ -136,6 +145,14 @@ Function KatanaGoWinkingSkeever()
 		Utility.Wait(0.3)   
 		KatanaActor.setAlpha(1)
 	endif
+EndFunction
+
+Function FavorOff()
+AK69KatanaWanderKillVar.SetValue(0)
+if AK69ShadowVar.GetValue() == 1
+AK69ShadowQuest.SetStage(10)
+endif
+;Debug.Notification ("Favor stuff is off")
 EndFunction
 
 ;==============Katana Relationship System==============
@@ -206,7 +223,8 @@ EndFunction
 float __minorAssessment = 0.05
 float __moderateAssessment = 0.2
 float __majorAssessment = 0.5
-float __PQAssessment = 2.0
+float __PQAssessment = 3.5
+float __PQSkipSuccessAssessment = 5.0
 
 Function IncreaseRateMinor()
 	ModAssessment(1, __minorAssessment)
@@ -223,6 +241,11 @@ EndFunction
 Function IncreaseRatePQ()
 	ModAssessment(1, __PQAssessment)
 EndFunction
+
+Function IncreaseRatePQSkipSuccess()
+	ModAssessment(1, __PQSkipSuccessAssessment)
+EndFunction
+
 
 Function DecreaseRateMinor()
 	If AK69DontHateMe.GetValue() == 0
@@ -275,116 +298,11 @@ Event OnUpdate()
 	RegisterForSingleUpdate(SecondsBetweenPeriodicUpdates)
 EndEvent
 
-;Relationship Stuff
-
-;==============Katana QueryStat==============
-;==============INCREASE==============
-;int property PStat_LocationsDiscovered = 0 auto hidden
-;int property PStat_DungeonsCleared = 0 auto hidden
-int property PStat_DaysPassed = 0 auto hidden
-int property PStat_BrawlsWon = 0 auto hidden 
-;int property PStat_StandingStones = 0 auto hidden
-;int property PStat_ChestsLooted = 0 auto hidden
-int property PStat_SkillIncrease = 0 auto hidden
-int property PStat_SkillBooksRead = 0 auto hidden
-int property PStat_Training = 0 auto hidden
-;int property PStat_BooksRead = 0 auto hidden
-int property PStat_HousesOwned = 0 auto hidden
-int property PStat_QuestsCompleted = 0 auto hidden
-;int property PStat_CritStrikes = 0 auto hidden
-;int property PStat_SneakAttacks = 0 auto hidden
-;int property PStat_Backstabs = 0 auto hidden
-;int property PStat_Disarmed = 0 auto hidden
-;int property PStat_UndeadKilled = 0 auto hidden
-;int property PStat_DaedraKilled = 0 auto hidden
-;int property PStat_AutomatonsKilled = 0 auto hidden
-;int property PStat_SpellsLearned = 0 auto hidden
-int property PStat_DragonSoulsCollected = 0 auto hidden
-int property PStat_WordsOfPowerLearned = 0 auto hidden
-int property PStat_ShoutsLearned = 0 auto hidden
-int property PStat_ShoutsMastered = 0 auto hidden
-int property PStat_TimesShouted = 0 auto hidden
-int property PStat_WeapsImproved = 0 auto hidden
-int property PStat_WeapsMade = 0 auto hidden
-;int property PStat_ArmorImproved = 0 auto hidden
-int property PStat_ArmorMade = 0 auto hidden
-;int property PStat_PoisonsMixed = 0 auto hidden
-;int property PStat_PoisonsUsed = 0 auto hidden
-;int property PStat_Persuasions = 0 auto hidden
-;int property PStat_EastmarchBounty = 0 auto hidden
-;int property PStat_FalkreathBounty = 0 auto hidden
-;int property PStat_HaafingarBounty = 0 auto hidden
-;int property PStat_HjaalmarchBounty = 0 auto hidden
-;int property PStat_ThePaleBounty = 0 auto hidden
-;int property PStat_TheReachBounty = 0 auto hidden
-;int property PStat_TheRiftBounty = 0 auto hidden
-;int property PStat_TribalOrcsBounty = 0 auto hidden
-;int property PStat_WhiterunBounty = 0 auto hidden
-;int property PStat_WinterholdBounty = 0 auto hidden
-
-;==============DECREASE==============
-
-int property PStat_Murders = 0 auto hidden
-int property PStat_BunniesSlaughtered = 0 auto hidden
-int property PStat_HorsesStolen = 0 auto hidden
-int property PStat_Trespasses = 0 auto hidden
-int property PStat_Bribes = 0 auto hidden
-;int property PStat_PocketsPicked = 0 auto hidden
-;int property PStat_ItemsPickpocketed = 0 auto hidden
-int property PStat_ItemsStolen = 0 auto hidden
-
-;==============END Katana QueryStat==============
-
-function UpdateAllStats()
-	
-	;PStat_LocationsDiscovered = Game.QueryStat("Locations Discovered")
-	;PStat_DungeonsCleared = Game.QueryStat("Dungeons Cleared")
-	PStat_DaysPassed = Game.QueryStat("Days Passed")
-	PStat_BrawlsWon = Game.QueryStat("Brawls Won")
-	;PStat_StandingStones = Game.QueryStat("Standing Stones Found")
-	;PStat_ChestsLooted = Game.QueryStat("Chests Looted")
-	PStat_SkillIncrease = Game.QueryStat("Skill Increases")
-	PStat_SkillBooksRead = Game.QueryStat("Skill Books Read")
-	PStat_Training = Game.QueryStat("Training Sessions")
-	;PStat_BooksRead = Game.QueryStat("Books Read")
-	PStat_HousesOwned = Game.QueryStat("Houses Owned")
-	PStat_QuestsCompleted = Game.QueryStat("Quests Completed")
-	;PStat_CritStrikes = Game.QueryStat("Critical Strikes")
-	;PStat_SneakAttacks = Game.QueryStat("Sneak Attacks")
-	;PStat_Backstabs = Game.QueryStat("Backstabs")
-	;PStat_Disarmed = Game.QueryStat("Weapons Disarmed")
-	;PStat_UndeadKilled = Game.QueryStat("Undead Killed")
-	;PStat_DaedraKilled = Game.QueryStat("Daedra Killed")
-	;PStat_AutomatonsKilled = Game.QueryStat("Automatons Killed")
-	;PStat_SpellsLearned = Game.QueryStat("Spells Learned")
-	PStat_DragonSoulsCollected = Game.QueryStat("Dragon Souls Collected")
-	PStat_WordsOfPowerLearned = Game.QueryStat("Words Of Power Learned")
-	PStat_ShoutsLearned = Game.QueryStat("Shouts Learned")
-	PStat_ShoutsMastered = Game.QueryStat("Shouts Mastered")
-	PStat_TimesShouted = Game.QueryStat("Times Shouted")
-	PStat_WeapsImproved = Game.QueryStat("Weapons Improved")
-	PStat_WeapsMade = Game.QueryStat("Weapons Made")
-	;PStat_ArmorImproved = Game.QueryStat("Armor Improved")
-	PStat_ArmorMade = Game.QueryStat("Armor Made")
-	;PStat_Persuasions = Game.QueryStat("Persuasions")
-	;PStat_PoisonsMixed = Game.QueryStat("Poisons Mixed")
-	;PStat_PoisonsUsed = Game.QueryStat("Poisons Used")
-	;PStat_EastmarchBounty = Game.QueryStat("Eastmarch Bounty")
-	;PStat_FalkreathBounty = Game.QueryStat("Falkreath Bounty")
-	;PStat_HaafingarBounty = Game.QueryStat("Haafingar Bounty")
-	;PStat_HjaalmarchBounty = Game.QueryStat("Hjaalmarch Bounty")
-	;PStat_ThePaleBounty = Game.QueryStat("The Pale Bounty")
-	;PStat_TheReachBounty = Game.QueryStat("The Reach Bounty")
-	;PStat_TheRiftBounty = Game.QueryStat("The Rift Bounty")
-	;PStat_TribalOrcsBounty = Game.QueryStat("Tribal Orcs Bounty")
-	;PStat_WhiterunBounty = Game.QueryStat("Whiterun Bounty")
-	;PStat_WinterholdBounty = Game.QueryStat("Winterhold Bounty")
-	PStat_BunniesSlaughtered = Game.QueryStat("Bunnies Slaughtered")
-	PStat_Murders = Game.QueryStat("Murders")
-	PStat_HorsesStolen = Game.QueryStat("Horses Stolen")
-	PStat_Trespasses = Game.QueryStat("Trespasses")
-	PStat_Bribes = Game.QueryStat("Bribes")
-	;PStat_PocketsPicked = Game.QueryStat("Pockets Picked")
-	;PStat_ItemsPickpocketed = Game.QueryStat("Items Pickpocketed")
-	PStat_ItemsStolen = Game.QueryStat("Items Stolen")
-endFunction
+bool property BBorn = false auto conditional
+bool property Chillfurrow = false auto conditional
+bool property DBSanc = false auto conditional
+bool property MarkSbloodInn = false auto conditional
+bool property MarkTemple = false auto conditional
+bool property Morthal = false auto conditional
+bool property BardsCol = false auto conditional
+bool property Bannered = false auto conditional

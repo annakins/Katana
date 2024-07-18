@@ -11,7 +11,6 @@ GlobalVariable Property AK69KatanaWasBetrayed Auto
 GlobalVariable Property AK69KatanaWorkWithPlayer Auto
 AK69KatanaController property KatanaDataStorage auto
 
-
 Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
 Actor combatTarget = Katana.GetCombatTarget()
 (AK69KatanaShadowAttackQuest as AK69KatanaShadowAttack).KatanaCombatStateChanged(akTarget, aeCombatState)
@@ -33,5 +32,4 @@ Event OnDeath(Actor akKiller)
      Self.GetActorReference().RemoveFromFaction(CurrentHireling)
      Self.Clear()
 EndEvent
-
 

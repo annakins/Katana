@@ -10,7 +10,6 @@ ReferenceAlias Property Alias_Megara Auto
 ;BEGIN FRAGMENT Fragment_0
 Function Fragment_0()
 ;BEGIN CODE
-AK69MegaraIntroMessage.Show()
 Self.Stop()
 ;END CODE
 EndFunction

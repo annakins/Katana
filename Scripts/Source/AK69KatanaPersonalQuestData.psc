@@ -20,15 +20,36 @@ bool property Stage2 = false auto conditional
 
 bool property DHStage = false auto conditional
 
+bool property GoToMarkarth = false auto conditional
+
+bool property GoToRiften = false auto conditional
+
+bool property GoToWinterhold = false auto conditional
+
+bool property PQ40 = false auto conditional
+
+bool property PQ50 = false auto conditional
+
+bool property PQ90 = false auto conditional
+
+bool property PQ90B = false auto conditional
+
+bool property PQ120 = false auto conditional
+
+bool property PQ130 = false auto conditional
+
+bool property PQ180 = false auto conditional
+
+bool property PQ180B = false auto conditional
+
+bool property PQ1 = false auto conditional
+
+bool property PQ2 = false auto conditional
+
+bool property PQ3 = false auto conditional
+
 ;===
 
-AK69KatanaController Property KatanaDataStorage  Auto  
-
-Function PQCompletedIncrease()
-KatanaDataStorage.IncreaseRatePQ()
-EndFunction
-
-;===
 
 GlobalVariable Property GameDaysPassed Auto
 GlobalVariable Property AK69KatanaStage2Var auto

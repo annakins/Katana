@@ -1,4 +1,4 @@
-Scriptname AK69EasterEggsScript extends Quest  
+Scriptname AK69EasterEggsScript extends Quest Conditional
 
 ObjectReference property Azatar auto
 ObjectReference property Chadryn auto
@@ -13,11 +13,15 @@ ObjectReference Property AK69ChadrynHuntMarker  Auto
 ObjectReference Property AK69ChadrynHuntMarker2  Auto 
 ObjectReference Property AK69ChadrynRiverwoodMarker  Auto 
 Quest Property AK69CarrotQuest Auto
+ObjectReference Property AK69NutBoysSceneTrigger Auto
+
+bool property EEFlirtatious = false auto conditional
 
 Function Setup()	
     Azatar.Enable()
     AzatarDrunkMarker.Enable()
     DeepvosDrunkMarker.Enable()
+    AK69NutBoysSceneTrigger.Enable()
     AK69ChadrynWhiterunMarker.Enable()
     Chadryn.Enable()
     Deepvos.Enable()

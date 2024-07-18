@@ -1,1 +1,0 @@
-IsRace("Katana.esp"|0x0012624D)

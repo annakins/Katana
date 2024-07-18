@@ -7,6 +7,7 @@ Function Fragment_3(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 AK69CarrotQuestKatanaPickup.Start()
+(GetOwningQuest() as AK69CarrotQuestScript).CarrotIdle = true
 ;END CODE
 EndFunction
 ;END FRAGMENT

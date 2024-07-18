@@ -1,0 +1,37 @@
+{
+    "name": "General",
+    "description": "Replaces some general animations, just for the companions in the mod.",
+    "priority": 1069200301,
+    "conditions": [
+        {
+            "condition": "OR",
+            "requiredVersion": "1.0.0.0",
+            "Conditions": [
+                {
+                    "condition": "IsActorBase",
+                    "requiredVersion": "1.0.0.0",
+                    "Actor base": {
+                        "pluginName": "Katana.esp",
+                        "formID": "8283EB"
+                    }
+                },
+                {
+                    "condition": "IsActorBase",
+                    "requiredVersion": "1.0.0.0",
+                    "Actor base": {
+                        "pluginName": "Katana.esp",
+                        "formID": "5900"
+                    }
+                },
+                {
+                    "condition": "IsActorBase",
+                    "requiredVersion": "1.0.0.0",
+                    "Actor base": {
+                        "pluginName": "Katana.esp",
+                        "formID": "8E6C1E"
+                    }
+                }
+            ]
+        }
+    ]
+}

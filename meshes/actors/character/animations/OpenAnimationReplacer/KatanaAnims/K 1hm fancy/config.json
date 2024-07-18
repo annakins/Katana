@@ -1,0 +1,49 @@
+{
+    "name": "K 1hm fancy",
+    "description": "Adds a sword twirl for Katana.",
+    "priority": 1069200303,
+    "conditions": [
+        {
+            "condition": "IsActorBase",
+            "requiredVersion": "1.0.0.0",
+            "Actor base": {
+                "pluginName": "Katana.esp",
+                "formID": "5900"
+            }
+        },
+        {
+            "condition": "IsInCombat",
+            "requiredVersion": "1.0.0.0",
+            "negated": true
+        },
+        {
+            "condition": "IsEquippedType",
+            "requiredVersion": "1.0.0.0",
+            "Type": {
+                "value": 1.0
+            },
+            "Left hand": false
+        },
+        {
+            "condition": "Random",
+            "requiredVersion": "1.0.0.0",
+            "Random value": {
+                "min": 0.0,
+                "max": 1.0
+            },
+            "Comparison": "<=",
+            "Numeric value": {
+                "value": 0.05000000074505806
+            }
+        },
+        {
+            "condition": "IsEquippedType",
+            "requiredVersion": "1.0.0.0",
+            "negated": true,
+            "Type": {
+                "value": 11.0
+            },
+            "Left hand": true
+        }
+    ]
+}

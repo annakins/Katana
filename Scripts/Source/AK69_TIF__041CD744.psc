@@ -8,13 +8,14 @@ Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 Game.GetPlayer().AddSpell(SummonMegara)
 Game.GetPlayer().AddSpell(UnstuckMegara)
+Game.GetPlayer().AddItem(AK69MegaraLantern)
 Megara.AllowBleedoutDialogue(true)
 CrossedArmsIdleMarker.Delete()
 ElliRef.Delete()
 AK69MegaraFollowQuest.Start()
 AK69EasterEggsQuest.Start()
 AK69TheKhatsEyeQuest.Start()
-
+AK69MegaraIntroMessage.Show()
 GetOwningQuest().Setstage(5)
 ;END CODE
 EndFunction
@@ -37,3 +38,7 @@ Quest Property AK69EasterEggsQuest  Auto
 Quest Property AK69MegaraFollowQuest  Auto  
 
 Quest Property AK69TheKhatsEyeQuest  Auto  
+
+Message Property AK69MegaraIntroMessage  Auto  
+
+MiscObject Property AK69MegaraLantern  Auto  

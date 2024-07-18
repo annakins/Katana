@@ -10,6 +10,7 @@ AK69Katana.AddToFaction(CurrentFollower)
 	(AK69KatanaFollowQuest as AK69Katanacontroller).SetFollower(AK69Katana as ObjectReference)
 	self.GetOwningQuest().SetCurrentStageID(15)
 	AK69Katana.SetRelationshipRank(game.GetPlayer(), 3)
+AK69KatanaTrustMessageIntro.Show()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -25,3 +26,5 @@ Actor Property AK69Katana  Auto
 Quest Property DialogueFollower  Auto  
 
 
+
+Message Property AK69KatanaTrustMessageIntro  Auto  

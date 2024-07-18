@@ -11,6 +11,9 @@ Game.GetPlayer().AddSpell(SummonKatana)
 Game.GetPlayer().AddSpell(UnstuckKatana)
 Game.GetPlayer().AddSpell(CheckRelationship)
 Katana.AllowBleedoutDialogue(true)
+(GetOwningQuest() as AK69KatanaQuestReadyScript).QuestReadyTime()
+AK69KatanaPersonalQuest.Start()
+AK69DecidedToDismissKatanaDuringHerQuest.Start()
 GetOwningQuest().SetStage(5)
 ;END CODE
 EndFunction
@@ -28,3 +31,7 @@ Actor Property Katana  Auto
 
 SPELL Property CheckRelationship  Auto  
 
+
+Quest Property AK69KatanaPersonalQuest  Auto  
+
+Quest Property AK69DecidedToDismissKatanaDuringHerQuest  Auto  

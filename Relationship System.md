@@ -113,7 +113,7 @@ These are mostly dev notes. ;)
 - `5` Shouts Mastered
 - `6` Weapon Made
 - `7` Armor Made
-- `8` Weapon Improved
+- ~~`8` Weapon Improved~~ : Goes to Weapon Made now.
 - ~~`9` Armor Improved~~ : Apparently buggy.
 - ~~`10` All bounties in the holds~~ : Incorrectly set initially. 
 - `11` Bribes
@@ -121,3 +121,4 @@ These are mostly dev notes. ;)
 - `13` Murders
 - `14` Bunnies Slaughtered
 - `15` Items Stolen
+- `16` Horses Stolen

@@ -1,0 +1,38 @@
+{
+    "priority": 2700001,
+    "keepRandomResultsOnLoop": true,
+    "conditions": [
+        {
+            "condition": "OR",
+            "requiredVersion": "1.0.0.0",
+            "Conditions": [
+                {
+                    "condition": "IsEquippedHasKeyword",
+                    "requiredVersion": "1.0.0.0",
+                    "Keyword": {
+                        "editorID": "weaptypekatana"
+                    },
+                    "Left hand": false
+                },
+                {
+                    "condition": "IsEquipped",
+                    "requiredVersion": "1.0.0.0",
+                    "Form": {
+                        "pluginName": "Katana.esp",
+                        "formID": "645BCE"
+                    },
+                    "Left hand": false
+                }
+            ]
+        },
+        {
+            "condition": "HasMagicEffect",
+            "requiredVersion": "1.0.0.0",
+            "Magic effect": {
+                "pluginName": "EldenSkyrim.esp",
+                "formID": "801"
+            },
+            "Active effects only": false
+        }
+    ]
+}

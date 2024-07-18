@@ -8,6 +8,7 @@ Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 HomeVar.SetValue(0)
 HomeMarker.Reset()
+AK69HomeResetMSG.Show()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -17,3 +18,5 @@ EndFunction
 GlobalVariable Property HomeVar  Auto  
 
 ObjectReference Property HomeMarker  Auto  
+
+Message Property AK69HomeResetMSG  Auto  

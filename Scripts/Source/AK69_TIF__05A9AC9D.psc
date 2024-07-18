@@ -8,6 +8,7 @@ Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 HomeMarker.MoveTo(Katana)
 HomeVar.SetValue(1)
+AK69KatanaSetHomeMSG.Show()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -19,3 +20,5 @@ ObjectReference Property HomeMarker  Auto
 Actor Property Katana  Auto  
 
 GlobalVariable Property HomeVar  Auto  
+
+Message Property AK69KatanaSetHomeMSG  Auto  

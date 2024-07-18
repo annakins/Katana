@@ -8,6 +8,7 @@ Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 HomeMarker.MoveTo(Megara)
 HomeVar.SetValue(1)
+AK69MegaraSetHomeMSG.Show()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -19,3 +20,5 @@ ObjectReference Property HomeMarker  Auto
 GlobalVariable Property HomeVar  Auto  
 
 Actor Property Megara  Auto  
+
+Message Property AK69MegaraSetHomeMSG  Auto  

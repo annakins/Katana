@@ -18,7 +18,11 @@ Quest Property AK69MegaraConfigQuest Auto
 Quest Property AK69MegaraSkyrimQuests Auto
 Quest Property AK69MegaraDismissedQuest Auto
 
-;bool Property PlayerSettled auto conditional
+bool Property SaidImpressive = false auto conditional
+bool Property SaidHoarding = false auto conditional
+bool Property SaidHoarding30books = false auto conditional
+bool Property SaidHoarding40books = false auto conditional
+Int Property AK69Quality Auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)
      actor FollowerActor = FollowerRef as Actor
@@ -39,6 +43,7 @@ EndFunction
 Function FollowerWait()
      actor FollowerActor = Megara.GetReference() as Actor
      MegaraRelaxVar.SetValue(1)
+     FollowerActor.SetActorValue("WaitingForPlayer", 1)
      SetObjectiveDisplayed(10, abforce = true)
 	FollowerActor.EvaluatePackage()
 EndFunction
@@ -46,6 +51,7 @@ EndFunction
 Function FollowerFollow()
      actor FollowerActor = Megara.GetReference() as Actor
 	MegaraRelaxVar.SetValue(0)
+     FollowerActor.SetActorValue("WaitingForPlayer", 0)
      SetObjectiveDisplayed(10, abdisplayed = false)
      FollowerActor.EvaluatePackage()
 EndFunction
@@ -90,3 +96,7 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
      EndIf
 	  
 EndFunction
+
+bool property Solitude = false auto conditional
+bool property Dragonsreach = false auto conditional
+bool property Whiterun = false auto conditional

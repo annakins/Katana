@@ -8,6 +8,7 @@ Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 (GetOwningQuest() as AK69KatanaPersonalQuestData).Stage2 = true
 (GetOwningQuest() as AK69KatanaPersonalQuestData).Stage3ReadyTime()
+GetOwningQuest().SetObjectiveCompleted(1)
 ;END CODE
 EndFunction
 ;END FRAGMENT

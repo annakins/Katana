@@ -7,7 +7,6 @@ Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 AK69EasterEgg1Var.SetValue(1)
-AK69EasterEgg1Scene.Start()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -16,4 +15,4 @@ EndFunction
 
 GlobalVariable Property AK69EasterEgg1Var  Auto  
 
-Scene Property AK69EasterEgg1Scene  Auto  
+

@@ -1,0 +1,29 @@
+{
+    "name": "Tavern K S",
+    "description": "Replaces Katana's and Shale's tavern animations.",
+    "priority": 1069200306,
+    "conditions": [
+        {
+            "condition": "OR",
+            "requiredVersion": "1.0.0.0",
+            "Conditions": [
+                {
+                    "condition": "IsActorBase",
+                    "requiredVersion": "1.0.0.0",
+                    "Actor base": {
+                        "pluginName": "Katana.esp",
+                        "formID": "8283EB"
+                    }
+                },
+                {
+                    "condition": "IsActorBase",
+                    "requiredVersion": "1.0.0.0",
+                    "Actor base": {
+                        "pluginName": "Katana.esp",
+                        "formID": "5900"
+                    }
+                }
+            ]
+        }
+    ]
+}

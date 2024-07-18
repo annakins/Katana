@@ -21,6 +21,7 @@ Actor Property Megara Auto
 GlobalVariable Property AK69KatanaRecruitedVar Auto
 GlobalVariable Property AK69MegaraRecruitedVar Auto
 ObjectReference Property AK69ChadrynWhiterunMarker  Auto 
+ObjectReference Property AK69NutBoysSceneTrigger  Auto 
 
 
 Event OnLocationChange(Location akOldLoc, Location akNewLoc)
@@ -32,6 +33,7 @@ If GameDaysPassed.GetValue() >= AK69NutBoysGoodbyeTimeVar.GetValue()
     DeepvosMarker.Disable()
     AzatarMarker.Disable()
     AK69DeepGoHereMeow.Disable()
+    AK69NutBoysSceneTrigger.Disable()
 Endif
 endif
 
@@ -49,7 +51,7 @@ if (GetOwningQuest().GetStage() == 60 && akNewLoc != SleepingGiantInn)
     Endif
 endif
 
-if (GetOwningQuest().GetStage() == 60 && AK69NutTalkNowVar.GetValue() == 1)
+if (GetOwningQuest().GetStage() == 60 && AK69NutTalkNowVar.GetValue() == 1) && Chadryn.IsDisabled()
 GetOwningQuest().SetStage(70)
 endif
 EndEvent

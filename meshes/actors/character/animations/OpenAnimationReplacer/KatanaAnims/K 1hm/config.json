@@ -1,0 +1,15 @@
+{
+    "name": "K 1hm",
+    "description": "Replaces Katana's noncombat 1hm idles.",
+    "priority": 1069200302,
+    "conditions": [
+        {
+            "condition": "IsActorBase",
+            "requiredVersion": "1.0.0.0",
+            "Actor base": {
+                "pluginName": "Katana.esp",
+                "formID": "5900"
+            }
+        }
+    ]
+}

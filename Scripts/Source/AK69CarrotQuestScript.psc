@@ -1,10 +1,12 @@
-Scriptname AK69CarrotQuestScript extends Quest  
+Scriptname AK69CarrotQuestScript extends Quest Conditional
 
 GlobalVariable Property AK69CappyCarrotTimeVar Auto
 GlobalVariable Property GameDaysPassed Auto
 ObjectReference Property AK69ChillfurrowXMarker  Auto 
 ObjectReference Property AK69BanneredMareMarker2  Auto 
 ObjectReference Property AK69CappyCarrot Auto
+
+bool property CarrotIdle = false auto conditional
 
 
 float UntilCappyTime = 1.92 ;0.04 is 1 game hour

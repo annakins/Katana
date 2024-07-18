@@ -1,4 +1,0 @@
-NOT IsInCombat() AND
-Random(0.30) AND
-IsActorValuePercentageLessThan(26, 0.30) AND
-IsRace("Katana.esp"|0x0012624D)

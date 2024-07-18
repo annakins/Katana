@@ -24,7 +24,7 @@ Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
      If AK69ShadowVar.GetValue() == 1 && PlayerREF.IsInCombat()
           AK69Invisibility.Cast(Megara, Megara)
      endif
-     
+     Megara.EvaluatePackage()
 EndEvent
 
 
