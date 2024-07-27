@@ -44,6 +44,11 @@
                 "value": 11.0
             },
             "Left hand": true
+        },
+        {
+            "condition": "IsInScene",
+            "requiredVersion": "1.2.0.0",
+            "negated": true
         }
     ]
 }

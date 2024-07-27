@@ -91,6 +91,9 @@ Function MovePlayer()
 Game.GetPlayer().PlaceAtMe(SummonValorTargetFXActivator)	
 Game.GetPlayer().MoveTo(AK69RiverCampMarker)
 Game.GetPlayer().PlaceAtMe(SummonValorTargetFXActivator)	
+River.PlaceAtMe(SummonValorTargetFXActivator)
+River.MoveTo(Game.GetPlayer() as objectreference, 200.000 * Math.Sin(Game.GetPlayer().GetAngleZ()), 200.000 * Math.Cos(Game.GetPlayer().GetAngleZ()))
+River.PlaceAtMe(SummonValorTargetFXActivator)	
 EndFunction
 
 Function MoveAndParalyze()

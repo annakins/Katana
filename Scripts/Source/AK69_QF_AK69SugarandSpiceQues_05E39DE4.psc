@@ -17,24 +17,9 @@ ReferenceAlias Property Alias_Bed Auto
 ReferenceAlias Property Alias_Player Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Throne
+;BEGIN ALIAS PROPERTY Door
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Throne Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY MarkerJustInCase
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_MarkerJustInCase Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Katana
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Katana Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Hideout
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Hideout Auto
+ReferenceAlias Property Alias_Door Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Megara
@@ -42,33 +27,38 @@ ReferenceAlias Property Alias_Hideout Auto
 ReferenceAlias Property Alias_Megara Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Door
+;BEGIN ALIAS PROPERTY MarkerJustInCase
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Door Auto
+ReferenceAlias Property Alias_MarkerJustInCase Auto
 ;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_18
-Function Fragment_18()
-;BEGIN CODE
-AK69SaSFinalScene.Start()
-Alias_Katana.GetActorReference().EvaluatePackage()
-;END CODE
-EndFunction
-;END FRAGMENT
+;BEGIN ALIAS PROPERTY Hideout
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Hideout Auto
+;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_15
-Function Fragment_15()
-;BEGIN CODE
-SetObjectiveCompleted(40)
-MegaraREF.moveto(MarkerTime)
-Alias_Katana.GetActorReference().EvaluatePackage()
-;END CODE
-EndFunction
-;END FRAGMENT
+;BEGIN ALIAS PROPERTY Throne
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Throne Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Katana
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Katana Auto
+;END ALIAS PROPERTY
 
 ;BEGIN FRAGMENT Fragment_23
 Function Fragment_23()
 ;BEGIN CODE
+Alias_Katana.GetActorReference().EvaluatePackage()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_21
+Function Fragment_21()
+;BEGIN CODE
+setObjectiveDisplayed(30)
 Alias_Katana.GetActorReference().EvaluatePackage()
 ;END CODE
 EndFunction
@@ -86,29 +76,6 @@ kmyQuest.DeleteStuff()
 AK69SaSCompleted.SetValue(1)
 AK69NaughtyBoi.SetValue(1)
 Self.Stop()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_8
-Function Fragment_8()
-;BEGIN CODE
-;This is so the scene after can play and there's no forcegreet anymore
-Alias_Katana.GetActorReference().EvaluatePackage()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_12
-Function Fragment_12()
-;BEGIN AUTOCAST TYPE AK69SugarandSpiceScript
-Quest __temp = self as Quest
-AK69SugarandSpiceScript kmyQuest = __temp as AK69SugarandSpiceScript
-;END AUTOCAST
-;BEGIN CODE
-kmyQuest.SleepySleeps()
-SetObjectiveDisplayed(40)
-Alias_Katana.GetActorReference().EvaluatePackage()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -131,38 +98,6 @@ Alias_Katana.GetActorReference().EvaluatePackage()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_1
-Function Fragment_1()
-;BEGIN AUTOCAST TYPE AK69SugarandSpiceScript
-Quest __temp = self as Quest
-AK69SugarandSpiceScript kmyQuest = __temp as AK69SugarandSpiceScript
-;END AUTOCAST
-;BEGIN CODE
-kmyQuest.DeleteStuff()
-AK69SaSCompleted.SetValue(1)
-Self.Stop()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_21
-Function Fragment_21()
-;BEGIN CODE
-setObjectiveDisplayed(30)
-Alias_Katana.GetActorReference().EvaluatePackage()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_6
-Function Fragment_6()
-;BEGIN CODE
-AK69DramaticScene.Start()
-Alias_Katana.GetActorReference().EvaluatePackage()
-;END CODE
-EndFunction
-;END FRAGMENT
-
 ;BEGIN FRAGMENT Fragment_20
 Function Fragment_20()
 ;BEGIN AUTOCAST TYPE AK69SugarandSpiceScript
@@ -178,10 +113,21 @@ Self.Stop()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_27
-Function Fragment_27()
+;BEGIN FRAGMENT Fragment_18
+Function Fragment_18()
 ;BEGIN CODE
-AK69SaSSceneTrigger.Enable()
+AK69SaSFinalScene.Start()
+Alias_Katana.GetActorReference().EvaluatePackage()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_15
+Function Fragment_15()
+;BEGIN CODE
+SetObjectiveCompleted(40)
+MegaraREF.moveto(MarkerTime)
+Alias_Katana.GetActorReference().EvaluatePackage()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -191,6 +137,61 @@ Function Fragment_10()
 ;BEGIN CODE
 AK69MegaraWalkAway.Start()
 SetObjectiveDisplayed(30)
+Alias_Katana.GetActorReference().EvaluatePackage()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_1
+Function Fragment_1()
+;BEGIN AUTOCAST TYPE AK69SugarandSpiceScript
+Quest __temp = self as Quest
+AK69SugarandSpiceScript kmyQuest = __temp as AK69SugarandSpiceScript
+;END AUTOCAST
+;BEGIN CODE
+kmyQuest.DeleteStuff()
+(AK69KatanaFollowQuest as AK69Katanacontroller).IncreaseRateMajor()
+AK69SaSCompleted.SetValue(1)
+Self.Stop()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_27
+Function Fragment_27()
+;BEGIN CODE
+AK69SaSSceneTrigger.Enable()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_12
+Function Fragment_12()
+;BEGIN AUTOCAST TYPE AK69SugarandSpiceScript
+Quest __temp = self as Quest
+AK69SugarandSpiceScript kmyQuest = __temp as AK69SugarandSpiceScript
+;END AUTOCAST
+;BEGIN CODE
+kmyQuest.SleepySleeps()
+SetObjectiveDisplayed(40)
+Alias_Katana.GetActorReference().EvaluatePackage()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_8
+Function Fragment_8()
+;BEGIN CODE
+;This is so the scene after can play and there's no forcegreet anymore
+Alias_Katana.GetActorReference().EvaluatePackage()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_6
+Function Fragment_6()
+;BEGIN CODE
+AK69DramaticScene.Start()
 Alias_Katana.GetActorReference().EvaluatePackage()
 ;END CODE
 EndFunction
@@ -215,3 +216,5 @@ ObjectReference Property AK69SaSSceneTrigger  Auto
 GlobalVariable Property AK69SaSCompleted  Auto  
 
 GlobalVariable Property AK69NaughtyBoi  Auto  
+
+Quest Property AK69KatanaFollowQuest  Auto  

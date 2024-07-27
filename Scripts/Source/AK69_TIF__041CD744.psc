@@ -7,7 +7,7 @@ Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 Game.GetPlayer().AddSpell(SummonMegara)
-Game.GetPlayer().AddSpell(UnstuckMegara)
+
 Game.GetPlayer().AddItem(AK69MegaraLantern)
 Megara.AllowBleedoutDialogue(true)
 CrossedArmsIdleMarker.Delete()
@@ -25,7 +25,7 @@ EndFunction
 
 SPELL Property SummonMegara  Auto  
 
-SPELL Property UnstuckMegara  Auto  
+
 
 Actor Property Megara  Auto  
 

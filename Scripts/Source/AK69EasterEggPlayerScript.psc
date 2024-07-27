@@ -6,6 +6,8 @@ GlobalVariable Property AK69NutTalkNowVar Auto
 GlobalVariable Property AK69ChadByeTimeVar Auto
 Location Property BanneredMare Auto  
 Location Property Whiterun Auto  
+Location Property Solitude Auto  
+Location Property Riften Auto  
 Location Property SleepingGiantInn Auto  
 ObjectReference property Azatar auto
 ObjectReference property Deepvos auto
@@ -15,6 +17,9 @@ ObjectReference Property AK69ChadrynSleepingGiantInnMarker  Auto
 ObjectReference property DeepvosMarker auto
 ObjectReference property AzatarMarker auto
 ObjectReference property AK69DeepGoHereMeow auto
+ObjectReference Property AK69ChadrynSolitudeMarker  Auto 
+ObjectReference Property AK69ChadrynHuntMarker  Auto 
+ObjectReference Property AK69ChadrynRiverwoodMarker  Auto 
 Scene Property AK69ChadrynIntroScene Auto
 Actor Property Katana Auto
 Actor Property Megara Auto
@@ -23,8 +28,27 @@ GlobalVariable Property AK69MegaraRecruitedVar Auto
 ObjectReference Property AK69ChadrynWhiterunMarker  Auto 
 ObjectReference Property AK69NutBoysSceneTrigger  Auto 
 
+int Property SolitudeTime  Auto  
+int Property RiftenTime  Auto  
+int Property RiverwoodTime  Auto  
 
 Event OnLocationChange(Location akOldLoc, Location akNewLoc)
+    
+if (GetOwningQuest().GetStage() == 10) && (akNewLoc != Whiterun) && SolitudeTime == 0
+    Chadryn.MoveTo(AK69ChadrynSolitudeMarker)
+    SolitudeTime = 1
+endif
+
+if (GetOwningQuest().GetStage() == 20) && (akNewLoc != Solitude) && RiftenTime == 0
+    Chadryn.MoveTo(AK69ChadrynHuntMarker)
+    RiftenTime == 1
+endif
+
+if (GetOwningQuest().GetStage() == 30) && (akNewLoc != Riften) && RiverwoodTime == 0
+    Chadryn.MoveTo(AK69ChadrynRiverwoodMarker)
+    RiverwoodTime == 1
+endif
+
 if (AK69NutTalkNowVar.GetValue() == 1 && akNewLoc != BanneredMare)
 If GameDaysPassed.GetValue() >= AK69NutBoysGoodbyeTimeVar.GetValue()
     Azatar.Disable()

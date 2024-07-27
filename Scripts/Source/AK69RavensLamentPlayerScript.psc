@@ -19,6 +19,7 @@ Actor Property Katana Auto
 Keyword property LocTypeCity auto
 Keyword property LocTypeTown auto
 Keyword property LocTypeClearable auto
+Keyword property LocTypeDungeon auto
 Location Property RiftenBeeandBarbLocation auto
 Location Property IvarsteadVilemyrInnLocation auto
 
@@ -41,7 +42,7 @@ Event OnLocationChange(Location akOldLoc, Location akNewLoc)
         AK69TheRavensLamentVoiceScene2.Start()
         endif
     endif
-    if (akNewLoc.HasKeyword(LocTypeClearable) && GetOwningQuest().GetStage() == 20 && !Game.GetPlayer().IsOnMount())
+    if ((akNewLoc.HasKeyword(LocTypeClearable) || akNewLoc.HasKeyword(LocTypeDungeon))  && GetOwningQuest().GetStage() == 20 && !Game.GetPlayer().IsOnMount())
         if (AK69KatanaRecruited.GetValue() ==1) && (AK69KatanaRelax.GetValue() ==0) && (AK69MegaraRecruited.GetValue() ==1) && (AK69MegaraRelax.GetValue() ==0)
         AK69RiverVoiceMarker.GetReference().MoveTo(Game.GetPlayer())
         Utility.Wait(0.1)
