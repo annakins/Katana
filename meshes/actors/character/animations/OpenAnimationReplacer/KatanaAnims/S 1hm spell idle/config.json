@@ -1,0 +1,99 @@
+{
+    "name": "S 1h spell",
+    "description": "Replaces Shale's noncombat 1h spell idles.",
+    "priority": 1069200309,
+    "conditions": [
+        {
+            "condition": "IsActorBase",
+            "requiredVersion": "1.0.0.0",
+            "Actor base": {
+                "pluginName": "Katana.esp",
+                "formID": "8283EB"
+            }
+        },
+        {
+            "condition": "OR",
+            "requiredVersion": "1.0.0.0",
+            "Conditions": [
+                {
+                    "condition": "IsEquippedType",
+                    "requiredVersion": "1.0.0.0",
+                    "Type": {
+                        "value": 1.0
+                    },
+                    "Left hand": false
+                },
+                {
+                    "condition": "IsEquippedType",
+                    "requiredVersion": "1.0.0.0",
+                    "Type": {
+                        "value": 2.0
+                    },
+                    "Left hand": false
+                },
+                {
+                    "condition": "IsEquippedType",
+                    "requiredVersion": "1.0.0.0",
+                    "Type": {
+                        "value": 3.0
+                    },
+                    "Left hand": false
+                },
+                {
+                    "condition": "IsEquippedType",
+                    "requiredVersion": "1.0.0.0",
+                    "Type": {
+                        "value": 4.0
+                    },
+                    "Left hand": false
+                }
+            ]
+        },
+        {
+            "condition": "OR",
+            "requiredVersion": "1.0.0.0",
+            "Conditions": [
+                {
+                    "condition": "IsEquippedType",
+                    "requiredVersion": "1.0.0.0",
+                    "Type": {
+                        "value": 12.0
+                    },
+                    "Left hand": true
+                },
+                {
+                    "condition": "IsEquippedType",
+                    "requiredVersion": "1.0.0.0",
+                    "Type": {
+                        "value": 13.0
+                    },
+                    "Left hand": true
+                },
+                {
+                    "condition": "IsEquippedType",
+                    "requiredVersion": "1.0.0.0",
+                    "Type": {
+                        "value": 14.0
+                    },
+                    "Left hand": true
+                },
+                {
+                    "condition": "IsEquippedType",
+                    "requiredVersion": "1.0.0.0",
+                    "Type": {
+                        "value": 15.0
+                    },
+                    "Left hand": true
+                },
+                {
+                    "condition": "IsEquippedType",
+                    "requiredVersion": "1.0.0.0",
+                    "Type": {
+                        "value": 16.0
+                    },
+                    "Left hand": true
+                }
+            ]
+        }
+    ]
+}

@@ -2,19 +2,14 @@
 ;NEXT FRAGMENT INDEX 15
 Scriptname AK69_QF_AK69CarrotQuest_05E02209 Extends Quest Hidden
 
+;BEGIN ALIAS PROPERTY Player
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Player Auto
+;END ALIAS PROPERTY
+
 ;BEGIN ALIAS PROPERTY Wilmuth
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_Wilmuth Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Chillfurrow
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Chillfurrow Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Megara
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Megara Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Carrot
@@ -27,9 +22,9 @@ ReferenceAlias Property Alias_Carrot Auto
 ReferenceAlias Property Alias_Bannered_Mare Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Player
+;BEGIN ALIAS PROPERTY Megara
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Player Auto
+ReferenceAlias Property Alias_Megara Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Katana
@@ -37,12 +32,42 @@ ReferenceAlias Property Alias_Player Auto
 ReferenceAlias Property Alias_Katana Auto
 ;END ALIAS PROPERTY
 
+;BEGIN ALIAS PROPERTY Chillfurrow
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Chillfurrow Auto
+;END ALIAS PROPERTY
+
+;BEGIN FRAGMENT Fragment_6
+Function Fragment_6()
+;BEGIN CODE
+Alias_Megara.GetActorReference().EvaluatePackage()
+SetObjectiveDisplayed(40)
+;END CODE
+EndFunction
+;END FRAGMENT
+
 ;BEGIN FRAGMENT Fragment_2
 Function Fragment_2()
 ;BEGIN CODE
 Alias_Megara.GetActorReference().EvaluatePackage()
 SetObjectiveDisplayed(20)
 SetObjectiveCompleted(10)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_8
+Function Fragment_8()
+;BEGIN AUTOCAST TYPE AK69CarrotQuestScript
+Quest __temp = self as Quest
+AK69CarrotQuestScript kmyQuest = __temp as AK69CarrotQuestScript
+;END AUTOCAST
+;BEGIN CODE
+Alias_Megara.GetActorReference().EvaluatePackage()
+Game.GetPlayer().RemoveItem(CarrotREF)
+setObjectiveCompleted(41)
+setObjectiveDisplayed(50)
+kmyQuest.CappyCarrotTimer()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -63,6 +88,16 @@ kmyQuest.DeleteTheStuff()
 EndFunction
 ;END FRAGMENT
 
+;BEGIN FRAGMENT Fragment_4
+Function Fragment_4()
+;BEGIN CODE
+Alias_Megara.GetActorReference().EvaluatePackage()
+AK69CarrotQuestMegaraPickup.Start()
+SetObjectiveCompleted(20)
+;END CODE
+EndFunction
+;END FRAGMENT
+
 ;BEGIN FRAGMENT Fragment_10
 Function Fragment_10()
 ;BEGIN AUTOCAST TYPE AK69CarrotQuestScript
@@ -75,7 +110,7 @@ kmyQuest.DeleteTheStuff()
 
 Self.CompleteAllObjectives()
 AK69CQCompleted.SetValue(1)
-setObjectiveCompleted(50)
+setObjectiveCompleted(51)
 Self.Stop()
 ;END CODE
 EndFunction
@@ -88,41 +123,6 @@ Alias_Megara.GetActorReference().EvaluatePackage()
 CarrotREF.Enable()
 SetObjectiveDisplayed(10)
 AK69SugarandSpiceQuest.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_6
-Function Fragment_6()
-;BEGIN CODE
-Alias_Megara.GetActorReference().EvaluatePackage()
-SetObjectiveDisplayed(40)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_4
-Function Fragment_4()
-;BEGIN CODE
-Alias_Megara.GetActorReference().EvaluatePackage()
-AK69CarrotQuestMegaraPickup.Start()
-SetObjectiveCompleted(20)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_8
-Function Fragment_8()
-;BEGIN AUTOCAST TYPE AK69CarrotQuestScript
-Quest __temp = self as Quest
-AK69CarrotQuestScript kmyQuest = __temp as AK69CarrotQuestScript
-;END AUTOCAST
-;BEGIN CODE
-Alias_Megara.GetActorReference().EvaluatePackage()
-Game.GetPlayer().RemoveItem(CarrotREF)
-setObjectiveCompleted(40)
-setObjectiveDisplayed(50)
-kmyQuest.CappyCarrotTimer()
 ;END CODE
 EndFunction
 ;END FRAGMENT

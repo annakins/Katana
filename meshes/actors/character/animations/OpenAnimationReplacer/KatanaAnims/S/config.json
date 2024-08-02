@@ -1,6 +1,6 @@
 {
     "name": "S",
-    "description": "Replaces Shale's noncombat 1hm idles.",
+    "description": "Replaces Shale's noncombat 1h idles.",
     "priority": 1069200300,
     "conditions": [
         {

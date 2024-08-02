@@ -1,6 +1,6 @@
 {
     "name": "M",
-    "description": "Replaces Megara's noncombat 1hm idles.",
+    "description": "Replaces Megara's noncombat 1h idles.",
     "priority": 1069200304,
     "conditions": [
         {
@@ -10,6 +10,15 @@
                 "pluginName": "Katana.esp",
                 "formID": "8E6C1E"
             }
+        },
+        {
+            "condition": "IsEquippedType",
+            "requiredVersion": "1.0.0.0",
+            "negated": true,
+            "Type": {
+                "value": 18.0
+            },
+            "Left hand": true
         }
     ]
 }

@@ -1,0 +1,23 @@
+{
+    "name": "M torch",
+    "description": "Replaces Megara's noncombat 1h idles + torch.",
+    "priority": 1069200305,
+    "conditions": [
+        {
+            "condition": "IsActorBase",
+            "requiredVersion": "1.0.0.0",
+            "Actor base": {
+                "pluginName": "Katana.esp",
+                "formID": "8E6C1E"
+            }
+        },
+        {
+            "condition": "IsEquippedType",
+            "requiredVersion": "1.0.0.0",
+            "Type": {
+                "value": 18.0
+            },
+            "Left hand": true
+        }
+    ]
+}

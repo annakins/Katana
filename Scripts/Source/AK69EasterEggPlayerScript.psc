@@ -31,6 +31,7 @@ ObjectReference Property AK69NutBoysSceneTrigger  Auto
 int Property SolitudeTime  Auto  
 int Property RiftenTime  Auto  
 int Property RiverwoodTime  Auto  
+int Property InnTime  Auto  
 
 Event OnLocationChange(Location akOldLoc, Location akNewLoc)
     
@@ -47,6 +48,11 @@ endif
 if (GetOwningQuest().GetStage() == 30) && (akNewLoc != Riften) && RiverwoodTime == 0
     Chadryn.MoveTo(AK69ChadrynRiverwoodMarker)
     RiverwoodTime == 1
+endif
+
+if (GetOwningQuest().GetStage() == 60) && (akNewLoc != akOldLoc) && InnTime == 0
+    Chadryn.MoveTo(AK69ChadrynSleepingGiantInnMarker)
+    InnTime == 1
 endif
 
 if (AK69NutTalkNowVar.GetValue() == 1 && akNewLoc != BanneredMare)

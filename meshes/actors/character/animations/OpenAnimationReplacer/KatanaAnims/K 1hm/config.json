@@ -1,6 +1,6 @@
 {
-    "name": "K 1hm",
-    "description": "Replaces Katana's noncombat 1hm idles.",
+    "name": "K 1h",
+    "description": "Replaces Katana's noncombat 1h idles.",
     "priority": 1069200302,
     "conditions": [
         {
