@@ -2,6 +2,11 @@
 ;NEXT FRAGMENT INDEX 6
 Scriptname AK69_QF_AK69MegaraBanditQuest_05BEE373 Extends Quest Hidden
 
+;BEGIN ALIAS PROPERTY Megara
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Megara Auto
+;END ALIAS PROPERTY
+
 ;BEGIN ALIAS PROPERTY BanditLocation
 ;ALIAS PROPERTY TYPE LocationAlias
 LocationAlias Property Alias_BanditLocation Auto
@@ -12,29 +17,15 @@ LocationAlias Property Alias_BanditLocation Auto
 ReferenceAlias Property Alias_Player Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY MapMarker
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_MapMarker Auto
-;END ALIAS PROPERTY
-
 ;BEGIN ALIAS PROPERTY bandit
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_bandit Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Megara
+;BEGIN ALIAS PROPERTY MapMarker
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Megara Auto
+ReferenceAlias Property Alias_MapMarker Auto
 ;END ALIAS PROPERTY
-
-;BEGIN FRAGMENT Fragment_5
-Function Fragment_5()
-;BEGIN CODE
-SetObjectiveCompleted(10)
-SetObjectiveDisplayed(20)
-;END CODE
-EndFunction
-;END FRAGMENT
 
 ;BEGIN FRAGMENT Fragment_0
 Function Fragment_0()
@@ -42,6 +33,15 @@ Function Fragment_0()
 SetObjectiveDisplayed(10)
 Alias_Bandit.GetReference().Enable(False)
 Alias_MapMarker.GetReference().AddToMap(False)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_5
+Function Fragment_5()
+;BEGIN CODE
+SetObjectiveCompleted(10)
+SetObjectiveDisplayed(20)
 ;END CODE
 EndFunction
 ;END FRAGMENT

@@ -37,9 +37,9 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 		endIf
 	endIf
 	if Player.IsOnMount() && (FollowerRecruited.GetValue() ==1) && AK69KatanaRidingVar.GetValue() == 1 as Float && (KatanaRelaxVar.GetValue() == 0)		
-		Utility.Wait(3)
+		Utility.Wait(1)
 		Katana.OnAnimationEvent(none, "tailHorseMount")
-		Utility.Wait(3)
+		;Utility.Wait(3)
 	endIf
 		If Katana.GetActorValue("WaitingForPlayer") == 0 && (KatanaRelaxVar.GetValue() == 0) && (FollowerRecruited.GetValue() ==1) 	
 			If asEventName == "tailHorseMount" && !Katana.IsOnMount()				
@@ -59,7 +59,7 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 			EndIf	
 			If asEventName == "tailHorseDismount"				
 				if (Takiyo.GetDistance(Game.GetPlayersLastRiddenHorse()) <= 700)					
-				Utility.Wait(3)
+				Utility.Wait(1)
 				Katana.Dismount()
 				Katana.EvaluatePackage()
 				Endif

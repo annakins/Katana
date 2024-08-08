@@ -13,10 +13,10 @@ Megara.AllowBleedoutDialogue(true)
 CrossedArmsIdleMarker.Delete()
 AK69MegaraFollowQuest.Start()
 AK69EasterEggsQuest.Start()
-AK69TheKhatsEyeQuest.Start()
 ElliRef.Delete()
 AK69MegaraPQSkipSuccessMessage.Show()
 GetOwningQuest().Setstage(5)
+;AK69TheKhatsEyeQuest.Start()
 ;END CODE
 EndFunction
 ;END FRAGMENT

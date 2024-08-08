@@ -8,6 +8,8 @@ Quest Property AK69EasterEggsQuest Auto
 Actor Property Chadryn Auto
 Actor Property Katana Auto
 
+;Solitude
+
 Event OnTriggerEnter(ObjectReference akActionRef)
 
     if (akActionRef == Katana && AK69KatanaRecruitedVar.GetValue() == 1 && AK69MegaraRecruitedVar.GetValue() == 1 && AK69EasterEggsQuest.GetStage() == 10)
@@ -15,6 +17,7 @@ Event OnTriggerEnter(ObjectReference akActionRef)
             if Game.GetPlayer().IsInCombat() == 0
                 ChadScene.Start()
                 SceneTriggered = 1
+                AK69EasterEggsQuest.SetObjectiveCompleted(10)
             endif
         endif
     endif

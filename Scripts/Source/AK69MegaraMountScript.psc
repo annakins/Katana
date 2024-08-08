@@ -37,9 +37,9 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 		endIf
 	endIf
 	if Player.IsOnMount() && (FollowerRecruited.GetValue() ==1) && AK69MegaraRidingVar.GetValue() == 1 as Float && (MegaraRelaxVar.GetValue() == 0) 
-		Utility.Wait(3)
+		Utility.Wait(1)
 		Megara.OnAnimationEvent(none, "tailHorseMount")
-		Utility.Wait(3)
+		;Utility.Wait(3)
 	endIf
 		If Megara.GetActorValue("WaitingForPlayer") == 0 && (MegaraRelaxVar.GetValue() == 0) && (FollowerRecruited.GetValue() ==1) 	
 			If asEventName == "tailHorseMount"
@@ -51,14 +51,14 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 				Utility.Wait(0.1)
 				Cappy.setAlpha(1)
 				endif
-				Utility.Wait(3)		
+				Utility.Wait(1)		
 				Megara.OnAnimationEvent(none, "tailHorseMount")
-				Utility.Wait(3)
+				;Utility.Wait(3)
 				Megara.EvaluatePackage()
 			EndIf	
 			If asEventName == "tailHorseDismount"
 				if (Cappy.GetDistance(Game.GetPlayersLastRiddenHorse()) <= 700)					
-				Utility.Wait(3)
+				Utility.Wait(1)
 				Megara.Dismount()
 				Megara.EvaluatePackage()
 				Endif

@@ -22,6 +22,8 @@ bool Property SaidImpressive = false auto conditional
 bool Property SaidHoarding = false auto conditional
 bool Property SaidHoarding30books = false auto conditional
 bool Property SaidHoarding40books = false auto conditional
+bool Property SaidPSEE = false auto conditional
+bool Property KhatsEyeStart = false auto conditional
 Int Property AK69Quality Auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)

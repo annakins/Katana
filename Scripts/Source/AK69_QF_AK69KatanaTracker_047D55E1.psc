@@ -2,11 +2,6 @@
 ;NEXT FRAGMENT INDEX 8
 Scriptname AK69_QF_AK69KatanaTracker_047D55E1 Extends Quest Hidden
 
-;BEGIN ALIAS PROPERTY Katana
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Katana Auto
-;END ALIAS PROPERTY
-
 ;BEGIN FRAGMENT Fragment_2
 Function Fragment_2()
 ;BEGIN AUTOCAST TYPE AK69KatanaQuestReadyScript

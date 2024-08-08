@@ -37,9 +37,9 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 		endIf
 	endIf
 	if Player.IsOnMount() && (AK69ShaleRecruited.GetValue() ==1) && AK69ShaleRidingVar.GetValue() == 1 as Float && (AK69ShaleRelax.GetValue() == 0) 
-		Utility.Wait(3)
+		Utility.Wait(1)
 		Shale.OnAnimationEvent(none, "tailHorseMount")
-		Utility.Wait(3)
+		;Utility.Wait(3)
 	endIf
 		If Shale.GetActorValue("WaitingForPlayer") == 0 && (AK69ShaleRelax.GetValue() == 0) && (AK69ShaleRecruited.GetValue() ==1) 	
 			If asEventName == "tailHorseMount"
@@ -51,14 +51,14 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 				Utility.Wait(0.1)
 				Lucky.setAlpha(1)
 				endif
-				Utility.Wait(3)		
+				Utility.Wait(1)		
 				Shale.OnAnimationEvent(none, "tailHorseMount")
-				Utility.Wait(3)
+				;Utility.Wait(3)
 				Shale.EvaluatePackage()
 			EndIf	
 			If asEventName == "tailHorseDismount"
 				if (Lucky.GetDistance(Game.GetPlayersLastRiddenHorse()) <= 700)					
-				Utility.Wait(3)
+				Utility.Wait(1)
 				Shale.Dismount()
 				Shale.EvaluatePackage()
 				Endif

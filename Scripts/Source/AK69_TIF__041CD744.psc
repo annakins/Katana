@@ -14,9 +14,9 @@ CrossedArmsIdleMarker.Delete()
 ElliRef.Delete()
 AK69MegaraFollowQuest.Start()
 AK69EasterEggsQuest.Start()
-AK69TheKhatsEyeQuest.Start()
 AK69MegaraIntroMessage.Show()
 GetOwningQuest().Setstage(5)
+;AK69TheKhatsEyeQuest.Start()
 ;END CODE
 EndFunction
 ;END FRAGMENT

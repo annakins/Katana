@@ -29,7 +29,6 @@ Function Setup()
     Deepvos.moveto(DeepvosMarker)
     Chadryn.moveto(AK69ChadrynWhiterunMarker)
     AK69CarrotQuest.Start()
-    
 EndFunction
     
 GlobalVariable Property GameDaysPassed Auto

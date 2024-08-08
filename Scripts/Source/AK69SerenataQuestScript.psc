@@ -19,6 +19,23 @@ Quest Property WICourier Auto
 ReferenceAlias Property NoteAliasRef Auto
 ReferenceAlias Property ScrollAliasRef Auto
 
+ObjectReference Property AK69CozyBed1 Auto  
+ObjectReference Property AK69CozyBed2 Auto  
+ObjectReference Property AK69CozyBed3 Auto  
+ObjectReference Property AK69CozyBed4 Auto  
+ObjectReference Property AK69CozyCookingPot Auto  
+ObjectReference Property AK69CozyCrate Auto  
+ObjectReference Property AK69CozyEmbers Auto  
+ObjectReference Property AK69CozyLustyBook1 Auto  
+ObjectReference Property AK69CozyLustyBook2 Auto  
+ObjectReference Property AK69CozyMead1 Auto  
+ObjectReference Property AK69CozyMush1 Auto  
+ObjectReference Property AK69CozyMush2 Auto  
+ObjectReference Property AK69CozyPlant1 Auto  
+ObjectReference Property AK69CozySpit Auto  
+ObjectReference Property AK69CozyStone Auto  
+ObjectReference Property AK69CozyWine1 Auto  
+
 ;Primarily used to handle functionality of setting globals that are used by individual WIComment quests to control how often comments about the player are heard
 
 float DaysUntilCourier = 0.96 ;0.04 is 1 game hour
@@ -100,6 +117,22 @@ function EndTeleportM()
     Azatar.Disable()
     Chadryn.Disable()
     Deepvos.Disable()
+    AK69CozyBed1.Enable() 
+    AK69CozyBed2.Enable()  
+    AK69CozyBed3.Enable() 
+    AK69CozyBed4.Enable()
+    AK69CozyCookingPot.Enable()  
+    AK69CozyCrate.Enable()  
+    AK69CozyEmbers.Enable()  
+    AK69CozyLustyBook1.Enable()  
+    AK69CozyLustyBook2.Enable()  
+    AK69CozyMead1.Enable() 
+    AK69CozyMush1.Enable()
+    AK69CozyMush2.Enable()
+    AK69CozyPlant1.Enable() 
+    AK69CozySpit.Enable()
+    AK69CozyStone.Enable()
+    AK69CozyWine1.Enable()  
     (AK69KatanaFollowQuest as AK69KatanaController).SetFollower(Katana)
     (AK69MegaraFollowQuest as AK69MegaraController).SetFollower(Megara)
  endFunction

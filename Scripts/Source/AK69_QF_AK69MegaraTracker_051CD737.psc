@@ -2,11 +2,6 @@
 ;NEXT FRAGMENT INDEX 4
 Scriptname AK69_QF_AK69MegaraTracker_051CD737 Extends Quest Hidden
 
-;BEGIN ALIAS PROPERTY Megara
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Megara Auto
-;END ALIAS PROPERTY
-
 ;BEGIN FRAGMENT Fragment_0
 Function Fragment_0()
 ;BEGIN CODE

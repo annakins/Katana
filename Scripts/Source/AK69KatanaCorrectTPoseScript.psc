@@ -31,4 +31,3 @@ Shale.EvaluatePackage()
 endif
 EndEvent
 
-;Credit to Tlam99 for orig script: https://www.nexusmods.com/skyrimspecialedition/mods/56955

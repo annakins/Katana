@@ -17,6 +17,7 @@ Int Property iFollowerDismiss Auto Conditional
 Quest Property AK69ShaleConfigQuest Auto
 Quest Property AK69ShaleSkyrimQuests Auto
 Quest Property AK69ShaleDismissedQuest Auto
+Quest Property AK69ShaleAdorbsQuest Auto
 
 Int Property AK69Quality Auto conditional
 bool Property Riverwoodmotto = false auto conditional
@@ -33,6 +34,7 @@ Function SetFollower(ObjectReference FollowerRef)
      AK69ShaleRecruited.SetValue(1)
 	AK69ShaleConfigQuest.Start()
      AK69ShaleSkyrimQuests.Start()
+     AK69ShaleAdorbsQuest.Start()
      AK69ShaleDismissedQuest.Stop()
 
 EndFunction
@@ -80,6 +82,7 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
           AK69ShaleRecruited.SetValue(0)
           AK69ShaleConfigQuest.Stop()
           AK69ShaleSkyrimQuests.Stop()
+          AK69ShaleAdorbsQuest.Stop()
           AK69ShaleDismissedQuest.Start()
           HirelingRehireScript.DismissHireling(DismissedFollowerActor.GetActorBase())
 

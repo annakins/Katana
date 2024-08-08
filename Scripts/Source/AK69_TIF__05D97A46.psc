@@ -6,9 +6,12 @@ Scriptname AK69_TIF__05D97A46 Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
-GetOwningQuest().SetStage(20)
+AK69ChadrynAfterSolitudeScene.Start()
+getowningquest().setstage(20)
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
+
+Scene Property AK69ChadrynAfterSolitudeScene  Auto  
