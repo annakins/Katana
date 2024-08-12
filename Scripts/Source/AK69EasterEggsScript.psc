@@ -37,7 +37,7 @@ GlobalVariable Property AK69ChadByeTimeVar auto
 
 ;Primarily used to handle functionality of setting globals that are used by individual WIComment quests to control how often comments about the player are heard
 
-float UntilGoodbye = 0.96 ;0.04 is 1 game hour
+float UntilGoodbye = 0.04 ;0.04 is 1 game hour
 
 Function GoodbyeNutBoys()
 	float NutBoysGoodbye = GameDaysPassed.GetValue() + UntilGoodbye	
@@ -55,7 +55,7 @@ Function GoodbyeChadryn()
     ChadByeTimer()
 EndFunction
 
-float ByeChad = 0.96 ;0.04 is 1 game hour
+float ByeChad = 0.04 ;0.04 is 1 game hour
 
 Function ChadByeTimer()
     float ChadByeBye = GameDaysPassed.GetValue() + ByeChad	

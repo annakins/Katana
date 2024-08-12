@@ -57,21 +57,21 @@ GlobalVariable Property AK69KatanaStage3Var auto
 GlobalVariable Property AK69DHStageVar auto 
 ;Primarily used to handle functionality of setting globals that are used by individual WIComment quests to control how often comments about the player are heard
 
-float DaysUntilReady = 0.12 ;0.04 is 1 game hour; so 3 hours
+float DaysUntilReady = 0.04 ;0.04 is 1 game hour; 
 
 Function StageReadyTime()
 	float StageReady = GameDaysPassed.GetValue() + DaysUntilReady	
 	AK69KatanaStage2Var.SetValue(StageReady)
 EndFunction
 
-float Stage3UntilReady = 0.12 ;3 hours
+float Stage3UntilReady = 0.04 ;1 hour
 
 Function Stage3ReadyTime()
 	float Stage3Ready = GameDaysPassed.GetValue() + Stage3UntilReady	
 	AK69KatanaStage3Var.SetValue(Stage3Ready)
 EndFunction
 
-float DHUntilReady = 0.24 ;6 hours
+float DHUntilReady = 0.12 ;3 hours
 
 Function DHReadyTime()
 	float DHReady = GameDaysPassed.GetValue() + DHUntilReady	

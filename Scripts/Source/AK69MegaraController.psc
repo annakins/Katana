@@ -100,5 +100,6 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
 EndFunction
 
 bool property Solitude = false auto conditional
+bool property SolitudeSis = false auto conditional
 bool property Dragonsreach = false auto conditional
 bool property Whiterun = false auto conditional

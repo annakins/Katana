@@ -9,6 +9,7 @@ Actor akSpeaker = akSpeakerRef as Actor
 game.getPlayer().addItem(Gold001, 3000)
 (GetOwningQuest() as AK69KatanaPersonalQuestData).playerIsGreedy = true
 (GetOwningQuest() as AK69KatanaPersonalQuestData).playerIsLoyal = false
+KatanaDataStorage.DecreaseRateMajor()
 GetOwningQuest().setstage(170)
 ;END CODE
 EndFunction
@@ -17,3 +18,5 @@ EndFunction
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
 
 MiscObject Property Gold001  Auto  
+
+AK69KatanaController Property KatanaDataStorage  Auto  

@@ -18,7 +18,7 @@ EndEvent
 Function CheckAround()
     UnlockMe.getReference()
     targetobj1 = UnlockMe.getReference()
-    If Katana.GetDistance(UnlockMe.getReference()) <= 700
+    If Katana.GetDistance(targetobj1) <= 700
     AK69LockpickScene.Start()
      Else
     AK69NOLockpickScene.Start()

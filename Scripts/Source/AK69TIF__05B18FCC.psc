@@ -6,6 +6,7 @@ Scriptname AK69TIF__05B18FCC Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
+KatanaDataStorage.DecreaseRateMajor()
 GetOwningQuest().SetStage(170)
 (GetOwningQuest() as AK69KatanaPersonalQuestData).playerIsLoyal = false
 ;END CODE
@@ -13,3 +14,5 @@ EndFunction
 ;END FRAGMENT
 
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
+
+AK69KatanaController Property KatanaDataStorage  Auto  

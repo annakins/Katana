@@ -74,14 +74,14 @@ if (GetOwningQuest().GetStage() == 0 && (akNewLoc == Whiterun) && Chadryn.GetPar
 endif
 Endif
 
-if (GetOwningQuest().GetStage() == 60 && akNewLoc != SleepingGiantInn)
+if ((GetOwningQuest().GetStage() >= 60 && GetOwningQuest().GetStage() < 70) && akNewLoc != SleepingGiantInn)
     If GameDaysPassed.GetValue() >= AK69ChadByeTimeVar.GetValue()
     AK69ChadrynSleepingGiantInnMarker.Disable()
     Chadryn.Disable()
     Endif
 endif
 
-if (GetOwningQuest().GetStage() == 60 && AK69NutTalkNowVar.GetValue() == 1) && Chadryn.IsDisabled()
+if ((GetOwningQuest().GetStage() >= 60 && GetOwningQuest().GetStage() < 70) && Azatar.IsDisabled() && Chadryn.IsDisabled())
 GetOwningQuest().SetStage(70)
 endif
 EndEvent
