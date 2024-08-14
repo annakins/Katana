@@ -16,6 +16,9 @@ Quest Property AK69CarrotQuest Auto
 ObjectReference Property AK69NutBoysSceneTrigger Auto
 
 bool property EEFlirtatious = false auto conditional
+bool property DoneWithChad = false auto conditional
+bool property DoneWithNutBoys = false auto conditional
+
 
 Function Setup()	
     Azatar.Enable()

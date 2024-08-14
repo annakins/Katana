@@ -5,10 +5,12 @@ int Property SceneTriggered  Auto
 Quest Property AK69EasterEggsQuest Auto
 GlobalVariable Property AK69KatanaRecruitedVar Auto
 GlobalVariable Property AK69MegaraRecruitedVar Auto
+GlobalVariable Property AK69MegaraRelax Auto
+GlobalVariable Property AK69KatanaRelax Auto
 
 Event OnTriggerEnter(ObjectReference akActionRef)
 
-    if akActionRef == Game.GetPlayer() && (AK69MegaraRecruitedVar.GetValue() == 1) && (AK69KatanaRecruitedVar.GetValue() == 1)
+    if akActionRef == Game.GetPlayer() && (AK69MegaraRecruitedVar.GetValue() == 1) && (AK69KatanaRecruitedVar.GetValue() == 1)  && AK69KatanaRelax.GetValue() == 0 && AK69MegaraRelax.GetValue() == 0 
         if SceneTriggered == 0
             if Game.GetPlayer().IsInCombat() == 0
                 AK69EasterEgg1Scene.Start()

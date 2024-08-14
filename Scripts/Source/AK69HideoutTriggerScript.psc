@@ -2,13 +2,14 @@ Scriptname AK69HideoutTriggerScript extends ObjectReference
 
 int Property SceneTriggered  Auto  
 GlobalVariable Property AK69KatanaRecruited Auto
+GlobalVariable Property AK69KatanaRelax Auto
 Actor Property Katana auto
 Quest Property AK69KatanaPersonalQuest Auto
 Activator Property InVis Auto
 
 Event OnTriggerEnter(ObjectReference akActionRef)
 
-    if (akActionRef == Game.GetPlayer() && AK69KatanaRecruited.GetValue() == 1 && AK69KatanaPersonalQuest.GetStage() == 180)
+    if (akActionRef == Game.GetPlayer() && AK69KatanaRecruited.GetValue() == 1 && AK69KatanaRelax.GetValue() == 0 && AK69KatanaPersonalQuest.GetStage() == 180)
         if SceneTriggered == 0
             Katana.EvaluatePackage()
             SceneTriggered = 1 

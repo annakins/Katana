@@ -25,6 +25,8 @@ Actor Property Katana Auto
 Actor Property Megara Auto
 GlobalVariable Property AK69KatanaRecruitedVar Auto
 GlobalVariable Property AK69MegaraRecruitedVar Auto
+GlobalVariable Property AK69KatanaRelax Auto
+GlobalVariable Property AK69MegaraRelax Auto
 ObjectReference Property AK69ChadrynWhiterunMarker  Auto 
 ObjectReference Property AK69NutBoysSceneTrigger  Auto 
 
@@ -67,7 +69,7 @@ If GameDaysPassed.GetValue() >= AK69NutBoysGoodbyeTimeVar.GetValue()
 Endif
 endif
 
-if (AK69KatanaRecruitedVar.GetValue() == 1) && (AK69MegaraRecruitedVar.GetValue() == 1) && (GetOwningQuest().GetStage() == 0)
+if (AK69KatanaRecruitedVar.GetValue() == 1) && AK69KatanaRelax.GetValue() == 0 && AK69MegaraRelax.GetValue() == 0 && (AK69MegaraRecruitedVar.GetValue() == 1) && (GetOwningQuest().GetStage() == 0)
     Chadryn.moveto(AK69ChadrynWhiterunMarker)
 if (GetOwningQuest().GetStage() == 0 && (akNewLoc == Whiterun) && Chadryn.GetParentCell() == Game.GetPlayer().GetParentCell())
     AK69ChadrynIntroScene.Start()
