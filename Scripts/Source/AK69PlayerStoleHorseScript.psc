@@ -12,7 +12,7 @@ Event OnActivate(ObjectReference akActionRef)
     KatanaDataStorage.DecreaseRateModerate()
 	AK69KatanaCommentVar.SetValue(16)
 	AK69KatanaPlayerReactionsQuestScene.Start()
-	Debug.Notification ("UpdateHorsesStolen")
+	;Debug.Notification ("UpdateHorsesStolen")
     endif
 
 EndEvent

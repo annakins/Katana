@@ -4,6 +4,6 @@ AK69KatanaController property KatanaDataStorage auto
 
 Event OnEffectStart(Actor aktarget, Actor akcaster)    
     KatanaDataStorage.DecreaseRateMinor()
-    Debug.Notification ("UpdateTrespasses")
+    ;Debug.Notification ("UpdateTrespasses")
 EndEvent
 

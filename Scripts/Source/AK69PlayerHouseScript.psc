@@ -18,6 +18,6 @@ Function HouseTime()
     KatanaDataStorage.IncreaseRateMinor()
     AK69KatanaCommentVar.SetValue(3)
     AK69KatanaPlayerReactionsQuestScene.Start()
-    Debug.Notification ("UpdateHousesOwned")
+    ;Debug.Notification ("UpdateHousesOwned")
     Self.Stop()
 EndFunction

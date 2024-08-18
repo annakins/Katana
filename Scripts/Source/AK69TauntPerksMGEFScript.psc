@@ -11,7 +11,7 @@ Utility.Wait(0.2)
 AK69TauntTargets.Cast(akCaster)
 Utility.Wait(0.2)
 AK69TauntCooldown.Cast(akCaster)
-Debug.Notification ("Shale is taunting and dancing")
+;Debug.Notification ("Shale is taunting and dancing")
 EndFunction
 
 

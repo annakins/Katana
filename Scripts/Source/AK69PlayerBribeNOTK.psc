@@ -12,13 +12,13 @@ if Bribes > AK69PlayerBribeVar.GetValue()
     AK69PlayerBribeVar.SetValue(Game.QueryStat("Bribes"))
    BribeTime()
 else
-    Debug.Notification ("Bribe Do Nothing")
+    ;Debug.Notification ("Bribe Do Nothing")
 endif
 EndEvent
 
 Function BribeTime()
     AK69KatanaCommentVar.SetValue(11)
     PlayerReactionsScene.Start()
-    Debug.Notification ("UpdateBribez")
+    ;Debug.Notification ("UpdateBribez")
 EndFunction
 

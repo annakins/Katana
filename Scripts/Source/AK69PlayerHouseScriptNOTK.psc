@@ -16,6 +16,6 @@ EndFunction
 Function HouseTime()	
     AK69KatanaCommentVar.SetValue(3)
     PlayerReactionsQuestScene.Start()
-    Debug.Notification ("UpdateHousesOwned")
+    ;Debug.Notification ("UpdateHousesOwned")
     Self.Stop()
 EndFunction

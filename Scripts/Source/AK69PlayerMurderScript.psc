@@ -8,6 +8,6 @@ Function Setup()
     KatanaDataStorage.DecreaseRateMajor()
 	AK69KatanaCommentVar.SetValue(13)
 	AK69KatanaPlayerReactionsQuestScene.Start()
-    Debug.Notification ("UpdateMurders")
+    ;Debug.Notification ("UpdateMurders")
     Self.Stop()
 EndFunction

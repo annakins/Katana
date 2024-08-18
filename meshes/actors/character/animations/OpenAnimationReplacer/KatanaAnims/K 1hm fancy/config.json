@@ -12,6 +12,18 @@
             }
         },
         {
+            "condition": "IsSneaking",
+            "requiredVersion": "1.0.0.0",
+            "negated": true
+        },
+        {
+            "condition": "IsCombatState",
+            "requiredVersion": "1.1.0.0",
+            "Combat state": {
+                "value": 0.0
+            }
+        },
+        {
             "condition": "IsInCombat",
             "requiredVersion": "1.0.0.0",
             "negated": true

@@ -15,7 +15,6 @@ AK69MegaraFollowQuest.Start()
 ElliRef.Delete()
 AK69MegaraPQSkipSuccessMessage.Show()
 GetOwningQuest().Setstage(5)
-Debug.Notification ("Skipper! Love you.")
 ;END CODE
 EndFunction
 ;END FRAGMENT

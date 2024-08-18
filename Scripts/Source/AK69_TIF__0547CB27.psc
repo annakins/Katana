@@ -7,7 +7,6 @@ Function Fragment_5(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 AK69TheKhatsEyeQuest.Start()
-Debug.Notification ("quest start")
 ;END CODE
 EndFunction
 ;END FRAGMENT

@@ -8,6 +8,6 @@ Function Setup()
     KatanaDataStorage.DecreaseRateMinor()
 	KatanaPlayerReactionsVar.SetValue(15)
 	KatanaPlayerReactionsScene.Start()
-    Debug.Notification ("PLAYER STOLE")
+    ;Debug.Notification ("PLAYER STOLE")
     Self.Stop()
 EndFunction

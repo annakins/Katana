@@ -9,7 +9,7 @@ ObjectReference Property AK69CappyCarrot Auto
 bool property CarrotIdle = false auto conditional
 
 
-float UntilCappyTime = 1.92 ;0.04 is 1 game hour
+float UntilCappyTime = 0.04 ;0.04 is 1 game hour
 
 Function CappyCarrotTimer()
 	float CappyCarrots = GameDaysPassed.GetValue() + UntilCappyTime	

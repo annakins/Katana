@@ -38,13 +38,13 @@ endEvent
 ;works
 function UpdateSkillIncreases()
 		KatanaDataStorage.IncreaseRateMinor()		
-		Debug.Notification ("UpdateSkillIncreases")
+		;Debug.Notification ("UpdateSkillIncreases")
 endFunction
 
 ;works
 function UpdateQuestsCompleted()
 		KatanaDataStorage.IncreaseRateMinor()
-		Debug.Notification ("UpdateQuestsCompleted")
+		;Debug.Notification ("UpdateQuestsCompleted")
 endFunction
 
 ;works
@@ -52,13 +52,13 @@ function UpdateDragonSouls()
 		KatanaDataStorage.IncreaseRateModerate()
 		KatanaPlayerReactionsVar.SetValue(4)
 		KatanaPlayerReactionsScene.Start()
-		Debug.Notification ("UpdateDragonSouls")
+		;Debug.Notification ("UpdateDragonSouls")
 endFunction
 
 ;works
 function UpdateShoutsLearned()
 		KatanaDataStorage.IncreaseRateModerate()
-		Debug.Notification ("UpdateShoutsLearned")
+		;Debug.Notification ("UpdateShoutsLearned")
 endFunction
 
 ;works
@@ -66,14 +66,14 @@ function UpdateShoutsMastered()
 		KatanaDataStorage.IncreaseRateModerate()
 		KatanaPlayerReactionsVar.SetValue(5)
 		KatanaPlayerReactionsScene.Start()
-		Debug.Notification ("UpdateShoutsMastered")
+		;Debug.Notification ("UpdateShoutsMastered")
 endFunction
 
 ;works
 function UpdateWeapsMade()
 		KatanaDataStorage.IncreaseRateMinor()
 		KatanaPlayerReactionsVar.SetValue(6)
-		Debug.Notification ("UpdateWeapsMade")
+		;Debug.Notification ("UpdateWeapsMade")
 endFunction
 
 ;works
@@ -81,5 +81,5 @@ function UpdateArmorMade()
 		KatanaDataStorage.IncreaseRateMinor()
 		KatanaPlayerReactionsVar.SetValue(7)
 		KatanaPlayerReactionsScene.Start()
-		Debug.Notification ("UpdateArmorMade")
+		;Debug.Notification ("UpdateArmorMade")
 endFunction

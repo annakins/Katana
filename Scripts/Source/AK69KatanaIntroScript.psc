@@ -39,6 +39,7 @@ ObjectReference Property AK69CozyPlant1 Auto
 ObjectReference Property AK69CozySpit Auto  
 ObjectReference Property AK69CozyStone Auto  
 ObjectReference Property AK69CozyWine1 Auto  
+ObjectReference Property AK69CozyRecallMarker Auto  
 
 Function SkipAll()
 AK69PQSkipSuccessVar.SetValue(1)
@@ -86,4 +87,5 @@ AK69CozyPlant1.Enable()
 AK69CozySpit.Enable()
 AK69CozyStone.Enable()
 AK69CozyWine1.Enable()  
+AK69CozyRecallMarker.Enable()
 EndFunction

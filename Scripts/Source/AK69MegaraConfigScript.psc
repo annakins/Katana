@@ -29,17 +29,17 @@ endEvent
 function UpdateDragonSouls()
 		AK69KatanaCommentVar.SetValue(4)
 		AK69MegaraReactions.Start()
-		Debug.Notification ("UpdateDragonSouls")
+		;Debug.Notification ("UpdateDragonSouls")
 endFunction
 
 function UpdateShoutsMastered()
 		AK69KatanaCommentVar.SetValue(5)
 		AK69MegaraReactions.Start()
-		Debug.Notification ("UpdateShoutsMastered")
+		;Debug.Notification ("UpdateShoutsMastered")
 endFunction
 
 function UpdateArmorMade()
 		AK69KatanaCommentVar.SetValue(7)
 		AK69MegaraReactions.Start()
-		Debug.Notification ("UpdateArmorMade")
+		;Debug.Notification ("UpdateArmorMade")
 endFunction

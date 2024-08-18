@@ -6,6 +6,6 @@ GlobalVariable property AK69KatanaCommentVar auto
 Function Setup()	
 	AK69KatanaCommentVar.SetValue(13)
 	PlayerReactionsQuestScene.Start()
-    Debug.Notification ("UpdateMurders")
+    ;Debug.Notification ("UpdateMurders")
     Self.Stop()
 EndFunction

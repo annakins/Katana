@@ -6,6 +6,6 @@ GlobalVariable property AK69KatanaCommentVar auto
 Function Setup()	
 	AK69KatanaCommentVar.SetValue(15)
 	PlayerReactionsScene.Start()
-    Debug.Notification ("PLAYER STOLE")
+    ;Debug.Notification ("PLAYER STOLE")
     Self.Stop()
 EndFunction

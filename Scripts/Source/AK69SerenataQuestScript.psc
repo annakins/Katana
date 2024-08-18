@@ -35,6 +35,7 @@ ObjectReference Property AK69CozyPlant1 Auto
 ObjectReference Property AK69CozySpit Auto  
 ObjectReference Property AK69CozyStone Auto  
 ObjectReference Property AK69CozyWine1 Auto  
+ObjectReference Property AK69CozyRecallMarker Auto  
 
 ;Primarily used to handle functionality of setting globals that are used by individual WIComment quests to control how often comments about the player are heard
 
@@ -133,6 +134,7 @@ function EndTeleportM()
     AK69CozySpit.Enable()
     AK69CozyStone.Enable()
     AK69CozyWine1.Enable()  
+    AK69CozyRecallMarker.Enable()
     (AK69KatanaFollowQuest as AK69KatanaController).SetFollower(Katana)
     (AK69MegaraFollowQuest as AK69MegaraController).SetFollower(Megara)
  endFunction

@@ -13,11 +13,21 @@ Message Property  FollowerDismissMessageWait Auto
 SetHirelingRehire Property HirelingRehireScript Auto
 GlobalVariable Property MegaraRelaxVar Auto
 GlobalVariable Property FollowerRecruited Auto
+GlobalVariable Property AK69KatanaRecruited Auto
+GlobalVariable Property AK69KatanaRelax Auto
+GlobalVariable Property AK69ShaleRecruited Auto
+GlobalVariable Property AK69ShaleRelax Auto
+ObjectReference Property AK69CozyRecallMarker Auto
+ObjectReference Property AK69CozyMarker1 Auto
+ObjectReference Property AK69KatanaSQMarker Auto
+Activator Property AK69CozyFXActivator Auto
 Int Property iFollowerDismiss Auto Conditional
 Quest Property AK69MegaraConfigQuest Auto
 Quest Property AK69MegaraSkyrimQuests Auto
 Quest Property AK69MegaraDismissedQuest Auto
-
+Actor Property MegaraActor Auto
+Actor Property KatanaActor Auto
+Actor Property ShaleActor Auto
 bool Property SaidImpressive = false auto conditional
 bool Property SaidHoarding = false auto conditional
 bool Property SaidHoarding30books = false auto conditional
@@ -97,6 +107,47 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
           iFollowerDismiss = 0
      EndIf
 	  
+EndFunction
+
+;This is the function to call in dialogue
+Function CozyTeleport()
+AK69CozyRecallMarker.MoveTo(PlayerREF)
+CompanionTeleport()
+EndFunction
+
+Function CompanionTeleport()
+if AK69KatanaRecruited.GetValue() == 1 && AK69KatanaRelax.GetValue() == 0
+     KatanaActor.MoveTo(AK69CozyMarker1)
+endif
+if AK69ShaleRecruited.GetValue() == 1 && AK69ShaleRelax.GetValue() == 0    
+     ShaleActor.MoveTo(AK69CozyMarker1)
+endif
+CozyTele()
+MegaraActor.MoveTo(AK69CozyMarker1)
+EndFunction
+
+;This is the function to call when you wanna go back
+Function CompanionRecall()
+if AK69KatanaRecruited.GetValue() == 1 && AK69KatanaRelax.GetValue() == 0
+     KatanaActor.MoveTo(AK69CozyRecallMarker)
+endif
+if AK69ShaleRecruited.GetValue() == 1 && AK69ShaleRelax.GetValue() == 0    
+     ShaleActor.MoveTo(AK69CozyRecallMarker)
+endif
+CozyRecall()
+MegaraActor.MoveTo(AK69CozyRecallMarker)
+EndFunction
+
+Function CozyTele()
+PlayerRef.PlaceAtMe(AK69CozyFXActivator)	
+PlayerRef.MoveTo(AK69KatanaSQMarker)
+PlayerRef.PlaceAtMe(AK69CozyFXActivator)	
+EndFunction
+     
+Function CozyRecall()
+PlayerRef.PlaceAtMe(AK69CozyFXActivator)	
+PlayerRef.MoveTo(AK69CozyRecallMarker)
+PlayerRef.PlaceAtMe(AK69CozyFXActivator)	
 EndFunction
 
 bool property Solitude = false auto conditional

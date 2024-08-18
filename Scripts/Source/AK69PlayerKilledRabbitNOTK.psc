@@ -7,7 +7,7 @@ Event OnDeath(Actor akKiller)
     if (akKiller == Game.GetPlayer())
         AK69KatanaCommentVar.SetValue(14)
        PlayerReactionsQuestScene.Start()
-        Debug.Notification ("UpdateBunnies")
+        ;Debug.Notification ("UpdateBunnies")
     endIf
   endEvent
 

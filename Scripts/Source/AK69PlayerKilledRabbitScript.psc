@@ -9,7 +9,7 @@ Event OnDeath(Actor akKiller)
         KatanaDataStorage.DecreaseRateMajor()
         AK69KatanaCommentVar.SetValue(14)
         AK69KatanaPlayerReactionsQuestScene.Start()
-        Debug.Notification ("UpdateBunnies")
+        ;Debug.Notification ("UpdateBunnies")
     endIf
   endEvent
 

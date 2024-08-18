@@ -8,6 +8,6 @@ Event OnEffectStart(Actor aktarget, Actor akcaster)
 	KatanaDataStorage.IncreaseRateMinor()	
     AK69KatanaCommentVar.SetValue(1)
     AK69KatanaPlayerReactionsQuestScene.Start()	
-    Debug.Notification ("PLAYER BRAWLZ") 
+    ;Debug.Notification ("PLAYER BRAWLZ") 
 EndEvent
 

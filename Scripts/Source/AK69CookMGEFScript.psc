@@ -13,24 +13,24 @@ Event OnEffectStart(Actor aktarget, Actor akcaster)
     AK69CookQuest.start()
     CheckAround()    
     Follower.EvaluatePackage()
-    Debug.Notification ("Cook effect started")
+    ;Debug.Notification ("Cook effect started")
 EndEvent
 
 Function CheckAround()
     CookingPot.getReference()
     targetobj1 = CookingPot.getReference()
-    If (Follower.GetDistance(targetobj1) <= 700 && !targetobj1.IsFurnitureInUse())
+    If (Follower.GetDistance(targetobj1) <= 700 && !targetobj1.IsFurnitureInUse(true))
         AK69CookScene.Start()
-    Elseif (Follower.GetDistance(targetobj1) <= 700 && targetobj1.IsFurnitureInUse())
+    Elseif (Follower.GetDistance(targetobj1) <= 700 && targetobj1.IsFurnitureInUse(true))
         AK69CookOccScene.Start()
      Else
         AK69NOCookScene.Start()
     endif
-    Debug.Notification ("Cook check + scene")
+    ;Debug.Notification ("Cook check + scene")
 EndFunction
 
 Event OnEffectFinish(Actor target, Actor caster)
     AK69CookQuest.stop()
-    Debug.Notification ("Cook effect end")
+    ;Debug.Notification ("Cook effect end")
 EndEvent 
 

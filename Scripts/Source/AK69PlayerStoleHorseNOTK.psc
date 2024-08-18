@@ -9,6 +9,6 @@ Event OnActivate(ObjectReference akActionRef)
     if akActionRef == Game.GetPlayer() && !Horse.GetActorReference().IsInFaction(PlayerHorseFaction)
 	AK69KatanaCommentVar.SetValue(16)
 	PlayerReactionsScene.Start()
-	Debug.Notification ("UpdateHorsesStolen")
+	;Debug.Notification ("UpdateHorsesStolen")
     endif
 EndEvent

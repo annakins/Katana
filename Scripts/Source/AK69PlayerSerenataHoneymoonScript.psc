@@ -26,7 +26,7 @@ Event OnLocationChange(Location akOldLoc, Location akNewLoc)
 if GetOwningQuest().GetStage() == 60 || GetOwningQuest().GetStage() == 70
     if Game.GetPlayer().GetItemCount(AK69SQScroll) == 0
         Game.GetPlayer().AddItem(AK69SQScroll)
-        Debug.Notification ("Should have a new scroll since it went away")
+        ;Debug.Notification ("Should have a new scroll since it went away")
     endIf
 endif
 

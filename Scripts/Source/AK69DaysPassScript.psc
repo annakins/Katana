@@ -6,7 +6,7 @@ GlobalVariable Property GameDaysPassed Auto
 
 Event OnEffectStart(Actor aktarget, Actor akcaster)    
     KatanaDataStorage.IncreaseRateMinor()
-    Debug.Notification ("UpdateDaysPassed")
+    ;Debug.Notification ("UpdateDaysPassed")
     AK69DaysPassVar.SetValue(0)
     Utility.Wait(0.1)
     DayTimer()

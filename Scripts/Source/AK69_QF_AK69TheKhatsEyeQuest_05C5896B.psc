@@ -7,29 +7,9 @@ Scriptname AK69_QF_AK69TheKhatsEyeQuest_05C5896B Extends Quest Hidden
 ReferenceAlias Property Alias_AlTharo Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY AlTharoMoorsideMarker
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_AlTharoMoorsideMarker Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Thalmor4
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Thalmor4 Auto
-;END ALIAS PROPERTY
-
 ;BEGIN ALIAS PROPERTY Megara
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_Megara Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY MovarthsLairMarker
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_MovarthsLairMarker Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY AlTharoGlasses
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_AlTharoGlasses Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Thalmor1
@@ -37,14 +17,9 @@ ReferenceAlias Property Alias_AlTharoGlasses Auto
 ReferenceAlias Property Alias_Thalmor1 Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Thalmor2
+;BEGIN ALIAS PROPERTY AlTharoMoorsideMarker
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Thalmor2 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Thalmor3
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Thalmor3 Auto
+ReferenceAlias Property Alias_AlTharoMoorsideMarker Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Katana
@@ -52,9 +27,9 @@ ReferenceAlias Property Alias_Thalmor3 Auto
 ReferenceAlias Property Alias_Katana Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Player
+;BEGIN ALIAS PROPERTY Thalmor4
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Player Auto
+ReferenceAlias Property Alias_Thalmor4 Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Thalmor5
@@ -62,27 +37,43 @@ ReferenceAlias Property Alias_Player Auto
 ReferenceAlias Property Alias_Thalmor5 Auto
 ;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_4
-Function Fragment_4()
-;BEGIN CODE
-;About to go get the spectacles
-;END CODE
-EndFunction
-;END FRAGMENT
+;BEGIN ALIAS PROPERTY AlTharoGlasses
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_AlTharoGlasses Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Thalmor3
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Thalmor3 Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY MovarthsLairMarker
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_MovarthsLairMarker Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Thalmor2
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Thalmor2 Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Player
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Player Auto
+;END ALIAS PROPERTY
 
 ;BEGIN FRAGMENT Fragment_14
 Function Fragment_14()
 ;BEGIN CODE
-AK69KECompleted.SetValue(1)
 Self.Stop()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_2
-Function Fragment_2()
+;BEGIN FRAGMENT Fragment_4
+Function Fragment_4()
 ;BEGIN CODE
-;Player is introduced to Al'Tharo
+;About to go get the spectacles
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -93,6 +84,35 @@ Function Fragment_5()
 ;Time to go to Movarth's Lair
 AlTharoGlasses.Enable()
 SetObjectiveDisplayed(40)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_0
+Function Fragment_0()
+;BEGIN AUTOCAST TYPE AK69TheKhatsEyeScript
+Quest __temp = self as Quest
+AK69TheKhatsEyeScript kmyQuest = __temp as AK69TheKhatsEyeScript
+;END AUTOCAST
+;BEGIN CODE
+kmyQuest.Setup()
+SetObjectiveDisplayed(5, abForce = true)
+(AK69MegaraFollowQuest as AK69MegaraController).KhatsEyeStart = true
+;Debug.Notification ("made it")
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_12
+Function Fragment_12()
+;BEGIN AUTOCAST TYPE AK69TheKhatsEyeScript
+Quest __temp = self as Quest
+AK69TheKhatsEyeScript kmyQuest = __temp as AK69TheKhatsEyeScript
+;END AUTOCAST
+;BEGIN CODE
+kmyQuest.GoodbyeAlTharo()
+AK69KECompleted.SetValue(1)
+(AK69KatanaFollowQuest as AK69Katanacontroller).IncreaseRateMajor()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -127,38 +147,18 @@ MovarthsLair.Disable()
 EndFunction
 ;END FRAGMENT
 
+;BEGIN FRAGMENT Fragment_2
+Function Fragment_2()
+;BEGIN CODE
+;Player is introduced to Al'Tharo
+;END CODE
+EndFunction
+;END FRAGMENT
+
 ;BEGIN FRAGMENT Fragment_3
 Function Fragment_3()
 ;BEGIN CODE
 ;They are about to find out what happened to the spectacles
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_12
-Function Fragment_12()
-;BEGIN AUTOCAST TYPE AK69TheKhatsEyeScript
-Quest __temp = self as Quest
-AK69TheKhatsEyeScript kmyQuest = __temp as AK69TheKhatsEyeScript
-;END AUTOCAST
-;BEGIN CODE
-kmyQuest.GoodbyeAlTharo()
-(AK69KatanaFollowQuest as AK69Katanacontroller).IncreaseRateMajor()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_0
-Function Fragment_0()
-;BEGIN AUTOCAST TYPE AK69TheKhatsEyeScript
-Quest __temp = self as Quest
-AK69TheKhatsEyeScript kmyQuest = __temp as AK69TheKhatsEyeScript
-;END AUTOCAST
-;BEGIN CODE
-kmyQuest.Setup()
-SetObjectiveDisplayed(5, abForce = true)
-(AK69MegaraFollowQuest as AK69MegaraController).KhatsEyeStart = true
-Debug.Notification ("made it")
 ;END CODE
 EndFunction
 ;END FRAGMENT
