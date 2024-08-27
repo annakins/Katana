@@ -224,9 +224,9 @@ Function ModAssessment(int assessmentIndex, float amount)
 EndFunction
 
 ;;; ASSESSMENT INCREMENTS AND FUNCTIONS
-float __minorAssessment = 0.05
-float __moderateAssessment = 0.2
-float __majorAssessment = 0.5
+float __minorAssessment = 0.2
+float __moderateAssessment = 0.6
+float __majorAssessment = 1.0
 float __PQAssessment = 3.5
 float __PQSkipSuccessAssessment = 7.0
 

@@ -5,6 +5,7 @@ ReferenceAlias property CookingPot auto
 Scene Property AK69CookScene auto
 Scene Property AK69NOCookScene auto
 Scene Property AK69CookOccScene Auto
+Scene Property AK69YASCookScene Auto
 Actor property Follower auto
 Keyword property AK69ChefKeyword auto
 
@@ -24,9 +25,8 @@ Function CheckAround()
         AK69CookScene.Start()
         Debug.Notification ("Will use cooking pot")
     ElseIf (Follower.HasMagicEffectWithKeyword(AK69ChefKeyword))
-        AK69CookScene.Start()
+        AK69YASCookScene.Start()
         Debug.Notification ("Keyword worked - will use cooking pot")
-        ;Should change this so it's just the "here you go" scene
     Elseif (Follower.GetDistance(targetobj1) <= 800 && targetobj1.IsFurnitureInUse(true))
         AK69CookOccScene.Start()
         Debug.Notification ("Occupied cooking pot")
