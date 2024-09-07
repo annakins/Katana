@@ -71,7 +71,7 @@ Function Stage3ReadyTime()
 	AK69KatanaStage3Var.SetValue(Stage3Ready)
 EndFunction
 
-float DHUntilReady = 0.12 ;3 hours
+float DHUntilReady = 0.04 ;1 hour
 
 Function DHReadyTime()
 	float DHReady = GameDaysPassed.GetValue() + DHUntilReady	

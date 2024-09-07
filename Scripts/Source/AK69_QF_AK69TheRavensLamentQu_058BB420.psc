@@ -2,89 +2,9 @@
 ;NEXT FRAGMENT INDEX 74
 Scriptname AK69_QF_AK69TheRavensLamentQu_058BB420 Extends Quest Hidden
 
-;BEGIN ALIAS PROPERTY Hag5
+;BEGIN ALIAS PROPERTY RiverNote
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Hag5 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY ShaleMarker2
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_ShaleMarker2 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY RiverMarker3
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_RiverMarker3 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY RiverVoice
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_RiverVoice Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Shale
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Shale Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY River
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_River Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY ShaleVoice_
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_ShaleVoice_ Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Hag4
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Hag4 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY VilemyrWarning
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_VilemyrWarning Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY BeeandBarbMarker
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_BeeandBarbMarker Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY RiverMarker1
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_RiverMarker1 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Megara
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Megara Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Hag1
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Hag1 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Player
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Player Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Katana
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Katana Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY CrateForSword
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_CrateForSword Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY VilemyrInnMarker
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_VilemyrInnMarker Auto
+ReferenceAlias Property Alias_RiverNote Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY BeeandBarbUPSTAIRSMarker
@@ -92,29 +12,29 @@ ReferenceAlias Property Alias_VilemyrInnMarker Auto
 ReferenceAlias Property Alias_BeeandBarbUPSTAIRSMarker Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY RiverNote
+;BEGIN ALIAS PROPERTY Atronach2
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_RiverNote Auto
+ReferenceAlias Property Alias_Atronach2 Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY ShaleVoice
+;BEGIN ALIAS PROPERTY Hag5
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_ShaleVoice Auto
+ReferenceAlias Property Alias_Hag5 Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Hag3
+;BEGIN ALIAS PROPERTY RiverVoice
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Hag3 Auto
+ReferenceAlias Property Alias_RiverVoice Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY RiverFlower
+;BEGIN ALIAS PROPERTY Hag4
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_RiverFlower Auto
+ReferenceAlias Property Alias_Hag4 Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY RiverMarker2
+;BEGIN ALIAS PROPERTY Megara
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_RiverMarker2 Auto
+ReferenceAlias Property Alias_Megara Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY FallowstoneMarker
@@ -122,14 +42,29 @@ ReferenceAlias Property Alias_RiverMarker2 Auto
 ReferenceAlias Property Alias_FallowstoneMarker Auto
 ;END ALIAS PROPERTY
 
+;BEGIN ALIAS PROPERTY RiverMarker1
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_RiverMarker1 Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY ShaleVoice
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_ShaleVoice Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY ShaleVoice_
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_ShaleVoice_ Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Hag1
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Hag1 Auto
+;END ALIAS PROPERTY
+
 ;BEGIN ALIAS PROPERTY Atronach1
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_Atronach1 Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Hag2
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Hag2 Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Shade
@@ -137,9 +72,49 @@ ReferenceAlias Property Alias_Hag2 Auto
 ReferenceAlias Property Alias_Shade Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Atronach2
+;BEGIN ALIAS PROPERTY Hag2
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Atronach2 Auto
+ReferenceAlias Property Alias_Hag2 Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY RiverFlower
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_RiverFlower Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Shale
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Shale Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY RiverMarker2
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_RiverMarker2 Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY ShaleMarker2
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_ShaleMarker2 Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY CrateForSword
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_CrateForSword Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Katana
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Katana Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY River
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_River Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY VilemyrWarning
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_VilemyrWarning Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY ShaleMarker1
@@ -147,44 +122,47 @@ ReferenceAlias Property Alias_Atronach2 Auto
 ReferenceAlias Property Alias_ShaleMarker1 Auto
 ;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_7
-Function Fragment_7()
+;BEGIN ALIAS PROPERTY BeeandBarbMarker
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_BeeandBarbMarker Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY RiverMarker3
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_RiverMarker3 Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Hag3
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Hag3 Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY VilemyrInnMarker
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_VilemyrInnMarker Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Player
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Player Auto
+;END ALIAS PROPERTY
+
+;BEGIN FRAGMENT Fragment_56
+Function Fragment_56()
+;BEGIN CODE
+;River talk to player
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_2
+Function Fragment_2()
 ;BEGIN AUTOCAST TYPE AK69TheRavensLamentScript
 Quest __temp = self as Quest
 AK69TheRavensLamentScript kmyQuest = __temp as AK69TheRavensLamentScript
 ;END AUTOCAST
 ;BEGIN CODE
-SetObjectiveDisplayed(50)
-SetObjectiveDisplayed(51)
-SetObjectiveDisplayed(52)
-kmyQuest.ActivateFlowerRiddle()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_13
-Function Fragment_13()
-;BEGIN CODE
-;Katana to ask Megara's thoughts
-AK69TheRavensLamentMegaraThoughts.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_42
-Function Fragment_42()
-;BEGIN CODE
-SetObjectiveDisplayed(230)
-
-Alias_Hag1.GetReference().Enable()
-Alias_Hag2.GetReference().Enable()
-Alias_Hag3.GetReference().Enable()
-Alias_Hag4.GetReference().Enable()
-Alias_Hag5.GetReference().Enable()
-Alias_River.GetActorReference().StartCombat(Game.GetPlayer())
-Alias_Katana.GetActorReference().StartCombat(Alias_Hag1.GetActorReference())
-Alias_Shale.GetActorReference().StartCombat(Alias_Hag2.GetActorReference())
-Alias_Megara.GetActorReference().StartCombat(Alias_Hag3.GetActorReference())
+;Second voice scene concluded
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -202,67 +180,29 @@ AK69TRLShadeScene1.Start()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_36
-Function Fragment_36()
+;BEGIN FRAGMENT Fragment_49
+Function Fragment_49()
+;BEGIN AUTOCAST TYPE AK69TheRavensLamentScript
+Quest __temp = self as Quest
+AK69TheRavensLamentScript kmyQuest = __temp as AK69TheRavensLamentScript
+;END AUTOCAST
 ;BEGIN CODE
-AK69FindRiverScene3.Stop()
-AK69FindRiverScene4.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_19
-Function Fragment_19()
-;BEGIN CODE
-SetObjectiveDisplayed(120)
-AK69Atronach1.Enable()
-AK69Atronach2.Enable()
-;Ambush
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_58
-Function Fragment_58()
-;BEGIN CODE
-AK69FindRiverScene4.Stop()
-;asking if player is ready
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_62
-Function Fragment_62()
-;BEGIN CODE
+kmyQuest.StopParalysis()
+kmyQuest.ShadeBye2()
 KatanaActor.EvaluatePackage()
 ShaleActor.EvaluatePackage()
 MegaraActor.EvaluatePackage()
-
-SetObjectiveDisplayed(290)
-SetObjectiveDisplayed(291)
-SetObjectiveDisplayed(292)
+AK69MegaraTorchVar.SetValue(0)
+SetStage(271)
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_29
-Function Fragment_29()
+;BEGIN FRAGMENT Fragment_31
+Function Fragment_31()
 ;BEGIN CODE
-AK69FindRiverScene1.Start()
-KatanaActor.EvaluatePackage()
-ShaleActor.EvaluatePackage()
-MegaraActor.EvaluatePackage()
-SetObjectiveDisplayed(170)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_27
-Function Fragment_27()
-;BEGIN CODE
-AK69RiverMarker1.Enable()
-Alias_Katana.GetActorReference().EvaluatePackage()
-;Katana forcegreet
+AK69FindRiverScene2.Start()
+AK69RiverMarker2.Enable()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -308,105 +248,90 @@ RiverActor.SetOutfit(AK69RiverOutfit2)
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_2
-Function Fragment_2()
+;BEGIN FRAGMENT Fragment_8
+Function Fragment_8()
+;BEGIN CODE
+setObjectiveCompleted(50)
+setObjectiveDisplayed(60)
+RiddleIdleScene.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_7
+Function Fragment_7()
 ;BEGIN AUTOCAST TYPE AK69TheRavensLamentScript
 Quest __temp = self as Quest
 AK69TheRavensLamentScript kmyQuest = __temp as AK69TheRavensLamentScript
 ;END AUTOCAST
 ;BEGIN CODE
-;Second voice scene concluded
+SetObjectiveDisplayed(50)
+SetObjectiveDisplayed(51)
+SetObjectiveDisplayed(52)
+kmyQuest.ActivateFlowerRiddle()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_22
-Function Fragment_22()
+;BEGIN FRAGMENT Fragment_24
+Function Fragment_24()
 ;BEGIN CODE
-SetObjectiveDisplayed(140)
-AK69ShaleMarker1.Enable()
-AK69ShaleTrigger1REF.Enable()
-MegaraActor.StopCombat()
-MegaraActor.StopCombatAlarm()
-KatanaActor.StopCombat()
-KatanaActor.StopCombatAlarm()
+Alias_Katana.GetActorReference().EvaluatePackage()
+AK69OnTheWay2Scene.Start()
+AK69ShaleMarker2.Enable()
+AK69ShaleTrigger2.Enable()
+ShaleREF.Enable()
+ShaleREF.RemoveItem(AK69Tsukikage, 1)
+ShaleREF.MoveTo(AK69ShaleMarker2)
+ShaleActor.SetRestrained()
+ShaleActor.SetOutfit(AK69ShaleOutfit_B)
+ShaleActor.AllowBleedoutDialogue(true)
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_5
-Function Fragment_5()
+;BEGIN FRAGMENT Fragment_58
+Function Fragment_58()
 ;BEGIN CODE
-setObjectiveCompleted(30)
-setObjectiveDisplayed(40)
+AK69FindRiverScene4.Stop()
+;asking if player is ready
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_49
-Function Fragment_49()
+;BEGIN FRAGMENT Fragment_44
+Function Fragment_44()
 ;BEGIN AUTOCAST TYPE AK69TheRavensLamentScript
 Quest __temp = self as Quest
 AK69TheRavensLamentScript kmyQuest = __temp as AK69TheRavensLamentScript
 ;END AUTOCAST
 ;BEGIN CODE
-kmyQuest.StopParalysis()
-kmyQuest.ShadeBye2()
-KatanaActor.EvaluatePackage()
-ShaleActor.EvaluatePackage()
-MegaraActor.EvaluatePackage()
-AK69MegaraTorchVar.SetValue(0)
-SetStage(271)
+SetObjectiveCompleted(230)
+AK69AuraBlueFX.stop(RiverActor)
+AK69TRLBleedoutScene.Start()
+kmyQuest.ShadeBye()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_10
-Function Fragment_10()
+;BEGIN FRAGMENT Fragment_0
+Function Fragment_0()
+;BEGIN AUTOCAST TYPE AK69TheRavensLamentScript
+Quest __temp = self as Quest
+AK69TheRavensLamentScript kmyQuest = __temp as AK69TheRavensLamentScript
+;END AUTOCAST
 ;BEGIN CODE
-setObjectiveCompleted(60)
-AK69TheRavensLamentReadRiddleScene.Start()
+;First voice scene concluded
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_4
-Function Fragment_4()
+;BEGIN FRAGMENT Fragment_27
+Function Fragment_27()
 ;BEGIN CODE
-setObjectiveDisplayed(30)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_56
-Function Fragment_56()
-;BEGIN CODE
-;River talk to player
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_70
-Function Fragment_70()
-;BEGIN CODE
-Self.CompleteAllObjectives()
-Self.Stop()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_12
-Function Fragment_12()
-;BEGIN CODE
-;Katana forcegreets player
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_60
-Function Fragment_60()
-;BEGIN CODE
-AK69FindRiverScene4B.Start()
+AK69RiverMarker1.Enable()
+Alias_Katana.GetActorReference().EvaluatePackage()
+;Katana forcegreet
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -441,6 +366,16 @@ AK69TRLShadeScene2.Start()
 EndFunction
 ;END FRAGMENT
 
+;BEGIN FRAGMENT Fragment_38
+Function Fragment_38()
+;BEGIN CODE
+AK69FindRiverScene5.Start()
+AK69MegaraTorchVar.SetValue(1)
+MegaraActor.RemoveItem(Torch01)
+;END CODE
+EndFunction
+;END FRAGMENT
+
 ;BEGIN FRAGMENT Fragment_20
 Function Fragment_20()
 ;BEGIN CODE
@@ -449,6 +384,92 @@ Alias_RiverVoice.GetReference().MoveTo(Game.GetPlayer())
 Alias_ShaleVoice.GetReference().MoveTo(Game.GetPlayer())
 AK69FallowstoneSceneB.Start()
 ;Atronachs deado
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_51
+Function Fragment_51()
+;BEGIN CODE
+SetObjectiveDisplayed(280)
+KatanaActor.EvaluatePackage()
+ShaleActor.EvaluatePackage()
+MegaraActor.EvaluatePackage()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_17
+Function Fragment_17()
+;BEGIN CODE
+SetObjectiveDisplayed(110)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_22
+Function Fragment_22()
+;BEGIN CODE
+SetObjectiveDisplayed(140)
+AK69ShaleMarker1.Enable()
+AK69ShaleTrigger1REF.Enable()
+MegaraActor.StopCombat()
+MegaraActor.StopCombatAlarm()
+KatanaActor.StopCombat()
+KatanaActor.StopCombatAlarm()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_72
+Function Fragment_72()
+;BEGIN CODE
+AK69TRLShadeScene2.Stop()
+AK69TRLTESTSCENE.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_5
+Function Fragment_5()
+;BEGIN CODE
+setObjectiveCompleted(30)
+setObjectiveDisplayed(40)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_70
+Function Fragment_70()
+;BEGIN CODE
+Self.CompleteAllObjectives()
+Self.Stop()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_60
+Function Fragment_60()
+;BEGIN CODE
+AK69FindRiverScene4B.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_13
+Function Fragment_13()
+;BEGIN CODE
+;Katana to ask Megara's thoughts
+AK69TheRavensLamentMegaraThoughts.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_10
+Function Fragment_10()
+;BEGIN CODE
+setObjectiveCompleted(60)
+AK69TheRavensLamentReadRiddleScene.Start()
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -466,73 +487,64 @@ RiverRef.PlaceAtMe(SummonValorTargetFXActivator)
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_0
-Function Fragment_0()
-;BEGIN AUTOCAST TYPE AK69TheRavensLamentScript
-Quest __temp = self as Quest
-AK69TheRavensLamentScript kmyQuest = __temp as AK69TheRavensLamentScript
-;END AUTOCAST
+;BEGIN FRAGMENT Fragment_42
+Function Fragment_42()
 ;BEGIN CODE
-;First voice scene concluded
+SetObjectiveDisplayed(230)
+
+Alias_Hag1.GetReference().Enable()
+Alias_Hag2.GetReference().Enable()
+Alias_Hag3.GetReference().Enable()
+Alias_Hag4.GetReference().Enable()
+Alias_Hag5.GetReference().Enable()
+Alias_River.GetActorReference().StartCombat(Game.GetPlayer())
+Alias_Katana.GetActorReference().StartCombat(Alias_Hag1.GetActorReference())
+Alias_Shale.GetActorReference().StartCombat(Alias_Hag2.GetActorReference())
+Alias_Megara.GetActorReference().StartCombat(Alias_Hag3.GetActorReference())
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_24
-Function Fragment_24()
+;BEGIN FRAGMENT Fragment_29
+Function Fragment_29()
 ;BEGIN CODE
-Alias_Katana.GetActorReference().EvaluatePackage()
-AK69OnTheWay2Scene.Start()
-AK69ShaleMarker2.Enable()
-AK69ShaleTrigger2.Enable()
-ShaleREF.Enable()
-ShaleREF.RemoveItem(AK69Tsukikage, 1)
-ShaleREF.MoveTo(AK69ShaleMarker2)
-ShaleActor.SetRestrained()
-ShaleActor.SetOutfit(AK69ShaleOutfit_B)
-ShaleActor.AllowBleedoutDialogue(true)
+AK69FindRiverScene1.Start()
+KatanaActor.EvaluatePackage()
+ShaleActor.EvaluatePackage()
+MegaraActor.EvaluatePackage()
+SetObjectiveDisplayed(170)
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_17
-Function Fragment_17()
+;BEGIN FRAGMENT Fragment_36
+Function Fragment_36()
 ;BEGIN CODE
-SetObjectiveDisplayed(110)
+AK69FindRiverScene3.Stop()
+AK69FindRiverScene4.Start()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_72
-Function Fragment_72()
+;BEGIN FRAGMENT Fragment_62
+Function Fragment_62()
 ;BEGIN CODE
-AK69TRLShadeScene2.Stop()
-AK69TRLTESTSCENE.Start()
+KatanaActor.EvaluatePackage()
+ShaleActor.EvaluatePackage()
+MegaraActor.EvaluatePackage()
+
+SetObjectiveDisplayed(290)
+SetObjectiveDisplayed(291)
+SetObjectiveDisplayed(292)
+;Follower dismiss not allowed
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_8
-Function Fragment_8()
+;BEGIN FRAGMENT Fragment_4
+Function Fragment_4()
 ;BEGIN CODE
-setObjectiveCompleted(50)
-setObjectiveDisplayed(60)
-RiddleIdleScene.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_44
-Function Fragment_44()
-;BEGIN AUTOCAST TYPE AK69TheRavensLamentScript
-Quest __temp = self as Quest
-AK69TheRavensLamentScript kmyQuest = __temp as AK69TheRavensLamentScript
-;END AUTOCAST
-;BEGIN CODE
-SetObjectiveCompleted(230)
-AK69AuraBlueFX.stop(RiverActor)
-AK69TRLBleedoutScene.Start()
-kmyQuest.ShadeBye()
+setObjectiveDisplayed(30)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -550,32 +562,21 @@ AK69TRLFINScene.Start()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_38
-Function Fragment_38()
+;BEGIN FRAGMENT Fragment_12
+Function Fragment_12()
 ;BEGIN CODE
-AK69FindRiverScene5.Start()
-AK69MegaraTorchVar.SetValue(1)
-MegaraActor.RemoveItem(Torch01)
+;Katana forcegreets player
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_31
-Function Fragment_31()
+;BEGIN FRAGMENT Fragment_19
+Function Fragment_19()
 ;BEGIN CODE
-AK69FindRiverScene2.Start()
-AK69RiverMarker2.Enable()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_51
-Function Fragment_51()
-;BEGIN CODE
-SetObjectiveDisplayed(280)
-KatanaActor.EvaluatePackage()
-ShaleActor.EvaluatePackage()
-MegaraActor.EvaluatePackage()
+SetObjectiveDisplayed(120)
+AK69Atronach1.Enable()
+AK69Atronach2.Enable()
+;Ambush
 ;END CODE
 EndFunction
 ;END FRAGMENT

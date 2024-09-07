@@ -1,6 +1,14 @@
 ;BEGIN FRAGMENT CODE - Do not edit anything between this and the end comment
-;NEXT FRAGMENT INDEX 17
+;NEXT FRAGMENT INDEX 22
 Scriptname AK69_SF_AK69EasterEgg1Scene_05C0277B Extends Scene Hidden
+
+;BEGIN FRAGMENT Fragment_5
+Function Fragment_5()
+;BEGIN CODE
+AK69Azatar.AddItem(AK69DeepvosNote, 1, true)
+;END CODE
+EndFunction
+;END FRAGMENT
 
 ;BEGIN FRAGMENT Fragment_8
 Function Fragment_8()
@@ -18,18 +26,10 @@ DeepDrunkMarker.Disable()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_5
-Function Fragment_5()
+;BEGIN FRAGMENT Fragment_18
+Function Fragment_18()
 ;BEGIN CODE
-AK69Azatar.AddItem(AK69DeepvosNote, 1, true)
 AK69EasterEgg1AfterScene.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_12
-Function Fragment_12()
-;BEGIN CODE
 (GetOwningQuest() as AK69EasterEggsScript).DoneWithNutBoys = true
 ;END CODE
 EndFunction
