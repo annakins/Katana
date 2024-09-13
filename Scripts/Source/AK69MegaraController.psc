@@ -17,6 +17,7 @@ GlobalVariable Property AK69KatanaRecruited Auto
 GlobalVariable Property AK69KatanaRelax Auto
 GlobalVariable Property AK69ShaleRecruited Auto
 GlobalVariable Property AK69ShaleRelax Auto
+GlobalVariable Property AK69MegaraDONOTPickUpVar Auto
 ObjectReference Property AK69CozyRecallMarker Auto
 ObjectReference Property AK69CozyMarker1 Auto
 ObjectReference Property AK69KatanaSQMarker Auto
@@ -107,6 +108,15 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
           iFollowerDismiss = 0
      EndIf
 	  
+EndFunction
+
+;Megara picks up ingredients by default
+Function PickUpIngredients()
+     AK69MegaraDONOTPickUpVar.SetValue(0)
+EndFunction
+
+Function DoNotPickUpIngredients()
+     AK69MegaraDONOTPickUpVar.SetValue(1)
 EndFunction
 
 ;This is the function to call in dialogue

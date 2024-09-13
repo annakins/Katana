@@ -18,6 +18,7 @@ Quest Property AK69ShaleConfigQuest Auto
 Quest Property AK69ShaleSkyrimQuests Auto
 Quest Property AK69ShaleDismissedQuest Auto
 Quest Property AK69ShaleAdorbsQuest Auto
+ObjectReference Property AK69ChestREF  Auto  
 
 Int Property AK69Quality Auto conditional
 bool Property Riverwoodmotto = false auto conditional
@@ -94,5 +95,8 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
           ;Shale.Clear()
           iFollowerDismiss = 0
      EndIf
-	  
+EndFunction
+
+Function OpenChest()
+     AK69ChestREF.Activate(PlayerREF)
 EndFunction
