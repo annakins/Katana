@@ -1,4 +1,4 @@
-Scriptname AK69SerenataQuestScript extends Quest  
+Scriptname AK69SerenataQuestScript extends Quest  Conditional
 
 GlobalVariable Property GameDaysPassed Auto
 GlobalVariable Property AK69SQCourierReadyVar auto
@@ -36,6 +36,8 @@ ObjectReference Property AK69CozySpit Auto
 ObjectReference Property AK69CozyStone Auto  
 ObjectReference Property AK69CozyWine1 Auto  
 ObjectReference Property AK69CozyRecallMarker Auto  
+
+bool Property IntroTalk = false auto conditional
 
 ;Primarily used to handle functionality of setting globals that are used by individual WIComment quests to control how often comments about the player are heard
 

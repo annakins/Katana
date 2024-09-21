@@ -41,6 +41,7 @@ bool Property NordicSouls = false auto conditional
 bool Property RiftenPockets = false auto conditional
 bool Property WhiterunOpp = false auto conditional
 bool Property Firemages = false auto conditional 
+bool Property ScarfHello = false auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)
      actor FollowerActor = FollowerRef as Actor

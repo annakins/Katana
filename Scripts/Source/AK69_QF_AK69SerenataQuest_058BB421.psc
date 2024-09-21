@@ -7,14 +7,19 @@ Scriptname AK69_QF_AK69SerenataQuest_058BB421 Extends Quest Hidden
 ReferenceAlias Property Alias_Megara Auto
 ;END ALIAS PROPERTY
 
+;BEGIN ALIAS PROPERTY Deep
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Deep Auto
+;END ALIAS PROPERTY
+
 ;BEGIN ALIAS PROPERTY Katana
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_Katana Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Azatar
+;BEGIN ALIAS PROPERTY Shale
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Azatar Auto
+ReferenceAlias Property Alias_Shale Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Chadryn
@@ -32,9 +37,9 @@ ReferenceAlias Property Alias_NoteAliasRef Auto
 ReferenceAlias Property Alias_Player Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Shale
+;BEGIN ALIAS PROPERTY Azatar
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Shale Auto
+ReferenceAlias Property Alias_Azatar Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY ScrollAliasRef
@@ -42,47 +47,61 @@ ReferenceAlias Property Alias_Shale Auto
 ReferenceAlias Property Alias_ScrollAliasRef Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Deep
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Deep Auto
-;END ALIAS PROPERTY
-
-;BEGIN FRAGMENT Fragment_26
-Function Fragment_26()
-;BEGIN AUTOCAST TYPE AK69SerenataQuestScript
-Quest __temp = self as Quest
-AK69SerenataQuestScript kmyQuest = __temp as AK69SerenataQuestScript
-;END AUTOCAST
+;BEGIN FRAGMENT Fragment_23
+Function Fragment_23()
 ;BEGIN CODE
-AK69SQAway.SetValue(0)
-SetObjectiveCompleted(140)
-kmyQuest.KatanaBack()
-kmyQuest.MegaraBack()
-Utility.Wait(1.5)
-AK69SQScene7.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_20
-Function Fragment_20()
-;BEGIN CODE
-SetObjectiveCompleted(80)
+AK69SQScene6.Stop()
+SetObjectiveCompleted(120)
+SetObjectiveDisplayed(130)
+SetObjectiveDisplayed(131)
 Alias_Megara.GetActorReference().EvaluatePackage()
+Alias_Chadryn.GetActorReference().EvaluatePackage()
+Alias_Katana.GetActorReference().EvaluatePackage()
+Alias_Deep.GetActorReference().EvaluatePackage()
+Alias_Shale.GetActorReference().EvaluatePackage()
+Alias_Azatar.GetActorReference().EvaluatePackage()
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_7
-Function Fragment_7()
+;BEGIN FRAGMENT Fragment_28
+Function Fragment_28()
+;BEGIN CODE
+SetObjectiveDisplayed(160)
+SetObjectiveDisplayed(161)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_1
+Function Fragment_1()
+;BEGIN CODE
+SetObjectiveCompleted(1)
+AK69SQScene1.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_9
+Function Fragment_9()
 ;BEGIN AUTOCAST TYPE AK69SerenataQuestScript
 Quest __temp = self as Quest
 AK69SerenataQuestScript kmyQuest = __temp as AK69SerenataQuestScript
 ;END AUTOCAST
 ;BEGIN CODE
-AK69SQAway.SetValue(1)
-kmyQuest.QuestReadyTime()
-SetObjectiveDisplayed(40)
+;Courier should come
+kmyQuest.PlaceNote()
+SetObjectiveCompleted(40)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_22
+Function Fragment_22()
+;BEGIN CODE
+AK69SQScene5.Stop()
+AK69SQScene6.Start()
+SetObjectiveDisplayed(120)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -95,19 +114,11 @@ AK69SQScene2.Start()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_3
-Function Fragment_3()
+;BEGIN FRAGMENT Fragment_11
+Function Fragment_11()
 ;BEGIN CODE
-AK69WeddingBellsVar.SetValue(1)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_21
-Function Fragment_21()
-;BEGIN CODE
-;Chad scene
-AK69SQScene5.Start()
+;Note got added to inventory
+SetObjectiveDisplayed(60)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -132,6 +143,32 @@ AK69SQAway.SetValue(0)
 EndFunction
 ;END FRAGMENT
 
+;BEGIN FRAGMENT Fragment_21
+Function Fragment_21()
+;BEGIN CODE
+;Chad scene
+AK69SQScene5.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_26
+Function Fragment_26()
+;BEGIN AUTOCAST TYPE AK69SerenataQuestScript
+Quest __temp = self as Quest
+AK69SerenataQuestScript kmyQuest = __temp as AK69SerenataQuestScript
+;END AUTOCAST
+;BEGIN CODE
+AK69SQAway.SetValue(0)
+SetObjectiveCompleted(140)
+kmyQuest.KatanaBack()
+kmyQuest.MegaraBack()
+Utility.Wait(1.5)
+AK69SQScene7.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
 ;BEGIN FRAGMENT Fragment_24
 Function Fragment_24()
 ;BEGIN AUTOCAST TYPE AK69SerenataQuestScript
@@ -151,10 +188,39 @@ AK69SQSceneS2.Start()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_18
-Function Fragment_18()
+;BEGIN FRAGMENT Fragment_30
+Function Fragment_30()
 ;BEGIN CODE
-;Meg talks to player
+SetObjectiveCompleted(160)
+SetObjectiveCompleted(161)
+AK69SQScene10.Start()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_7
+Function Fragment_7()
+;BEGIN AUTOCAST TYPE AK69SerenataQuestScript
+Quest __temp = self as Quest
+AK69SerenataQuestScript kmyQuest = __temp as AK69SerenataQuestScript
+;END AUTOCAST
+;BEGIN CODE
+AK69SQAway.SetValue(1)
+kmyQuest.QuestReadyTime()
+SetObjectiveDisplayed(40)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_33
+Function Fragment_33()
+;BEGIN AUTOCAST TYPE AK69SerenataQuestScript
+Quest __temp = self as Quest
+AK69SerenataQuestScript kmyQuest = __temp as AK69SerenataQuestScript
+;END AUTOCAST
+;BEGIN CODE
+kmyQuest.EndQuest()
+SetStage(190)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -172,92 +238,27 @@ AK69SQSceneS1.Start()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_28
-Function Fragment_28()
+;BEGIN FRAGMENT Fragment_3
+Function Fragment_3()
 ;BEGIN CODE
-SetObjectiveDisplayed(160)
-SetObjectiveDisplayed(161)
+AK69WeddingBellsVar.SetValue(1)
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_22
-Function Fragment_22()
+;BEGIN FRAGMENT Fragment_18
+Function Fragment_18()
 ;BEGIN CODE
-AK69SQScene5.Stop()
-AK69SQScene6.Start()
-SetObjectiveDisplayed(120)
+;Meg talks to player
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_1
-Function Fragment_1()
+;BEGIN FRAGMENT Fragment_20
+Function Fragment_20()
 ;BEGIN CODE
-AK69SQScene1.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_23
-Function Fragment_23()
-;BEGIN CODE
-AK69SQScene6.Stop()
-SetObjectiveCompleted(120)
-SetObjectiveDisplayed(130)
-SetObjectiveDisplayed(131)
+SetObjectiveCompleted(80)
 Alias_Megara.GetActorReference().EvaluatePackage()
-Alias_Chadryn.GetActorReference().EvaluatePackage()
-Alias_Katana.GetActorReference().EvaluatePackage()
-Alias_Deep.GetActorReference().EvaluatePackage()
-Alias_Shale.GetActorReference().EvaluatePackage()
-Alias_Azatar.GetActorReference().EvaluatePackage()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_30
-Function Fragment_30()
-;BEGIN CODE
-SetObjectiveCompleted(160)
-SetObjectiveCompleted(161)
-AK69SQScene10.Start()
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_11
-Function Fragment_11()
-;BEGIN CODE
-;Note got added to inventory
-SetObjectiveDisplayed(60)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_9
-Function Fragment_9()
-;BEGIN AUTOCAST TYPE AK69SerenataQuestScript
-Quest __temp = self as Quest
-AK69SerenataQuestScript kmyQuest = __temp as AK69SerenataQuestScript
-;END AUTOCAST
-;BEGIN CODE
-;Courier should come
-kmyQuest.PlaceNote()
-SetObjectiveCompleted(40)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_33
-Function Fragment_33()
-;BEGIN AUTOCAST TYPE AK69SerenataQuestScript
-Quest __temp = self as Quest
-AK69SerenataQuestScript kmyQuest = __temp as AK69SerenataQuestScript
-;END AUTOCAST
-;BEGIN CODE
-kmyQuest.EndQuest()
-SetStage(190)
 ;END CODE
 EndFunction
 ;END FRAGMENT
