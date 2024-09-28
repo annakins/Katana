@@ -42,6 +42,11 @@ bool Property RiftenPockets = false auto conditional
 bool Property WhiterunOpp = false auto conditional
 bool Property Firemages = false auto conditional 
 bool Property ScarfHello = false auto conditional
+bool Property SaSChapter = false auto conditional
+bool Property TRLRealized = false auto conditional
+bool Property TRLRealRiver = false auto conditional
+bool Property TRLDistracted = false auto conditional
+bool Property TRLVoices = false auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)
      actor FollowerActor = FollowerRef as Actor

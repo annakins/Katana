@@ -36,6 +36,8 @@ bool Property SaidHoarding40books = false auto conditional
 bool Property SaidPSEE = false auto conditional
 bool Property KhatsEyeStart = false auto conditional
 Int Property AK69Quality Auto conditional
+bool Property TRLZander = false auto conditional
+bool Property TRLHi = false auto conditional
 
 Function SetFollower(ObjectReference FollowerRef)
      actor FollowerActor = FollowerRef as Actor

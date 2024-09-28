@@ -5,6 +5,7 @@ Actor Property Megara Auto
 Actor Property Shale Auto
 ReferenceAlias Property River Auto
 Scene Property AK69ImpatientMuchScene Auto
+Scene Property AK69FindRiverScene6 Auto
 GlobalVariable Property AK69HagKillCount Auto
 
 Event OnEnterBleedout()
@@ -24,9 +25,11 @@ Event OnEnterBleedout()
 endEvent
 
 Event OnHit(ObjectReference akAggressor, Form akSource, Projectile akProjectile, bool abPowerAttack, bool abSneakAttack, bool abBashAttack, bool abHitBlocked)
-    if GetOwningQuest().GetStage() == 220 
+    if GetOwningQuest().GetStage() == 220 && akAggressor == game.getPlayer()
+        AK69FindRiverScene6.Stop()
         River.GetActorReference().GetActorBase().SetInvulnerable(true)
         AK69ImpatientMuchScene.Start()
+        River.GetActorReference().StartCombat(Game.GetPlayer())
         GetOwningQuest().SetStage(230)
     endif
   EndEvent

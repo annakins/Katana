@@ -1,4 +1,4 @@
-Scriptname AK69TheRavensLamentScript extends Quest  
+Scriptname AK69TheRavensLamentScript extends Quest Conditional
 
 ObjectReference Property AK69RiverDoNothingMarker Auto
 ObjectReference property RiverRef auto
@@ -51,6 +51,16 @@ EffectShader Property DeathFXS Auto
 EffectShader Property Paralysis Auto
 Activator Property SummonValorTargetFXActivator Auto
 Scene Property AK69ByeRiverScene Auto
+
+bool Property TRLCaution = false auto conditional
+bool Property TRLDrink = false auto conditional
+bool Property TRLDistraction = false auto conditional
+bool Property TRLRest = false auto conditional
+bool Property TRLLeading = false auto conditional
+bool Property TRLEwRiver = false auto conditional
+bool Property TRLGhost = false auto conditional
+bool Property TRLCackles = false auto conditional
+bool Property TRLWorstDay = false auto conditional
 
 Function Setup()
     AK69RiverDoNothingMarker.Enable()

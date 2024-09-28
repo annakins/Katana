@@ -1,13 +1,14 @@
 Scriptname AK69CookMGEFScript extends activemagiceffect  
 
 Quest property AK69CookQuest auto
+GlobalVariable property IsCookingVar auto
 ReferenceAlias property CookingPot auto
 Scene Property AK69CookScene auto
 Scene Property AK69NOCookScene auto
 Scene Property AK69CookOccScene Auto
 Scene Property AK69YASCookScene Auto
 Actor property Follower auto
-Keyword property AK69ChefKeyword auto
+
 
 ObjectReference targetobj1
 
@@ -24,12 +25,15 @@ Function CheckAround()
     If (Follower.GetDistance(targetobj1) <= 800 && !targetobj1.IsFurnitureInUse(true))
         AK69CookScene.Start()
         ;Debug.Notification ("Will use cooking pot")
-    ElseIf (Follower.HasMagicEffectWithKeyword(AK69ChefKeyword))
+        ;this means the pot should not be in use so they walk to it
+    ElseIf IsCookingVar.GetValue() == 1
         AK69YASCookScene.Start()
-        ;Debug.Notification ("Keyword worked - will use cooking pot")
+        ;Debug.Notification ("they are already cooking - will give you food")
+        ;this means they are already using the cooking pot
     Elseif (Follower.GetDistance(targetobj1) <= 800 && targetobj1.IsFurnitureInUse(true))
         AK69CookOccScene.Start()
         ;Debug.Notification ("Occupied cooking pot")
+        ;someone else is using the pot
      Else
         AK69NOCookScene.Start()
         ;Debug.Notification ("No cooking pot")
