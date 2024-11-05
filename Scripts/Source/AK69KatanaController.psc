@@ -38,6 +38,7 @@ bool Property SaidHoarding30books = false auto conditional
 bool Property RiftenApplePie = false auto conditional
 bool Property WakingDreams = false auto conditional
 bool Property NordicSouls = false auto conditional
+bool Property iyreshot = false auto conditional
 bool Property RiftenPockets = false auto conditional
 bool Property WhiterunOpp = false auto conditional
 bool Property Firemages = false auto conditional 
@@ -60,7 +61,7 @@ Function SetFollower(ObjectReference FollowerRef)
      FollowerRecruited.SetValue(1)
 	 AK69KatanaConfigQuest.Start()
 	 AK69KatanaPlayerReactionsQuest.Start()
-	 AK69KatanaSkyrimQuests.Start()
+	 ;AK69KatanaSkyrimQuests.Start()
 	 AK69KatanaDismissedQuest.Stop()
 	 ;KatanaPQDialogue.Start() switched to start game enabled
 EndFunction
@@ -110,7 +111,7 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
 		  AK69KatanaConfigQuest.Stop()
 		  AK69KatanaPlayerReactionsQuest.Stop()
 		  ;KatanaPQDialogue.Stop()
-		  AK69KatanaSkyrimQuests.Stop()
+		  ;AK69KatanaSkyrimQuests.Stop()
 		  AK69KatanaDismissedQuest.Start()
           HirelingRehireScript.DismissHireling(DismissedFollowerActor.GetActorBase())
           If iSayLine == 1

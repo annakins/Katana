@@ -5,6 +5,7 @@ Scriptname AK69_QF_AK69MegaraTracker_051CD737 Extends Quest Hidden
 ;BEGIN FRAGMENT Fragment_0
 Function Fragment_0()
 ;BEGIN CODE
+AK69MegaraSkyrimQuests.Start()
 Self.Stop()
 ;END CODE
 EndFunction
@@ -24,3 +25,5 @@ Quest Property AK69MegaraFollowQuest  Auto
 Quest Property AK69TheKhatsEyeQuest  Auto  
 
 Message Property AK69MegaraIntroMessage  Auto  
+
+Quest Property AK69MegaraSkyrimQuests  Auto  

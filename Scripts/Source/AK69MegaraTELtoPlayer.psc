@@ -5,12 +5,11 @@ Activator Property OutVis Auto
 Activator Property InVis Auto
 VisualEffect Property VisEffect Auto
 actor property Player auto
-STATIC Property OutLocMarker Auto
+Actor Property Megara auto
 float Property XFloat Auto Hidden
 float Property YFloat Auto Hidden
 float Property ZFloat Auto Hidden
 bool Property bCasting Auto
-ActorBase Property ActorOwner Auto
 globalvariable property AK69MegaraRidingVar auto
 GlobalVariable property followerrecruited auto
 
@@ -57,12 +56,12 @@ function CheckSuccess(ObjectReference ObjPoint)
 endFunction
 
 Event OnLoad()
-float FRand = utility.RandomFloat()
-	if (self.GetDistance(Player) > 2000)&&(FollowerRecruited.GetValue() ==1)
-		if (FRand > 0.2) 
+;float FRand = utility.RandomFloat()
+	if (self.GetDistance(Player) > 2000)&&(FollowerRecruited.GetValue() ==1)&&(Megara.GetActorValue("WaitingForPlayer") == 0)
+		;if (FRand > 0.2) 
 		bCasting = True
 		TeleportTo(Player, 0.4)
-		endIf
+		;endIf
 	endIf
 EndEvent
 

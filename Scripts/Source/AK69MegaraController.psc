@@ -50,7 +50,7 @@ Function SetFollower(ObjectReference FollowerRef)
      FollowerActor.EvaluatePackage()
      FollowerRecruited.SetValue(1)
 	AK69MegaraConfigQuest.Start()
-     AK69MegaraSkyrimQuests.Start()
+     ;AK69MegaraSkyrimQuests.Start()
      AK69MegaraDismissedQuest.Stop()
 
 EndFunction
@@ -97,7 +97,7 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
           DismissedFollowerActor.SetActorValue("WaitingForPlayer", 0)
           FollowerRecruited.SetValue(0)
           AK69MegaraConfigQuest.Stop()
-          AK69MegaraSkyrimQuests.Stop()
+          ;AK69MegaraSkyrimQuests.Stop()
           AK69MegaraDismissedQuest.Start()
           HirelingRehireScript.DismissHireling(DismissedFollowerActor.GetActorBase())
 

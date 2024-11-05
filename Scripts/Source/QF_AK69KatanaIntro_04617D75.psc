@@ -11,6 +11,7 @@ ReferenceAlias Property Alias_Katana Auto
 Function Fragment_0()
 ;BEGIN CODE
 ;TrustMessageIntro was here
+AK69KatanaSkyrimQuests.Start()
 AK69KatanaTracker.Start()
 Self.Stop()
 ;END CODE
@@ -22,3 +23,5 @@ EndFunction
 Quest Property AK69KatanaTracker  Auto  
 
 Message Property AK69KatanaTrustMessageIntro  Auto  
+
+Quest Property AK69KatanaSkyrimQuests  Auto  
