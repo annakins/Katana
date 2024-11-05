@@ -112,13 +112,13 @@ Function DismissFollower(Int iMessage = 0, Int iSayLine = 1)
 	  
 EndFunction
 
-;Megara picks up ingredients by default
+;Megara does not pick up ingredients by default
 Function PickUpIngredients()
-     AK69MegaraDONOTPickUpVar.SetValue(0)
+     AK69MegaraDONOTPickUpVar.SetValue(1)
 EndFunction
 
 Function DoNotPickUpIngredients()
-     AK69MegaraDONOTPickUpVar.SetValue(1)
+     AK69MegaraDONOTPickUpVar.SetValue(0)
 EndFunction
 
 ;This is the function to call in dialogue
