@@ -6,17 +6,11 @@ Scriptname AK69_TIF__052F19E7 Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
-Player.SheatheWeapon()
-
-Utility.Wait(0.1)
-
-akSpeaker.playIdleWithTarget(pa_HugA, Player)
+Debug.Notification ("Shale pulls you into a bear hug.")
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
 
-Idle Property pa_HugA  Auto  
 
-Actor Property Player  Auto  

@@ -6,17 +6,11 @@ Scriptname AK69_TIF__05CF248C Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
-Player.SheatheWeapon()
-
-Utility.Wait(0.1)
-
-akSpeaker.playIdleWithTarget(pa_HugA, Player)
+Debug.Notification ("Katana hugs you briefly but firmly.")
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
 
-Actor Property Player  Auto  
 
-Idle Property pa_HugA  Auto  
