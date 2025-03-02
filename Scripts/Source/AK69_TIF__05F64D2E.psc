@@ -7,7 +7,7 @@ Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
 Game.GetPlayer().PlaceAtMe(AK69HealFXActivator)
-Game.GetPlayer().RestoreActorValue("Health", 100 as Float)
+Game.GetPlayer().RestoreActorValue("Health", 300 as Float)
 ;END CODE
 EndFunction
 ;END FRAGMENT
