@@ -13,7 +13,7 @@ Spell Property AK69Invisibility Auto
 
 Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
      Actor combatTarget = Shale.GetCombatTarget()
-     If (akTarget == PlayerREF) && (AK69ShaleRecruited.GetValue() ==1) 
+     If (akTarget == PlayerREF) && (Shale.IsPlayerTeammate())
      AK69ShaleWasBetrayed.SetValue(1 as float)
      KatanaDataStorage.DecreaseRateMajor()
      (GetOwningQuest() as AK69ShaleController).DismissFollower(0, 0)   

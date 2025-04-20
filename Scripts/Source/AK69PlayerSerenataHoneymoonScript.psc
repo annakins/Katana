@@ -9,16 +9,17 @@ Location Property AK69CozyLocation Auto
 Keyword Property LocTypeClearable Auto
 Scroll Property AK69SQScroll Auto
 Cell Property AK69CozyInterior Auto
+Actor Property Shale Auto
 
 Event OnLocationChange(Location akOldLoc, Location akNewLoc)
     if (GetOwningQuest().GetStage() == 40 && akNewLoc != akOldLoc)
-    If GameDaysPassed.GetValue() >= AK69SQCourierReadyVar.GetValue() && (AK69ShaleRecruited.GetValue() == 1) && (AK69ShaleRelax.GetValue() == 0)
+    If GameDaysPassed.GetValue() >= AK69SQCourierReadyVar.GetValue() && (Shale.IsPlayerTeammate() && Shale.GetActorValue("WaitingForPlayer") == 0)
         GetOwningQuest().SetStage(50)
     Endif
    endif
 
    if (GetOwningQuest().GetStage() == 140 && akNewLoc != akOldLoc && !akNewLoc.HasKeyword(LocTypeClearable))
-    If (GameDaysPassed.GetValue() >= AK69HoneymoonBabesTimer.GetValue()) && (AK69ShaleRecruited.GetValue() == 1) && (AK69ShaleRelax.GetValue() == 0)
+    If (GameDaysPassed.GetValue() >= AK69HoneymoonBabesTimer.GetValue()) && (Shale.IsPlayerTeammate() && Shale.GetActorValue("WaitingForPlayer") == 0)
         GetOwningQuest().SetStage(150)
     Endif
    endif

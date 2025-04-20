@@ -13,7 +13,7 @@ GlobalVariable Property AK69MegaraRelax Auto
 
 ;This used to have Katana.IsInLocation
 Event OnLocationChange(Location akOldLoc, Location akNewLoc)
-if ((GetOwningQuest().GetStage() == 0) && MoorsideInn == akNewLoc && (AK69KatanaRecruited.GetValue() ==1) && (AK69KatanaRelax.GetValue() ==0) && (AK69MegaraRecruited.GetValue() ==1) && (AK69MegaraRelax.GetValue() ==0))
+if ((GetOwningQuest().GetStage() == 0) && MoorsideInn == akNewLoc && (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && (Megara.IsPlayerTeammate() && Megara.GetActorValue("WaitingForPlayer") == 0))
 	AK69TheKhatsEyeQuestIntroScene.Start()
 	GetOwningQuest().SetObjectiveCompleted(5)
 Endif

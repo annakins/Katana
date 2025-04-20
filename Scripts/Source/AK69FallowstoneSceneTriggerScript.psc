@@ -9,10 +9,12 @@ GlobalVariable Property AK69KatanaRecruited Auto
 GlobalVariable Property AK69MegaraRelax Auto
 GlobalVariable Property AK69KatanaRelax Auto
 Quest Property AK69TheRavensLamentQuest Auto
+Actor Property Katana Auto
+Actor Property Megara Auto
 
 Event OnTriggerEnter(ObjectReference akActionRef)
 
-    if (akActionRef == Game.GetPlayer() && AK69KatanaRecruited.GetValue() == 1 && AK69MegaraRecruited.GetValue() == 1 && AK69KatanaRelax.GetValue() == 0 && AK69MegaraRelax.GetValue() == 0 && AK69TheRavensLamentQuest.GetStage() == 100)
+    if (akActionRef == Game.GetPlayer() && (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && (Megara.IsPlayerTeammate() && Megara.GetActorValue("WaitingForPlayer") == 0) && AK69TheRavensLamentQuest.GetStage() == 100)
         if SceneTriggered == 0
             if Game.GetPlayer().IsInCombat() == 0
                 AK69RiverVoiceMarker.GetReference().MoveTo(Game.GetPlayer())

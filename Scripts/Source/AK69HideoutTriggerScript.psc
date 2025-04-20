@@ -9,7 +9,7 @@ Activator Property InVis Auto
 
 Event OnTriggerEnter(ObjectReference akActionRef)
 
-    if (akActionRef == Game.GetPlayer() && AK69KatanaRecruited.GetValue() == 1 && AK69KatanaRelax.GetValue() == 0 && AK69KatanaPersonalQuest.GetStage() == 180)
+    if (akActionRef == Game.GetPlayer() && (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && AK69KatanaPersonalQuest.GetStage() == 180)
         if SceneTriggered == 0
             Katana.EvaluatePackage()
             SceneTriggered = 1 

@@ -14,7 +14,7 @@ AK69KatanaController property KatanaDataStorage auto
 Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
 Actor combatTarget = Katana.GetCombatTarget()
 (AK69KatanaShadowAttackQuest as AK69KatanaShadowAttack).KatanaCombatStateChanged(akTarget, aeCombatState)
-If (akTarget == PlayerREF) && (FollowerRecruited.GetValue() ==1) 
+If (akTarget == PlayerREF) && Katana.IsPlayerTeammate() 
 AK69KatanaWasBetrayed.SetValue(1 as float)
 KatanaDataStorage.DecreaseRateMajor()
 (GetOwningQuest() as AK69KatanaController).DismissFollower(0, 0)

@@ -36,14 +36,14 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 			Shale.EvaluatePackage()
 		endIf
 	endIf
-	if Player.IsOnMount() && (AK69ShaleRecruited.GetValue() ==1) && AK69ShaleRidingVar.GetValue() == 1 as Float && (AK69ShaleRelax.GetValue() == 0) 
+	if Player.IsOnMount() && (Shale.IsPlayerTeammate()) && AK69ShaleRidingVar.GetValue() == 1 as Float && (Shale.GetActorValue("WaitingForPlayer") == 0) 
 		Utility.Wait(1)
 		Shale.OnAnimationEvent(none, "tailHorseMount")
 		;Utility.Wait(3)
 	endIf
-		If Shale.GetActorValue("WaitingForPlayer") == 0 && (AK69ShaleRelax.GetValue() == 0) && (AK69ShaleRecruited.GetValue() ==1) 	
+		If Shale.GetActorValue("WaitingForPlayer") == 0 && (Shale.GetActorValue("WaitingForPlayer") == 0) && (Shale.IsPlayerTeammate()) 	
 			If asEventName == "tailHorseMount"
-				if (Shale.GetDistance(Lucky) >= 2048) && (AK69ShaleRecruited.GetValue() ==1) 
+				if (Shale.GetDistance(Lucky) >= 2048) && (Shale.IsPlayerTeammate()) 
 				BeginTeleport()
                 Lucky.setAlpha(0.1)
                 Lucky.MoveTo(Player as objectreference, -900.000 * Math.Sin(Player.GetAngleZ()), -900.000 * Math.Cos(Player.GetAngleZ()))

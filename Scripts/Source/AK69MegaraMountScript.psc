@@ -36,14 +36,14 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 			Megara.EvaluatePackage()
 		endIf
 	endIf
-	if Player.IsOnMount() && (FollowerRecruited.GetValue() ==1) && AK69MegaraRidingVar.GetValue() == 1 as Float && (MegaraRelaxVar.GetValue() == 0) 
+	if Player.IsOnMount() && (Megara.IsPlayerTeammate()) && AK69MegaraRidingVar.GetValue() == 1 as Float && (Megara.GetActorValue("WaitingForPlayer") == 0) 
 		Utility.Wait(1)
 		Megara.OnAnimationEvent(none, "tailHorseMount")
 		;Utility.Wait(3)
 	endIf
-		If Megara.GetActorValue("WaitingForPlayer") == 0 && (MegaraRelaxVar.GetValue() == 0) && (FollowerRecruited.GetValue() ==1) 	
+		If Megara.GetActorValue("WaitingForPlayer") == 0 && (Megara.GetActorValue("WaitingForPlayer") == 0) && (Megara.IsPlayerTeammate()) 	
 			If asEventName == "tailHorseMount"
-				if (Megara.GetDistance(Cappy) >= 2048) && (FollowerRecruited.GetValue() ==1) 
+				if (Megara.GetDistance(Cappy) >= 2048) && (Megara.IsPlayerTeammate()) 
 				BeginTeleport()
                 Cappy.setAlpha(0.1)
                 Cappy.MoveTo(Player as objectreference, -700.000 * Math.Sin(Player.GetAngleZ()), -700.000 * Math.Cos(Player.GetAngleZ()))

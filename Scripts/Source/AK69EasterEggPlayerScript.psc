@@ -69,7 +69,7 @@ If GameDaysPassed.GetValue() >= AK69NutBoysGoodbyeTimeVar.GetValue()
 Endif
 endif
 
-if (AK69KatanaRecruitedVar.GetValue() == 1) && AK69KatanaRelax.GetValue() == 0 && AK69MegaraRelax.GetValue() == 0 && (AK69MegaraRecruitedVar.GetValue() == 1) && (GetOwningQuest().GetStage() == 0)
+if (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && (Megara.IsPlayerTeammate() && Megara.GetActorValue("WaitingForPlayer") == 0) && (GetOwningQuest().GetStage() == 0)
     Chadryn.moveto(AK69ChadrynWhiterunMarker)
 if (GetOwningQuest().GetStage() == 0 && (akNewLoc == Whiterun) && Chadryn.GetParentCell() == Game.GetPlayer().GetParentCell())
     AK69ChadrynIntroScene.Start()

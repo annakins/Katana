@@ -8,12 +8,13 @@ GlobalVariable Property AK69MegaraRelax Auto
 Quest Property AK69EasterEggsQuest Auto
 Actor Property Chadryn Auto
 Actor Property Katana Auto
+Actor Property Megara Auto
 
 ;Riften 
 
 Event OnTriggerEnter(ObjectReference akActionRef)
 
-    if (akActionRef == Katana && AK69KatanaRecruited.GetValue() == 1 && AK69MegaraRecruitedVar.GetValue() == 1 && AK69MegaraRelax.GetValue() == 0 && AK69EasterEggsQuest.GetStage() == 20)
+    if (akActionRef == Katana && (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && (Megara.IsPlayerTeammate() && Megara.GetActorValue("WaitingForPlayer") == 0) && AK69EasterEggsQuest.GetStage() == 20)
         if (SceneTriggered == 0) && (Chadryn.GetParentCell() == Game.GetPlayer().GetParentCell())
             if Game.GetPlayer().IsInCombat() == 0
                 ChadScene.Start()

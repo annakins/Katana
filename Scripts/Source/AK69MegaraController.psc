@@ -128,10 +128,10 @@ CompanionTeleport()
 EndFunction
 
 Function CompanionTeleport()
-if AK69KatanaRecruited.GetValue() == 1 && AK69KatanaRelax.GetValue() == 0
+if (KatanaActor.IsPlayerTeammate() && KatanaActor.GetActorValue("WaitingForPlayer") == 0)
      KatanaActor.MoveTo(AK69CozyMarker1)
 endif
-if AK69ShaleRecruited.GetValue() == 1 && AK69ShaleRelax.GetValue() == 0    
+if (ShaleActor.IsPlayerTeammate() && ShaleActor.GetActorValue("WaitingForPlayer") == 0)
      ShaleActor.MoveTo(AK69CozyMarker1)
 endif
 CozyTele()
@@ -140,10 +140,10 @@ EndFunction
 
 ;This is the function to call when you wanna go back
 Function CompanionRecall()
-if AK69KatanaRecruited.GetValue() == 1 && AK69KatanaRelax.GetValue() == 0
+if (KatanaActor.IsPlayerTeammate() && KatanaActor.GetActorValue("WaitingForPlayer") == 0)
      KatanaActor.MoveTo(AK69CozyRecallMarker)
 endif
-if AK69ShaleRecruited.GetValue() == 1 && AK69ShaleRelax.GetValue() == 0    
+if (ShaleActor.IsPlayerTeammate() && ShaleActor.GetActorValue("WaitingForPlayer") == 0)    
      ShaleActor.MoveTo(AK69CozyRecallMarker)
 endif
 CozyRecall()

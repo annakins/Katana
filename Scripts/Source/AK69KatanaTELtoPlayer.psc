@@ -13,6 +13,8 @@ bool Property bCasting Auto
 globalvariable property AK69KatanaRidingVar auto
 GlobalVariable property followerrecruited auto
 
+;Removed in 3.0.4 but keeping script in folder just in case
+
 function BeginTeleport()
 PlaceAtMe(InVis)
 endFunction

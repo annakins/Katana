@@ -16,6 +16,7 @@ ReferenceAlias Property AK69RiverVoiceMarker Auto
 ReferenceAlias Property ShaleVoiceUnknown Auto
 ReferenceAlias Property ShaleVoice Auto
 Actor Property Katana Auto
+Actor Property Megara Auto
 Keyword property LocTypeCity auto
 Keyword property LocTypeTown auto
 Keyword property LocTypeClearable auto
@@ -30,33 +31,33 @@ ObjectReference Property AK69VilemyrNote auto
 
 Event OnLocationChange(Location akOldLoc, Location akNewLoc)
     if (akNewLoc.HasKeyword(LocTypeCity) && GetOwningQuest().GetStage() == 0)
-        if (AK69KatanaRecruited.GetValue() ==1) && (AK69KatanaRelax.GetValue() ==0) && (AK69MegaraRecruited.GetValue() ==1) && (AK69MegaraRelax.GetValue() ==0)
+        if (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && (Megara.IsPlayerTeammate() && Megara.GetActorValue("WaitingForPlayer") == 0)
         AK69RiverVoiceMarker.GetReference().MoveTo(Game.GetPlayer())
         Utility.Wait(1.0)
         AK69TheRavensLamentVoiceScene1.Start()
         endif
     endif
     if (akNewLoc.HasKeyword(LocTypeTown) && GetOwningQuest().GetStage() == 10)
-        if (AK69KatanaRecruited.GetValue() ==1) && (AK69KatanaRelax.GetValue() ==0) && (AK69MegaraRecruited.GetValue() ==1) && (AK69MegaraRelax.GetValue() ==0)
+        if (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && (Megara.IsPlayerTeammate() && Megara.GetActorValue("WaitingForPlayer") == 0)
         AK69RiverVoiceMarker.GetReference().MoveTo(Game.GetPlayer())
         Utility.Wait(1.0)
         AK69TheRavensLamentVoiceScene2.Start()
         endif
     endif
     if ((akNewLoc.HasKeyword(LocTypeClearable) || akNewLoc.HasKeyword(LocTypeDungeon) || akNewLoc.HasKeyword(LocTypeBanditCamp))  && GetOwningQuest().GetStage() == 20 && !Game.GetPlayer().IsOnMount())
-        if (AK69KatanaRecruited.GetValue() ==1) && (AK69KatanaRelax.GetValue() ==0) && (AK69MegaraRecruited.GetValue() ==1) && (AK69MegaraRelax.GetValue() ==0)
+        if (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && (Megara.IsPlayerTeammate() && Megara.GetActorValue("WaitingForPlayer") == 0)
         AK69RiverVoiceMarker.GetReference().MoveTo(Game.GetPlayer())
         Utility.Wait(0.1)
         AK69TheRavensLamentVoiceScene3.Start()
         endif
     endif
     if (RiftenBeeandBarbLocation == akNewLoc) && (GetOwningQuest().GetStage() == 40)
-        if (AK69KatanaRecruited.GetValue() ==1) && (AK69KatanaRelax.GetValue() ==0) && (AK69MegaraRecruited.GetValue() ==0 || AK69MegaraRelax.GetValue() ==1)
+        if (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && (!Megara.IsPlayerTeammate() || Megara.GetActorValue("WaitingForPlayer") == 1)
         AK69TheRavensLamentNoMegaraBeeandBarb.Start()
         endif
     endif
     if (RiftenBeeandBarbLocation == akNewLoc) && (GetOwningQuest().GetStage() == 40)
-        if (AK69KatanaRecruited.GetValue() ==1) && (AK69KatanaRelax.GetValue() ==0) && (AK69MegaraRecruited.GetValue() ==1) && (AK69MegaraRelax.GetValue() ==0)
+        if (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && (Megara.IsPlayerTeammate() && Megara.GetActorValue("WaitingForPlayer") == 0)
         AK69RiverRiddle.Enable()
         AK69RiverFlower.Enable()
         AK69RiverFlower.BlockActivation(True)
@@ -69,7 +70,7 @@ Event OnLocationChange(Location akOldLoc, Location akNewLoc)
         endif
     endif
     if (IvarsteadVilemyrInnLocation == akNewLoc) && (GetOwningQuest().GetStage() == 100)
-        if (AK69KatanaRecruited.GetValue() ==1) && (AK69KatanaRelax.GetValue() ==0) && (AK69MegaraRecruited.GetValue() ==1) && (AK69MegaraRelax.GetValue() ==0)
+        if (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && (Megara.IsPlayerTeammate() && Megara.GetActorValue("WaitingForPlayer") == 0)
             if AK69CheckedVilemyr.GetValue() ==0
             AK69VilemyrNote.Enable()
             AK69CheckedVilemyr.SetValue(1)
@@ -79,7 +80,7 @@ Event OnLocationChange(Location akOldLoc, Location akNewLoc)
         endif
     endif
     if (RiftenBeeandBarbLocation == akNewLoc) && (GetOwningQuest().GetStage() == 280)
-        if (AK69KatanaRecruited.GetValue() ==1) && (AK69KatanaRelax.GetValue() ==0) && (AK69MegaraRecruited.GetValue() ==1) && (AK69MegaraRelax.GetValue() ==0)
+        if (Katana.IsPlayerTeammate() && Katana.GetActorValue("WaitingForPlayer") == 0) && (Megara.IsPlayerTeammate() && Megara.GetActorValue("WaitingForPlayer") == 0)
         GetOwningQuest().SetObjectiveCompleted(280)
         Utility.Wait(3.0)
         AK69TheRavensLamentBeeandBarbUPSTAIRS.Start()

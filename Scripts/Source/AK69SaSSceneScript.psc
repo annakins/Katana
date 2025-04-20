@@ -10,6 +10,7 @@ GlobalVariable Property AK69KatanaRecruitedVar Auto
 GlobalVariable Property AK69KatlaNoMegaraFGVar Auto
 Quest Property AK69SugarandSpiceQuest Auto
 Actor Property Katana Auto
+Actor Property Megara Auto
 
 Event OnTriggerEnter(ObjectReference akActionRef)
 

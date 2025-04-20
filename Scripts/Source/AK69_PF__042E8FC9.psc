@@ -10,18 +10,18 @@ Megara.EvaluatePackage()
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_2
-Function Fragment_2(Actor akActor)
+;BEGIN FRAGMENT Fragment_1
+Function Fragment_1(Actor akActor)
 ;BEGIN CODE
 Megara.EvaluatePackage()
+;(GetOwningQuest() as AK69KatanaPersonalQuestData).GotoRiften = true
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_1
-Function Fragment_1(Actor akActor)
+;BEGIN FRAGMENT Fragment_2
+Function Fragment_2(Actor akActor)
 ;BEGIN CODE
-(GetOwningQuest() as AK69KatanaPersonalQuestData).GotoRiften = true
 Megara.EvaluatePackage()
 ;END CODE
 EndFunction

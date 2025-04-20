@@ -8,21 +8,21 @@ GlobalVariable Property AK69MegaraRecruited Auto
 GlobalVariable Property AK69ShaleRecruited Auto
 
 Event OnEffectStart(Actor akTarget, Actor akCaster)
-if AK69KatanaRecruited.GetValue() == 1
+if Katana.IsPlayerTeammate()
 Katana.StopCombat()	
 Katana.StopCombatAlarm()
 Katana.Disable()
 Katana.Enable()
 Katana.EvaluatePackage()
 endif
-if AK69MegaraRecruited.GetValue() == 1
+if Megara.IsPlayerTeammate()
 Megara.StopCombat()	
 Megara.StopCombatAlarm()
 Megara.Disable()
 Megara.Enable()
 Megara.EvaluatePackage()
 endif
-if AK69ShaleRecruited.GetValue() == 1
+if Shale.IsPlayerTeammate()
 Shale.StopCombat()	
 Shale.StopCombatAlarm()
 Shale.Disable()

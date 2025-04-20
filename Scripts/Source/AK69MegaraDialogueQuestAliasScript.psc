@@ -13,7 +13,7 @@ Spell Property AK69Invisibility Auto
 
 Event OnCombatStateChanged(Actor akTarget, int aeCombatState)
      Actor combatTarget = Megara.GetCombatTarget()
-     If (akTarget == PlayerREF) && (FollowerRecruited.GetValue() ==1) 
+     If (akTarget == PlayerREF) && (Megara.IsPlayerTeammate()) 
      AK69MegaraWasBetrayed.SetValue(1 as float)
      KatanaDataStorage.DecreaseRateMajor()
      (GetOwningQuest() as AK69MegaraController).DismissFollower(0, 0)     

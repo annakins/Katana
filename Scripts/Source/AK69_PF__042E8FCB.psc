@@ -13,8 +13,8 @@ EndFunction
 ;BEGIN FRAGMENT Fragment_1
 Function Fragment_1(Actor akActor)
 ;BEGIN CODE
-(GetOwningQuest() as AK69KatanaPersonalQuestData).GotoWinterhold = true
 Megara.EvaluatePackage()
+;(GetOwningQuest() as AK69KatanaPersonalQuestData).GotoWinterhold = true
 ;END CODE
 EndFunction
 ;END FRAGMENT
